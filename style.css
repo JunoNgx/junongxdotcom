@@ -1,26 +1,14 @@
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 4vw;
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  body {
-/*    font-size: 16px;*/
-    width: 40%;
-  }
-}
-
-
 body {
-/*
-    min-width: 20em;
-    max-width: 35em;
-*/
+    max-width: 640px;
     margin: 0 auto;
+    font-size: 16px;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 img {
@@ -28,14 +16,14 @@ img {
 }
 
 .segment {
-    margin: 3em auto;
+    margin: 2em auto;
     border: 1px solid #0080FF;
-    padding: 3em;
+    padding: 2em;
 }
 
 .gallery{
     background-color: #EEEEEE;
-    padding: 0.5em;
+    padding: 0.2em;
     width: 80%;
     height: auto;
     margin: 1em auto;
