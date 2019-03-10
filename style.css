@@ -1,0 +1,94 @@
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 4vw;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+/*    font-size: 16px;*/
+    width: 40%;
+  }
+}
+
+
+body {
+/*
+    min-width: 20em;
+    max-width: 35em;
+*/
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.segment {
+    margin: 3em auto;
+    border: 1px solid #0080FF;
+    padding: 3em;
+}
+
+.gallery{
+    background-color: #EEEEEE;
+    padding: 0.5em;
+    width: 80%;
+    height: auto;
+    margin: 1em auto;
+
+}
+
+.gallery a{
+    transition: background-color .2s ease-in;
+}
+
+.gallery a:hover{
+    background-color: #0080FF;
+}
+
+.desc {
+    padding: 0.3em;
+}
+
+h2 {
+    color: #E52B50;
+}
+
+p {
+    color: #242424;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+a {
+    color: #0080FF;
+    transition: background-color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+}
+
+a:visited {
+    color: #E52B50;
+}
+
+a:hover {
+    color: white;
+    background: #0080FF;
+}
+
+strong {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+em {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#aureotetralogo {
+    width: 65%;
+}
