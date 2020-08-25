@@ -14,7 +14,8 @@ export default function Home() {
         <div>
             <Head>
                 <title>Juno Nguyen</title>
-                <meta property="og:title" content={"Juno Nguyen"} key="title"/>
+                <meta content={"Juno Nguyen"} key="title"/>
+                <meta name="theme-color" content="#222"/>
             </Head>
             <div className="page">
                 {/* <div className="page--links"> */}
