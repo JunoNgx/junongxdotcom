@@ -21,7 +21,7 @@ $trans-time: 400ms;
 @mixin col-sha-trans($col) {
     transition: box-shadow $trans-time ease-out;
     &:hover {
-        box-shadow: -15px 0 $col;
+        box-shadow: -5px 0 $col;
     }
 }
 
@@ -51,26 +51,39 @@ body {
 }
 
 .contacts {
+    // @include std-border;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin: 1rem;
     &__item {
+        text-align: right;
+        width: 55%;
+        border-bottom: 1px solid #eee;
         font-size: 2rem;
         margin: 0.3rem 1rem;
         list-style: none;
         a {
+            padding: 0;
             text-decoration: none;
         }
     }
     @media screen and (min-width: $breakpoint) {
+        border-right: 2px solid $pri-col;
         width: 200px;
         position: fixed;
         left: 60%;
+        &__item {
+            // @include std-border();
+            width: auto;
+            // padding: 0;
+            border: none;
+        }
         a {
-            padding: 0 1rem;
+            padding: 0;
             transition: $trans-time ease;
             &:hover {
+                padding-left: 1rem;
                 padding-right: 5rem;
                 background-color: $pri-col;
                 color: $bac-col;
@@ -80,8 +93,9 @@ body {
 }
 
 .section {
+    // @include std-border;
     margin: 1rem 1rem 5rem 1rem;
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0 1rem 0 1rem;
     p {
         hyphens: auto;
         line-height: 1.5;
@@ -112,7 +126,6 @@ body {
     }
 
     &--banner {
-        
         border-bottom: double 2px $pri-col;
         padding-bottom: 2rem;
     }

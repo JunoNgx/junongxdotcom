@@ -28,9 +28,9 @@ export default function Home() {
                     <Gamedev/>
                     <Others/>
                     <ContactMe/>
+                    <Footer/>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }
