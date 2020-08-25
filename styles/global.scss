@@ -112,21 +112,9 @@ body {
     }
 
     &--banner {
-        @include col-sha-trans($pal-p);
+        
         border-bottom: double 2px $pri-col;
         padding-bottom: 2rem;
-    }
-    &--ebonymemo {
-        @include col-sha-trans($pal-y);
-    }
-    &--wonyun {
-        @include col-sha-trans($pal-b);
-    }
-    &--gamedev {
-        @include col-sha-trans($pal-g);
-    }
-    &--others {
-        @include col-sha-trans($pal-r);
     }
     &--contact-me {
         margin: auto;
@@ -148,6 +136,7 @@ body {
     }
 
     @media screen and (min-width: $breakpoint) {
+
         &__brand {
             font-size: 5rem;
             margin: 0;
@@ -159,6 +148,23 @@ body {
                 }
             }
         }
+
+        &--banner {
+            @include col-sha-trans($pal-p);
+        }
+        &--ebonymemo {
+            @include col-sha-trans($pal-y);
+        }
+        &--wonyun {
+            @include col-sha-trans($pal-b);
+        }
+        &--gamedev {
+            @include col-sha-trans($pal-g);
+        }
+        &--others {
+            @include col-sha-trans($pal-r);
+        }
+
     }
 }
 
