@@ -8,7 +8,7 @@ $pri-col: #eee;
 
 $pal-r: salmon;
 $pal-g: darkseagreen;
-$pal-b: cadetblue;
+$pal-b: steelblue;
 $pal-y: lemonchiffon;
 $pal-p: peachpuff;
 
@@ -41,6 +41,7 @@ body {
     // font-size: 18px;
     max-width: 768px;
     margin: auto;
+    margin-top: 2rem;
     a {
         color: $pri-col;
         &:visited {
@@ -105,11 +106,12 @@ body {
     }
     &__subbrand {
         font-size: 1.5rem;
+        margin: 0;
     }
 
     &__header {
+        font-size: 3rem;
         margin: 0 0 1rem 0;
-        font-size: 2rem;
     }
     &__subheader {
         font-size: 1.5rem;
@@ -129,6 +131,9 @@ body {
     &--ebonymemo {
         @include col-sha-trans($pal-y);
     }
+    &--wonyun {
+        @include col-sha-trans($pal-b);
+    }
     &--gamedev {
         @include col-sha-trans($pal-g);
     }
@@ -145,6 +150,7 @@ body {
         }
         &__content {
             @include std-border;
+            margin: 1rem;
             padding: 1rem 2rem;
             &:after {
                 content: "My contacts are above on top ↑";
@@ -154,6 +160,10 @@ body {
     }
 
     @media screen and (min-width: $breakpoint) {
+        &__brand {
+            font-size: 5rem;
+            margin: 0;
+        }
         &--contact-me {
             &__content {
                 &:after {

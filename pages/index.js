@@ -7,6 +7,7 @@ import Gamedev from '../components/Gamedev'
 import Others from '../components/Others'
 import ContactMe from '../components/ContactMe'
 import Footer from '../components/Footer'
+import Wonyun from '../components/Wonyun'
 
 export default function Home() {
     return (
@@ -22,12 +23,13 @@ export default function Home() {
                 <div className="page--content">
                     <Banner/>
                     <EbonyMemo/>
+                    <Wonyun/>
                     <Gamedev/>
                     <Others/>
                     <ContactMe/>
-                    <Footer/>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

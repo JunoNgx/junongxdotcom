@@ -9,8 +9,9 @@ export default function ContactContactLinknks() {
                 <ContactLink link={URL.twitter}>Twitter</ContactLink>
                 <ContactLink link={URL.github}>GitHub</ContactLink>
                 <ContactLink link={URL.itchio}>Itch.io</ContactLink>
-                <ContactLink link={URL.instagram}>Instagram</ContactLink>
+                {/* <ContactLink link={URL.instagram}>Instagram</ContactLink> */}
                 <ContactLink link={URL.flickr}>Flickr</ContactLink>
+                <ContactLink link={URL.email}>Email</ContactLink>
                 <ContactLink link={URL.linkedin}>LinkedIn</ContactLink>
             </ul>
         // </div>
