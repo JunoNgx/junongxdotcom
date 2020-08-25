@@ -25,20 +25,11 @@ $trans-time: 400ms;
     }
 }
 
-html {
-    
-    @media screen and (min-width: $breakpoint) {
-
-    }
-}
-
 body {
-    // @include std-border;
     color: $pri-col;
     background-color: $bac-col;
     font-weight: lighter;
     font-family: Roboto Condensed, serif;
-    // font-size: 18px;
     max-width: 768px;
     margin: auto;
     margin-top: 2rem;
@@ -55,7 +46,6 @@ body {
 
 .page {
     &--content {
-        // @include std-border;
         max-width: 512px;
     }
 }
@@ -90,7 +80,6 @@ body {
 }
 
 .section {
-    // @include std-border;
     margin: 1rem 1rem 5rem 1rem;
     padding: 0 0.5rem 0 0.5rem;
     p {
@@ -119,7 +108,6 @@ body {
     &__img {
         display: block;
         width: 100%;
-        // text-align: center;
         margin: auto;
     }
 
@@ -172,21 +160,11 @@ body {
             }
         }
     }
-
-    // transition: transform 300ms ease-out;
-    // transition: box-shadow 300ms ease-out;
-    // &:hover {
-    //     box-shadow: -10px 0;
-    //     // font-size: 20px;
-    //     // transform: translateX(50px)
-
-    // }
 }
 
 .footer {
     margin: 5rem auto 1rem auto;
     text-align: center;
-    // @include std-border;
 }
 
 // Colour pallete
