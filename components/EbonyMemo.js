@@ -1,5 +1,4 @@
 import React from 'react'
-import URL from 'URL'
 import CA from './CustomAnchor'
 
 const URL_LOCAL = {

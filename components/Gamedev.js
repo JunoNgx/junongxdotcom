@@ -1,6 +1,6 @@
 import React from 'react'
 import CA from './CustomAnchor'
-import URL from './URL'
+import { URL } from './URL'
 
 export default function Gamedev() {
     return (
