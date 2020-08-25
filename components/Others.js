@@ -7,6 +7,7 @@ export default function Others() {
             <h2 className="section__header"><a className="pal--r">Other works</a></h2>
             <p>While not programming or playing videogames, you will find me enjoying arthouse cinema flicks, taking photographs, composing new Lego models on Stud.io, watching professional StarCraft, playing guitar, or soldering a new mechanical keyboard build.</p>
             <h3 className="section__subheader">Photography</h3>
+            <img className="section__img" src="/pavilion.jpg" alt="Singapore Bayfront Pavillion"/>
             <p>A rare creative hobby in which I enjoy the process more than more outcome. I shoot exclusively with vintage manual focus lenses and Fujifilm mechanically-inspired bodies (and occasionally dabble into film photography). I think sceneries and stills in portrait mode are highly underrated and underexplored.</p>
             <p><CA link="URL.flickr">My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
             <h3 className="section__subheader">Lego StarCraft</h3>
