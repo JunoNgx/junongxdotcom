@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
 
 $breakpoint: 720px;
-$font-size: 18px;
+$font-size: 20px;
 
 $bac-col: #222;
 $pri-col: #eee;
@@ -29,7 +29,7 @@ body {
     color: $pri-col;
     background-color: $bac-col;
     font-weight: lighter;
-    font-family: Roboto Condensed, serif;
+    font-family: Jost, serif;
     max-width: 768px;
     margin: auto;
     margin-top: 2rem;
@@ -151,7 +151,7 @@ body {
 
     @media screen and (min-width: $breakpoint) {
         &__brand {
-            font-size: 5rem;
+            font-size: 4rem;
             margin: 0;
         }
         &--contact-me {
@@ -182,6 +182,7 @@ body {
 }
 
 .footer {
+    font-size: $font-size;
     margin: 5rem auto 1rem auto;
     text-align: center;
 }
