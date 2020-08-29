@@ -1,3 +1,6 @@
+// CSS for JunoNgx.com created by Juno Nguyen
+// This project is using BEM naming convention
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
 
 $breakpoint: 720px;
@@ -52,7 +55,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     margin: 0rem 1rem 3rem 1rem;
-    // margin-bottom: 2rem;
     &__item {
         text-align: right;
         width: 55%;
@@ -75,9 +77,7 @@ body {
         position: fixed;
         left: 60%;
         &__item {
-            // @include std-border();
             width: auto;
-            // padding: 0;
             border: none;
         }
         a {
@@ -197,23 +197,22 @@ body {
 }
 
 // Colour pallete
-.pal--r {
-    color: $pal-r;
+.pal {
+    &--r {
+        color: $pal-r;
+    }
+    &--g {
+        color: $pal-g;
+    }
+    &--b {
+        color: $pal-b;
+    }
+    &--y {
+        color: $pal-y;
+    }
+    &--p {
+        color: $pal-p;
+    }
 }
 
-.pal--g {
-    color: $pal-g;
-}
-
-.pal--b {
-    color: $pal-b;
-}
-
-.pal--y {
-    color: $pal-y;
-}
-
-.pal--p {
-    color: $pal-p;
-}
 
