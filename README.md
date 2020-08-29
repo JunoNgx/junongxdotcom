@@ -12,9 +12,9 @@ The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Net
 
 This project is made with [Next.js](https://nextjs.org/) and [SASS](https://sass-lang.com/) (using BEM naming convention). Deployment is powered by [next-on-netlify](https://www.npmjs.com/package/next-on-netlify) for compatibility with Netlify functions. It is fully server-side rendered.
 
-## Environment Variables
+## Environment variables
 
-This project doesn't require any environment variable and not setup is needed.
+This project doesn't require any environment variable and no setup is neccessary for deployment.
 
 ## Local deployment
 
