@@ -1,5 +1,6 @@
 import React from 'react'
 import CA from './CustomAnchor'
+import { URL } from './URL'
 
 export default function Others() {
     return (
@@ -9,7 +10,7 @@ export default function Others() {
             <h3 className="section__subheader">Photography</h3>
             <img className="section__img" src="/pavilion.jpg" alt="Singapore Bayfront Pavillion"/>
             <p>A rare creative hobby in which I enjoy the process more than more outcome. I shoot exclusively with vintage manual focus lenses and Fujifilm mechanical-inspired bodies (and occasionally dabble into film photography). I think sceneries and stills in portrait mode are highly underrated.</p>
-            <p><CA link="URL.flickr">My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
+            <p><CA link={URL.flickr}>My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
             <h3 className="section__subheader">Lego StarCraft</h3>
             <img className="section__img" src="/taccom.jpg" alt="StarCraft Goliath microscale"/>
             <p>Having been a lifetime admirer of StarCraft from a game designer's perspective, the game found ways into my life in peculiar ways. Not until my mid-20s, did I realise the creative potential and elegance in tiny Lego models of 30 pieces. My tiny curiosity crept into a relatively big project (and still on going) that you can find on my <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">Flickr</CA>.</p>

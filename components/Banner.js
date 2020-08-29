@@ -5,7 +5,7 @@ import CA from './CustomAnchor'
 export default function Banner() {
     return (
         <div className="section section--banner">
-            <h3 class="section__subbrand">Hi, my name is</h3>
+            <h3 className="section__subbrand">Hi, my name is</h3>
             <h1 className="section__brand pal--p">Juno Nguyen</h1>
             <p>I am <a className="pal--g">a software developer</a> based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and <a className="pal--b">the independent videogame developer</a> <CA link={URL.itchio}>manafarm</CA>. I am <a className="pal--r"L>a generalist</a>, having worked on videogames, full-stack web applications, command tools and still exploring.</p>
             
