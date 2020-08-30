@@ -15,7 +15,7 @@ export default function Home() {
             <Head>
                 <title>Juno Nguyen</title>
                 <meta content={"Juno Nguyen"} key="title"/>
-                <meta name="theme-color" content="#222"/>
+                <meta name="theme-color" content="#242424"/>
 				<meta name="description" content="Singapore-based software developer, web developer, game developer, and artist"/>
             </Head>
             <div className="page">
