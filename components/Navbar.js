@@ -19,24 +19,23 @@ export default function ContactContactLinknks() {
     //     : "navbar__content"
 
     let navbarControlClass = "navbar__control"
-    let navbarButtonImgClass = "navbar__control__icon"
-    let navbarLabelClass = "navbar__control__label"
+    let navbarControlIconClass = "navbar__control__icon"
+    let navbarControlLabelClass = "navbar__control__label"
     let navbarContentClass = "navbar__content"
 
     if (isExpanded) {
-        navbarButtonImgClass += " " + navbarButtonImgClass + "--expanded"
-        navbarLabelClass += " " + navbarLabelClass + "--expanded"
-        navbarContentClass += " " + navbarContentClass + "--expanded"
         navbarControlClass += " " + navbarControlClass + "--expanded"
+        navbarControlIconClass += " " + navbarControlIconClass + "--expanded"
+        navbarControlLabelClass += " " + navbarControlLabelClass + "--expanded"
+        navbarContentClass += " " + navbarContentClass + "--expanded"
     }
 
     return (
         <div className="navbar">
-            <div
-            className={navbarControlClass}
-            onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
-                <p className={navbarLabelClass}>My contacts</p>
-                <img className={navbarButtonImgClass} src="/ExpandButton.png"/>
+            <div className={navbarControlClass} onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
+                <p className={navbarControlLabelClass}>My contacts</p>
+                {/* <img className={navbarButtonImgClass} src="/ExpandButton.png"/> */}
+                <div className={navbarControlIconClass}/>
             </div>
             <div className={navbarContentClass}>
                 <ul className="navbar__content_contacts">
@@ -48,9 +47,7 @@ export default function ContactContactLinknks() {
                     <ContactLink link={URL.email}>Email</ContactLink>
                     <ContactLink link={URL.linkedin}>LinkedIn</ContactLink>
                 </ul>
-                <p
-                className="navbar__content__contacts__close"
-                onClick={()=>{setIsExpanded(false)}}>
+                <p className="navbar__content__contacts__close" onClick={()=>{setIsExpanded(false)}}>
                     Close
                 </p>
             </div>

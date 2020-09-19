@@ -9,7 +9,8 @@ $font-size: 20px;
 $bac-col: #eee;
 $pri-col: #445;
 $hyperlink-col: mediumaquamarine;
-$navbar-size: 32px;
+$navbar-height: 32px;
+$navbar-icon-size: 16px;
 
 $trans-time: 400ms;
 
@@ -70,7 +71,7 @@ body {
         cursor: pointer;
         background-color: $hyperlink-col;
         width: 150px;
-        height: $navbar-size;
+        height: $navbar-height;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -80,18 +81,31 @@ body {
 
         &__label {
             font-size: 1.2em;
-            color: #fff;
+            color: $bac-col;
             transition: font-size $trans-time;
             &--expanded {
                 font-size: 2rem;
             }
         }
         &__icon {
-            width: $navbar-size;
-            height: $navbar-size;
-            transition: $trans-time;
+            // width: $navbar-size;
+            // height: $navbar-size;
+            // transition: $trans-time;
+            // &--expanded {
+            //     transform: rotate(180deg);
+            // }
+            margin-right: 1rem;
+            height: $navbar-icon-size;
+            width: $navbar-icon-size;
+            border-right: solid 5px $bac-col;
+            border-bottom: solid 5px $bac-col;
+            // transform: translateY();
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            transition: transform $trans-time, transform-origin $trans-time;
             &--expanded {
-                transform: rotate(180deg);
+                transform-origin: 65% 65%;
+                transform: rotate(225deg);
             }
         }
 
@@ -201,8 +215,8 @@ body {
     }
 
     &__brand {
-        font-size: 2rem;
-        margin: 0;
+        // font-size: 2rem;
+        // margin: 0;
     }
     // &__subbrand {
     //     font-size: 1.5rem;
