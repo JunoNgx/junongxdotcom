@@ -100,7 +100,7 @@ body {
         justify-content: flex-end;
         margin-top: 30%;
         background-color: $hyperlink-col;
-        clip-path: circle(10px at 90% 5%);
+        clip-path: circle(0px at 90% 5%);
         transition: clip-path $trans-time;
         
         &--expanded {
