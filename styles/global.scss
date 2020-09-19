@@ -46,26 +46,34 @@ body {
 }
 
 .navbar {
-    @include std-border();
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    // @include std-border();
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // width: 100%;
+    // height: 100%;
 
     // display: flex;
     // flex-direction: column;
     // align-items: flex-end;
     // justify-content: space-between;
 
-    padding: 10px;
-    // background-color: $hyperlink-col;
+    // padding: 10px;
+    // background-color: cadetblue;
+    // z-index: -1;
 
 
 
     &__control{
         z-index: 1;
-        position: absolute;
+        // position: sticky;
+        // top: 0;
+        // right: 0;
+
+        // Sticky will require the entire navbar being part of the page content
+        // hence `fixed` is the more simple solution here that meets the
+        // requirement
+        position: fixed;
         right: 1rem;
         top: 1rem;
         cursor: pointer;
@@ -114,8 +122,8 @@ body {
         }
     }
     &__content {
-        @include std-border();
-        position: absolute;
+        // @include std-border();
+        position: fixed;
         right: 0;
         bottom: 0;
         height: 100%;
@@ -215,8 +223,8 @@ body {
     }
 
     &__brand {
-        // font-size: 2rem;
-        // margin: 0;
+        font-size: 2rem;
+        margin: 0;
     }
     // &__subbrand {
     //     font-size: 1.5rem;
