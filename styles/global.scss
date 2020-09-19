@@ -46,33 +46,8 @@ body {
 }
 
 .navbar {
-    // @include std-border();
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // width: 100%;
-    // height: 100%;
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-end;
-    // justify-content: space-between;
-
-    // padding: 10px;
-    // background-color: cadetblue;
-    // z-index: -1;
-
-
-
     &__control{
         z-index: 1;
-        // position: sticky;
-        // top: 0;
-        // right: 0;
-
-        // Sticky will require the entire navbar being part of the page content
-        // hence `fixed` is the more simple solution here that meets the
-        // requirement
         position: fixed;
         right: 1rem;
         top: 1rem;
@@ -86,6 +61,9 @@ body {
         justify-content: space-between;
 
         transition: width $trans-time;
+        &--expanded {
+            width: 250px;
+        }
 
         &__label {
             font-size: 1.2em;
@@ -96,18 +74,11 @@ body {
             }
         }
         &__icon {
-            // width: $navbar-size;
-            // height: $navbar-size;
-            // transition: $trans-time;
-            // &--expanded {
-            //     transform: rotate(180deg);
-            // }
             margin-right: 1rem;
             height: $navbar-icon-size;
             width: $navbar-icon-size;
             border-right: solid 5px $bac-col;
             border-bottom: solid 5px $bac-col;
-            // transform: translateY();
             transform: rotate(45deg);
             transform-origin: 100% 100%;
             transition: transform $trans-time, transform-origin $trans-time;
@@ -116,13 +87,8 @@ body {
                 transform: rotate(225deg);
             }
         }
-
-        &--expanded {
-            width: 250px;
-        }
     }
     &__content {
-        // @include std-border();
         position: fixed;
         right: 0;
         bottom: 0;
@@ -134,23 +100,20 @@ body {
         justify-content: flex-end;
         margin-top: 30%;
         background-color: $hyperlink-col;
-
-        // clip-path: polygon(95% 5%, 95% 5%, 95% 5%, 95% 5%);
         clip-path: circle(10px at 90% 5%);
-        // z-index: 2;
         transition: clip-path $trans-time;
+        
+        &--expanded {
+            clip-path: circle(1000px at 90% 5%);
+        }
 
         &__contacts {
-            // @include std-border;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            // margin: 0rem 1rem 3rem 1rem;
             &__item {
                 text-align: right;
-                // width: 55%;
                 border-bottom: 2px solid $bac-col;
-                // @include std-border();
                 font-size: 2rem;
                 margin: 0.3rem 3rem;
                 list-style: none;
@@ -172,88 +135,34 @@ body {
                 border: none;
             }
         }
-        &--expanded {
-            // background-color: steelblue;
-            // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: circle(1000px at 90% 5%);
-        }
     }
     @media screen and (min-width: $breakpoint) {
-        // &__contacs {
-        //     border-right: 2px solid $pri-col;
-        //     width: 200px;
-        //     position: fixed;
-        //     left: 60%;
-        //     &__item {
-        //         width: auto;
-        //         border: none;
-        //     }
-        //     a {
-        //         padding: 0;
-        //         transition: $trans-time ease;
-        //         &:hover {
-        //             padding-left: 1rem;
-        //             padding-right: 5rem;
-        //             background-color: $pri-col;
-        //             color: $bac-col;
-        //         }
-        //     }
-        // }
-
         &__control{
             display: none;
         }
+
         &__content {
-            // @include std-border();
             margin: 0;
-            
-            // position: fixed;
             right: auto;
             left: 60%;
             top: 0;
             bottom: auto;
             height: auto;
             width: 270px;
-            // display: flex;
-            // flex-direction: column;
-            // align-items: flex-end;
-            // justify-content: flex-end;
-            // margin-top: 30%;
             background-color: transparent;
             clip-path: none;
-    
-            // clip-path: polygon(95% 5%, 95% 5%, 95% 5%, 95% 5%);
-            // clip-path: circle(10px at 90% 5%);
-            // z-index: 2;
-            // transition: clip-path $trans-time;
-    
+
             &__contacts {
                 border-right: 2px solid $pri-col;
-                // @include std-border;
-                // background-color: red;
-                // display: flex;
-                // flex-direction: column;
-                // align-items: flex-eNd;
-                // margin: 0rem 1rem 3rem 1rem;
                 &__item {
-                    // text-align: right;
-                    // width: 55%;
-                    // border-bottom: 2px solid $pri-col;
-                    // @include std-border();
-                    // font-size: 2rem;
-                    margin-right: 1rem;
-                    // list-style: none;
+                    margin-right: 1rem;    
                     a {
                         color: $pri-col;
                         padding: 0;
-                    //     text-decoration: none;
+                        transition: $trans-time ease;
                         &:visited {
                             color: $pri-col;
                         }
-                    }        
-                    a {
-                        padding: 0;
-                        transition: $trans-time ease;
                         &:hover {
                             padding-left: 1rem;
                             padding-right: 5rem;
@@ -272,12 +181,7 @@ body {
 
 .decorator {
     width: 72px;
-    // height: 64px;
-    // border: 2px solid $pri-col;
     margin: 1rem 0 3rem 2rem;
-    // z-index: 10;
-    // animation: spin 4s infinite cubic-bezier(0,1.33,.88,.01);
-    // animation: spin 4s infinite linear;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2px;
@@ -317,11 +221,6 @@ body {
         font-size: 2rem;
         margin: 0;
     }
-    // &__subbrand {
-    //     font-size: 1.5rem;
-    //     margin: 0;
-    // }
-
     &__header {
         font-size: 2rem;
         margin: 0 0 1rem 0;

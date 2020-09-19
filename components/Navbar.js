@@ -6,18 +6,6 @@ export default function ContactContactLinknks() {
 
     const [isExpanded, setIsExpanded] = useState(false)
 
-    // const navbarButtonImgClass = (isExpanded)
-    //     ? "navbar__button__image navbar__button__image--expanded"
-    //     : "navbar__button__image"
-
-    // const navbarLabelClass = (isExpanded)
-    //     ? "navbar__label navbar__label--expanded"
-    //     : "navbar__label"
-
-    // const navbarContentClass = (isExpanded)
-    //     ? "navbar__content navbar__content--expanded"
-    //     : "navbar__content"
-
     let navbarControlClass = "navbar__control"
     let navbarControlIconClass = "navbar__control__icon"
     let navbarControlLabelClass = "navbar__control__label"
@@ -34,7 +22,6 @@ export default function ContactContactLinknks() {
         <div className="navbar">
             <div className={navbarControlClass} onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
                 <p className={navbarControlLabelClass}>My contacts</p>
-                {/* <img className={navbarButtonImgClass} src="/ExpandButton.png"/> */}
                 <div className={navbarControlIconClass}/>
             </div>
             <div className={navbarContentClass}>
