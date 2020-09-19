@@ -199,6 +199,74 @@ body {
         //         }
         //     }
         // }
+
+        &__control{
+            display: none;
+        }
+        &__content {
+            // @include std-border();
+            margin: 0;
+            
+            // position: fixed;
+            right: auto;
+            left: 60%;
+            top: 0;
+            bottom: auto;
+            height: auto;
+            width: 270px;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: flex-end;
+            // justify-content: flex-end;
+            // margin-top: 30%;
+            background-color: transparent;
+            clip-path: none;
+    
+            // clip-path: polygon(95% 5%, 95% 5%, 95% 5%, 95% 5%);
+            // clip-path: circle(10px at 90% 5%);
+            // z-index: 2;
+            // transition: clip-path $trans-time;
+    
+            &__contacts {
+                border-right: 2px solid $pri-col;
+                // @include std-border;
+                // background-color: red;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: flex-eNd;
+                // margin: 0rem 1rem 3rem 1rem;
+                &__item {
+                    // text-align: right;
+                    // width: 55%;
+                    // border-bottom: 2px solid $pri-col;
+                    // @include std-border();
+                    // font-size: 2rem;
+                    margin-right: 1rem;
+                    // list-style: none;
+                    a {
+                        color: $pri-col;
+                        padding: 0;
+                    //     text-decoration: none;
+                        &:visited {
+                            color: $pri-col;
+                        }
+                    }        
+                    a {
+                        padding: 0;
+                        transition: $trans-time ease;
+                        &:hover {
+                            padding-left: 1rem;
+                            padding-right: 5rem;
+                            background-color: $pri-col;
+                            color: $bac-col;
+                        }
+                    }
+                }
+                &__close {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -219,6 +287,9 @@ body {
         width: 32px;
         height: 32px;
         border: 2px solid $pri-col;
+    }
+    @media screen and (min-width: $breakpoint) {
+        display: none;
     }
 }
 

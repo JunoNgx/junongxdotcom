@@ -38,7 +38,7 @@ export default function ContactContactLinknks() {
                 <div className={navbarControlIconClass}/>
             </div>
             <div className={navbarContentClass}>
-                <ul className="navbar__content_contacts">
+                <ul className="navbar__content__contacts">
                     <ContactLink link={URL.twitter}>Twitter</ContactLink>
                     <ContactLink link={URL.github}>GitHub</ContactLink>
                     <ContactLink link={URL.itchio}>Itch.io</ContactLink>
