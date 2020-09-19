@@ -1,6 +1,6 @@
 import Head from 'next/head'
 // import styles from '../styles/Home.module.css'
-import ContactLinks from '../components/ContactLinks'
+import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
 import EbonyMemo from '../components/EbonyMemo'
 import Gamedev from '../components/Gamedev'
@@ -20,7 +20,7 @@ export default function Home() {
             </Head>
             <div className="page">
                 {/* <div className="page--links"> */}
-                    <ContactLinks/>
+                    <Navbar/>
                 {/* </div> */}
                 <div className="page--content">
                     <Banner/>
