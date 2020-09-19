@@ -8,6 +8,7 @@ import Others from '../components/Others'
 import ContactMe from '../components/ContactMe'
 import Footer from '../components/Footer'
 import Wonyun from '../components/Wonyun'
+import Decorator from '../components/Decorator'
 
 export default function Home() {
     return (
@@ -23,7 +24,7 @@ export default function Home() {
                     <Navbar/>
                 {/* </div> */}
                 <div className="page--content">
-                    <div className="spinner"/>
+                    <Decorator/>
                     <Banner/>
                     <EbonyMemo/>
                     <Wonyun/>

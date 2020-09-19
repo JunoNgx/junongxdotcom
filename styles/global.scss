@@ -202,19 +202,24 @@ body {
     }
 }
 
-.spinner {
-    width: 32px;
-    height: 32px;
-    border: 2px solid $pri-col;
+.decorator {
+    width: 72px;
+    // height: 64px;
+    // border: 2px solid $pri-col;
     margin: 1rem 0 3rem 2rem;
     // z-index: 10;
-    animation: spin 4s infinite cubic-bezier(0,1.33,.88,.01);
+    // animation: spin 4s infinite cubic-bezier(0,1.33,.88,.01);
     // animation: spin 4s infinite linear;
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
 
-@keyframes spin {
-    0% {transform: rotate(0deg)}
-    100% {transform: rotate(720deg)}
+    &__child {
+        margin: 0;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $pri-col;
+    }
 }
 
 .section {
