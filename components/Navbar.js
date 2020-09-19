@@ -10,28 +10,38 @@ export default function ContactContactLinknks() {
         ? "navbar__button__image navbar__button__image--expanded"
         : "navbar__button__image"
 
+    const navbarLabelClass = (isExpanded)
+        ? "navbar__label navbar__label--expanded"
+        : "navbar__label"
+
+    const navbarContentClass = (isExpanded)
+        ? "navbar__content navbar__content--expanded"
+        : "navbar__content"
+
     return (
         <div className="navbar">
             <div
             className="navbar__button"
             onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
-                <p>My contacts</p>
+                <p className={navbarLabelClass}>My contacts</p>
                 <img className={navbarButtonImgClass} src="/ExpandButton.png"/>
             </div>
-            <ul className="navbar__contacts">
-                <ContactLink link={URL.twitter}>Twitter</ContactLink>
-                <ContactLink link={URL.github}>GitHub</ContactLink>
-                <ContactLink link={URL.itchio}>Itch.io</ContactLink>
-                <ContactLink link={URL.flickr}>Flickr</ContactLink>
-                <ContactLink link={URL.instagram}>Instagram</ContactLink>
-                <ContactLink link={URL.email}>Email</ContactLink>
-                <ContactLink link={URL.linkedin}>LinkedIn</ContactLink>
-            </ul>
+            <div className={navbarContentClass}>
+                <ul className="navbar__content_contacts">
+                    <ContactLink link={URL.twitter}>Twitter</ContactLink>
+                    <ContactLink link={URL.github}>GitHub</ContactLink>
+                    <ContactLink link={URL.itchio}>Itch.io</ContactLink>
+                    <ContactLink link={URL.flickr}>Flickr</ContactLink>
+                    <ContactLink link={URL.instagram}>Instagram</ContactLink>
+                    <ContactLink link={URL.email}>Email</ContactLink>
+                    <ContactLink link={URL.linkedin}>LinkedIn</ContactLink>
+                </ul>
                 <p
-                className="navbar__contacts__item navbar__contacts__item--close"
+                className="navbar__content__contacts__close"
                 onClick={()=>{setIsExpanded(false)}}>
                     Close
                 </p>
+            </div>
         </div>
 
     )
@@ -39,6 +49,6 @@ export default function ContactContactLinknks() {
 
 function ContactLink({children, link}) {
     return (
-        <li className="navbar__contacts__item"><CA link={link}>{children}</CA></li>
+        <li className="navbar__content__contacts__item"><CA link={link}>{children}</CA></li>
     )
 }
