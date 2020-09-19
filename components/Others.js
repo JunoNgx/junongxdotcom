@@ -13,7 +13,7 @@ export default function Others() {
             <p><CA link={URL.flickr}>My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
             <h3 className="section__subheader">Lego StarCraft</h3>
             <img className="section__img" src="/taccom.jpg" alt="StarCraft Goliath microscale"/>
-            <p>Having been a lifetime admirer of StarCraft from a game designer's perspective, the game found peculiar ways into my life. Not until my mid-20s, did I realise the creative potential and elegance in tiny Lego models of 30 pieces. My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr album</CA>.</p>
+            <p>Having been a lifetime admirer of StarCraft from a game designer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces. My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr album</CA>.</p>
             <p></p>
             <h3 className="section__subheader">Mechanical keyboards</h3>
             <img className="section__img" src="/keebs_in_film.jpg" alt="Ortholinear 40% mechanical keyboards shot with film photography"/>
