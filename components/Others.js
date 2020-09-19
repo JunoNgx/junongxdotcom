@@ -5,7 +5,7 @@ import { URL } from './URL'
 export default function Others() {
     return (
         <div className="section section--others">
-            <h2 className="section__header"><a className="pal--r">Other works</a></h2>
+            <h2 className="section__header">Other works</h2>
             <p>While not programming or playing videogames, you will find me brushing my cat, enjoying arthouse cinema flicks, taking photographs, composing new Lego models on Stud.io, watching professional StarCraft, dissecting film screenplays, playing guitar, or soldering a new mechanical keyboard build.</p>
             <h3 className="section__subheader">Photography</h3>
             <img className="section__img" src="/pavilion.jpg" alt="Singapore Bayfront Pavillion"/>

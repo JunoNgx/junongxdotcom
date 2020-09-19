@@ -6,15 +6,9 @@
 $breakpoint: 720px;
 $font-size: 20px;
 
-$bac-col: #242424;
-$pri-col: #eee;
-
-$pal-r: salmon;
-$pal-g: darkseagreen;
-$pal-b: deepskyblue;
-$pal-y: lemonchiffon;
-$pal-p: peachpuff;
-$pal-url: cadet-blue;
+$bac-col: #eee;
+$pri-col: #445;
+$hyperlink-col: mediumaquamarine;
 
 $trans-time: 400ms;
 
@@ -32,15 +26,15 @@ $trans-time: 400ms;
 body {
     color: $pri-col;
     background-color: $bac-col;
-    font-weight: lighter;
+    // font-weight: lighter;
     font-family: Jost, serif;
     max-width: 768px;
     margin: auto;
     margin-top: 2rem;
 
-    h1, h2, h3 {
-        font-weight: lighter;
-    }
+    // h1, h2, h3 {
+    //     font-weight: lighter;
+    // }
 }
 
 .page {
@@ -58,7 +52,7 @@ body {
     &__item {
         text-align: right;
         width: 55%;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $pri-col;
         font-size: 2rem;
         margin: 0.3rem 1rem;
         list-style: none;
@@ -104,26 +98,26 @@ body {
         margin: 1rem 0 0 0;
     }
     a.custom-hyperlink {
-        background-image: linear-gradient(to top, transparent 10%, teal 10% 40%, transparent 40%);
+        background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 40%, transparent 40%);
         color: $pri-col;
         text-decoration: none;
         transition: background-image 10000ms;
         &:hover {
-            background-image: linear-gradient(to top, transparent 10%, teal 10% 90%, transparent 90%);
+            background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 90%, transparent 90%);
         }
     }
 
     &__brand {
-        font-size: 3.5rem;
+        font-size: 2rem;
         margin: 0;
     }
-    &__subbrand {
-        font-size: 1.5rem;
-        margin: 0;
-    }
+    // &__subbrand {
+    //     font-size: 1.5rem;
+    //     margin: 0;
+    // }
 
     &__header {
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0 0 1rem 0;
     }
     &__subheader {
@@ -150,7 +144,7 @@ body {
         &__content {
             @include std-border;
             margin: 1rem;
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             &:after {
                 content: "My contacts are above on top ↑";
                 font-size: $font-size;
@@ -161,7 +155,7 @@ body {
     @media screen and (min-width: $breakpoint) {
 
         &__brand {
-            font-size: 4rem;
+            font-size: 2.5rem;
             margin: 0;
         }
         &--contact-me {
@@ -173,19 +167,19 @@ body {
         }
 
         &--banner {
-            @include col-sha-trans($pal-p);
+            @include col-sha-trans($pri-col);
         }
         &--ebonymemo {
-            @include col-sha-trans($pal-y);
+            @include col-sha-trans($pri-col);
         }
         &--wonyun {
-            @include col-sha-trans($pal-b);
+            @include col-sha-trans($pri-col);
         }
         &--gamedev {
-            @include col-sha-trans($pal-g);
+            @include col-sha-trans($pri-col);
         }
         &--others {
-            @include col-sha-trans($pal-r);
+            @include col-sha-trans($pri-col);
         }
 
     }
@@ -195,25 +189,12 @@ body {
     font-size: $font-size;
     margin: 5rem auto 1rem auto;
     text-align: center;
-}
 
-// Colour pallete
-.pal {
-    &--r {
-        color: $pal-r;
-    }
-    &--g {
-        color: $pal-g;
-    }
-    &--b {
-        color: $pal-b;
-    }
-    &--y {
-        color: $pal-y;
-    }
-    &--p {
-        color: $pal-p;
+    a {
+        color: $pri-col;
+        &:hover {
+            color: $pri-col;
+        }
     }
 }
-
 
