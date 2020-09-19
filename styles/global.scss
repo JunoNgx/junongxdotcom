@@ -222,6 +222,10 @@ body {
         margin: 0;
     }
     &__header {
+        // text-align: right;
+        color: $bac-col;
+        background-color: $pri-col;
+        padding: 0 1rem;
         font-size: 2rem;
         margin: 0 0 1rem 0;
     }
