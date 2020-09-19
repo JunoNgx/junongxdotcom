@@ -6,22 +6,34 @@ export default function ContactContactLinknks() {
 
     const [isExpanded, setIsExpanded] = useState(false)
 
-    const navbarButtonImgClass = (isExpanded)
-        ? "navbar__button__image navbar__button__image--expanded"
-        : "navbar__button__image"
+    // const navbarButtonImgClass = (isExpanded)
+    //     ? "navbar__button__image navbar__button__image--expanded"
+    //     : "navbar__button__image"
 
-    const navbarLabelClass = (isExpanded)
-        ? "navbar__label navbar__label--expanded"
-        : "navbar__label"
+    // const navbarLabelClass = (isExpanded)
+    //     ? "navbar__label navbar__label--expanded"
+    //     : "navbar__label"
 
-    const navbarContentClass = (isExpanded)
-        ? "navbar__content navbar__content--expanded"
-        : "navbar__content"
+    // const navbarContentClass = (isExpanded)
+    //     ? "navbar__content navbar__content--expanded"
+    //     : "navbar__content"
+
+    let navbarControlClass = "navbar__control"
+    let navbarButtonImgClass = "navbar__control__icon"
+    let navbarLabelClass = "navbar__control__label"
+    let navbarContentClass = "navbar__content"
+
+    if (isExpanded) {
+        navbarButtonImgClass += " " + navbarButtonImgClass + "--expanded"
+        navbarLabelClass += " " + navbarLabelClass + "--expanded"
+        navbarContentClass += " " + navbarContentClass + "--expanded"
+        navbarControlClass += " " + navbarControlClass + "--expanded"
+    }
 
     return (
         <div className="navbar">
             <div
-            className="navbar__button"
+            className={navbarControlClass}
             onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
                 <p className={navbarLabelClass}>My contacts</p>
                 <img className={navbarButtonImgClass} src="/ExpandButton.png"/>

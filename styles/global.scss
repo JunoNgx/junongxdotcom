@@ -62,20 +62,31 @@ body {
 
 
 
-    &__button{
+    &__control{
         z-index: 1;
         position: absolute;
         right: 1rem;
         top: 1rem;
         cursor: pointer;
         background-color: $hyperlink-col;
-        width: 200px;
+        width: 150px;
         height: $navbar-size;
         padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &__image {
+
+        transition: width $trans-time;
+
+        &__label {
+            font-size: 1.2em;
+            color: #fff;
+            transition: font-size $trans-time;
+            &--expanded {
+                font-size: 2rem;
+            }
+        }
+        &__icon {
             width: $navbar-size;
             height: $navbar-size;
             transition: $trans-time;
@@ -83,13 +94,9 @@ body {
                 transform: rotate(180deg);
             }
         }
-    }
-    &__label {
-        font-size: 1.2em;
-        color: #fff;
-        transition: font-size $trans-time;
+
         &--expanded {
-            font-size: 2rem;
+            width: 220px;
         }
     }
     &__content {
@@ -106,7 +113,9 @@ body {
         margin-top: 30%;
         background-color: $hyperlink-col;
 
-        clip-path: polygon(95% 5%, 95% 5%, 95% 5%, 95% 5%);
+        // clip-path: polygon(95% 5%, 95% 5%, 95% 5%, 95% 5%);
+        clip-path: circle(10px at 90% 5%);
+        // z-index: 2;
         transition: clip-path $trans-time;
 
         &__contacts {
@@ -143,7 +152,8 @@ body {
         }
         &--expanded {
             // background-color: steelblue;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: circle(1000px at 90% 5%);
         }
     }
     @media screen and (min-width: $breakpoint) {
