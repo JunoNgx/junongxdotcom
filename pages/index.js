@@ -23,6 +23,7 @@ export default function Home() {
                     <Navbar/>
                 {/* </div> */}
                 <div className="page--content">
+                    <div className="spinner"/>
                     <Banner/>
                     <EbonyMemo/>
                     <Wonyun/>
