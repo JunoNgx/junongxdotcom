@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ContactMe() {
+export default function CallToAction() {
     return (
         <div className="section section--contact-me">
             <div className="section--contact-me__content">

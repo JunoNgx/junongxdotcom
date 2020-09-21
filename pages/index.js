@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 import EbonyMemo from '../components/EbonyMemo'
 import Gamedev from '../components/Gamedev'
 import Others from '../components/Others'
-import ContactMe from '../components/ContactMe'
+import CallToAction from '../components/CallToAction'
 import Footer from '../components/Footer'
 import LatestGame from '../components/LatestGame'
 import Decorator from '../components/Decorator'
@@ -27,7 +27,7 @@ export default function Home() {
                     <LatestGame/>
                     <Gamedev/>
                     <Others/>
-                    <ContactMe/>
+                    <CallToAction/>
                     <Footer/>
                 </div>
             </div>
