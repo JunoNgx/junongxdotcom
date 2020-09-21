@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { useSpring, animated} from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 import { URL } from './URL'
 import CA from './CustomAnchor'
+import { useMediaQuery } from 'react-responsive'
 
-export default function ContactContactLinknks() {
+export default function Navbar() {
 
     const [isExpanded, setIsExpanded] = useState(false)
+    const isMobile = useMediaQuery({ maxDeviceWidth: 720 })
 
     // Expand animation is powered by react-spring
     const springProps = useSpring({
@@ -20,6 +22,11 @@ export default function ContactContactLinknks() {
             easing: t => 1-(--t)*t*t*t
         }
     })
+
+    // react-spring and animation are only used in mobile layout
+    const navbarContentStyle = (isMobile)
+        ? {clipPath: springProps.clipPath}
+        : {}
 
     return (
         <div className="navbar">
@@ -38,7 +45,7 @@ export default function ContactContactLinknks() {
             </div>
             <animated.div
             className={"navbar__content"}
-            style={{clipPath: springProps.clipPath}}
+            style={navbarContentStyle}
             >
                 <ul className="navbar__content__contacts">
                     <ContactLink link={URL.twitter}>Twitter</ContactLink>
