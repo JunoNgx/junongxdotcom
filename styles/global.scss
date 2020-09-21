@@ -68,12 +68,6 @@ body {
             margin-right: 0.8em;
             font-size: 1.2rem;
             color: $bac-col;
-
-            // transition: font-size $trans-time;
-            // &--expanded {
-            //     font-size: 2rem;
-            // }
-
         }
         &__icon {
             margin-right: 1rem;
@@ -83,12 +77,6 @@ body {
             border-bottom: solid 5px $bac-col;
             transform: rotate(45deg);
             transform-origin: 100% 100%;
-
-            // transition: transform $trans-time, transform-origin $trans-time;
-            // &--expanded {
-            //     transform-origin: 65% 65%;
-            //     transform: rotate(225deg);
-            // }
         }
     }
     &__content {
@@ -104,11 +92,6 @@ body {
         margin-top: 30%;
         background-color: $hyperlink-col;
         clip-path: circle(0px at 90% 5%);
-
-        // transition: clip-path $trans-time;        
-        // &--expanded {
-        //     clip-path: circle(1000px at 90% 5%);
-        // }
 
         &__contacts {
             display: flex;

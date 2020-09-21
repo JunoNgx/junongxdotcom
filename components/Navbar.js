@@ -6,17 +6,8 @@ import CA from './CustomAnchor'
 export default function ContactContactLinknks() {
 
     const [isExpanded, setIsExpanded] = useState(false)
-    // const labelFontSizeProps = useSpring({
-    //     // font-size: isExpanded ? 2rem : 1.2rem
-    //     fontSize: '2rem'
-    // })
 
-    // // const props = useSpring ({
-    // //     width: isExpanded ? width: 0
-    // // })
-    // const navbarContentClipPathProps = useSpring({
-    //     clipPath: 'circle(1000px at 90% 5%)'
-    // })
+    // Expand animation is powered by react-spring
     const springProps = useSpring({
         fontSize: isExpanded ? '2rem' : '1.2rem',
         transform: isExpanded ? 'rotate(225deg)' : 'rotate(45deg)',
@@ -25,42 +16,28 @@ export default function ContactContactLinknks() {
 
         config: {
             duration: 400,
-            // mass: 1,
-            // tension: 400,
-            // friction: 10
+            // easeOutQuart
             easing: t => 1-(--t)*t*t*t
         }
     })
 
-    let navbarControlClass = "navbar__control"
-    let navbarControlIconClass = "navbar__control__icon"
-    let navbarControlLabelClass = "navbar__control__label"
-    let navbarContentClass = "navbar__content"
-
-    // if (isExpanded) {
-    //     navbarControlClass += " " + navbarControlClass + "--expanded"
-    //     navbarControlIconClass += " " + navbarControlIconClass + "--expanded"
-    //     navbarControlLabelClass += " " + navbarControlLabelClass + "--expanded"
-    //     navbarContentClass += " " + navbarContentClass + "--expanded"
-    // }
-
     return (
         <div className="navbar">
             <div
-            className={navbarControlClass}
+            className={"navbar__control"}
             onClick={()=>setIsExpanded(isExpanded=>!isExpanded)}>
                 <animated.p
-                className={navbarControlLabelClass}
+                className={"navbar__control__label"}
                 style={{fontSize: springProps.fontSize}}>
                     My contacts
                 </animated.p>
                 <animated.div
-                className={navbarControlIconClass}
+                className={"navbar__control__icon"}
                 style={{transform: springProps.transform, transformOrigin: springProps.transformOrigin}}
                 />
             </div>
             <animated.div
-            className={navbarContentClass}
+            className={"navbar__content"}
             style={{clipPath: springProps.clipPath}}
             >
                 <ul className="navbar__content__contacts">
