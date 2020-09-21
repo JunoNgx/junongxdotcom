@@ -45,6 +45,11 @@ body {
     }
 }
 
+@keyframes navbar-label-enlarge {
+    0% {font-size: 1.2rem}
+    100% {font-size: 2rem}
+}
+
 .navbar {
     &__control{
         z-index: 1;
@@ -53,25 +58,22 @@ body {
         top: 1rem;
         cursor: pointer;
         background-color: $hyperlink-col;
-        width: 150px;
         height: $navbar-height;
         padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        transition: width $trans-time;
-        &--expanded {
-            width: 250px;
-        }
-
         &__label {
-            font-size: 1.2em;
+            margin-right: 0.8em;
+            font-size: 1.2rem;
             color: $bac-col;
+
             transition: font-size $trans-time;
             &--expanded {
                 font-size: 2rem;
             }
+
         }
         &__icon {
             margin-right: 1rem;
@@ -81,6 +83,7 @@ body {
             border-bottom: solid 5px $bac-col;
             transform: rotate(45deg);
             transform-origin: 100% 100%;
+
             transition: transform $trans-time, transform-origin $trans-time;
             &--expanded {
                 transform-origin: 65% 65%;
@@ -101,8 +104,8 @@ body {
         margin-top: 30%;
         background-color: $hyperlink-col;
         clip-path: circle(0px at 90% 5%);
-        transition: clip-path $trans-time;
-        
+
+        transition: clip-path $trans-time;        
         &--expanded {
             clip-path: circle(1000px at 90% 5%);
         }

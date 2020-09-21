@@ -35,7 +35,7 @@ export default function ContactContactLinknks() {
                     <ContactLink link={URL.linkedin}>LinkedIn</ContactLink>
                 </ul>
                 <p className="navbar__content__contacts__close" onClick={()=>{setIsExpanded(false)}}>
-                    Close
+                    ╳
                 </p>
             </div>
         </div>
