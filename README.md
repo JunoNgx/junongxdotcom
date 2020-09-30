@@ -6,7 +6,7 @@ My centralised portfolio website, where my works across fields and medium gather
 
 The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Netlify.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/76be89ad-66ae-41d3-a0d5-6ddc1498f142/deploy-status)](https://app.netlify.com/sites/junongxdotcom/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff83aa39-9847-428e-ad7e-f63cb7fe6883/deploy-status)](https://app.netlify.com/sites/junongxdotcom/deploys)
 
 ## Tech stack
 
@@ -35,6 +35,10 @@ npm run dev
 Open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
 
 This is a self-contained static site and doesn't require any data fetching.
+
+## Previous versions
+
+This website has gone through several major overhauls, including usage of other tech stacks. Previous versions can be found in other branches. Current domain is generally always deployed with the branch `master`.
 
 ## Contribution
 
