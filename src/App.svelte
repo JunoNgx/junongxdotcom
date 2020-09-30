@@ -1,10 +1,6 @@
 <script>
     import Navbar from './components/Navbar.svelte';
-    // import Footer from './components/Footer.svelte';
     import CA from './components/CustomAnchor.svelte';
-    // import SimpleComponent from './components/SimpleComponent.svelte'
-    // export let name;
-    
     import { URL, URL_EM } from './components/URL.js';
 </script>
 
@@ -14,7 +10,7 @@
         <div class="page--content">
 
             <!-- Decorator -->
-            <!-- Only shows up to fill up space in mobile layout -->
+            <!-- Only displayed as visual fillers in the mobile layout -->
             <div class="decorator">
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
@@ -140,15 +136,6 @@
             font-size: $font-size;
             margin: 1rem 0 0 0;
         }
-        // a.custom-hyperlink {
-        //     background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 40%, transparent 40%);
-        //     color: $pri-col;
-        //     text-decoration: none;
-        //     transition: background-image 10000ms;
-        //     &:hover {
-        //         background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 90%, transparent 90%);
-        //     }
-        // }
 
         &__brand {
             font-size: 2rem;
@@ -229,12 +216,6 @@
         text-align: center;
         p {
             margin: 0;
-        }
-        custom-hyperlink {
-            color: $pri-col;
-            &:hover {
-                color: $pri-col;
-            }
         }
     }
 </style>

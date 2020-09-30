@@ -1,23 +1,8 @@
 <!-- {@debug isExpanded} -->
 
 <script>
-    // import ContactLink from './ContactLink.svelte'
-    // import CA from './CustomAnchor.svelte';
     import { URL } from './URL.js';
-
     let isExpanded = false;
-
-    // // let navbarControlClass = "navbar__control"
-    // // let navbarControlIconClass = "navbar__control__icon"
-    // // let navbarControlLabelClass = "navbar__control__label"
-    // // let navbarContentClass = "navbar__content"
-
-    // if (isExpanded) {
-    //     // navbarControlClass += " " + navbarControlClass + "--expanded"
-    //     // navbarControlIconClass += " " + navbarControlIconClass + "--expanded"
-    //     // navbarControlLabelClass += " " + navbarControlLabelClass + "--expanded"
-    //     // navbarContentClass += " " + navbarContentClass + "--expanded"
-    // }
 </script>
 
 <div class="navbar">
@@ -34,14 +19,6 @@
             <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.instagram}>Instagram</a></li>
             <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.email}>Email</a></li>
             <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.linkedin}>LinkedIn</a></li>
-
-            <!-- <ContactLink link={URL.twitter}>Twitter</ContactLink>
-            <ContactLink link={URL.github}>GitHub</ContactLink>
-            <ContactLink link={URL.itchio}>Itch.io</ContactLink>
-            <ContactLink link={URL.flickr}>Flickr</ContactLink>
-            <ContactLink link={URL.instagram}>Instagram</ContactLink>
-            <ContactLink link={URL.email}>Email</ContactLink>
-            <ContactLink link={URL.linkedin}>LinkedIn</ContactLink> -->
         </ul>
         <p class="navbar__content__contacts__close" on:click={()=>{isExpanded = false}}>
             ╳
