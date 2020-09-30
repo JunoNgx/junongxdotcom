@@ -27,6 +27,8 @@
 </div>
 
 <style lang="scss">
+    // Using BEM naming convention
+
     @import '../styles/global.scss';
 
     .navbar {
