@@ -2,7 +2,7 @@
     export let link;
 </script>
 
-<a class="custom-hyperlink" href={link} rel="noopener" target="_blank"><slot/></a>
+<a class="custom-hyperlink" href={link} rel="noopener noreferrer" target="_blank"><slot/></a>
 
 <style lang="scss">
     @import '../styles/global.scss';
