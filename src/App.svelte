@@ -21,6 +21,7 @@
             <!-- Banner -->
             <div class="section section--banner">
                 <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
+                <p>(he/him)</p>
                 <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
                 
                 <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
