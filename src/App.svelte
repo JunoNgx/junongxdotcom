@@ -81,7 +81,10 @@
 
                 <!-- moon2p8-py -->
                 <h3 class="section__subheader">moon2p8 [Python]</h3>
-                <p></p>
+                <p>[Python, June 2020]</p>
+                <p>After shipping <strong>Wonyun Trench Run</strong>, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was <CA link="https://moonscript.org/">moonscript</CA>, which compiled to lua. <strong>moon2p8</strong> was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.</p>
+                <p><CA link="https://github.com/JunoNgx/moon2p8-py">GitHub repository</CA></p>
+
             </section>
 
             <!-- Others -->
