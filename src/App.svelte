@@ -60,8 +60,11 @@
                 <p>These are other small and miscellaneous projects that do not warrant their own sections, but are listed here nevertheless for completeness.</p>
 
                 <!-- Working memory test -->
-                <h3 class="section__subheader">Working Memory Test [ReactJS]</h3>
-                <p></p>
+                <h3 class="section__subheader">Working Memory Test</h3>
+                <img class="section__img" src="/images/WorkingMemoryTestTrailer.gif" alt="demonstration of the application Working Memory Test"/>
+                <p>[ReactJS, October 2020]</p>
+                <p>During my study at Murdoch University, I and my team was tasked with a research project. At the height of the pandemic, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SCSS</strong> over a weekend (minor refactor and bugfixes were done in the following week) as the primary research instrument. The work was well-received by the project supervisor as well as participants.</p>
+                <p><CA link="https://github.com/JunoNgx/working-memory-test">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p>
 
                 <!-- Pura -->
                 <h3 class="section__subheader">Pura [Flutter]</h3>
