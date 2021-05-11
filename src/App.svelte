@@ -226,6 +226,9 @@
             &--gamedev {
                 @include col-sha-trans($pri-col);
             }
+            &--misc {
+                @include col-sha-trans($pri-col);
+            }
             &--others {
                 @include col-sha-trans($pri-col);
             }
