@@ -54,6 +54,28 @@
                 <p>My major releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
             </section>
 
+            <!-- Other projects -->
+            <section class="section section--misc">
+                <h2 class="section__header">Other projects</h2>
+                <p>These are other small and miscellaneous projects that do not warrant their own sections, but are listed here nevertheless for completeness.</p>
+
+                <!-- Working memory test -->
+                <h3 class="section__subheader">Working Memory Test [ReactJS]</h3>
+                <p></p>
+
+                <!-- Pura -->
+                <h3 class="section__subheader">Pura [Flutter]</h3>
+                <p></p>
+
+                <!-- Lutro Mega Input Library -->
+                <h3 class="section__subheader">Lutro Mega Input Library [Lua]</h3>
+                <p></p>
+
+                <!-- moon2p8-py -->
+                <h3 class="section__subheader">moon2p8 [Python]</h3>
+                <p></p>
+            </section>
+
             <!-- Others -->
             <section class="section section--others">
                 <h2 class="section__header">Other works</h2>
@@ -70,11 +92,6 @@
                 <img class="section__img" src="/images/keebs_in_film.jpg" alt="Ortholinear 40% mechanical keyboards shot with film photography"/>
                 <p>Started off as a utilitarian need to improve my sitting posture; this, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how an electric circuit works, mechanical keyboards offer a fascinating and endless world of self-expression.</p>
                 <p><CA link="https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum">My personalised keymap, "junonum"</CA>, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal 4x12 ortholinear keymap.</p>
-            </section>
-
-            <!-- Other projects -->
-            <section class="section section--others2">
-
             </section>
 
             <!-- CallToAction -->
