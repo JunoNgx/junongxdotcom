@@ -11,51 +11,51 @@
 
             <!-- Decorator -->
             <!-- Only displayed as visual fillers in the mobile layout -->
-            <div class="decorator">
+            <section class="decorator">
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
-            </div>
+            </section>
 
             <!-- Banner -->
-            <div class="section section--banner">
+            <section class="section section--banner">
                 <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                 <p>(he/him)</p>
                 <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
                 
                 <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
-            </div>
+            </section>
 
             <!-- EbonyMemo -->
-            <div class="section section--ebonymemo">
+            <section class="section section--ebonymemo">
                 <h2 class="section__header">Ebony Memo</h2>
                 <p><CA link={URL_EM.frontend_deployment}>Ebony Memo</CA> is an arthouse videogame curator website for mobile devices. This is a custom content management system built with MERN stack, consisting of three parts:</p>
                 <p><strong>Backend</strong> (NodeJS/Express, <CA link={URL_EM.backend_source}>source</CA>, <CA link={URL_EM.backend_deployment}>deployment</CA>): A serverless RESTful API handling CRUD operations and authorisations for data modification. The database is stored on MongoDB Atlas.</p>
                 <p><strong>Content management application</strong> (ReactJS, <CA link={URL_EM.cma_source}>source</CA>, <CA link={URL_EM.cma_deployment}>deployment</CA>): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not optimized for mobile or SEO.</p>
                 <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
-            </div>
+            </section>
 
             <!-- LatestGame -->
-            <div class="section section--wonyun">
+            <section class="section section--wonyun">
                 <h2 class="section__header">Wonyun Trench Run</h2>
                 <img class="section__img" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
                 <p>My latest videogame, launched in June 2020, is my first major dive into videogame architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
                 <p><CA link="https://github.com/JunoNgx/p8wonyun">View the source code</CA> // <CA link="https://junongx.itch.io/wonyun-trench-run">play the game</CA>.</p>
-            </div>
+            </section>
 
             <!-- Gamedev -->
-            <div class="section section--gamedev">
+            <section class="section section--gamedev">
                 <h2 class="section__header">manafarm</h2>
                 <img class="section__img" src="/images/manafarm_black_512.png" alt="manafarm logo"/>
                 <p>Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression.</p>
                 <p>I have been a hobbyist videogame developer since 2013, under the moniker <em>Aureoline Tetrahedron</em>, making a wide range of videogames in different frameworks and engines (in chronological order: <CA link="https://www.construct.net/">Construct</CA>, <CA link="http://phaser.io/">Phaser</CA>, <CA link="https://love2d.org/">love2d</CA>, <CA link="https://haxeflixel.com/">HaxeFlixel</CA>, <CA link="https://luxeengine.com/">Luxe</CA>, <CA link="https://unity.com/">Unity</CA> and <CA link="https://www.lexaloffle.com/pico-8.php">Pico8</CA>) on different platforms. The <em>manafarm</em> rebranding was made in 2019, after several years of hiatus.</p>
     
                 <p>My major releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
-            </div>
+            </section>
 
             <!-- Others -->
-            <div class="section section--others">
+            <section class="section section--others">
                 <h2 class="section__header">Other works</h2>
                 <p>While not programming or playing videogames, you will find me brushing my cat, enjoying arthouse cinema flicks, taking photographs, composing new Lego models on Stud.io, watching professional StarCraft, dissecting film screenplays, covering Damien Rice's songs on my guitar, or soldering a new mechanical keyboard build.</p>
                 <h3 class="section__subheader">Photography</h3>
@@ -70,20 +70,25 @@
                 <img class="section__img" src="/images/keebs_in_film.jpg" alt="Ortholinear 40% mechanical keyboards shot with film photography"/>
                 <p>Started off as a utilitarian need to improve my sitting posture; this, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how an electric circuit works, mechanical keyboards offer a fascinating and endless world of self-expression.</p>
                 <p><CA link="https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum">My personalised keymap, "junonum"</CA>, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal 4x12 ortholinear keymap.</p>
-            </div>
+            </section>
+
+            <!-- Other projects -->
+            <section class="section section--others2">
+
+            </section>
 
             <!-- CallToAction -->
-            <div class="section section--contact-me">
+            <section class="section section--contact-me">
                 <div class="section--contact-me__content">
                     <p>Would you like to say hello?</p>
                 </div>
-            </div>
+            </section>
 
             <!-- Footer -->
-            <div class="footer">
+            <section class="footer">
                 <p>made with <CA link="https://svelte.dev/">Svelte</CA> and <CA link="https://sass-lang.com/">SASS</CA></p>
                 <p>uncopyrighted and <CA link="https://github.com/JunoNgx/junongxdotcom">open source</CA></p>
-            </div>
+            </section>
         </div>
     </div>
 </main>
