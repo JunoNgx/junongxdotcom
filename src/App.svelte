@@ -66,6 +66,8 @@
                 <p>During my study at Murdoch University, I and my team was tasked with a research project related to human working memory. At the height of the pandemic, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SCSS</strong> over a weekend (minor refactor and bugfixes were done in the following week) as the primary research instrument. The work was well-received by the project supervisor as well as participants.</p>
                 <p><CA link="https://github.com/JunoNgx/working-memory-test">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p>
 
+                <hr>
+
                 <!-- Pura -->
                 <h3 class="section__subheader">Pura</h3>
                 <img class="section__img" src="/images/PuraTrailer.gif" alt="demonstration of the Flutter application Pura"/>
@@ -73,11 +75,15 @@
                 <p>As one of my earliest dabbles into native app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps were riddled with ads). The development process provides insights into both the anatomy of a native app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
                 <p><CA link="https://github.com/JunoNgx/flutter-pura">GitHub repository</CA>/<CA link="https://play.google.com/store/apps/details?id=com.junongx.wallpaper">Google Play Store listing</CA></p>
 
+                <hr>
+
                 <!-- Lutro Mega Input Library -->
                 <h3 class="section__subheader">Lutro Mega Input Library</h3>
                 <p class="section__subsubtitle">[Lua, December 2020]</p>
                 <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provides me a chance to dive deep into some interesting aspects of retro gaming. One of the tools we used were <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
                 <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHut repository</CA></p>
+
+                <hr>
 
                 <!-- moon2p8-py -->
                 <h3 class="section__subheader">moon2p8</h3>
@@ -181,6 +187,7 @@
         }
         &__subheader {
             font-size: 1.5rem;
+            margin-top: 2em;
         }
         &__img {
             display: block;
