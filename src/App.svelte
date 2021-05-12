@@ -80,15 +80,15 @@
                 <!-- Lutro Mega Input Library -->
                 <h3 class="section__subheader">Lutro Mega Input Library</h3>
                 <p class="section__subsubtitle">[Lua, December 2020]</p>
-                <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provides me a chance to dive deep into some interesting aspects of retro gaming. One of the tools we used were <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
+                <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used were <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
                 <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHut repository</CA></p>
 
                 <hr>
 
                 <!-- moon2p8-py -->
-                <h3 class="section__subheader">moon2p8</h3>
+                <h3 class="section__subheader">Moon2P8</h3>
                 <p class="section__subsubtitle">[Python, June 2020]</p>
-                <p>After shipping <strong>Wonyun Trench Run</strong>, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was <CA link="https://moonscript.org/">moonscript</CA>, which compiled to lua. <strong>moon2p8</strong> was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.</p>
+                <p>After shipping <strong>Wonyun Trench Run</strong>, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was <CA link="https://moonscript.org/">moonscript</CA>, which compiled to lua. <strong>Moon2P8</strong> was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.</p>
                 <p><CA link="https://github.com/JunoNgx/moon2p8-py">GitHub repository</CA></p>
 
             </section>
