@@ -1,6 +1,7 @@
 <script>
     import Navbar from './components/Navbar.svelte';
     import CA from './components/CustomAnchor.svelte';
+    import FadeInComp from './components/FadeInComponent.svelte';
     import { URL, URL_EM } from './components/URL.js';
 </script>
 
@@ -19,13 +20,15 @@
             </section>
 
             <!-- Banner -->
-            <section class="section section--banner">
-                <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
-                <p>(he/him)</p>
-                <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
-                
-                <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
-            </section>
+            <FadeInComp>
+                <section class="section section--banner">
+                    <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
+                    <p>(he/him)</p>
+                    <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
+                    
+                    <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
+                </section>
+            </FadeInComp>
 
             <!-- EbonyMemo -->
             <section class="section section--ebonymemo">
