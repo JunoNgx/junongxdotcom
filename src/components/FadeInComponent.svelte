@@ -2,7 +2,7 @@
     import {onMount} from 'svelte';
 
     export let isOnceOnly = true;
-    export let intersectingThreshold = 0.3;
+    export let intersectingThreshold = 0.5;
 
     let intersectionObserverSupport = false
     let isVisible = false;
@@ -45,16 +45,14 @@
 <style lang="scss">
     @import '../styles/global.scss';
     .fade-in-component {
-        transition: opacity 600ms ease-out, transform 600ms ease-out;
+        transition: opacity 600ms ease-out;
         opacity: 0;
-        transform: translate(-100px, 0);
         &--is-visible {
             opacity: 1.0;
-            transform: translate(0, 0);
         }
-
         @media screen and (min-width: $breakpoint) {
-            transform: translate(-400px, 0);
+            transition: opacity 600ms ease-out, transform 600ms ease-out;
+            transform: translate(-300px, 0);
             &--is-visible {
                 transform: translate(0, 0);
             }

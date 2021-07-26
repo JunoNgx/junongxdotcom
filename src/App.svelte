@@ -20,7 +20,7 @@
             </section>
 
             <!-- Banner -->
-            <!-- <FadeInComp isOnceOnly={true}> -->
+            <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
@@ -28,7 +28,7 @@
                     
                     <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
                 </section>
-            <!-- </FadeInComp> -->
+            </FadeInComp>
 
             <!-- EbonyMemo -->
             <FadeInComp isOnceOnly={true}>
