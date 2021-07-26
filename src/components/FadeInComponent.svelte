@@ -1,14 +1,16 @@
 <script>
     import {onMount} from 'svelte';
 
+    export let isOnceOnly;
+
     let intersectionObserverSupport = false
     let isVisible = false;
     let element;
     let observer;
 
     function updateVisibility(entries, observer) {
+        if (isVisible && isOnceOnly) return;
         isVisible = entries[0].isIntersecting;
-        console.log("updating visibility");
     }
 
     onMount(() => {
@@ -41,10 +43,18 @@
 <style lang="scss">
 
     .fade-in-component {
-        background-color: blue;
+        transition: opacity 0.5s ease-out;
+        transition: transform 0.5s ease-out;
+        opacity: 0;
+        transform: translate(200px, 0);
+        // background-color: blue;
         // transform: rotate(45deg);
         &--is-visible {
-            background-color: red;
+            transition: opacity 0.5s ease-out;
+            transition: transform 0.5s ease-out;
+            // background-color: red;
+            opacity: 1.0;
+            transform: translate(0, 0);
         }
     }
 </style>
