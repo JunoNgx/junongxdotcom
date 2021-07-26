@@ -20,7 +20,7 @@
             </section>
 
             <!-- Banner -->
-            <FadeInComp isOnceOnly={true}>
+            <!-- <FadeInComp isOnceOnly={true}> -->
                 <section class="section section--banner">
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
@@ -28,7 +28,7 @@
                     
                     <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
                 </section>
-            </FadeInComp>
+            <!-- </FadeInComp> -->
 
             <!-- EbonyMemo -->
             <FadeInComp isOnceOnly={true}>
@@ -180,8 +180,7 @@
     }
 
     .section {
-        @include std-border;
-        margin: 1rem 0.5rem 5rem 0.5rem;
+        margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
         p {
             hyphens: auto;
@@ -212,7 +211,7 @@
         }
 
         &--banner {
-            border-bottom: solid 2px $pri-col;
+            // border-bottom: solid 2px $pri-col;
             padding-bottom: 2rem;
         }
         &--contact-me {
@@ -236,6 +235,7 @@
         }
 
         @media screen and (min-width: $breakpoint) {
+            @include std-border;
             margin: 1rem 1rem 5rem 1rem;
             padding: 2rem;
 
@@ -268,6 +268,11 @@
             }
             &--others {
                 @include col-sha-trans($pri-col);
+            }
+
+            &--contact-me {
+                border: none;
+                margin: auto;
             }
 
         }
