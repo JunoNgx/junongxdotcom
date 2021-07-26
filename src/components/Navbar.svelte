@@ -118,7 +118,7 @@
             }
     
             &__content {
-                margin: 4rem auto 0 auto;
+                margin: 3.3rem auto 0 auto;
                 right: auto;
                 left: 60%;
                 top: 0;
@@ -129,7 +129,8 @@
                 clip-path: none;
     
                 &__contacts {
-                    border-right: 2px solid $pri-col;
+                    padding: 0;
+                    border-right: 10px solid $pri-col;
                     &__item {
                         margin-right: 1rem;    
                     }

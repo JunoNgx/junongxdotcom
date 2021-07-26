@@ -144,7 +144,7 @@
 
     .page {
         &--content {
-            max-width: 512px;
+            max-width: 550px;
         }
     }
 
@@ -224,6 +224,7 @@
 
         @media screen and (min-width: $breakpoint) {
             padding: 2rem;
+
             &__brand {
                 font-size: 2.5rem;
                 margin: 0;
