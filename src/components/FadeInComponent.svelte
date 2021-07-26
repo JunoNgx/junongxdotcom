@@ -1,7 +1,8 @@
 <script>
     import {onMount} from 'svelte';
 
-    export let isOnceOnly;
+    export let isOnceOnly = true;
+    export let intersectingThreshold = 0.3;
 
     let intersectionObserverSupport = false
     let isVisible = false;
@@ -23,7 +24,7 @@
             const options = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.5
+                threshold: intersectingThreshold
             }
             observer = new IntersectionObserver(updateVisibility, options);
             observer.observe(element);
@@ -43,16 +44,10 @@
 <style lang="scss">
 
     .fade-in-component {
-        transition: opacity 0.5s ease-out;
-        transition: transform 0.5s ease-out;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         opacity: 0;
         transform: translate(200px, 0);
-        // background-color: blue;
-        // transform: rotate(45deg);
         &--is-visible {
-            transition: opacity 0.5s ease-out;
-            transition: transform 0.5s ease-out;
-            // background-color: red;
             opacity: 1.0;
             transform: translate(0, 0);
         }
