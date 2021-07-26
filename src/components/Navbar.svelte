@@ -2,6 +2,7 @@
 
 <script>
     import { URL } from './URL.js';
+    import NAL from './NavbarAnchorLink.svelte'
     let isExpanded = false;
 </script>
 
@@ -12,13 +13,13 @@
     </div>
     <div class="navbar__content" class:navbar__content--expanded={isExpanded}>
         <ul class="navbar__content__contacts">
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.twitter}>Twitter</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.github}>GitHub</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.itchio}>Itch.io</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.flickr}>Flickr</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.instagram}>Instagram</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.email}>Email</a></li>
-            <li class="navbar__content__contacts__item"><a rel="noopener" target="_blank" href={URL.linkedin}>LinkedIn</a></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.twitter}>Twitter</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.github}>GitHub</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.itchio}>Itch.io</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.flickr}>Flickr</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.instagram}>Instagram</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.email}>Email</NAL></li>
+            <li class="navbar__content__contacts__item"><NAL link={URL.linkedin}>LinkedIn</NAL></li>
         </ul>
         <p class="navbar__content__contacts__close" on:click={()=>{isExpanded = false}}>
             ╳
@@ -54,7 +55,6 @@
                 &--expanded {
                     font-size: 2rem;
                 }
-    
             }
             &__icon {
                 margin-right: 1rem;
@@ -101,14 +101,6 @@
                     font-size: 2rem;
                     margin: 0.3rem 3rem;
                     list-style: none;
-                    a {
-                        color: $bac-col;
-                        padding: 0;
-                        text-decoration: none;
-                        &:visited {
-                            color: $bac-col;
-                        }
-                    }
                 }
                 &__close {
                     color: $bac-col;
@@ -140,20 +132,6 @@
                     border-right: 2px solid $pri-col;
                     &__item {
                         margin-right: 1rem;    
-                        a {
-                            color: $pri-col;
-                            padding: 0;
-                            transition: $trans-time ease;
-                            &:visited {
-                                color: $pri-col;
-                            }
-                            &:hover {
-                                padding-left: 1rem;
-                                padding-right: 5rem;
-                                background-color: $pri-col;
-                                color: $bac-col;
-                            }
-                        }
                     }
                     &__close {
                         display: none;
