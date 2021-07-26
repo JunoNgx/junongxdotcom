@@ -119,10 +119,10 @@
             </section>
 
             <!-- Footer -->
-            <section class="footer">
+            <footer class="footer">
                 <p>made with <CA link="https://svelte.dev/">Svelte</CA> and <CA link="https://sass-lang.com/">SASS</CA></p>
                 <p>uncopyrighted and <CA link="https://github.com/JunoNgx/junongxdotcom">open source</CA></p>
-            </section>
+            </footer>
         </div>
     </div>
 </main>
