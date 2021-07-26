@@ -15,12 +15,12 @@ $navbar-icon-size: 16px;
 $trans-time: 400ms;
 
 @mixin std-border {
-    border: 1px solid $pri-col;
+    border: 2px solid $pri-col;
 }
 
 @mixin col-sha-trans($col) {
     transition: box-shadow $trans-time ease-out;
     &:hover {
-        box-shadow: -5px 0 $col;
+        box-shadow: 10px 10px $col;
     }
 }

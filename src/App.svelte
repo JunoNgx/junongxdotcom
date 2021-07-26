@@ -167,9 +167,9 @@
     }
 
     .section {
-        // @include std-border;
+        @include std-border;
         margin: 1rem 1rem 5rem 1rem;
-        padding: 0 1rem 0 1rem;
+        padding: 1rem;
         p {
             hyphens: auto;
             line-height: 1.5;
@@ -203,6 +203,7 @@
             padding-bottom: 2rem;
         }
         &--contact-me {
+            border: none;
             margin: auto;
             text-align: center;
             max-width: 360px;
@@ -222,7 +223,7 @@
         }
 
         @media screen and (min-width: $breakpoint) {
-
+            padding: 2rem;
             &__brand {
                 font-size: 2.5rem;
                 margin: 0;
