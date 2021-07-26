@@ -181,7 +181,7 @@
 
     .section {
         @include std-border;
-        margin: 1rem 1rem 5rem 1rem;
+        margin: 1rem 0.5rem 5rem 0.5rem;
         padding: 1rem;
         p {
             hyphens: auto;
@@ -236,6 +236,7 @@
         }
 
         @media screen and (min-width: $breakpoint) {
+            margin: 1rem 1rem 5rem 1rem;
             padding: 2rem;
 
             &__brand {
