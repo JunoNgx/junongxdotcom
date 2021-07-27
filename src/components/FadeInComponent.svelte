@@ -52,7 +52,7 @@
         }
         @media screen and (min-width: $breakpoint) {
             transition: opacity 600ms ease-out, transform 600ms ease-out;
-            transform: translate(-300px, 0);
+            transform: translate(-150px, 0);
             &--is-visible {
                 transform: translate(0, 0);
             }

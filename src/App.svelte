@@ -31,7 +31,7 @@
             </FadeInComp>
 
             <!-- EbonyMemo -->
-            <FadeInComp isOnceOnly={true}>
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.4}>
                 <section class="section section--ebonymemo">
                     <h2 class="section__header">Ebony Memo</h2>
                     <p><CA link={URL_EM.frontend_deployment}>Ebony Memo</CA> is an arthouse videogame curator website for mobile devices. This is a custom content management system built with MERN stack, consisting of three parts:</p>
@@ -52,7 +52,7 @@
             </FadeInComp>
 
             <!-- CrispGameLib -->
-            <FadeInComp isOnceOnly={true}>
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.2}>
                 <section class="section section--crisp-game-lib">
                     <h2 class="section__header">CrispGameLib Collection</h2>
                     <img class="section__img section__img--pixel" src="images/CrispGameLib_Blitzed.gif" alt="Juno Nguyen's game Blitzed"/>
