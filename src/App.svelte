@@ -274,6 +274,9 @@
             &--wonyun {
                 @include col-sha-trans($pri-col);
             }
+            &--crisp-game-lib {
+                @include col-sha-trans($pri-col);
+            }
             &--gamedev {
                 @include col-sha-trans($pri-col);
             }
