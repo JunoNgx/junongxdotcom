@@ -40,6 +40,10 @@ This is a self-contained static site and doesn't require any data fetching.
 
 This website has gone through several major overhauls, including usage of other tech stacks. Previous versions can be found in other branches. Current domain is generally always deployed with the branch `master`.
 
+## Acknowledgement
+
+This website uses the typeface [Jost](https://indestructibletype.com/Jost.html) (via Google Fonts) by [Owen Earl](https://indestructibletype.com/), who has also influenced its overall design.
+
 ## Contribution
 
 For suggestions and  criticism, please feel free to open an issue for this repository.
