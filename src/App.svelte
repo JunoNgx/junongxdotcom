@@ -45,9 +45,20 @@
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--wonyun">
                     <h2 class="section__header">Wonyun Trench Run</h2>
-                    <img class="section__img" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
+                    <img class="section__img section__img--pixel" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
                     <p>My latest major release, launched in June 2020, is my first major dive into videogame architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
                     <p><CA link="https://github.com/JunoNgx/p8wonyun">View the source</CA>/<CA link="https://junongx.itch.io/wonyun-trench-run">Play the game</CA>.</p>
+                </section>
+            </FadeInComp>
+
+            <!-- CrispGameLib -->
+            <FadeInComp isOnceOnly={true}>
+                <section class="section section--crisp-game-lib">
+                    <h2 class="section__header">CrispGameLib Collection</h2>
+                    <img class="section__img section__img--pixel" src="images/CrispGameLib_Blitzed.gif" alt="Juno Nguyen's game Blitzed"/>
+                    <p>Despite having been a huge fan of <CA link="https://twitter.com/abagames">Kenta Cho</CA> for a long time, my path to his tools was barred by the lack of documentation and idiosyncratic styles and syntaxes, though it finally changed with the arrival of <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>. With many of the basic and common components of a game being taken of by the library, I had one of my best development experiences ever, where I was able to fully focus ideas, execution, and my the unique elements of my games. My favourite discovery while working with the library was <CA link="https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html">JSDoc</CA>, which provided type annotation and fixed a Javascript's major problem, not unlike TypeScript, though in a leaner and more simple package.</p>
+                    <p>Since July 2021, on top of growing a good amount of my own videogame works, I have also been an active contributor of CrispGameLib. I have also written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA> for the library.</p>
+                    <p><CA link="https://github.com/JunoNgx/crips-game-lib-collection">GitHub repository</CA>/<CA link="https://junongx.itch.io/crisp-webgame-collection">Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
 
@@ -205,6 +216,9 @@
             display: block;
             width: 100%;
             margin: auto;
+            &--pixel {
+                image-rendering: pixelated;
+            }
         }
         &__subsubtitle {
             font-style: italic;
