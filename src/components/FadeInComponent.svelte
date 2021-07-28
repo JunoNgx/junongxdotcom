@@ -10,7 +10,6 @@
     let observer;
 
     function updateVisibility(entries, observer) {
-        console.log("updating visibility");
         if (isVisible && isOnceOnly) return;
         isVisible = entries[0].isIntersecting;
     }
