@@ -102,7 +102,7 @@
                     <h3 class="section__subheader">Lutro Mega Input Library</h3>
                     <p class="section__subsubtitle">[Lua, December 2020]</p>
                     <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used were <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
-                    <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHut repository</CA></p>
+                    <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHub repository</CA></p>
 
                     <hr>
 
