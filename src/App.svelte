@@ -42,7 +42,7 @@
             </FadeInComp>
 
             <!-- LatestGame -->
-            <FadeInComp isOnceOnly={true}>
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.4}>
                 <section class="section section--wonyun">
                     <h2 class="section__header">Wonyun Trench Run</h2>
                     <img class="section__img section__img--pixel" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
@@ -63,7 +63,7 @@
             </FadeInComp>
 
             <!-- Gamedev -->
-            <FadeInComp isOnceOnly={true}>
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.4}>
                 <section class="section section--gamedev">
                     <h2 class="section__header">manafarm</h2>
                     <img class="section__img" src="/images/manafarm_black_512.png" alt="manafarm logo"/>
