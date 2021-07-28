@@ -26,7 +26,7 @@
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
                     
-                    <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free and open source and can be found on <CA link={URL.github}>my GitHub</CA>. The notable ones are also listed below.</p>
+                    <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
                 </section>
             </FadeInComp>
 
@@ -46,7 +46,7 @@
                 <section class="section section--wonyun">
                     <h2 class="section__header">Wonyun Trench Run</h2>
                     <img class="section__img section__img--pixel" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
-                    <p>My latest major release, launched in June 2020, is my first major dive into videogame architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
+                    <p>My latest major videogame release, launched in June 2020, is my first dive into videogame software architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
                     <p><CA link="https://github.com/JunoNgx/p8wonyun">View the source</CA>/<CA link="https://junongx.itch.io/wonyun-trench-run">Play the game</CA>.</p>
                 </section>
             </FadeInComp>
@@ -56,8 +56,8 @@
                 <section class="section section--crisp-game-lib">
                     <h2 class="section__header">CrispGameLib Collection</h2>
                     <img class="section__img section__img--pixel" src="images/CrispGameLib_Blitzed.gif" alt="Juno Nguyen's game Blitzed"/>
-                    <p>I have been a long time admirer of <CA link="https://twitter.com/abagames">Kenta Cho</CA> and using his tools to make games was one of  my ever-procrastinated projects. <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>, one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.</p>
-                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making webgames at a rapid pace and building up a collection. I have also written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA> for the library.</p>
+                    <p>I have been a long time admirer of <CA link="https://twitter.com/abagames">Kenta Cho</CA>, and using his tools to make games was one of  my ever-procrastinated projects. <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>, one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.</p>
+                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also been actively contributing to the library and written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA>.</p>
                     <p><CA link="https://github.com/JunoNgx/crips-game-lib-collection">GitHub repository</CA>/<CA link="https://junongx.itch.io/crisp-webgame-collection">Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
@@ -84,7 +84,7 @@
                     <h3 class="section__subheader">Working Memory Test</h3>
                     <img class="section__img" src="/images/WorkingMemoryTestTrailer.gif" alt="demonstration of the application Working Memory Test"/>
                     <p class="section__subsubtitle">[ReactJS, October 2020]</p>
-                    <p>During my study at Murdoch University, I and my team was tasked with a research project related to human working memory. At the height of the pandemic, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SCSS</strong> over a weekend (minor refactor and bugfixes were done in the following week) as the primary research instrument. The work was well-received by the project supervisor as well as participants.</p>
+                    <p>During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SASS</strong> over a weekend (minor refactor and bugfixes were done in the following week) as the primary research instrument. The work was well-received by the project supervisor as well as participants.</p>
                     <p><CA link="https://github.com/JunoNgx/working-memory-test">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p>
 
                     <hr>
@@ -93,7 +93,7 @@
                     <h3 class="section__subheader">Pura</h3>
                     <img class="section__img" src="/images/PuraTrailer.gif" alt="demonstration of the Flutter application Pura"/>
                     <p class="section__subsubtitle">[Flutter, April 2020]</p>
-                    <p>As one of my earliest dabbles into native app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps were riddled with ads). The development process provides insights into both the anatomy of a native app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
+                    <p>As one of my earliest dabbles into mobile app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
                     <p><CA link="https://github.com/JunoNgx/flutter-pura">GitHub repository</CA>/<CA link="https://play.google.com/store/apps/details?id=com.junongx.wallpaper">Google Play Store listing</CA></p>
 
                     <hr>
