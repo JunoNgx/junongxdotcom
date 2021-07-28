@@ -8,33 +8,17 @@
     @import '../styles/global.scss';
 
     a.custom-hyperlink {
-        background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 40%, transparent 40%);
         color: $pri-col;
         text-decoration: none;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to top, $hyperlink-col 0% 90%, transparent 10%);
+        background-position: 50% 80%;
+        background-size: 100% 30%;
+        transition: background-size $trans-time*0.7 ease-out,
+            background-position $trans-time*0.7 ease-out;
         &:hover {
-            background-image: linear-gradient(to top, transparent 10%, $hyperlink-col 10% 90%, transparent 90%);
+            background-position: 50% 50%;
+            background-size: 100% 100%;
         }
     }
-    // Animating hyperlink highlight
-    // Adapted from Evan You's website
-    // Doesn't work when the url is on a linebreak
-    // a.custom-hyperlink {
-    //     color: $pri-col;
-    //     text-decoration: none;
-    //     position: relative;
-    //     &::before {
-    //         background-color: $hyperlink-col;
-    //         content: '';
-    //         position: absolute;
-    //         z-index: -1;
-    //         top: 60%;
-    //         left: -0.1rem;
-    //         right: -0.1rem;
-    //         bottom: 10%;
-    //         transition: top $trans-time*0.7 ease-out;
-    //     }
-    //     &:hover::before {
-    //         top: 10%;
-    //     }
-    // }
 </style>
