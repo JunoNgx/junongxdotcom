@@ -125,7 +125,7 @@
                     <p>A rare creative hobby in which I enjoy the process more than more outcome. I shoot exclusively with vintage manual focus lenses and Fujifilm mechanical-inspired bodies (and occasionally dabble into film photography). I think sceneries and stills in portrait mode are highly underrated.</p>
                     <p><CA link={URL.flickr}>My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
                     <h3 class="section__subheader">Lego StarCraft</h3>
-                    <img class="section__img" src="/images/taccom.jpg" alt="StarCraft Goliath microscale"/>
+                    <img class="section__img" src="/images/siegetank_belshir.jpg" alt="StarCraft Siege Tank microscale in Belshir"/>
                     <p>Having been a lifelong admirer of StarCraft from a game designer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces. My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr</CA>.</p>
                     <p></p>
                     <h3 class="section__subheader">Mechanical keyboards</h3>
