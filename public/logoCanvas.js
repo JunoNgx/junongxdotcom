@@ -30,56 +30,63 @@ let shapes;
 /** @type { Spawner [] } */
 let spawners;
 
+
+
 function setup() {
     canvas.width = 720;
     canvas.height = 360;
+
+    const G = {
+        BASE: canvas.width * 0.20,
+        HEIGHT: canvas.height * 0.37
+    }
 
     window.requestAnimationFrame(loop);
     shapes = [];
     spawners = [
         {
-            pos: vec(canvas.width * 0.3, canvas.height * -0.5),
+            pos: vec(canvas.width * 0.32, canvas.height * -0.5),
             cooldown: 0,
-            interval: 150,
-            base: canvas.width * 0.14,
-            height: canvas.height * 0.35,
+            interval: 160,
+            base: G.BASE,
+            height: G.HEIGHT,
             speed: canvas.height * 0.003,
             isDown: true,
-            // color: '#cbebb9'
-            color: '#445'
+            color: '#99e0af'
+            // color: '#445'
         },
         {
-            pos: vec(canvas.width * -0.032, canvas.height * 1.2),
-            cooldown: 0,
-            interval: 120,
-            base: canvas.width * 0.29,
-            height: canvas.height * 0.47,
-            speed: canvas.height * 0.005,
-            isDown: false,
-            // color: '#ffc0cb'
-            color: '#445'
-        },
-        {
-            pos: vec(canvas.width * 0.86, canvas.height * -0.8),
-            cooldown: 0,
-            interval: 420,
-            base: canvas.width * 0.18,
-            height: canvas.height * 0.64,
-            speed: canvas.height * 0.002,
-            isDown: true,
-            // color: '#fffacd'
-            color: '#445'
-        },
-        {
-            pos: vec(canvas.width * 0.4, canvas.height * 1.5),
+            pos: vec(canvas.width * 0.05, canvas.height * 1.2),
             cooldown: 0,
             interval: 60,
-            base: canvas.width * 0.27,
-            height: canvas.height * 0.17,
+            base: G.BASE,
+            height: G.HEIGHT,
+            speed: canvas.height * 0.008,
+            isDown: false,
+            color: '#d968b1'
+            // color: '#445'
+        },
+        {
+            pos: vec(canvas.width * 0.85, canvas.height * -0.8),
+            cooldown: 0,
+            interval: 160,
+            base: G.BASE,
+            height: G.HEIGHT,
+            speed: canvas.height * 0.003,
+            isDown: true,
+            color: '#e6df97'
+            // color: '#445'
+        },
+        {
+            pos: vec(canvas.width * 0.42, canvas.height * 1.5),
+            cooldown: 0,
+            interval: 120,
+            base: G.BASE,
+            height: G.HEIGHT,
             speed: canvas.height * 0.004,
             isDown: false,
-            // color: '#a6e5f5'
-            color: '#445'
+            color: '#3ba1cc'
+            // color: '#445'
         },
     ];
 }
@@ -127,12 +134,12 @@ function draw() {
         && s.pos.y < canvas.height * 2.0
     );
     
-    const fontSize = canvas.width * 0.12;
+    const fontSize = canvas.width * 0.13;
     ctx.font = fontSize + 'px monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = '#eee';
-    ctx.fillText("hello, world.", canvas.width/2, canvas.height/2);
+    ctx.fillText("hello world", canvas.width/2, canvas.height/2);
 }
 
 function paral(_pos, _base, _height, _speed, _isDown, _color) {
