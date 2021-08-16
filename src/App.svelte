@@ -10,15 +10,6 @@
         <Navbar/>
         <div class="page--content">
 
-            <!-- Decorator -->
-            <!-- Only displayed as visual fillers in the mobile layout -->
-            <!-- <section class="decorator">
-                <div class="decorator__child"/>
-                <div class="decorator__child"/>
-                <div class="decorator__child"/>
-                <div class="decorator__child"/>
-            </section> -->
-
             <!-- Banner -->
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
@@ -172,25 +163,7 @@
             max-width: 550px;
         }
     }
-
-    .decorator {
-        width: 72px;
-        margin: 1rem 0 3rem 2rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2px;
-
-        &__child {
-            margin: 0;
-            width: 32px;
-            height: 32px;
-            border: 2px solid $pri-col;
-        }
-        @media screen and (min-width: $breakpoint) {
-            display: none;
-        }
-    }
-
+    
     .section {
         margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
