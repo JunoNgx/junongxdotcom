@@ -12,21 +12,22 @@
 
             <!-- Decorator -->
             <!-- Only displayed as visual fillers in the mobile layout -->
-            <section class="decorator">
+            <!-- <section class="decorator">
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
                 <div class="decorator__child"/>
-            </section>
+            </section> -->
 
             <!-- Banner -->
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
+                    <canvas class="section__canvas" id="logoCanvas"/>
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
                     
-                    <p>I am a generalist, having worked on videogames, full-stack web applications, command line tools, and still exploring. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
+                    <p>I am a fullstack web developer by trade, though I also have a massive love for videogame development and creative coding. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
                 </section>
             </FadeInComp>
 
@@ -38,6 +39,18 @@
                     <p><strong>Backend</strong> (NodeJS/Express, <CA link={URL_EM.backend_source}>source</CA>, <CA link={URL_EM.backend_deployment}>deployment</CA>): A serverless RESTful API handling CRUD operations and authorisations for data modification. The database is stored on MongoDB Atlas.</p>
                     <p><strong>Content management application</strong> (ReactJS, <CA link={URL_EM.cma_source}>source</CA>, <CA link={URL_EM.cma_deployment}>deployment</CA>): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not optimized for mobile or SEO.</p>
                     <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
+                </section>
+            </FadeInComp>
+
+            <!-- Gamedev -->
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.4}>
+                <section class="section section--gamedev">
+                    <h2 class="section__header">manafarm</h2>
+                    <img class="section__img" src="/images/manafarm_black_512.png" alt="manafarm logo"/>
+                    <p>Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression.</p>
+                    <p>I have been a hobbyist videogame developer since 2013, under the moniker <em>Aureoline Tetrahedron</em>, making a wide range of videogames with different frameworks and engines on different platforms. The <em>manafarm</em> rebranding was made in 2019, after several years of hiatus.</p>
+        
+                    <p>My major releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
 
@@ -59,18 +72,6 @@
                     <p>I have been a long time admirer of <CA link="https://twitter.com/abagames">Kenta Cho</CA>, and using his tools to make games was one of  my ever-procrastinated projects. <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>, one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.</p>
                     <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also been actively contributing to the library and written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA>.</p>
                     <p><CA link="https://github.com/JunoNgx/crips-game-lib-collection">GitHub repository</CA>/<CA link="https://junongx.itch.io/crisp-webgame-collection">Itch.io page</CA>.</p>
-                </section>
-            </FadeInComp>
-
-            <!-- Gamedev -->
-            <FadeInComp isOnceOnly={true} intersectingThreshold={0.4}>
-                <section class="section section--gamedev">
-                    <h2 class="section__header">manafarm</h2>
-                    <img class="section__img" src="/images/manafarm_black_512.png" alt="manafarm logo"/>
-                    <p>Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression.</p>
-                    <p>I have been a hobbyist videogame developer since 2013, under the moniker <em>Aureoline Tetrahedron</em>, making a wide range of videogames in different frameworks and engines (in chronological order: <CA link="https://www.construct.net/">Construct</CA>, <CA link="http://phaser.io/">Phaser</CA>, <CA link="https://love2d.org/">love2d</CA>, <CA link="https://haxeflixel.com/">HaxeFlixel</CA>, <CA link="https://luxeengine.com/">Luxe</CA>, <CA link="https://unity.com/">Unity</CA> and <CA link="https://www.lexaloffle.com/pico-8.php">Pico8</CA>) on different platforms. The <em>manafarm</em> rebranding was made in 2019, after several years of hiatus.</p>
-        
-                    <p>My major releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
 
@@ -220,6 +221,12 @@
                 image-rendering: pixelated;
             }
         }
+
+        &__canvas {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
         &__subsubtitle {
             font-style: italic;
         }
@@ -294,7 +301,6 @@
 
         }
     }
-
     .footer {
         font-size: $font-size;
         margin: 5rem auto 1rem auto;
