@@ -31,8 +31,8 @@ let shapes;
 let spawners;
 
 function setup() {
-
-    canvas.height = canvas.width/2;
+    canvas.width = 720;
+    canvas.height = 360;
 
     window.requestAnimationFrame(loop);
     shapes = [];
@@ -127,12 +127,12 @@ function draw() {
         && s.pos.y < canvas.height * 2.0
     );
     
-    const fontSize = canvas.width * 0.15;
-    ctx.font = fontSize + 'px sans-serif';
+    const fontSize = canvas.width * 0.12;
+    ctx.font = fontSize + 'px monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = '#eee';
-    ctx.fillText("hello world", canvas.width/2, canvas.height/2);
+    ctx.fillText("hello, world.", canvas.width/2, canvas.height/2);
 }
 
 function paral(_pos, _base, _height, _speed, _isDown, _color) {
