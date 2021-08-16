@@ -18,7 +18,7 @@
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
                     
-                    <p>I am a fullstack web developer by trade, though I also have a massive love for videogame development and creative coding. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
+                    <p>I am a fullstack web developer by trade, and also have a massive love for videogame development and creative coding. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
                 </section>
             </FadeInComp>
 
@@ -163,7 +163,7 @@
             max-width: 550px;
         }
     }
-    
+
     .section {
         margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
