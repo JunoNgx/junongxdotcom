@@ -40,6 +40,9 @@ class LogoCanvas {
     /** @type { Spawner [] } */
     static spawners;
 
+    /** @type { string [] } */
+    static colorList
+
     constructor() {
         this.canvas = document.getElementById("logoCanvas");
         this.ctx = this.canvas.getContext("2d");
@@ -49,6 +52,14 @@ class LogoCanvas {
 
         this.BASE = this.canvas.width * 0.20;
         this.HEIGHT= this.canvas.height * 0.37;
+
+        this.colorList = [
+            '#99e0af',
+            '#d968b1',
+            '#e6df97',
+            '#3ba1cc'
+        ]
+        shuffle(this.colorList);
 
         this.shapes = [];
         this.spawners = [
@@ -60,7 +71,8 @@ class LogoCanvas {
                 height: this.HEIGHT,
                 speed: this.canvas.height * 0.003,
                 isDown: true,
-                color: '#99e0af'
+                color: this.colorList[0]
+                // color: '#99e0af'
                 // color: '#445'
             },
             {
@@ -71,7 +83,8 @@ class LogoCanvas {
                 height: this.HEIGHT,
                 speed: this.canvas.height * 0.008,
                 isDown: false,
-                color: '#d968b1'
+                color: this.colorList[1]
+                // color: '#d968b1'
                 // color: '#445'
             },
             {
@@ -82,7 +95,8 @@ class LogoCanvas {
                 height: this.HEIGHT,
                 speed: this.canvas.height * 0.003,
                 isDown: true,
-                color: '#e6df97'
+                color: this.colorList[2]
+                // color: '#e6df97'
                 // color: '#445'
             },
             {
@@ -93,7 +107,8 @@ class LogoCanvas {
                 height: this.HEIGHT,
                 speed: this.canvas.height * 0.004,
                 isDown: false,
-                color: '#3ba1cc'
+                color: this.colorList[3]
+                // color: '#3ba1cc'
                 // color: '#445'
             },
         ];
@@ -206,7 +221,10 @@ class BackgroundCanvas {
     /** @type { number } */
     static rotation;
 
+    /** @type { string [] } */
     static colorList;
+
+    /** @type { string } */
     static color;
 
     constructor() {
@@ -330,7 +348,6 @@ function draw() {
     backgroundCanvas.draw();
 }
 
-
 // --== Other utility functions
 
 /**
@@ -362,4 +379,19 @@ function vec(_x, _y) {
  */
 function lerp (start, end, amt){
     return (1-amt)*start+amt*end
+}
+
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+  
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // Swapping values
+        [array[currentIndex], array[randomIndex]] =
+            [array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
 }
