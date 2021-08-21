@@ -207,6 +207,9 @@ class BackgroundCanvas {
     /** @type { number } */
     static rotation;
 
+    static colorList;
+    static color;
+
     setup() {
 
         this.canvas = document.getElementById("backgroundCanvas");
@@ -249,7 +252,18 @@ class BackgroundCanvas {
             this.canvas.style.width = this.canvas.width + 'px';
             this.canvas.style.height = this.canvas.height + 'px';
         });
-        this.rotation = 0;   
+        this.rotation = 0;
+
+        this.colorList = [
+            "#aaa", // grey
+            "#ffaaaa", // light red
+            "#c2e3af", // grass
+            "#0077ff", // blue
+            "#fff700", // yellow
+            "#00ffff", // cyan
+        ];
+        const randomIndex = Math.floor(Math.random() * this.colorList.length);
+        this.color = this.colorList[randomIndex];
     }
 
     draw() {
@@ -260,7 +274,15 @@ class BackgroundCanvas {
         this.core.y = lerp(this.core.y, this.cursor.y, 0.5);
         this.rotation += 0.04;
         
-        this.ctx.lineWidth = 3;
+        this.ctx.lineWidth = 2;
+        this.ctx.strokeStyle = this.color;
+        // this.ctx.strokeStyle = "#aaa" ;
+        // this.ctx.strokeStyle = "#ffaaaa"; 
+        // this.ctx.strokeStyle = "#c2e3af"; 
+        // this.ctx.strokeStyle = "#0077ff"; 
+        // this.ctx.strokeStyle = "#fff700"; 
+        // this.ctx.strokeStyle = "#00ffff"; 
+
         // Draw the core
         /** @type { Vector[] } */
         let corePoints = [];
@@ -270,7 +292,6 @@ class BackgroundCanvas {
                 this.core.y + this.CORE_RADIUS * Math.sin(this.rotation + Math.PI/2 * i),
             );
         }
-        this.ctx.strokeStyle = "#887";
         this.ctx.beginPath();
         this.ctx.moveTo(corePoints[0].x, corePoints[0].y);
         this.ctx.lineTo(corePoints[1].x, corePoints[1].y);
