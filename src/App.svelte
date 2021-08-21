@@ -221,6 +221,7 @@
             padding-bottom: 2rem;
         }
         &--contact-me {
+            background-color: transparent;
             border: none;
             margin: auto;
             text-align: center;
@@ -231,6 +232,7 @@
             }
             &__content {
                 @include std-border;
+                background-color: $bac-col;
                 margin: 1rem;
                 padding: 1rem 1.5rem;
                 &:after {
