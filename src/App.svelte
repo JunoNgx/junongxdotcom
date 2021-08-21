@@ -7,6 +7,7 @@
 
 <main>
 	<div class="page">
+        <canvas class="page__background" id="backgroundCanvas"/>
         <Navbar/>
         <div class="page--content">
 
@@ -159,12 +160,23 @@
     }
 
     .page {
+        &__background {
+            visibility: hidden;
+            @media screen and (min-width: $breakpoint) {
+                visibility: visible;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -2;
+            }
+        }
         &--content {
             max-width: 550px;
         }
     }
 
     .section {
+        background-color: $bac-col;
         margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
         p {
