@@ -40,8 +40,7 @@ class LogoCanvas {
     /** @type { Spawner [] } */
     static spawners;
 
-    setup() {
-
+    constructor() {
         this.canvas = document.getElementById("logoCanvas");
         this.ctx = this.canvas.getContext("2d");
         
@@ -210,8 +209,7 @@ class BackgroundCanvas {
     static colorList;
     static color;
 
-    setup() {
-
+    constructor() {
         this.canvas = document.getElementById("backgroundCanvas");
         this.ctx = this.canvas.getContext("2d");
 
@@ -276,12 +274,6 @@ class BackgroundCanvas {
         
         this.ctx.lineWidth = 2;
         this.ctx.strokeStyle = this.color;
-        // this.ctx.strokeStyle = "#aaa" ;
-        // this.ctx.strokeStyle = "#ffaaaa"; 
-        // this.ctx.strokeStyle = "#c2e3af"; 
-        // this.ctx.strokeStyle = "#0077ff"; 
-        // this.ctx.strokeStyle = "#fff700"; 
-        // this.ctx.strokeStyle = "#00ffff"; 
 
         // Draw the core
         /** @type { Vector[] } */
@@ -328,10 +320,7 @@ window.onload = setup;
 
 function setup() {
     logoCanvas = new LogoCanvas();
-    logoCanvas.setup();
-
     backgroundCanvas = new BackgroundCanvas();
-    backgroundCanvas.setup();
 
     window.requestAnimationFrame(loop);
 }
