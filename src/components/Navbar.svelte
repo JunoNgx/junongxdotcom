@@ -133,6 +133,7 @@
                     border-right: 10px solid $pri-col;
                     &__item {
                         margin-right: 1rem;    
+                        border-bottom: none;
                     }
                     &__close {
                         display: none;
