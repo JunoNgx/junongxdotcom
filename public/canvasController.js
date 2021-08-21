@@ -234,14 +234,14 @@ class BackgroundCanvas {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
 
-        this.CORE_RADIUS = 32;
+        this.CORE_RADIUS = 24;
         this.AMT_OF_PLANETS_MIN = 3;
         this.AMT_OF_PLANETS_MAX = 7;
-        this.PLANET_SIZE_MIN = 8;
-        this.PLANET_SIZE_MAX = 18;
+        this.PLANET_SIZE_MIN = 4;
+        this.PLANET_SIZE_MAX = 12;
         this.PLANET_ROTATION_SPEED_MIN = -0.02;
         this.PLANET_ROTATION_SPEED_MAX = 0.02;
-        this.PLANET_DISTANCE = 48;
+        this.PLANET_DISTANCE = 24;
 
         this.planets = [];
         const noOfPlanets = Math.floor(randomWithRange(this.AMT_OF_PLANETS_MIN,
@@ -272,11 +272,12 @@ class BackgroundCanvas {
 
         this.colorList = [
             "#aaa", // grey
+            "#aaa", // grey
+            "#aaa", // grey
             "#ffaaaa", // light red
             "#c2e3af", // grass
-            "#0077ff", // blue
-            "#fff700", // yellow
-            "#00ffff", // cyan
+            "#a3ceff", // blue
+            "#00ffee", // cyan
         ];
         const randomIndex = Math.floor(Math.random() * this.colorList.length);
         this.color = this.colorList[randomIndex];
@@ -288,7 +289,7 @@ class BackgroundCanvas {
 
         this.core.x = lerp(this.core.x, this.cursor.x, 0.5);
         this.core.y = lerp(this.core.y, this.cursor.y, 0.5);
-        this.rotation += 0.03;
+        this.rotation += 0.02;
         
         this.ctx.lineWidth = 2;
         this.ctx.strokeStyle = this.color;
@@ -315,8 +316,8 @@ class BackgroundCanvas {
             this.planets[i].rotation += this.planets[i].rotationSpd;
 
             const pPos = vec(
-                this.core.x + (64 + i * this.PLANET_DISTANCE) * Math.cos(this.planets[i].rotation),
-                this.core.y + (64 + i * this.PLANET_DISTANCE) * Math.sin(this.planets[i].rotation)
+                this.core.x + (48 + i * this.PLANET_DISTANCE) * Math.cos(this.planets[i].rotation),
+                this.core.y + (48 + i * this.PLANET_DISTANCE) * Math.sin(this.planets[i].rotation)
             );
 
             this.ctx.beginPath();
