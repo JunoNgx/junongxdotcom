@@ -221,8 +221,8 @@ class BackgroundCanvas {
         this.AMT_OF_PLANETS_MAX = 7;
         this.PLANET_SIZE_MIN = 8;
         this.PLANET_SIZE_MAX = 18;
-        this.PLANET_ROTATION_SPEED_MIN = -0.05;
-        this.PLANET_ROTATION_SPEED_MAX = 0.05;
+        this.PLANET_ROTATION_SPEED_MIN = -0.02;
+        this.PLANET_ROTATION_SPEED_MAX = 0.02;
         this.PLANET_DISTANCE = 48;
 
         this.planets = [];
@@ -270,7 +270,7 @@ class BackgroundCanvas {
 
         this.core.x = lerp(this.core.x, this.cursor.x, 0.5);
         this.core.y = lerp(this.core.y, this.cursor.y, 0.5);
-        this.rotation += 0.04;
+        this.rotation += 0.03;
         
         this.ctx.lineWidth = 2;
         this.ctx.strokeStyle = this.color;
