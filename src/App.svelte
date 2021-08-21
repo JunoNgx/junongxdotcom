@@ -161,9 +161,9 @@
 
     .page {
         &__background {
-            visibility: hidden;
+            display: none;
             @media screen and (min-width: $breakpoint) {
-                visibility: visible;
+                display: block;
                 position: fixed;
                 top: 0;
                 left: 0;
