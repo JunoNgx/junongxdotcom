@@ -331,55 +331,64 @@ class ScrollCanvas {
     static canvas;
     static ctx;
 
+    /** @type { {x: number, y: number} [] } */
+    static posList;
+
     constructor() {
         this.canvas = document.getElementById("scrollCanvas");
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = 720;
         this.canvas.height = 360;
+
+        this.posList = [
+            {x: this.canvas.width * 0.2, y: this.canvas.height * 0.5},
+            {x: this.canvas.width * 0.5, y: this.canvas.height * 0.5},
+            {x: this.canvas.width * 0.8, y: this.canvas.height * 0.5}
+        ];
     }
 
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.ctx.fillStyle = "#ff7700";
+        this.ctx.fillRect(0, 0, 720, 360);
 
-        this.ctx.strokeStyle = "#000";
-        // this.ctx.fillRect(0, 0, 720, 720);
-        this.ctx.fillStyle = "#ff0000";
-        this.ctx.lineWidth = 10;
-        polygon(this.ctx, this.canvas.width/2, this.canvas.height/2, 20, 4, 0);
-        // polygon(this.ctx, 0, 0, 24, 3, 0);
+        this.ctx.fillStyle = "#242424";
+        this.ctx.lineWidth = 4;
+        // polygon(this.ctx, this.canvas.width/2, this.canvas.height/2, 20, 4, window.scrollY/10);
 
-        // const _rotation = Math.PI/3;
-        // const _radius = 50;
-        // const a = (Math.PI * 2) / 5;
-        // this.ctx.beginPath();
-        //     this.ctx.moveTo(
-        //         360 + _radius * Math.cos(_rotation),
-        //         360 + _radius * Math.sin(_rotation)
-        //     );
-        //     for (let i = 1; i < 5; i++) {
-        //         this.ctx.lineTo(
-        //             360 + _radius * Math.cos(_rotation + a*i),
-        //             360 + _radius * Math.sin(_rotation + a*i)
-        //         );
-        //     }
-        // this.ctx.closePath();
+        this.ctx.fillRect(this.posList[0].x, this.posList[0].y, 30, 30);
+        
+        polygon(this.ctx, this.posList[1].x, this.posList[1].y, 75, 3, Math.PI/2);
+        
+        const circRadius = 75;
+        const circRadiusInner = 20;
+        const nodeRadius = 15;
+        const circRotation = window.scrollY/100;
+        const amountOfNodes = 7;
+        const nodeAngle = Math.PI * 2 /7;
 
-        // this.ctx.beginPath();
-        //     this.ctx.moveTo(50, 50);
-        //     this.ctx.lineTo(70, 90);
-        //     this.ctx.lineTo(20, 120);
-        // this.ctx.closePath();
-        // this.ctx.stroke();
+        this.ctx.beginPath();
+        this.ctx.arc(this.posList[2].x, this.posList[2].y, circRadius, 0, Math.PI*2);
+        this.ctx.stroke();
 
-        // this.ctx.beginPath();
-        // this.ctx.moveTo(75, 50);
-        // this.ctx.lineTo(100, 75);
-        // this.ctx.lineTo(100, 25);
-        // this.ctx.fill();
+        this.ctx.beginPath();
+        this.ctx.arc(this.posList[2].x, this.posList[2].y, circRadiusInner, 0, Math.PI*2);
+        this.ctx.stroke();
+
+        for (let i = 0; i < amountOfNodes; i++) {
+            this.ctx.beginPath();
+            this.ctx.arc(
+                this.posList[2].x + circRadius * Math.cos(circRotation + nodeAngle * i),
+                this.posList[2].y + circRadius * Math.sin(circRotation + nodeAngle * i),
+                nodeRadius,
+                0,
+                Math.PI * 2
+            )
+            this.ctx.fill();
+        }
     }
-
-    
 }
 
 
