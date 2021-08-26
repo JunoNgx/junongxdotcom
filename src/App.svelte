@@ -67,6 +67,16 @@
                 </section>
             </FadeInComp>
 
+            <!-- Creative Coding -->
+            <FadeInComp isOnceOnly={true} intersectingThreshold={0.2}>
+                <section class="section section--creative-coding">
+                    <h2 class="section__header">Creative Coding</h2>
+                    <canvas class="section__canvas" id="scrollCanvas"/>
+                    <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of my works are also incorporated into this website.</p>
+                    <p>My works have been displayed in my creative coding collection, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2020.</p>
+                </section>
+            </FadeInComp>
+
             <!-- Other projects -->
             <FadeInComp isOnceOnly={true} intersectingThreshold={0.05}>
                 <section class="section section--misc">
@@ -272,6 +282,9 @@
                 @include col-sha-trans($pri-col);
             }
             &--gamedev {
+                @include col-sha-trans($pri-col);
+            }
+            &--creative-coding {
                 @include col-sha-trans($pri-col);
             }
             &--misc {
