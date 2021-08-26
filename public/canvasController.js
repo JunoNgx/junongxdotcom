@@ -346,6 +346,7 @@ class ScrollCanvas {
             {x: this.canvas.width * 0.5, y: this.canvas.height * 0.5},
             {x: this.canvas.width * 0.8, y: this.canvas.height * 0.5}
         ];
+        shuffle(this.posList);
     }
 
     draw() {
