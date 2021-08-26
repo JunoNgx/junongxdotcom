@@ -226,7 +226,6 @@
         }
 
         &--banner {
-            // border-bottom: solid 2px $pri-col;
             padding-bottom: 2rem;
         }
         &--contact-me {
