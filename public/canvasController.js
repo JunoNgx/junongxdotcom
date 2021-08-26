@@ -351,17 +351,24 @@ class ScrollCanvas {
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
+        this.ctx.strokeStyle = "#242424";
         this.ctx.fillStyle = "#ff7700";
         this.ctx.fillRect(0, 0, 720, 360);
 
-        this.ctx.fillStyle = "#242424";
+        this.ctx.fillStyle = "#ff0077";
         this.ctx.lineWidth = 4;
-        // polygon(this.ctx, this.canvas.width/2, this.canvas.height/2, 20, 4, window.scrollY/10);
 
+        // Wavily-moving square
         this.ctx.fillRect(this.posList[0].x, this.posList[0].y, 30, 30);
-        
-        polygon(this.ctx, this.posList[1].x, this.posList[1].y, 75, 3, Math.PI/2);
-        
+
+        // Colour-shifting triangle
+        this.ctx.fillStyle = hslToHex(window.scrollY % 360, 80, 70);
+        polygon(this.ctx, this.posList[1].x, this.posList[1].y, 75, 3, Math.PI/2, true);
+
+        // Rotating circle
+        this.ctx.strokeStyle = "#242424";
+        this.ctx.fillStyle = "#242424";
+
         const circRadius = 75;
         const circRadiusInner = 20;
         const nodeRadius = 15;
@@ -465,7 +472,7 @@ function shuffle(array) {
     return array;
 }
 
-function polygon(_ctx, _x, _y, _radius, _sides, _rotation) {
+function polygon(_ctx, _x, _y, _radius, _sides, _rotation, _isFilled) {
 
     if (_sides < 3) {
         console.error("Drawing polygon with less than 3 sides");
@@ -474,16 +481,32 @@ function polygon(_ctx, _x, _y, _radius, _sides, _rotation) {
 
     const a = (Math.PI * 2) / _sides;
     _ctx.beginPath();
-        _ctx.moveTo(
-            _x + _radius * Math.cos(_rotation),
-            _y + _radius * Math.sin(_rotation)
+    _ctx.moveTo(
+        _x + _radius * Math.cos(_rotation),
+        _y + _radius * Math.sin(_rotation)
+    );
+    for (let i = 1; i < _sides; i++) {
+        _ctx.lineTo(
+            _x + _radius * Math.cos(_rotation + a*i),
+            _y + _radius * Math.sin(_rotation + a*i)
         );
-        for (let i = 1; i < _sides; i++) {
-            _ctx.lineTo(
-                _x + _radius * Math.cos(_rotation + a*i),
-                _y + _radius * Math.sin(_rotation + a*i)
-            );
-        }
-    _ctx.closePath();
-    _ctx.stroke();
+    }
+    if (_isFilled) _ctx.fill();
+    else {
+        _ctx.closePath();
+        _ctx.stroke();
+    }
+}
+
+// by icl7126 from StackOverflow
+// https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex/54014428
+function hslToHex(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+      const k = (n + h / 30) % 12;
+      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+      return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
 }
