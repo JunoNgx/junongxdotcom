@@ -351,23 +351,30 @@ class ScrollCanvas {
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
-        this.ctx.strokeStyle = "#242424";
-        this.ctx.fillStyle = "#ff7700";
-        this.ctx.fillRect(0, 0, 720, 360);
-
-        this.ctx.fillStyle = "#ff0077";
+        const primaryColor = "#242424";
         this.ctx.lineWidth = 4;
 
+        // // Background
+        // this.ctx.fillStyle = "#ff7700";
+        // this.ctx.fillRect(0, 0, 720, 360);
+
         // Wavily-moving square
-        this.ctx.fillRect(this.posList[0].x, this.posList[0].y, 30, 30);
+        this.ctx.fillStyle = primaryColor;
+
+        const offsetX = 48 * Math.sin(window.scrollY/30 % 360);
+        const offsetY = 120 * Math.sin(window.scrollY/100);
+        this.ctx.fillRect(
+            this.posList[0].x + offsetX,
+            this.posList[0].y + offsetY,
+            30, 30
+        );
 
         // Colour-shifting triangle
         this.ctx.fillStyle = hslToHex(window.scrollY % 360, 80, 70);
         polygon(this.ctx, this.posList[1].x, this.posList[1].y, 75, 3, Math.PI/2, true);
 
         // Rotating circle
-        this.ctx.strokeStyle = "#242424";
-        this.ctx.fillStyle = "#242424";
+        this.ctx.strokeStyle, this.ctx.fillStyle = primaryColor, primaryColor;
 
         const circRadius = 75;
         const circRadiusInner = 20;
