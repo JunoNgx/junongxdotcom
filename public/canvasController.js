@@ -24,7 +24,7 @@ function loop() {
  */
 
 // --== Class: Logo Canvas
-class LogoCanvas {
+class BannerCanvas {
 
     static canvas;
     static ctx;
@@ -411,8 +411,8 @@ class ScrollCanvas {
 
 // --== Primary driver
 
-/** @type { LogoCanvas } */
-let logoCanvas;
+/** @type { BannerCanvas } */
+let bannerCanvas;
 /** @type { BackgroundCanvas } */
 let backgroundCanvas;
 /** @type { ScrollCanvas } */
@@ -421,7 +421,7 @@ let scrollCanvas;
 window.onload = setup;
 
 function setup() {
-    logoCanvas = new LogoCanvas("logo-canvas");
+    bannerCanvas = new BannerCanvas("banner-canvas");
     backgroundCanvas = new BackgroundCanvas("background-canvas");
     scrollCanvas = new ScrollCanvas("scroll-canvas");
 
@@ -429,7 +429,7 @@ function setup() {
 }
 
 function draw() {
-    logoCanvas.draw();
+    bannerCanvas.draw();
     backgroundCanvas.draw();
     scrollCanvas.draw();
 }

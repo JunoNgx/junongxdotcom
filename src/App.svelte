@@ -14,7 +14,7 @@
             <!-- Banner -->
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
-                    <canvas class="section__canvas" id="logo-canvas"/>
+                    <canvas class="section__canvas" id="banner-canvas"/>
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
