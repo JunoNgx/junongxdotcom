@@ -71,8 +71,8 @@
                 <section class="section section--creative-coding">
                     <h2 class="section__header">Creative Coding</h2>
                     <canvas class="section__canvas" id="scroll-canvas"/>
-                    <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of my works are also incorporated into this website.</p>
-                    <p>My works have been displayed in my creative coding collection, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2020.</p>
+                    <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of pieces have also been incorporated into this website.</p>
+                    <p>My creative coding works have been displayed in my creative coding collection, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2021.</p>
                 </section>
             </FadeInComp>
 
@@ -129,7 +129,6 @@
                     <h3 class="section__subheader">Lego StarCraft</h3>
                     <img class="section__img" src="/images/siegetank.jpg" alt="StarCraft Siege Tank microscale"/>
                     <p>Having been a lifelong admirer of StarCraft from a game designer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces (in case you're not aware, #AdultFansOfLego is a thing). My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr</CA>.</p>
-                    <p></p>
                     <h3 class="section__subheader">Mechanical keyboards</h3>
                     <img class="section__img" src="/images/keebs_in_film.jpg" alt="Ortholinear 40% mechanical keyboards shot with film photography"/>
                     <p>Started off as a utilitarian need to improve my sitting posture, this hobby, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how an electric circuit works, mechanical keyboards offer a fascinating and endless world of self-expression.</p>
