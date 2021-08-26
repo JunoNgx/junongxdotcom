@@ -43,8 +43,8 @@ class LogoCanvas {
     /** @type { string [] } */
     static colorList
 
-    constructor() {
-        this.canvas = document.getElementById("logo-canvas");
+    constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext("2d");
         
         this.canvas.width = 720;
@@ -227,8 +227,8 @@ class BackgroundCanvas {
     /** @type { string } */
     static color;
 
-    constructor() {
-        this.canvas = document.getElementById("background-canvas");
+    constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = window.innerWidth;
@@ -334,8 +334,8 @@ class ScrollCanvas {
     /** @type { {x: number, y: number} [] } */
     static posList;
 
-    constructor() {
-        this.canvas = document.getElementById("scroll-canvas");
+    constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = 720;
@@ -419,9 +419,9 @@ let scrollCanvas;
 window.onload = setup;
 
 function setup() {
-    logoCanvas = new LogoCanvas();
-    backgroundCanvas = new BackgroundCanvas();
-    scrollCanvas = new ScrollCanvas();
+    logoCanvas = new LogoCanvas("logo-canvas");
+    backgroundCanvas = new BackgroundCanvas("background-canvas");
+    scrollCanvas = new ScrollCanvas("scroll-canvas");
 
     window.requestAnimationFrame(loop);
 }
