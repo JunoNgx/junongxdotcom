@@ -70,8 +70,8 @@
                 <section class="section section--creative-coding">
                     <h2 class="section__header">Creative Coding</h2>
                     <canvas class="section__canvas" id="scroll-canvas"/>
-                    <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of pieces have also been incorporated into this website.</p>
-                    <p>My creative coding works have been displayed in my creative coding collection, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2021.</p>
+                    <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of generative arts have also been incorporated into this website, randomising a small number of elements for each of your visit.</p>
+                    <p>My creative coding works have been displayed in my personal gallery, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2021.</p>
                 </section>
             </FadeInComp>
 
