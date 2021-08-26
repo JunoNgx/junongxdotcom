@@ -7,14 +7,14 @@
 
 <main>
 	<div class="page">
-        <canvas class="page__background" id="backgroundCanvas"/>
+        <canvas class="page__background" id="background-canvas"/>
         <Navbar/>
         <div class="page--content">
 
             <!-- Banner -->
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
-                    <canvas class="section__canvas" id="logoCanvas"/>
+                    <canvas class="section__canvas" id="logo-canvas"/>
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
@@ -71,7 +71,7 @@
             <FadeInComp isOnceOnly={true} intersectingThreshold={0.2}>
                 <section class="section section--creative-coding">
                     <h2 class="section__header">Creative Coding</h2>
-                    <canvas class="section__canvas" id="scrollCanvas"/>
+                    <canvas class="section__canvas" id="scroll-canvas"/>
                     <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of my works are also incorporated into this website.</p>
                     <p>My works have been displayed in my creative coding collection, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2020.</p>
                 </section>

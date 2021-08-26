@@ -44,7 +44,7 @@ class LogoCanvas {
     static colorList
 
     constructor() {
-        this.canvas = document.getElementById("logoCanvas");
+        this.canvas = document.getElementById("logo-canvas");
         this.ctx = this.canvas.getContext("2d");
         
         this.canvas.width = 720;
@@ -228,7 +228,7 @@ class BackgroundCanvas {
     static color;
 
     constructor() {
-        this.canvas = document.getElementById("backgroundCanvas");
+        this.canvas = document.getElementById("background-canvas");
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = window.innerWidth;
@@ -335,7 +335,7 @@ class ScrollCanvas {
     static posList;
 
     constructor() {
-        this.canvas = document.getElementById("scrollCanvas");
+        this.canvas = document.getElementById("scroll-canvas");
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = 720;
