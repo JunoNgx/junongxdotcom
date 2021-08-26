@@ -254,6 +254,7 @@
 
         @media screen and (min-width: $breakpoint) {
             @include std-border;
+            @include col-sha-trans($pri-col);
             margin: 1rem 1rem 5rem 1rem;
             padding: 2rem;
 
@@ -269,30 +270,30 @@
                 }
             }
 
-            &--banner {
-                @include col-sha-trans($pri-col);
-            }
-            &--ebonymemo {
-                @include col-sha-trans($pri-col);
-            }
-            &--wonyun {
-                @include col-sha-trans($pri-col);
-            }
-            &--crisp-game-lib {
-                @include col-sha-trans($pri-col);
-            }
-            &--gamedev {
-                @include col-sha-trans($pri-col);
-            }
-            &--creative-coding {
-                @include col-sha-trans($pri-col);
-            }
-            &--misc {
-                @include col-sha-trans($pri-col);
-            }
-            &--others {
-                @include col-sha-trans($pri-col);
-            }
+            // &--banner {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--ebonymemo {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--wonyun {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--crisp-game-lib {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--gamedev {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--creative-coding {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--misc {
+            //     @include col-sha-trans($pri-col);
+            // }
+            // &--others {
+            //     @include col-sha-trans($pri-col);
+            // }
 
             &--contact-me {
                 border: none;
