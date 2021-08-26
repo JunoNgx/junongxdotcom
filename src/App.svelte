@@ -17,9 +17,8 @@
                     <canvas class="section__canvas" id="banner-canvas"/>
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
-                    <p>I am a software developer based in Singapore, best known as the creator of the website <CA link={URL.ebonymemo}>Ebony Memo</CA> and the independent videogame developer <CA link={URL.itchio}>manafarm</CA>.</p>
-                    
-                    <p>I am a fullstack web developer by trade, and also have a massive love for videogame development and creative coding. Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. Major projects are listed below.</p>
+                    <p>I am a software developer based in Singapore. Outside of being a fullstack web developer by trade, I am also, recreationally, an independent videogame developer and a creative coding artist.</p>
+                    <p>Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. This website details some of my major projects.</p>
                 </section>
             </FadeInComp>
 
@@ -42,7 +41,7 @@
                     <p>Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression.</p>
                     <p>I have been a hobbyist videogame developer since 2013, under the moniker <em>Aureoline Tetrahedron</em>, making a wide range of videogames with different frameworks and engines on different platforms. The <em>manafarm</em> rebranding was made in 2019, after several years of hiatus.</p>
         
-                    <p>My major releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
+                    <p>My major videogame releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
 
@@ -62,7 +61,7 @@
                     <h2 class="section__header">CrispGameLib Collection</h2>
                     <img class="section__img section__img--pixel" src="images/CrispGameLib_Blitzed.gif" alt="Juno Nguyen's game Blitzed"/>
                     <p>I have been a long time admirer of <CA link="https://twitter.com/abagames">Kenta Cho</CA>, and using his tools to make games was one of  my ever-procrastinated projects. <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>, one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.</p>
-                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also been actively contributing to the library and written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA>.</p>
+                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA> and occasionally contributed back to the library.</p>
                     <p><CA link="https://github.com/JunoNgx/crips-game-lib-collection">GitHub repository</CA>/<CA link="https://junongx.itch.io/crisp-webgame-collection">Itch.io page</CA>.</p>
                 </section>
             </FadeInComp>
@@ -87,7 +86,7 @@
                     <h3 class="section__subheader">Working Memory Test</h3>
                     <img class="section__img" src="/images/WorkingMemoryTestTrailer.gif" alt="demonstration of the application Working Memory Test"/>
                     <p class="section__subsubtitle">[ReactJS, October 2020]</p>
-                    <p>During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SASS</strong> over a weekend (minor refactor and bugfixes were done in the following week) as the primary research instrument. The work was well-received by the project supervisor as well as participants.</p>
+                    <p>During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SASS</strong> over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.</p>
                     <p><CA link="https://github.com/JunoNgx/working-memory-test">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p>
 
                     <hr>
@@ -96,7 +95,7 @@
                     <h3 class="section__subheader">Pura</h3>
                     <img class="section__img" src="/images/PuraTrailer.gif" alt="demonstration of the Flutter application Pura"/>
                     <p class="section__subsubtitle">[Flutter, April 2020]</p>
-                    <p>As one of my earliest dabbles into mobile app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
+                    <p>As one of my earliest dabbles into mobile app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps with similar functions were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
                     <p><CA link="https://github.com/JunoNgx/flutter-pura">GitHub repository</CA>/<CA link="https://play.google.com/store/apps/details?id=com.junongx.wallpaper">Google Play Store listing</CA></p>
 
                     <hr>
@@ -104,7 +103,7 @@
                     <!-- Lutro Mega Input Library -->
                     <h3 class="section__subheader">Lutro Mega Input Library</h3>
                     <p class="section__subsubtitle">[Lua, December 2020]</p>
-                    <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used were <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
+                    <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used was <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was to be created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
                     <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHub repository</CA></p>
 
                     <hr>
@@ -125,16 +124,16 @@
                     <p>While not programming or playing videogames, you will find me brushing my cat, enjoying arthouse cinema flicks, taking photographs, composing new Lego models on Stud.io, watching professional StarCraft, dissecting film screenplays, covering Damien Rice's songs on my guitar, or soldering a new mechanical keyboard build.</p>
                     <h3 class="section__subheader">Photography</h3>
                     <img class="section__img" src="/images/pavilion.jpg" alt="Singapore Bayfront Pavillion"/>
-                    <p>A rare creative hobby in which I enjoy the process more than more outcome. I shoot exclusively with vintage manual focus lenses and Fujifilm mechanical-inspired bodies (and occasionally dabble into film photography). I think sceneries and stills in portrait mode are highly underrated.</p>
+                    <p>A rare creative hobby in which I enjoy the process more than the output. I shoot exclusively with vintage manual focus lenses and Fujifilm mechanical-inspired bodies (and occasionally dabble into film photography itself).</p>
                     <p><CA link={URL.flickr}>My Flickr page</CA> is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.</p>
                     <h3 class="section__subheader">Lego StarCraft</h3>
                     <img class="section__img" src="/images/siegetank.jpg" alt="StarCraft Siege Tank microscale"/>
-                    <p>Having been a lifelong admirer of StarCraft from a game designer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces. My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr</CA>.</p>
+                    <p>Having been a lifelong admirer of StarCraft from a game designer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces (in case you're not aware, #AdultFansOfLego is a thing). My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on <CA link="https://www.flickr.com/photos/junongx/albums/72157715396303363">my Flickr</CA>.</p>
                     <p></p>
                     <h3 class="section__subheader">Mechanical keyboards</h3>
                     <img class="section__img" src="/images/keebs_in_film.jpg" alt="Ortholinear 40% mechanical keyboards shot with film photography"/>
-                    <p>Started off as a utilitarian need to improve my sitting posture; this, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how an electric circuit works, mechanical keyboards offer a fascinating and endless world of self-expression.</p>
-                    <p><CA link="https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum">My personalised keymap, "junonum"</CA>, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal 4x12 ortholinear keymap.</p>
+                    <p>Started off as a utilitarian need to improve my sitting posture, this hobby, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how an electric circuit works, mechanical keyboards offer a fascinating and endless world of self-expression.</p>
+                    <p>For years, I have been daily driving exclusively with the 4x12 ortholinear layout, popularised by the OLKB Planck. <CA link="https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum">My personalised keymap, "junonum"</CA>, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal  keymap.</p>
                 </section>
             </FadeInComp>
 
