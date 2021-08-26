@@ -298,6 +298,10 @@
             &--contact-me {
                 border: none;
                 margin: auto;
+                box-shadow: none;
+                &:hover {
+                    box-shadow: none;
+                }
             }
 
         }
