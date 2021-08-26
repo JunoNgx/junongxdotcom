@@ -113,18 +113,18 @@
             }
         }
         @media screen and (min-width: $breakpoint) {
+            margin-right: 1rem;
             &__control{
                 display: none;
             }
-    
             &__content {
-                margin: 3.3rem auto 0 auto;
+                position: sticky;
+                margin: 0 0 0 0;
                 right: auto;
-                left: 60%;
-                top: 0;
+                top: 4.5rem;
                 bottom: auto;
                 height: auto;
-                width: 270px;
+                width: 240px;
                 background-color: transparent;
                 clip-path: none;
     

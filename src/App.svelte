@@ -6,11 +6,10 @@
 </script>
 
 <main>
+    <canvas class="background" id="background-canvas"/>
 	<div class="page">
-        <canvas class="page__background" id="background-canvas"/>
-        <Navbar/>
         <div class="page--content">
-
+            
             <!-- Banner -->
             <FadeInComp isOnceOnly={true}>
                 <section class="section section--banner">
@@ -149,6 +148,7 @@
                 <p>uncopyrighted and <CA link="https://github.com/JunoNgx/junongxdotcom">open source</CA></p>
             </footer>
         </div>
+        <Navbar/>
     </div>
 </main>
 
@@ -159,7 +159,7 @@
         color: $pri-col;
         background-color: $bac-col;
         font-family: Jost, serif;
-        max-width: 768px;
+        max-width: 850px;
         margin: auto;
         margin-top: 2rem;
         @media screen and (min-width: $breakpoint) {
@@ -167,19 +167,23 @@
         }
     }
 
-    .page {
-        &__background {
-            display: none;
-            @media screen and (min-width: $breakpoint) {
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: -2;
-            }
+    .background {
+        display: none;
+        @media screen and (min-width: $breakpoint) {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -2;
         }
+    }
+    .page {
         &--content {
-            max-width: 550px;
+            max-width: 520px;
+        }
+        @media screen and (min-width: $breakpoint) {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
