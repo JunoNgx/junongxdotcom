@@ -327,6 +327,61 @@ class BackgroundCanvas {
     }
 }
 
+class ScrollCanvas {
+    static canvas;
+    static ctx;
+
+    constructor() {
+        this.canvas = document.getElementById("scrollCanvas");
+        this.ctx = this.canvas.getContext("2d");
+
+        this.canvas.width = 720;
+        this.canvas.height = 360;
+    }
+
+    draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        this.ctx.strokeStyle = "#000";
+        // this.ctx.fillRect(0, 0, 720, 720);
+        this.ctx.fillStyle = "#ff0000";
+        this.ctx.lineWidth = 10;
+        polygon(this.ctx, this.canvas.width/2, this.canvas.height/2, 20, 4, 0);
+        // polygon(this.ctx, 0, 0, 24, 3, 0);
+
+        // const _rotation = Math.PI/3;
+        // const _radius = 50;
+        // const a = (Math.PI * 2) / 5;
+        // this.ctx.beginPath();
+        //     this.ctx.moveTo(
+        //         360 + _radius * Math.cos(_rotation),
+        //         360 + _radius * Math.sin(_rotation)
+        //     );
+        //     for (let i = 1; i < 5; i++) {
+        //         this.ctx.lineTo(
+        //             360 + _radius * Math.cos(_rotation + a*i),
+        //             360 + _radius * Math.sin(_rotation + a*i)
+        //         );
+        //     }
+        // this.ctx.closePath();
+
+        // this.ctx.beginPath();
+        //     this.ctx.moveTo(50, 50);
+        //     this.ctx.lineTo(70, 90);
+        //     this.ctx.lineTo(20, 120);
+        // this.ctx.closePath();
+        // this.ctx.stroke();
+
+        // this.ctx.beginPath();
+        // this.ctx.moveTo(75, 50);
+        // this.ctx.lineTo(100, 75);
+        // this.ctx.lineTo(100, 25);
+        // this.ctx.fill();
+    }
+
+    
+}
+
 
 // --== Primary driver
 
@@ -334,12 +389,15 @@ class BackgroundCanvas {
 let logoCanvas;
 /** @type { BackgroundCanvas } */
 let backgroundCanvas;
+/** @type { ScrollCanvas } */
+let scrollCanvas;
 
 window.onload = setup;
 
 function setup() {
     logoCanvas = new LogoCanvas();
     backgroundCanvas = new BackgroundCanvas();
+    scrollCanvas = new ScrollCanvas();
 
     window.requestAnimationFrame(loop);
 }
@@ -347,6 +405,7 @@ function setup() {
 function draw() {
     logoCanvas.draw();
     backgroundCanvas.draw();
+    scrollCanvas.draw();
 }
 
 // --== Other utility functions
@@ -395,4 +454,27 @@ function shuffle(array) {
     }
   
     return array;
+}
+
+function polygon(_ctx, _x, _y, _radius, _sides, _rotation) {
+
+    if (_sides < 3) {
+        console.error("Drawing polygon with less than 3 sides");
+        return;
+    }
+
+    const a = (Math.PI * 2) / _sides;
+    _ctx.beginPath();
+        _ctx.moveTo(
+            _x + _radius * Math.cos(_rotation),
+            _y + _radius * Math.sin(_rotation)
+        );
+        for (let i = 1; i < _sides; i++) {
+            _ctx.lineTo(
+                _x + _radius * Math.cos(_rotation + a*i),
+                _y + _radius * Math.sin(_rotation + a*i)
+            );
+        }
+    _ctx.closePath();
+    _ctx.stroke();
 }
