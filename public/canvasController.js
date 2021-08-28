@@ -418,7 +418,8 @@ let backgroundCanvas;
 /** @type { ScrollCanvas } */
 let scrollCanvas;
 
-window.onload = setup;
+// window.onload = setup;
+window.addEventListener('DOMContentLoaded', () => setup());
 
 function setup() {
     bannerCanvas = new BannerCanvas("banner-canvas");
