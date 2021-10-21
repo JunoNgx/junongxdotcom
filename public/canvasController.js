@@ -270,17 +270,18 @@ class PlanetaryCanvas {
         });
         this.rotation = 0;
 
-        this.colorList = [
-            "#aaa", // grey
-            "#aaa", // grey
-            "#aaa", // grey
-            "#ffaaaa", // light red
-            "#c2e3af", // grass
-            "#a3ceff", // blue
-            "#00ffee", // cyan
-        ];
-        const randomIndex = Math.floor(Math.random() * this.colorList.length);
-        this.color = this.colorList[randomIndex];
+        // this.colorList = [
+        //     "#aaa", // grey
+        //     "#aaa", // grey
+        //     "#aaa", // grey
+        //     "#ffaaaa", // light red
+        //     "#c2e3af", // grass
+        //     "#a3ceff", // blue
+        //     "#00ffee", // cyan
+        // ];
+        // const randomIndex = Math.floor(Math.random() * this.colorList.length);
+        // this.color = this.colorList[randomIndex];
+        this.color = "#aaa";
     }
 
     draw() {
