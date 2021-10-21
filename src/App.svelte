@@ -7,7 +7,7 @@
 
 <main>
     <canvas class="background" id="vision-canvas"/>
-    <canvas class="background" id="background-canvas"/>
+    <canvas class="background" id="planetary-canvas"/>
 	<div class="page">
         <div class="page--content">
             

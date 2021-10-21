@@ -188,7 +188,7 @@ class BannerCanvas {
 }
 
 // --== Class: BackgroundCanvas
-class BackgroundCanvas {
+class PlanetaryCanvas {
 
     static canvas;
     static ctx;
@@ -456,13 +456,14 @@ class VisionCanvas {
             s: (window.innerWidth <= window.innerHeight) ? window.innerWidth : window.innerHeight
         };
 
-        const colourList = [
-            "lightCoral",
-            "gold",
-            "springGreen",
-            "cyan",
-            "deepSkyBlue"
-        ];
+        // const colourList = [
+        //     // "lightCoral",
+        //     // "gold",
+        //     // "springGreen",
+        //     // "cyan",
+        //     // "deepSkyBlue"
+        //     "mediumaquamarine"
+        // ];
 
         this.nodes = [];
         // Top left
@@ -472,27 +473,27 @@ class VisionCanvas {
             randomWithRange(this.canvas.width * 0.1, this.canvas.width * 0.3),
             randomWithRange(this.canvas.height * 0.1, this.canvas.height * 0.4),
             randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            colourList[Math.floor(Math.random() * colourList.length)]
+            "mediumaquamarine"
         ));
         // Bottom left
         this.nodes.push(new VisionNode(
             randomWithRange(this.canvas.width * 0.1, this.canvas.width * 0.3),
             randomWithRange(this.canvas.height * 0.6, this.canvas.height * 0.9),
             randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            colourList[Math.floor(Math.random() * colourList.length)]
+            "mediumaquamarine"
         ));
         // Mid right top
         this.nodes.push(new VisionNode(
             randomWithRange(this.canvas.width * 0.4, this.canvas.width * 0.7),
             randomWithRange(this.canvas.height * 0.2, this.canvas.height * 0.6),
             randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            colourList[Math.floor(Math.random() * colourList.length)]
+            "mediumaquamarine"
         ));
         this.nodes.push(new VisionNode(
             randomWithRange(this.canvas.width * 0.6, this.canvas.width * 0.9),
             randomWithRange(this.canvas.height * 0.7, this.canvas.height * 0.9),
             randomWithRange(VisionCanvas.wSize.l * 0.04, VisionCanvas.wSize.l * 0.12),
-            colourList[Math.floor(Math.random() * colourList.length)]
+            "mediumaquamarine"
         ));
     }
 
@@ -567,8 +568,8 @@ class VisionNode {
 
 /** @type { BannerCanvas } */
 let bannerCanvas;
-/** @type { BackgroundCanvas } */
-let backgroundCanvas;
+/** @type { Planetary } */
+let planetaryCanvas;
 /** @type { ScrollCanvas } */
 let scrollCanvas;
 /** @type { VisionCanvas} */
@@ -579,7 +580,7 @@ window.addEventListener('DOMContentLoaded', () => setup());
 
 function setup() {
     bannerCanvas = new BannerCanvas("banner-canvas");
-    backgroundCanvas = new BackgroundCanvas("background-canvas");
+    planetaryCanvas = new PlanetaryCanvas("planetary-canvas");
     scrollCanvas = new ScrollCanvas("scroll-canvas");
     visionCanvas = new VisionCanvas("vision-canvas")
 
@@ -588,7 +589,7 @@ function setup() {
 
 function draw() {
     visionCanvas.draw();
-    backgroundCanvas.draw();
+    planetaryCanvas.draw();
     bannerCanvas.draw();
     scrollCanvas.draw();
 }
