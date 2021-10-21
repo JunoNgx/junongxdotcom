@@ -21,9 +21,10 @@ This project doesn't require any environment variable and no setup is neccessary
 First, clone the repository and move into the directory:
 
 ```
-git clone https://github.com/JunoNgx/junongxdotcom.git
+git clone git@github.com:JunoNgx/junongxdotcom.git
 cd junongxdotcom
-npm run build
+npm ci
+npm run dev
 ```
 
 Then, run the development server:
