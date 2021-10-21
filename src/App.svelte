@@ -16,7 +16,7 @@
                     <canvas class="section__canvas" id="banner-canvas"/>
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
-                    <p>I am a software developer based in Singapore. Outside of being a fullstack web developer by trade, I am also, recreationally, an independent videogame developer and a creative coding artist.</p>
+                    <p>I am a software developer based in Singapore. Outside of mainly working on fullstack web development, I am also, recreationally, an independent videogame developer and a creative coding artist.</p>
                     <p>Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. This website details some of my major projects.</p>
                 </section>
             </FadeInComp>
