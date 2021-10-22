@@ -208,6 +208,7 @@
         margin: auto;
         margin-top: 2rem;
         @media screen and (min-width: $breakpoint) {
+            background-color: $bg-col;
             margin-top: 4rem;
         }
     }

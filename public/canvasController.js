@@ -447,13 +447,22 @@ class VisionCanvas {
             VisionCanvas.cursor.y = Math.round(e.clientY - canvasRect.top);
         });
         
-        const nodeColour = "#999";
-        const sideList = [3, 4, 5, 32];
-        shuffle(sideList);
+        
         const regularSizeMin = 0.02;
         const regularSizeMax = 0.05;
         const largeSizeMin = 0.04;
         const largeSizeMax = 0.07;
+        
+        // const nodeColour = "#898";
+        let colourList = [
+            "#9c465d",
+            "#2c598a",
+            "#377352",
+            "#ffe08a"
+        ];
+        shuffle(colourList);
+        let sideList = [3, 4, 5, 32];
+        shuffle(sideList);
         
         this.nodes = [];
         this.nodes.push(new VisionNode(
@@ -461,28 +470,28 @@ class VisionCanvas {
             randomWithRange(0.6, 0.8),
             randomWithRange(regularSizeMin, regularSizeMax),
             sideList[0],
-            nodeColour
+            colourList[0]
         ));
         this.nodes.push(new VisionNode(
             randomWithRange(0.3, 0.4),
             randomWithRange(0.2, 0.4),
             randomWithRange(regularSizeMin, regularSizeMax),
             sideList[1],
-            nodeColour
+            colourList[1]
         ));
         this.nodes.push(new VisionNode(
             randomWithRange(0.6, 0.7),
             randomWithRange(0.1, 0.4),
             randomWithRange(regularSizeMin, regularSizeMax),
             sideList[2],
-            nodeColour
+            colourList[2]
         ));
         this.nodes.push(new VisionNode(
             randomWithRange(0.6, 0.9),
             randomWithRange(0.6, 0.9),
             randomWithRange(largeSizeMin, largeSizeMax),
             sideList[3],
-            nodeColour
+            colourList[3]
         ));
     }
 
@@ -551,7 +560,7 @@ class VisionNode {
             y: this.y * window.innerHeight - backDist * Math.sin(angleToCursor)
         }
 
-        ctx.fillStyle = '#DDD';
+        ctx.fillStyle = '#ccc';
         polygon(
             ctx,
             backPos.x, backPos.y,
