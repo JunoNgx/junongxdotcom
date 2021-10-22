@@ -6,7 +6,8 @@ export const URL = {
     instagram: "https://instagram.com/scientistxprincess/",
     flickr: "https://flickr.com/people/JunoNgx/",
     linkedin: "https://www.linkedin.com/in/JunoNgx/",
-    ebonymemo: "http://ebonymemo.com/"
+    ebonymemo: "http://ebonymemo.com/",
+    creative_coding: "https://junongx.github.io/p5js-gallery/",
 }
 
 export const URL_EM = {
