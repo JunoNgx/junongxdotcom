@@ -28,15 +28,15 @@
             display: inline;
             text-align: center;
             text-decoration: none;
-            padding: 0.5rem 2rem;
+            padding: 0.5rem 1.5rem;
             color: $bac-col;
-            font-size: $font-size * 1.2;
+            font-size: $font-size;
             background-color: $cta-col;
             transition: $trans-time ease;
             &:hover {
                 color: $pri-col;
                 background-color: $hyperlink-col;
-                translate: -0.25rem -0.25rem;
+                transform: translate(-0.25rem, -0.25rem);
                 box-shadow: 0.25rem 0.25rem;
             }
 
