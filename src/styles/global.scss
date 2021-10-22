@@ -19,6 +19,10 @@ $trans-time: 400ms;
     border: 2px solid $pri-col;
 }
 
+@mixin std-border-btm {
+    border-bottom: 2px solid $pri-col;
+}
+
 @mixin col-sha-trans($col) {
     transition: box-shadow $trans-time ease-out;
     &:hover {

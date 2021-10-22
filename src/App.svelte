@@ -238,6 +238,7 @@
         background-color: $bac-col;
         margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
+        @include std-border-btm;
         p {
             hyphens: auto;
             line-height: 1.5;
