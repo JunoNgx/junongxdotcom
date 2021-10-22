@@ -29,12 +29,15 @@
             text-align: center;
             text-decoration: none;
             padding: 0.25rem 1rem;
-            color: #fff;
+            color: $bac-col;
             font-size: $font-size;
             background-color: $cta-col;
             transition: $trans-time ease;
             &:hover {
-                background-color: $pri-col;
+                color: $pri-col;
+                background-color: $hyperlink-col;
+                translate: -0.25rem -0.25rem;
+                box-shadow: 0.25rem 0.25rem;
             }
 
             // @media screen and (min-width: $breakpoint) {
