@@ -17,21 +17,25 @@
 
     .section__actions {
         display: flex;
-        margin-top: 1.25rem;
+        margin-top: 2rem;
         justify-content: flex-end;
         gap: 1rem;
         &__item {
             display: inline;
+            text-align: center;
             text-decoration: none;
             padding: 0.25rem 1rem;
-            color: $bac-col;
-            font-size: 1.25em;
+            color: #fff;
+            font-size: $font-size;
             background-color: $cta-col;
             transition: $trans-time ease;
             &:hover {
-                color: $bac-col;
                 background-color: $pri-col;
             }
+
+            // @media screen and (min-width: $breakpoint) {
+            //     font-size: $font-size * 1.25;
+            // }
         }
     }
 </style>
