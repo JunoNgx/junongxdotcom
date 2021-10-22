@@ -28,9 +28,9 @@
             display: inline;
             text-align: center;
             text-decoration: none;
-            padding: 0.25rem 1rem;
+            padding: 0.5rem 2rem;
             color: $bac-col;
-            font-size: $font-size;
+            font-size: $font-size * 1.2;
             background-color: $cta-col;
             transition: $trans-time ease;
             &:hover {
