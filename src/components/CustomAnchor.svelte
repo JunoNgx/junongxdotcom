@@ -1,8 +1,17 @@
 <script>
     export let link;
+    export let isCta = false;
+
+
 </script>
 
-<a class="custom-hyperlink" href={link} rel="noopener noreferrer" target="_blank"><slot/></a>
+<a
+    class="custom-hyperlink" href={link}
+    class:custom-hyperlink--cta={isCta}
+    rel="noopener noreferrer" target="_blank"
+>    
+    <slot/>
+</a>
 
 <style lang="scss">
     @import '../styles/global.scss';
@@ -19,6 +28,9 @@
         &:hover {
             background-position: 50% 50%;
             background-size: 100% 100%;
+        }
+        &--cta {
+            background-image: linear-gradient(to top, $hyperlink-cta-col 0% 90%, transparent 10%);
         }
     }
 </style>
