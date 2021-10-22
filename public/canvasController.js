@@ -28,22 +28,16 @@ function loop() {
 // --== Class: Logo Canvas
 class BannerCanvas {
 
-    static canvas;
-    static ctx;
-
-    static BASE;
-    static HEIGHT;
+    canvas;
+    ctx;
 
     /** @typedef {{pos: Vector, base: number, height: number, angle: number, speed: number, color: string}} Parallelogram */
     /** @type { Parallelogram [] } */
-    static shapes;
+    shapes;
 
     /** @typedef {{cooldown: number, pos: Vector, interval: number, base: number, height: number, speed: number, color: String}} Spawner */
     /** @type { Spawner [] } */
-    static spawners;
-
-    /** @type { string [] } */
-    static colorList
+    spawners;
 
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
@@ -52,16 +46,16 @@ class BannerCanvas {
         this.canvas.width = 720;
         this.canvas.height = 360;
 
-        this.BASE = this.canvas.width * 0.20;
-        this.HEIGHT= this.canvas.height * 0.37;
+        const shapeBase = this.canvas.width * 0.20;
+        const shapeHeight = this.canvas.height * 0.37;
 
-        this.colorList = [
-            '#99e0af',
+        let colourList = [
             '#d968b1',
-            '#e6df97',
-            '#3ba1cc'
+            '#99e0af',
+            '#3ba1cc',
+            '#ffe08a'
         ]
-        shuffle(this.colorList);
+        shuffle(colourList);
 
         this.shapes = [];
         this.spawners = [
@@ -69,49 +63,41 @@ class BannerCanvas {
                 pos: vec(this.canvas.width * 0.32, this.canvas.height * -0.5),
                 cooldown: 0,
                 interval: 160,
-                base: this.BASE,
-                height: this.HEIGHT,
+                base: shapeBase,
+                height: shapeHeight,
                 speed: this.canvas.height * 0.003,
                 isDown: true,
-                color: this.colorList[0]
-                // color: '#99e0af'
-                // color: '#445'
+                color: colourList[0]
             },
             {
                 pos: vec(this.canvas.width * 0.05, this.canvas.height * 1.2),
                 cooldown: 0,
                 interval: 60,
-                base: this.BASE,
-                height: this.HEIGHT,
+                base: shapeBase,
+                height: shapeHeight,
                 speed: this.canvas.height * 0.008,
                 isDown: false,
-                color: this.colorList[1]
-                // color: '#d968b1'
-                // color: '#445'
+                color: colourList[1]
             },
             {
                 pos: vec(this.canvas.width * 0.85, this.canvas.height * -0.8),
                 cooldown: 0,
                 interval: 160,
-                base: this.BASE,
-                height: this.HEIGHT,
+                base: shapeBase,
+                height: shapeHeight,
                 speed: this.canvas.height * 0.003,
                 isDown: true,
-                color: this.colorList[2]
-                // color: '#e6df97'
-                // color: '#445'
+                color: colourList[2]
             },
             {
                 pos: vec(this.canvas.width * 0.42, this.canvas.height * 1.5),
                 cooldown: 0,
                 interval: 120,
-                base: this.BASE,
-                height: this.HEIGHT,
+                base: shapeBase,
+                height: shapeHeight,
                 speed: this.canvas.height * 0.004,
                 isDown: false,
-                color: this.colorList[3]
-                // color: '#3ba1cc'
-                // color: '#445'
+                color: colourList[3]
             },
         ];
     }
@@ -455,11 +441,11 @@ class VisionCanvas {
         
         // const nodeColour = "#898";
         let colourList = [
-            "#9c465d",
-            "#2c598a",
-            "#377352",
-            "#ffe08a"
-        ];
+            '#d968b1',
+            '#99e0af',
+            '#3ba1cc',
+            '#ffe08a'
+        ]
         shuffle(colourList);
         let sideList = [3, 4, 5, 32];
         shuffle(sideList);
