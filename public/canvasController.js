@@ -505,9 +505,14 @@ class VisionCanvas {
         VisionCanvas.draggedCursor.x = lerp(VisionCanvas.draggedCursor.x, VisionCanvas.cursor.x, 0.5);
         VisionCanvas.draggedCursor.y = lerp(VisionCanvas.draggedCursor.y, VisionCanvas.cursor.y, 0.5);
 
+        // This is necessary to ensure that all the front nodes are always on top of the back nodes
         this.nodes.forEach(node => {
-            node.draw(ctx);
+            node.drawBack(ctx);
         });
+        
+        this.nodes.forEach(node => {
+            node.drawFront(ctx);
+        })
     }
 }
 
@@ -536,18 +541,12 @@ class VisionNode {
     }
 
     /** @param {CanvasRenderingContext2D} ctx */
-    draw(ctx) {
-
+    drawBack(ctx) {
         const angleToCursor = Math.atan2(VisionCanvas.draggedCursor.y - this.y, VisionCanvas.draggedCursor.x - this.x);
         const distToCursor = dist(
             VisionCanvas.draggedCursor.x, VisionCanvas.draggedCursor.y,
             this.x, this.y);
         const backDist = distToCursor * 0.15;
-        const frontDist = distToCursor * 0.3;
-        const frontPos = {
-            x: this.x + frontDist * Math.cos(angleToCursor),
-            y: this.y + frontDist * Math.sin(angleToCursor)
-        }        
         const backPos = {
             x: this.x - backDist * Math.cos(angleToCursor),
             y: this.y - backDist * Math.sin(angleToCursor)
@@ -555,6 +554,20 @@ class VisionNode {
 
         ctx.fillStyle = '#DDD';
         polygon(ctx, backPos.x, backPos.y, this.size + distToCursor * 0.08, 3, Math.PI/2, true);
+    }
+
+    /** @param {CanvasRenderingContext2D} ctx */
+    drawFront(ctx) {
+        const angleToCursor = Math.atan2(VisionCanvas.draggedCursor.y - this.y, VisionCanvas.draggedCursor.x - this.x);
+        const distToCursor = dist(
+            VisionCanvas.draggedCursor.x, VisionCanvas.draggedCursor.y,
+            this.x, this.y);
+
+        const frontDist = distToCursor * 0.3;
+        const frontPos = {
+            x: this.x + frontDist * Math.cos(angleToCursor),
+            y: this.y + frontDist * Math.sin(angleToCursor)
+        }        
 
         ctx.strokeStyle = this.colour;
         ctx.lineWidth = VisionCanvas.wSize.s * 0.01;
@@ -589,8 +602,8 @@ function setup() {
 }
 
 function draw() {
-    visionCanvas.draw();
     planetaryCanvas.draw();
+    visionCanvas.draw();
     bannerCanvas.draw();
     scrollCanvas.draw();
 }
