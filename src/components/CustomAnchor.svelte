@@ -28,7 +28,7 @@
             background-size: 100% 100%;
         }
         &--cta {
-            background-image: linear-gradient(to top, $hyperlink-cta-col 0% 90%, transparent 10%);
+            background-image: linear-gradient(to top, $cta-col 0% 90%, transparent 10%);
         }
     }
 </style>

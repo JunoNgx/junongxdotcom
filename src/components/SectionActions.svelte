@@ -5,11 +5,11 @@
 <main>
     <div class="section__actions">
         {#each items as item}
-            <div class="section__actions_item">
-                <a href={item.link} rel="noopener noreferrer" target="_blank">
+            <!-- <div class="section__actions__item"> -->
+                <a class = "section__actions__item" href={item.link} rel="noopener noreferrer" target="_blank">
                     {item.label}
                 </a>
-            </div>
+            <!-- </div> -->
         {/each}
     </div>
 </main>
@@ -22,8 +22,19 @@
         margin: 1rem;
         justify-content: flex-end;
         &__item {
-            background-color: 'red';
-            color: 'blue';
+            display: inline;
+            text-decoration: none;
+            // border: 1px $pri-col solid;
+            padding: 0.25rem 1rem;
+            // &a {
+            color: $bac-col;
+            font-size: 1.25em;
+            background-color: $pri-col;
+            // }
+            transition: $trans-time ease;
+            &:hover {
+                background-color: $cta-col;
+            }
         }
     }
 </style>
