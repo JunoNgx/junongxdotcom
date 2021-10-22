@@ -33,7 +33,7 @@
                     <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
                     <SectionActions
                         items = {[
-                            {label: "Project home page", link: URL_EM.frontend_deployment}
+                            {label: "EbonyMemo.com", link: URL_EM.frontend_deployment}
                         ]}
                     />
                 </section>
@@ -113,7 +113,6 @@
                     <img class="section__img" src="/images/WorkingMemoryTestTrailer.gif" alt="demonstration of the application Working Memory Test"/>
                     <p class="section__subsubtitle">[ReactJS, October 2020]</p>
                     <p>During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SASS</strong> over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.</p>
-                    <!-- <p><CA link="">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p> -->
                     <SectionActions
                         items={[
                             {label: "GitHub page", link: "https://github.com/JunoNgx/working-memory-test"},
@@ -153,7 +152,6 @@
                     <h3 class="section__subheader">Moon2P8</h3>
                     <p class="section__subsubtitle">[Python, June 2020]</p>
                     <p>After shipping <strong>Wonyun Trench Run</strong>, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was <CA link="https://moonscript.org/">moonscript</CA>, which compiled to lua. <strong>Moon2P8</strong> was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.</p>
-                    <!-- <p><CA link="https://github.com/JunoNgx/moon2p8-py">GitHub repository</CA></p> -->
                     <SectionActions
                         items={[
                             {label: "GitHub page", link: "https://github.com/JunoNgx/moon2p8-py"}
