@@ -33,12 +33,9 @@
                     <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
                     <SectionActions
                         items = {[
-                            {label: "Main Page", link: URL_EM.frontend_deployment}
+                            {label: "Project home page", link: URL_EM.frontend_deployment}
                         ]}
                     />
-                    <!-- <div class="section__actions">
-                        <div class="section__actions__item"><CA link={URL_EM.frontend_deployment}>Home page</CA></div>
-                    </div> -->
                 </section>
             </FadeInComp>
 
@@ -49,8 +46,12 @@
                     <img class="section__img" src="/images/manafarm_black_512.png" alt="manafarm logo"/>
                     <p>Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression.</p>
                     <p>I have been a hobbyist videogame developer since 2013, under the moniker <em>Aureoline Tetrahedron</em>, making a wide range of videogames with different frameworks and engines on different platforms. The <em>manafarm</em> rebranding was made in 2019, after several years of hiatus.</p>
-        
-                    <p>My major videogame releases can be found on my <CA link={URL.itchio}>Itch.io page</CA>.</p>
+                    <p>My major videogame releases can be found on my <strong>Itch.io page</strong>.</p>
+                    <SectionActions
+                        items={[
+                            {label: "Itch.io page", link: URL.itchio}
+                        ]}
+                    />
                 </section>
             </FadeInComp>
 
@@ -60,7 +61,12 @@
                     <h2 class="section__header">Wonyun Trench Run</h2>
                     <img class="section__img section__img--pixel" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
                     <p>My latest major videogame release, launched in June 2020, is my first dive into videogame software architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
-                    <p><CA isCta=true link="https://github.com/JunoNgx/p8wonyun">View the source</CA>/<CA link="https://junongx.itch.io/wonyun-trench-run">Play the game</CA>.</p>
+                    <SectionActions
+                        items={[
+                            {label: "View the source", link: "https://github.com/JunoNgx/p8wonyun"},
+                            {label: "Play on Itch.io", link: "https://junongx.itch.io/wonyun-trench-run"},
+                        ]}
+                    />
                 </section>
             </FadeInComp>
 
@@ -70,8 +76,13 @@
                     <h2 class="section__header">CrispGameLib Collection</h2>
                     <img class="section__img section__img--pixel" src="images/CrispGameLib_Blitzed.gif" alt="Juno Nguyen's game Blitzed"/>
                     <p>I have been a long time admirer of <CA link="https://twitter.com/abagames">Kenta Cho</CA>, and using his tools to make games was one of  my ever-procrastinated projects. <CA link="https://github.com/abagames/crisp-game-lib">CrispGameLib</CA>, one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.</p>
-                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also written a long and detailed <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">tutorial</CA> and occasionally contributed back to the library.</p>
-                    <p><CA link="https://github.com/JunoNgx/crips-game-lib-collection">GitHub repository</CA>/<CA link="https://junongx.itch.io/crisp-webgame-collection">Itch.io page</CA>.</p>
+                    <p>Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also written <CA link="https://github.com/JunoNgx/crisp-game-lib-tutorial">a long and detailed tutorial</CA> and occasionally contributed back to the library.</p>
+                    <SectionActions
+                        items={[
+                            {label: "View the source", link: "https://github.com/JunoNgx/crips-game-lib-collection"},
+                            {label: "Play on Itch.io", link: "https://junongx.itch.io/crisp-webgame-collection"}
+                        ]}
+                    />
                 </section>
             </FadeInComp>
 
@@ -81,7 +92,13 @@
                     <h2 class="section__header">Creative Coding</h2>
                     <canvas class="section__canvas" id="scroll-canvas"/>
                     <p>As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with <CA link="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">the web canvas API</CA> as much as <CA link="https://p5js.org/">p5js</CA>. A handful of generative arts have also been incorporated into this website, randomising a small number of elements for each of your visit.</p>
-                    <p>My creative coding works have been displayed in my personal gallery, <CA link="https://junongx.github.io/p5js-gallery/">Game of Ease</CA>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2021.</p>
+                    <p>My creative coding works have been displayed in my personal gallery, <strong>Game of Ease</strong>, along side my <CA link="https://openprocessing.org/user/281414/">OpenProcessing account</CA>, since August 2021.</p>
+                    <SectionActions
+                        items={[
+                            {label: "View the gallery", link: URL.creative_coding},
+                            {label: "View the source", link: "https://github.com/JunoNgx/p5js-gallery"},
+                        ]}
+                    />
                 </section>
             </FadeInComp>
 
@@ -96,7 +113,13 @@
                     <img class="section__img" src="/images/WorkingMemoryTestTrailer.gif" alt="demonstration of the application Working Memory Test"/>
                     <p class="section__subsubtitle">[ReactJS, October 2020]</p>
                     <p>During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with <strong>ReactJS</strong> and <strong>SASS</strong> over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.</p>
-                    <p><CA link="https://github.com/JunoNgx/working-memory-test">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p>
+                    <!-- <p><CA link="">GitHub repository</CA>/<CA link="https://workingmemorytest.netlify.app/">Deployment</CA></p> -->
+                    <SectionActions
+                        items={[
+                            {label: "GitHub page", link: "https://github.com/JunoNgx/working-memory-test"},
+                            {label: "Deployment page", link: "https://workingmemorytest.netlify.app/"}
+                        ]}
+                    />
 
                     <hr>
 
@@ -105,7 +128,12 @@
                     <img class="section__img" src="/images/PuraTrailer.gif" alt="demonstration of the Flutter application Pura"/>
                     <p class="section__subsubtitle">[Flutter, April 2020]</p>
                     <p>As one of my earliest dabbles into mobile app development, <strong>Pura</strong> was created with both technical curiosity and personal needs in mind (the existing apps with similar functions were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's <strong>Flutter</strong>, a promising up-and-coming multi-platform framework.</p>
-                    <p><CA link="https://github.com/JunoNgx/flutter-pura">GitHub repository</CA>/<CA link="https://play.google.com/store/apps/details?id=com.junongx.wallpaper">Google Play Store listing</CA></p>
+                    <SectionActions
+                        items={[
+                            {label: "GitHub page", link: "https://github.com/JunoNgx/flutter-pura"},
+                            {label: "Play Store listing", link: "https://play.google.com/store/apps/details?id=com.junongx.wallpaper"}
+                        ]}
+                    />
 
                     <hr>
 
@@ -113,7 +141,11 @@
                     <h3 class="section__subheader">Lutro Mega Input Library</h3>
                     <p class="section__subsubtitle">[Lua, December 2020]</p>
                     <p>Working with <CA link="https://piepacker.com/">Piepacker</CA> on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used was <CA link="https://github.com/piepacker/lutro">Lutro</CA>, a port of love2d API to <CA link="https://www.libretro.com/">libretro</CA>. The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was to be created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.</p>
-                    <p><CA link="https://github.com/JunoNgx/LutroMegaInput">GitHub repository</CA></p>
+                    <SectionActions
+                        items={[
+                            {label: "GitHub page", link: "https://github.com/JunoNgx/LutroMegaInput"}
+                        ]}
+                    />
 
                     <hr>
 
@@ -121,7 +153,12 @@
                     <h3 class="section__subheader">Moon2P8</h3>
                     <p class="section__subsubtitle">[Python, June 2020]</p>
                     <p>After shipping <strong>Wonyun Trench Run</strong>, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was <CA link="https://moonscript.org/">moonscript</CA>, which compiled to lua. <strong>Moon2P8</strong> was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.</p>
-                    <p><CA link="https://github.com/JunoNgx/moon2p8-py">GitHub repository</CA></p>
+                    <!-- <p><CA link="https://github.com/JunoNgx/moon2p8-py">GitHub repository</CA></p> -->
+                    <SectionActions
+                        items={[
+                            {label: "GitHub page", link: "https://github.com/JunoNgx/moon2p8-py"}
+                        ]}
+                    />
 
                 </section>
             </FadeInComp>
