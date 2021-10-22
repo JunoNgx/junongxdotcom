@@ -18,7 +18,7 @@
                     <h1 class="section__brand">Hi, I'm Juno Nguyen.</h1>
                     <p>(he/him)</p>
                     <p>I am a software developer based in Singapore. Outside of mainly working on fullstack web development, I am also, recreationally, an independent videogame developer and a creative coding artist.</p>
-                    <p>Most of my works are free, open source, and can be found on <CA isCta=true link={URL.github}>my GitHub</CA>. This website details some of my major projects.</p>
+                    <p>Most of my works are free, open source, and can be found on <CA link={URL.github}>my GitHub</CA>. This website details some of my major projects.</p>
                 </section>
             </FadeInComp>
 
@@ -51,7 +51,7 @@
                     <h2 class="section__header">Wonyun Trench Run</h2>
                     <img class="section__img section__img--pixel" src="/images/wonyun_5.gif" alt="Wonyun Trench Run screenshot"/>
                     <p>My latest major videogame release, launched in June 2020, is my first dive into videogame software architecture. Implementing the <strong>entity-component-system</strong> pattern, the game is extremely scalable and flexible, and adding new features is a breeze. The minimalistic nature and limitations of <strong>Pico8</strong> (which uses a highly limited subset of Lua) made it an interesting challenge, both technically and artistically.</p>
-                    <p><CA link="https://github.com/JunoNgx/p8wonyun">View the source</CA>/<CA link="https://junongx.itch.io/wonyun-trench-run">Play the game</CA>.</p>
+                    <p><CA isCta=true link="https://github.com/JunoNgx/p8wonyun">View the source</CA>/<CA link="https://junongx.itch.io/wonyun-trench-run">Play the game</CA>.</p>
                 </section>
             </FadeInComp>
 
