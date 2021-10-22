@@ -421,13 +421,6 @@ class VisionCanvas {
     static draggedCursor;
     /** @type {VisionNode []} */
     nodes;
-    /**
-     * @type {{
-     * s: number
-     * l: number
-     * }}
-     * */
-    static wSize;
 
     /** @param {string} canvasId */
     constructor(canvasId) {
@@ -451,50 +444,40 @@ class VisionCanvas {
             VisionCanvas.cursor.x = Math.round(e.clientX - canvasRect.left);
             VisionCanvas.cursor.y = Math.round(e.clientY - canvasRect.top);
         });
-
-        VisionCanvas.wSize = {
-            l: (window.innerWidth >= window.innerHeight) ? window.innerWidth : window.innerHeight,
-            s: (window.innerWidth <= window.innerHeight) ? window.innerWidth : window.innerHeight
-        };
-
-        // const colourList = [
-        //     // "lightCoral",
-        //     // "gold",
-        //     // "springGreen",
-        //     // "cyan",
-        //     // "deepSkyBlue"
-        //     "mediumaquamarine"
-        // ];
+        
+        const nodeColour = "#999";
 
         this.nodes = [];
         // Top left
-        const regularSizeMin = 0.03;
-        const regularSizeMax = 0.1;
+        const regularSizeMin = 0.02;
+        const regularSizeMax = 0.05;
+        const largeSizeMin = 0.05;
+        const largeSizeMax = 0.1;
         this.nodes.push(new VisionNode(
-            randomWithRange(this.canvas.width * 0.1, this.canvas.width * 0.3),
-            randomWithRange(this.canvas.height * 0.1, this.canvas.height * 0.4),
-            randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            "mediumaquamarine"
+            randomWithRange(0.1, 0.3),
+            randomWithRange(0.1, 0.3),
+            randomWithRange(regularSizeMin, regularSizeMax),
+            nodeColour
         ));
         // Bottom left
         this.nodes.push(new VisionNode(
-            randomWithRange(this.canvas.width * 0.1, this.canvas.width * 0.3),
-            randomWithRange(this.canvas.height * 0.6, this.canvas.height * 0.9),
-            randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            "mediumaquamarine"
+            randomWithRange(0.1, 0.3),
+            randomWithRange(0.7, 0.9),
+            randomWithRange(regularSizeMin, regularSizeMax),
+            nodeColour
         ));
         // Mid right top
         this.nodes.push(new VisionNode(
-            randomWithRange(this.canvas.width * 0.4, this.canvas.width * 0.7),
-            randomWithRange(this.canvas.height * 0.2, this.canvas.height * 0.6),
-            randomWithRange(VisionCanvas.wSize.l * regularSizeMin, VisionCanvas.wSize.l * regularSizeMax),
-            "mediumaquamarine"
+            randomWithRange(0.4, 0.7),
+            randomWithRange(0.2, 0.6),
+            randomWithRange(regularSizeMin, regularSizeMax),
+            nodeColour
         ));
         this.nodes.push(new VisionNode(
-            randomWithRange(this.canvas.width * 0.6, this.canvas.width * 0.9),
-            randomWithRange(this.canvas.height * 0.7, this.canvas.height * 0.9),
-            randomWithRange(VisionCanvas.wSize.l * 0.04, VisionCanvas.wSize.l * 0.12),
-            "mediumaquamarine"
+            randomWithRange(0.7, 0.9),
+            randomWithRange(0.7, 0.9),
+            randomWithRange(largeSizeMin, largeSizeMax),
+            nodeColour
         ));
     }
 
@@ -513,6 +496,7 @@ class VisionCanvas {
         this.nodes.forEach(node => {
             node.drawFront(ctx);
         })
+        
     }
 }
 
@@ -523,60 +507,74 @@ class VisionNode {
     /** @type {number} */
     y;
     /** @type {number} */
-    size;
+    sizeRate;
     /** @type {string} */
     colour;
 
     /**
      * @param {number} _x
      * @param {number} _y
-     * @param {number} _size
+     * @param {number} _sizeRate
      * @param {string} _colour
      */
-    constructor(_x, _y, _size, _colour) {
+    constructor(_x, _y, _sizeRate, _colour) {
         this.x = _x;
         this.y = _y;
-        this.size = _size;
+        this.sizeRate = _sizeRate;
         this.colour = _colour;
     }
 
     /** @param {CanvasRenderingContext2D} ctx */
     drawBack(ctx) {
-        const angleToCursor = Math.atan2(VisionCanvas.draggedCursor.y - this.y, VisionCanvas.draggedCursor.x - this.x);
+        const angleToCursor = Math.atan2(
+            VisionCanvas.draggedCursor.y - (window.innerHeight * this.y),
+            VisionCanvas.draggedCursor.x - (window.innerWidth * this.x)
+        );
         const distToCursor = dist(
             VisionCanvas.draggedCursor.x, VisionCanvas.draggedCursor.y,
-            this.x, this.y);
+            window.innerWidth * this.x,
+            window.innerHeight * this.y
+        );
+
         const backDist = distToCursor * 0.15;
         const backPos = {
-            x: this.x - backDist * Math.cos(angleToCursor),
-            y: this.y - backDist * Math.sin(angleToCursor)
+            x: this.x * window.innerWidth - backDist * Math.cos(angleToCursor),
+            y: this.y * window.innerHeight - backDist * Math.sin(angleToCursor)
         }
 
         ctx.fillStyle = '#DDD';
-        polygon(ctx, backPos.x, backPos.y, this.size + distToCursor * 0.08, 3, Math.PI/2, true);
+        polygon(
+            ctx, backPos.x, backPos.y,
+            (window.innerWidth * this.sizeRate) + distToCursor * 0.15,
+            3, Math.PI/2, true
+        );
     }
 
     /** @param {CanvasRenderingContext2D} ctx */
     drawFront(ctx) {
-        const angleToCursor = Math.atan2(VisionCanvas.draggedCursor.y - this.y, VisionCanvas.draggedCursor.x - this.x);
+        const angleToCursor = Math.atan2(
+            VisionCanvas.draggedCursor.y - (window.innerHeight * this.y),
+            VisionCanvas.draggedCursor.x - (window.innerWidth * this.x)
+        );
         const distToCursor = dist(
             VisionCanvas.draggedCursor.x, VisionCanvas.draggedCursor.y,
-            this.x, this.y);
+            window.innerWidth * this.x,
+            window.innerHeight * this.y
+        );
 
-        const frontDist = distToCursor * 0.3;
+        const frontDist = distToCursor * 0.4;
         const frontPos = {
-            x: this.x + frontDist * Math.cos(angleToCursor),
-            y: this.y + frontDist * Math.sin(angleToCursor)
+            x: this.x * window.innerWidth + frontDist * Math.cos(angleToCursor),
+            y: this.y * window.innerHeight + frontDist * Math.sin(angleToCursor)
         }        
 
         ctx.strokeStyle = this.colour;
-        ctx.lineWidth = VisionCanvas.wSize.s * 0.01;
-        polygon(ctx, frontPos.x, frontPos.y, this.size/2 + distToCursor * 0.04, 3, Math.PI/2, false);
+        ctx.lineWidth = window.innerWidth * 0.002 + distToCursor * 0.04;
+        polygon(ctx, frontPos.x, frontPos.y,
+            (window.innerWidth * this.sizeRate) * 0.5 + distToCursor * 0.1,
+            3, Math.PI/2, false);
     }
 }
-
-
-
 
 // --== Primary driver
 
