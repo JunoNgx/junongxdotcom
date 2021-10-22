@@ -5,7 +5,11 @@
 <main>
     <div class="section__actions">
         {#each items as item}
-                <a class = "section__actions__item" href={item.link} rel="noopener noreferrer" target="_blank">
+                <a
+                    class="section__actions__item"
+                    href={item.link} rel="noopener noreferrer"
+                    target="_blank"
+                >
                     {item.label}
                 </a>
         {/each}
