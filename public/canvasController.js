@@ -178,17 +178,17 @@ class BannerCanvas {
 // --== Class: BackgroundCanvas
 class PlanetaryCanvas {
 
-    static canvas;
-    static ctx;
+    canvas;
+    ctx;
 
-    static CORE_RADIUS; 
-    static AMT_OF_PLANETS_MIN; 
-    static AMT_OF_PLANETS_MAX; 
-    static PLANET_SIZE_MIN; 
-    static PLANET_SIZE_MAX; 
-    static PLANET_ROTATION_SPEED_MIN; 
-    static PLANET_ROTATION_SPEED_MAX; 
-    static PLANET_DISTANCE; 
+    CORE_RADIUS; 
+    AMT_OF_PLANETS_MIN; 
+    AMT_OF_PLANETS_MAX; 
+    PLANET_SIZE_MIN; 
+    PLANET_SIZE_MAX; 
+    PLANET_ROTATION_SPEED_MIN; 
+    PLANET_ROTATION_SPEED_MAX; 
+    PLANET_DISTANCE; 
 
     /**
      * @typedef {{
@@ -198,22 +198,22 @@ class PlanetaryCanvas {
      * }} Planet
      */
     /** @type { Planet [] } */
-    static planets;
+    planets;
 
     /** @type { Vector } */
-    static cursor;
+    cursor;
 
     /** @type { Vector } */
-    static core;
+    core;
 
     /** @type { number } */
-    static rotation;
+    rotation;
 
     /** @type { string [] } */
-    static colorList;
+    colorList;
 
     /** @type { string } */
-    static color;
+    color;
 
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
@@ -317,11 +317,11 @@ class PlanetaryCanvas {
 }
 
 class ScrollCanvas {
-    static canvas;
-    static ctx;
+    canvas;
+    ctx;
 
     /** @type { {x: number, y: number} [] } */
-    static posList;
+    posList;
 
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
