@@ -6,7 +6,7 @@
     let isExpanded = false;
 </script>
 
-<div class="navbar">
+<nav class="navbar">
     <div class={"navbar__control"} class:navbar__control--expanded={isExpanded} on:click={() => {isExpanded = !isExpanded}}>
         <p class={"navbar__control__label"} class:navbar__control__label--expanded={isExpanded}>My contacts</p>
         <div class={"navbar__control__icon"} class:navbar__control__icon--expanded={isExpanded}/>
@@ -25,7 +25,7 @@
             ╳
         </p>
     </div>
-</div>
+</nav>
 
 <style lang="scss">
     // Using BEM naming convention
@@ -88,7 +88,7 @@
     
             transition: clip-path $trans-time;        
             &--expanded {
-                clip-path: circle(1000px at 90% 5%);
+                clip-path: circle(150vh at 90% 5%);
             }
     
             &__contacts {
