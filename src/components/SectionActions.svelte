@@ -1,15 +1,13 @@
 <script>
-    export let items; // {label: string, link: string}
+    export let items; // {label: string, link: string}[]
 </script>
 
 <main>
     <div class="section__actions">
         {#each items as item}
-            <!-- <div class="section__actions__item"> -->
                 <a class = "section__actions__item" href={item.link} rel="noopener noreferrer" target="_blank">
                     {item.label}
                 </a>
-            <!-- </div> -->
         {/each}
     </div>
 </main>
@@ -19,21 +17,20 @@
 
     .section__actions {
         display: flex;
-        margin: 1rem;
+        margin-top: 1.25rem;
         justify-content: flex-end;
+        gap: 1rem;
         &__item {
             display: inline;
             text-decoration: none;
-            // border: 1px $pri-col solid;
             padding: 0.25rem 1rem;
-            // &a {
             color: $bac-col;
             font-size: 1.25em;
-            background-color: $pri-col;
-            // }
+            background-color: $cta-col;
             transition: $trans-time ease;
             &:hover {
-                background-color: $cta-col;
+                color: $bac-col;
+                background-color: $pri-col;
             }
         }
     }
