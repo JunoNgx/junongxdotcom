@@ -2,6 +2,7 @@
     import Navbar from './components/Navbar.svelte';
     import CA from './components/CustomAnchor.svelte';
     import FadeInComp from './components/FadeInComponent.svelte';
+    import SectionActions from './components/SectionActions.svelte'
     import { URL, URL_EM } from './components/URL.js';
 </script>
 
@@ -30,6 +31,14 @@
                     <p><strong>Backend</strong> (NodeJS/Express, <CA link={URL_EM.backend_source}>source</CA>, <CA link={URL_EM.backend_deployment}>deployment</CA>): A serverless RESTful API handling CRUD operations and authorisations for data modification. The database is stored on MongoDB Atlas.</p>
                     <p><strong>Content management application</strong> (ReactJS, <CA link={URL_EM.cma_source}>source</CA>, <CA link={URL_EM.cma_deployment}>deployment</CA>): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not optimized for mobile or SEO.</p>
                     <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
+                    <SectionActions
+                        items = {[
+                            {label: "Main Page", link: URL_EM.frontend_deployment}
+                        ]}
+                    />
+                    <!-- <div class="section__actions">
+                        <div class="section__actions__item"><CA link={URL_EM.frontend_deployment}>Home page</CA></div>
+                    </div> -->
                 </section>
             </FadeInComp>
 
@@ -211,6 +220,7 @@
             font-size: 1.5rem;
             margin-top: 2em;
         }
+
         &__img {
             display: block;
             width: 100%;

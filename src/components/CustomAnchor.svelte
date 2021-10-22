@@ -1,8 +1,6 @@
 <script>
     export let link;
     export let isCta = false;
-
-
 </script>
 
 <a
