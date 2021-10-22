@@ -1,3 +1,5 @@
+// Canvas controller scripts for JunoNgx.com by Juno Nguyen
+
 // --== Core setup for canvas loop
 const FPS = 60;
 const INTERVAL = 1000/FPS;
