@@ -448,37 +448,40 @@ class VisionCanvas {
         });
         
         const nodeColour = "#999";
-
-        this.nodes = [];
-        // Top left
+        const sideList = [3, 4, 5, 32];
+        shuffle(sideList);
         const regularSizeMin = 0.02;
         const regularSizeMax = 0.05;
-        const largeSizeMin = 0.05;
-        const largeSizeMax = 0.1;
+        const largeSizeMin = 0.04;
+        const largeSizeMax = 0.07;
+        
+        this.nodes = [];
         this.nodes.push(new VisionNode(
-            randomWithRange(0.1, 0.3),
-            randomWithRange(0.1, 0.3),
+            randomWithRange(0.1, 0.2),
+            randomWithRange(0.6, 0.8),
             randomWithRange(regularSizeMin, regularSizeMax),
-            nodeColour
-        ));
-        // Bottom left
-        this.nodes.push(new VisionNode(
-            randomWithRange(0.1, 0.3),
-            randomWithRange(0.7, 0.9),
-            randomWithRange(regularSizeMin, regularSizeMax),
-            nodeColour
-        ));
-        // Mid right top
-        this.nodes.push(new VisionNode(
-            randomWithRange(0.4, 0.7),
-            randomWithRange(0.2, 0.6),
-            randomWithRange(regularSizeMin, regularSizeMax),
+            sideList[0],
             nodeColour
         ));
         this.nodes.push(new VisionNode(
-            randomWithRange(0.7, 0.9),
-            randomWithRange(0.7, 0.9),
+            randomWithRange(0.3, 0.4),
+            randomWithRange(0.2, 0.4),
+            randomWithRange(regularSizeMin, regularSizeMax),
+            sideList[1],
+            nodeColour
+        ));
+        this.nodes.push(new VisionNode(
+            randomWithRange(0.6, 0.7),
+            randomWithRange(0.1, 0.4),
+            randomWithRange(regularSizeMin, regularSizeMax),
+            sideList[2],
+            nodeColour
+        ));
+        this.nodes.push(new VisionNode(
+            randomWithRange(0.6, 0.9),
+            randomWithRange(0.6, 0.9),
             randomWithRange(largeSizeMin, largeSizeMax),
+            sideList[3],
             nodeColour
         ));
     }
@@ -510,6 +513,8 @@ class VisionNode {
     y;
     /** @type {number} */
     sizeRate;
+    /** @type {number} */
+    sideCount;
     /** @type {string} */
     colour;
 
@@ -517,12 +522,14 @@ class VisionNode {
      * @param {number} _x
      * @param {number} _y
      * @param {number} _sizeRate
+     * @param {number} _sideCount
      * @param {string} _colour
      */
-    constructor(_x, _y, _sizeRate, _colour) {
+    constructor(_x, _y, _sizeRate, _sideCount, _colour) {
         this.x = _x;
         this.y = _y;
         this.sizeRate = _sizeRate;
+        this.sideCount = _sideCount;
         this.colour = _colour;
     }
 
@@ -546,9 +553,12 @@ class VisionNode {
 
         ctx.fillStyle = '#DDD';
         polygon(
-            ctx, backPos.x, backPos.y,
+            ctx,
+            backPos.x, backPos.y,
             (window.innerWidth * this.sizeRate) + distToCursor * 0.15,
-            3, Math.PI/2, true
+            this.sideCount,
+            (this.sideCount === 3) ? Math.PI/2 : Math.PI/4,
+            true
         );
     }
 
@@ -572,9 +582,14 @@ class VisionNode {
 
         ctx.strokeStyle = this.colour;
         ctx.lineWidth = window.innerWidth * 0.002 + distToCursor * 0.04;
-        polygon(ctx, frontPos.x, frontPos.y,
+        polygon(
+            ctx,
+            frontPos.x,
+            frontPos.y,
             (window.innerWidth * this.sizeRate) * 0.5 + distToCursor * 0.1,
-            3, Math.PI/2, false);
+            this.sideCount,
+            (this.sideCount === 3) ? Math.PI/2 : Math.PI/4,
+            false);
     }
 }
 
