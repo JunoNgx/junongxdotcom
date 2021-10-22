@@ -33,7 +33,7 @@
                     <p><strong>Frontend</strong> (NextJS, <CA link={URL_EM.frontend_source}>source</CA>, <CA link={URL_EM.frontend_deployment}>deployment</CA>): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.</p>
                     <SectionActions
                         items = {[
-                            {label: "EbonyMemo.com", link: URL_EM.frontend_deployment}
+                            {label: "Visit EbonyMemo.com", link: URL_EM.frontend_deployment}
                         ]}
                     />
                 </section>
@@ -49,7 +49,7 @@
                     <p>My major videogame releases can be found on my <strong>Itch.io page</strong>.</p>
                     <SectionActions
                         items={[
-                            {label: "Itch.io page", link: URL.itchio}
+                            {label: "Visit Itch.io page", link: URL.itchio}
                         ]}
                     />
                 </section>
