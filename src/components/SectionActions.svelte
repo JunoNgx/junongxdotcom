@@ -1,5 +1,7 @@
-<script>
-    export let items; // {label: string, link: string}[]
+<script lang="ts">
+    import type SectionAction from "../models/SectionAction";
+
+    export let items: SectionAction[];
 </script>
 
 <main>

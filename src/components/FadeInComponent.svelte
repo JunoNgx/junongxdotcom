@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import {onMount} from 'svelte';
 
     export let isOnceOnly = true;
@@ -6,12 +6,18 @@
 
     let intersectionObserverSupport = false
     let isVisible = false;
-    let element;
-    let observer;
+    let element: Element;
+    let observer: IntersectionObserver;
 
-    function updateVisibility(entries, observer) {
-        if (isVisible && isOnceOnly) return;
-        isVisible = entries[0].isIntersecting;
+    function updateVisibility(
+        entries: IntersectionObserverEntry[],
+        observer: IntersectionObserver
+        ) {
+
+        entries.forEach((e) => {
+            if (isVisible && isOnceOnly) return;
+            isVisible = e.isIntersecting;
+        });
     }
 
     onMount(() => {
