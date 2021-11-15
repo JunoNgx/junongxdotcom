@@ -1,5 +1,6 @@
 <script lang="ts">
     import Navbar from './components/Navbar.svelte';
+    import Footer from './components/Footer.svelte';
     import CA from './components/CustomAnchor.svelte';
     import FadeInComp from './components/FadeInComponent.svelte';
     import SectionActions from './components/SectionActions.svelte'
@@ -188,10 +189,11 @@
             </section>
 
             <!-- Footer -->
-            <footer class="footer">
+            <!-- <footer class="footer">
                 <p>made with <CA link="https://svelte.dev/">Svelte</CA> and <CA link="https://sass-lang.com/">SASS</CA></p>
                 <p>uncopyrighted and <CA link="https://github.com/JunoNgx/junongxdotcom">open source</CA></p>
-            </footer>
+            </footer> -->
+            <Footer/>
         </div>
         <Navbar/>
     </div>
@@ -356,14 +358,6 @@
                 }
             }
 
-        }
-    }
-    .footer {
-        font-size: vars.$font-size;
-        margin: 5rem auto 1rem auto;
-        text-align: center;
-        p {
-            margin: 0;
         }
     }
 </style>
