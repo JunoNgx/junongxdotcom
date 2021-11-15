@@ -198,24 +198,27 @@
 </main>
 
 <style lang="scss">
-    @import './styles/global.scss';
+    @use "./styles/vars.scss";
+    @use "./styles/mixins.scss";
+
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
     :global(body) {
-        color: $pri-col;
-        background-color: $bac-col;
+        color: vars.$pri-col;
+        background-color: vars.$bac-col;
         font-family: Jost, serif;
         max-width: 850px;
         margin: auto;
         margin-top: 2rem;
-        @media screen and (min-width: $breakpoint) {
-            background-color: $bg-col;
+        @media screen and (min-width: vars.$breakpoint) {
+            background-color: vars.$bg-col;
             margin-top: 4rem;
         }
     }
 
     .background {
         display: none;
-        @media screen and (min-width: $breakpoint) {
+        @media screen and (min-width: vars.$breakpoint) {
             display: block;
             position: fixed;
             top: 0;
@@ -227,21 +230,21 @@
         &--content {
             max-width: 520px;
         }
-        @media screen and (min-width: $breakpoint) {
+        @media screen and (min-width: vars.$breakpoint) {
             display: flex;
             justify-content: space-between;
         }
     }
 
     .section {
-        background-color: $bac-col;
+        background-color: vars.$bac-col;
         margin: 1rem 1rem 5rem 1rem;
         padding: 1rem;
-        @include std-border-btm;
+        @include mixins.std-border-btm;
         p {
             hyphens: auto;
             line-height: 1.5;
-            font-size: $font-size;
+            font-size: vars.$font-size;
             margin: 1rem 0 0 0;
         }
 
@@ -290,20 +293,20 @@
                 margin: 0;
             }
             &__content {
-                @include std-border;
-                background-color: $bac-col;
+                @include mixins.std-border;
+                background-color: vars.$bac-col;
                 margin: 1rem;
                 padding: 1rem 1.5rem;
                 &:after {
                     content: "My contacts are above on top ↑";
-                    font-size: $font-size;
+                    font-size: vars.$font-size;
                 }
             }
         }
 
-        @media screen and (min-width: $breakpoint) {
-            @include std-border;
-            @include col-sha-trans($pri-col);
+        @media screen and (min-width: vars.$breakpoint) {
+            @include mixins.std-border;
+            @include mixins.col-sha-trans(vars.$pri-col);
             margin: 1rem 1rem 5rem 1rem;
             padding: 2rem;
 
@@ -356,7 +359,7 @@
         }
     }
     .footer {
-        font-size: $font-size;
+        font-size: vars.$font-size;
         margin: 5rem auto 1rem auto;
         text-align: center;
         p {

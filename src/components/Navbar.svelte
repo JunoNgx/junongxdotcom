@@ -30,7 +30,7 @@
 <style lang="scss">
     // Using BEM naming convention
 
-    @import '../styles/global.scss';
+    @use '../styles/vars.scss';
 
     .navbar {
         &__control{
@@ -39,8 +39,8 @@
             right: 1rem;
             top: 1rem;
             cursor: pointer;
-            background-color: $hyperlink-col;
-            height: $navbar-height;
+            background-color: vars.$hyperlink-col;
+            height: vars.$navbar-height;
             padding: 10px;
             display: flex;
             align-items: center;
@@ -49,23 +49,23 @@
             &__label {
                 margin-right: 0.8em;
                 font-size: 1.2rem;
-                color: $bac-col;
+                color: vars.$bac-col;
     
-                transition: font-size $trans-time;
+                transition: font-size vars.$trans-time;
                 &--expanded {
                     font-size: 2rem;
                 }
             }
             &__icon {
                 margin-right: 1rem;
-                height: $navbar-icon-size;
-                width: $navbar-icon-size;
-                border-right: solid 5px $bac-col;
-                border-bottom: solid 5px $bac-col;
+                height: vars.$navbar-icon-size;
+                width: vars.$navbar-icon-size;
+                border-right: solid 5px vars.$bac-col;
+                border-bottom: solid 5px vars.$bac-col;
                 transform: rotate(45deg);
                 transform-origin: 100% 100%;
     
-                transition: transform $trans-time, transform-origin $trans-time;
+                transition: transform vars.$trans-time, transform-origin vars.$trans-time;
                 &--expanded {
                     transform-origin: 65% 65%;
                     transform: rotate(225deg);
@@ -83,10 +83,10 @@
             align-items: flex-end;
             justify-content: flex-end;
             margin-top: 30%;
-            background-color: $hyperlink-col;
+            background-color: vars.$hyperlink-col;
             clip-path: circle(0px at 90% 5%);
     
-            transition: clip-path $trans-time;        
+            transition: clip-path vars.$trans-time;        
             &--expanded {
                 clip-path: circle(150vh at 90% 5%);
             }
@@ -97,22 +97,22 @@
                 align-items: flex-end;
                 &__item {
                     text-align: right;
-                    border-bottom: 2px solid $bac-col;
+                    border-bottom: 2px solid vars.$bac-col;
                     font-size: 2rem;
                     margin: 0.3rem 3rem;
                     list-style: none;
                 }
                 &__close {
-                    color: $bac-col;
+                    color: vars.$bac-col;
                     font-size: 2rem;
                     cursor: pointer;
-                    color: $bac-col;
+                    color: vars.$bac-col;
                     margin: 5% 3rem 5% 0;
                     border: none;
                 }
             }
         }
-        @media screen and (min-width: $breakpoint) {
+        @media screen and (min-width: vars.$breakpoint) {
             margin-right: 1rem;
             &__control{
                 display: none;
@@ -130,7 +130,7 @@
     
                 &__contacts {
                     padding: 0;
-                    border-right: 10px solid $pri-col;
+                    border-right: 10px solid vars.$pri-col;
                     &__item {
                         margin-right: 1rem;    
                         border-bottom: none;

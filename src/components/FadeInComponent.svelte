@@ -42,14 +42,15 @@
 </div>
 
 <style lang="scss">
-    @import '../styles/global.scss';
+    @use '../styles/vars.scss';
+
     .fade-in-component {
         transition: opacity 600ms ease-out;
         opacity: 0;
         &--is-visible {
             opacity: 1.0;
         }
-        @media screen and (min-width: $breakpoint) {
+        @media screen and (min-width: vars.$breakpoint) {
             transition: opacity 600ms ease-out, transform 600ms ease-out;
             transform: translate(-150px, 0);
             &--is-visible {

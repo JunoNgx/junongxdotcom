@@ -17,7 +17,7 @@
 </main>
 
 <style lang="scss">
-    @import '../styles/global.scss';
+    @use '../styles/vars.scss';
 
     .section__actions {
         display: flex;
@@ -29,13 +29,13 @@
             text-align: center;
             text-decoration: none;
             padding: 0.5rem 1.5rem;
-            color: $bac-col;
-            font-size: $font-size;
-            background-color: $cta-col;
-            transition: $trans-time ease;
+            color: vars.$bac-col;
+            font-size: vars.$font-size;
+            background-color: vars.$cta-col;
+            transition: vars.$trans-time ease;
             &:hover {
-                color: $pri-col;
-                background-color: $hyperlink-col;
+                color: vars.$pri-col;
+                background-color: vars.$hyperlink-col;
                 transform: translate(-0.25rem, -0.25rem);
                 box-shadow: 0.25rem 0.25rem;
             }

@@ -5,27 +5,27 @@
 <a rel="noopener noreferrer" target="_blank" href={link}><slot/></a>
 
 <style lang="scss">
-    @import '../styles/global.scss';
+    @use '../styles/vars.scss';
 
     a {
-        color: $bac-col;
+        color: vars.$bac-col;
         padding: 0;
         text-decoration: none;
         &:visited {
-            color: $bac-col;
+            color: vars.$bac-col;
         }
-        @media screen and (min-width: $breakpoint) {
-            color: $pri-col;
+        @media screen and (min-width: vars.$breakpoint) {
+            color: vars.$pri-col;
             padding: 0;
-            transition: $trans-time ease;
+            transition: vars.$trans-time ease;
             &:visited {
-                color: $pri-col;
+                color: vars.$pri-col;
             }
             &:hover {
                 padding-left: 1rem;
                 padding-right: 5rem;
-                background-color: $pri-col;
-                color: $bac-col;
+                background-color: vars.$pri-col;
+                color: vars.$bac-col;
             }
         }
     }

@@ -12,23 +12,23 @@
 </a>
 
 <style lang="scss">
-    @import '../styles/global.scss';
+    @use '../styles/vars.scss';
 
     a.custom-hyperlink {
-        color: $pri-col;
+        color: vars.$pri-col;
         text-decoration: none;
         background-repeat: no-repeat;
-        background-image: linear-gradient(to top, $hyperlink-col 0% 90%, transparent 10%);
+        background-image: linear-gradient(to top, vars.$hyperlink-col 0% 90%, transparent 10%);
         background-position: 50% 80%;
         background-size: 100% 30%;
-        transition: background-size $trans-time*0.7 ease-out,
-            background-position $trans-time*0.7 ease-out;
+        transition: background-size vars.$trans-time*0.7 ease-out,
+            background-position vars.$trans-time*0.7 ease-out;
         &:hover {
             background-position: 50% 50%;
             background-size: 100% 100%;
         }
         &--cta {
-            background-image: linear-gradient(to top, $cta-col 0% 90%, transparent 10%);
+            background-image: linear-gradient(to top, vars.$cta-col 0% 90%, transparent 10%);
         }
     }
 </style>

@@ -1,0 +1,16 @@
+@use './vars';
+
+@mixin std-border {
+    border: 2px solid vars.$pri-col;
+}
+
+@mixin std-border-btm {
+    border-bottom: 2px solid vars.$pri-col;
+}
+
+@mixin col-sha-trans($col) {
+    transition: box-shadow vars.$trans-time ease-out;
+    &:hover {
+        box-shadow: 10px 10px $col;
+    }
+}
