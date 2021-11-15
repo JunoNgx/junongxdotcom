@@ -1,6 +1,6 @@
 <!-- {@debug isExpanded} -->
 
-<script>
+<script lang="ts">
     import { URL } from './URL.js';
     import NAL from './NavbarAnchorLink.svelte'
     let isExpanded = false;
