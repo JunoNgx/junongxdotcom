@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Navbar from './components/Navbar.svelte';
     import CA from './components/CustomAnchor.svelte';
     import FadeInComp from './components/FadeInComponent.svelte';
