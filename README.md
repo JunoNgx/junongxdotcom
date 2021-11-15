@@ -10,7 +10,7 @@ The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Net
 
 ## Tech stack
 
-This project is made with [Svelte](https://svelte.dev/) and [SASS](https://sass-lang.com/) (using BEM naming convention).
+This project is made with [Svelte](https://svelte.dev/), [SASS](https://sass-lang.com/) (using BEM naming convention), and [TypeScript](https://www.typescriptlang.org/).
 
 ## Environment variables
 
