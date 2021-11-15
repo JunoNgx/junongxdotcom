@@ -245,7 +245,10 @@
         @include mixins.std-border-btm;
         p {
             hyphens: auto;
+            -moz-hyphens: auto;
             -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            -o-hyphens: auto;
             line-height: 1.5;
             font-size: vars.$font-size;
             margin: 1rem 0 0 0;
