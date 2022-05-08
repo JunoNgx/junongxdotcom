@@ -27,6 +27,13 @@
 <style lang="sass">
     @use "../styles/_mixins" as m
     @use "../styles/vars" as v
+
+    @mixin title
+        font-size: 1.0rem
+        padding: 0.25rem 1.5rem 0.25rem 0.5rem
+        color: v.$col-bg
+        background-color: v.$col-pri
+        // box-shadow: 4px 4px v.$col-pri
     
     .control
         text-align: right
@@ -38,9 +45,7 @@
 
         &__contacts
             &__title
-                font-size: 1.0rem
-                padding: 0.25rem 0.5rem
-                box-shadow: 4px 4px v.$col-pri
+                +title
 
             &__item
                 margin-right: 0.5rem
@@ -55,9 +60,7 @@
 
         &__settings
             &__title
-                font-size: 1.0rem
-                padding: 0.25rem 0.5rem
-                box-shadow: 4px 4px v.$col-pri
+                +title
 
         +m.mobile
             text-align: left
