@@ -24,14 +24,15 @@
                         a(href!="{link.url}") {link.label}
             button(class="section__buttons__expand-btn" on:click!="{handleExpandClick}")
                 +if('isExpanded')
-                    span(class="section__buttons__expand-btn__label") read less
+                    span(class="section__buttons__expand-btn__label") Show less
                     +else()
-                        span read more
+                        span Show more
 
 </template>
 
 <style lang="sass">
     @use "../styles/vars" as v
+    @use "../styles/mixins" as m
 
     .section
         margin: 2rem
@@ -66,13 +67,31 @@
             justify-content: space-between
 
             &__links
+                padding: 0.2rem 0.5rem
+
                 display: flex
                 flex-flow: row nowrap
-                justify-content: space-between
+                justify-content: space-around
                 flex-grow: 4
 
                 &__item
                     display: block
+
+            &__expand-btn
+                border: none
+                border-radius: 0
+                padding: 0.5rem
+                cursor: pointer
+                color: v.$col-bg
+                background-color: v.$col-pri
+                transition: background-color v.$trans-time-default ease-out
+
+                &:hover
+                    background-color: lighten(v.$col-pri, 20%)
+
+        +m.mobile
+            margin: 2rem 0.5rem
+
 
     :global(.section__content p:first-child)
         margin-top: 0
