@@ -1,6 +1,9 @@
 <script lang="ts">
-    import logo from "./assets/svelte.png";
-    import Counter from "./lib/Counter.svelte";
+    import logo from "./assets/svelte.png"
+    import Counter from "./lib/Counter.svelte"
+
+    import content from "./data/content.yaml"
+    console.log(content)
 </script>
 
 <template lang="pug">
