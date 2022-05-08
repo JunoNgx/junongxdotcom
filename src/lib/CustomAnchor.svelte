@@ -3,6 +3,6 @@
 </script>
 
 <template lang="pug">
-    a(href!="{link}")
+    a(href!="{link}" rel="noopener noreferrer" target="_blank")
         slot
 </template>
