@@ -101,7 +101,6 @@
         +m.mobile
             flex-flow: column nowrap
 
-
     .leftside-wrapper
         max-width: 300px
         max-height: 90vh
