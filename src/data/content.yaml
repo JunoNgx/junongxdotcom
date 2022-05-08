@@ -1,6 +1,7 @@
 
 - title: manafarm
-  imageSrc: ./assets/manafarm_black_512.png
+  imgSrc: /images/manafarm_black_512.png
+  imgAlt: manafarm logo
   summary: |
     I am a hobbyist gamedev and make an awful lot of videogames just for the sheer fun of it. My major videogame releases can be found on my [Itch.io page](https://JunoNgx.itch.io/).
   content: |
@@ -16,6 +17,8 @@
 
 
 - title: Wonyun Trench Run
+  imgSrc: /images/wonyun_5.gif
+  imgAlt: animated screenshot of the game Wonyun Trench Run
   summary: |
     A shoot-em-up title for Pico-8 with an **entity-component-system** architecture.
   content: |
