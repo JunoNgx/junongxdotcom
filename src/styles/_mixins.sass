@@ -6,3 +6,9 @@
 @mixin mobile
     @media screen and (max-width: v.$breakpoint)
         @content
+
+@mixin transition($elements...)
+    $transition: ()
+    @each $el in $elements 
+        $transition:append($transition, $el v.$trans-time-default ease-out, $separator: comma)
+    transition: $transition
