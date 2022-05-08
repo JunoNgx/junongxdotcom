@@ -10,8 +10,9 @@
 <template lang="pug">
     main
         div(class="leftside-wrapper")
-            Header
-            Control
+            div(class="leftside-content")
+                Header
+                Control
 
         div(class="content-wrapper")
             +each("content as entry")
@@ -96,15 +97,22 @@
 
         display: flex
         flex-flow: row nowrap
-        align-items: space-around
+        justify-content: space-around
 
         +m.mobile
             flex-flow: column nowrap
 
     .leftside-wrapper
+        position: sticky
+        top: 20px
         max-width: 300px
         max-height: 90vh
-        position: sticky
+        padding-right: 2rem
+        border-right: 2px dashed v.$col-pri
+
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-around
 
     .content-wrapper
         flex-grow: 3
