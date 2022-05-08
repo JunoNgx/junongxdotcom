@@ -14,6 +14,9 @@
     header
         text-align: right
 
+        h1
+            margin-top: 0
+
         +m.mobile
             text-align: left
 </style>
