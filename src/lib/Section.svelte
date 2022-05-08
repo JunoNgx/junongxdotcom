@@ -5,7 +5,7 @@
 
     let isExpanded: boolean = false
 
-    function handleExpandClick(e: Event) {
+    function handleExpandClick() {
         isExpanded = !isExpanded
     }
 </script>
@@ -22,7 +22,7 @@
                 +each('entry.links as link')
                     div(class="section__buttons__links__item")
                         a(href!="{link.url}") {link.label}
-            button(class="section__buttons__expand-btn" on:click!="{e => handleExpandClick(e)}")
+            button(class="section__buttons__expand-btn" on:click!="{handleExpandClick}")
                 +if('isExpanded')
                     span(class="section__buttons__expand-btn__label") read less
                     +else()
