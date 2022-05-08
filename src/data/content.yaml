@@ -1,4 +1,27 @@
 
+- title: Ebony Memo
+  summary: |
+    As a videogame enthusiast, I seek out interesting titles across platforms, mobile nevertheless. [Ebony Memo](http://ebonymemo.com/) is an arthouse videogame curator website for mobile devices, and also a full custom content management system of MERN stack.
+  content: |
+    The system consists of three parts:
+
+    * **Backend** (NodeJS/Express, [source](https://github.com/JunoNgx/ebonymemo-backend-nodejs)): A serverless RESTful API handling CRUD operations and authorisations for data modification. The database is stored on MongoDB Atlas.
+
+    * **Content management application** (ReactJS, [source](https://github.com/JunoNgx/ebonymemo-admin-reactjs), [deployment](https://eleum-loyce.netlify.app/)): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not mobile-responsive.
+
+    * **Frontend** (NextJS, [source](https://github.com/JunoNgx/ebonymemo-frontend-next), [deployment](http://ebonymemo.com/)): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.
+
+    This was my attempt to dive into full-stack development and was an enlightening experience.
+  tags:
+    - web development
+    - release
+    - nodeJS
+    - ReactJS
+  links:
+    - label: EbonyMemo.com
+      url: http://ebonymemo.com/
+
+
 - title: manafarm
   imgSrc: /images/manafarm_black_512.png
   imgAlt: manafarm logo
@@ -10,7 +33,8 @@
     Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone. 
     
     It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
-  tag: gamedev
+  tags:
+    - game development
   links:
     - label: Itch.io page
       url: https://junongx.itch.io/
@@ -25,6 +49,9 @@
     One of the few larger-scale and more complete titles I have completed, this was my first dive into the very quirky and cozy ecosystem of Pico8. With a full suite of tools for pretty much all aspects of gamedev, I was able to create assets in a productive and convenient manner, without the overhead of tool switching. The minimalistic nature and limitations of Pico8 (which uses a highly limited subset of Lua) also made it an interesting challenge, both technically and artistically.
 
     On the other hand, the technical highlight of the game is the implementation of **entity-component-system**, in which systems iterate over an entity container, and in turns, iterate over entities' components and perform the relevant logic when due. This allows an extremely modular architecture in which code reusability is high and adding new features is simple.
+  tags:
+    - game development
+    - release
   links:
     - label: source
       url: https://github.com/JunoNgx/p8wonyun
@@ -32,7 +59,7 @@
       url: https://junongx.itch.io/wonyun-trench-run
 
 
-- title: This website
+- title: This Website
   summary: |
     As a creative enthusiast, I have worked on many projects over the years, and a portfolio website has always been something important to me. This site has been revamped, redesigned, and reworked many times over the years, and is currently taking on a structured data approach like an application.
   content: |
@@ -40,7 +67,145 @@
 
     On the other hand, it also addressed a few usability issues. What if the visitor only wanted to skim through and not read everything in great details? What if the visitor is only interested in specific types of projects? How can I make the website more interactive and engaging?
 
-    After much research and digging deep into the problem, my answer for this was the `YAML` format.
+    After much research and digging deep into the problem, my answer for this was [YAML](https://yaml.org/), a highly human-friendly markup language. Each and every one of these entries you are reading is stored as Markdown syntaxes inside a list in a YAML file. The front-end (Svelte) then reads this file, iterates over the array while also extracting other data in each object (e.g. the section title, the summary, external links) to use as `prop` for a series of repeated component. Writing content for this site has since been a great pleasure.
+
+    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax) and the template language [pug](https://pugjs.org/api/getting-started.html), makes this my most human-readable and elegant codebase yet.
+  tags:
+    - web development
+    - in active development
+    - ReactJS
+    - svelte
   links:
     - label: source
-      url: https://junongx.com/
+      url: https://github.com/JunoNgx/junongxdotcom
+
+
+- title: CrispGameLib Collection
+  imgSrc: /images/CrispGameLib_Blitzed.gif
+  imgAlt: animated screenshot of the game Blitzed in CripsGameLib Collection
+  summary: A series of web minigames created with CrispGameLib.
+  content: |
+    I have been a long time admirer of [Kenta Cho](https://twitter.com/abagames), and using his tools to make games was one of my ever-procrastinated projects. [CrispGameLib](https://github.com/abagames/crisp-game-lib), one of his many quirky and idiosyncratic libraries, is his most accessible and best documented work yet.
+
+    Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also written [a long and detailed tutorial](https://github.com/abagames/crisp-game-lib) and occasionally contributed back to the library.
+  tags:
+    - game development
+    - in active development
+    - release
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/crips-game-lib-collection
+    - label: itch.io page
+      url: https://junongx.itch.io/crisp-webgame-collection
+
+
+- title: Creative Coding
+  summary: There is much more to programming than just cold hard logic, and programming for art is one of my favourite pastimes.
+  content: |
+    As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with [the web canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) as much as [p5js](https://p5js.org/). A handful of generative arts have also been incorporated into this website, randomising a small number of elements for each of your visit.
+
+    My creative coding works have been displayed in my personal gallery, Game of Ease, along side my [OpenProcessing account](https://openprocessing.org/user/281414/), since August 2021.
+  tags:
+    - creative coding
+    - in active development
+  links:
+    - label: source
+      url: https://junongx.github.io/p5js-gallery/
+    - label: gallery
+      url: https://github.com/JunoNgx/p5js-gallery
+
+
+- title: Working Memory Test
+  imgSrc: /images/WorkingMemoryTestTrailer.gif
+  imgAlt: A gif trailer for the Working Memory Test tool
+  summary: A research tool I made for a university project.
+  content: |
+    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
+  tags:
+    - web development
+    - ReactJS
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/working-memory-test
+    - label: deployment
+      url: https://workingmemorytest.netlify.app/
+
+
+- title: Pura
+  imgSrc: /images/PuraTrailer.gif
+  imgAlt: A gif trailer for the app Pura
+  summary: A minimalist wallpaper generator made with Flutter for Android.
+  content: |
+    As one of my earliest dabbles into mobile app development, Pura was created with both technical curiosity and personal needs in mind (the existing apps with similar functions were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's [Flutter](https://flutter.dev/), a promising up-and-coming multi-platform framework.
+  tags:
+    - app development
+    - flutter
+    - release
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/flutter-pura
+    - label: Play Store page
+      url: https://play.google.com/store/apps/details?id=com.junongx.wallpaper
+
+
+- title: Lutro Mega Input Library
+  summary: An utility input library for the game engine Lutro.
+  content: |
+    Working with [Piepacker](https://piepacker.com/) on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used was [Lutro](https://github.com/piepacker/lutro), a port of [love2d](http://love2d.org/) API to [libretro](https://www.libretro.com/). The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was to be created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.
+  tags:
+    - game development
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/LutroMegaInput
+
+
+- title: Moon2P8
+  summary: An injection tool for Pico8 written in Python
+  content: |
+    After shipping Wonyun Trench Run, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was [moonscript](https://moonscript.org/), which compiled to lua. Moon2P8 was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.
+  tags:
+    - game development
+    - python
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/moon2p8-py
+
+- title: Photography
+  imgSrc: /images/pavilion.jpg
+  imgAlt: The pavillion at Gardens by the Bay, Singapore
+  summary: I'm also a hobbyist photographer who immensely love the clicky movements of mechanical bodies in film and Fujifilm camera.
+  content: |
+    A rare creative hobby in which I enjoy the process more than the output. I shoot exclusively with vintage manual focus lenses and Fujifilm's mechanical-inspired bodies (and occasionally dabble into film photography itself).
+
+    [My Flickr page](https://flickr.com/people/JunoNgx/) is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.
+  tags:
+    - hobbies
+  links:
+    - label: flickr
+      url: https://flickr.com/people/JunoNgx/
+
+- title: Lego StarCraft
+  imgSrc: /images/siegetank.jpg
+  imgAlt: Microscale StarCraft Siege Tank
+  summary: Behind programming, Lego is probably the secondmost magical thing in this world to me.
+  content: |
+    Having been a lifelong admirer of StarCraft from a game developer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces (in case you're not aware, #AdultFansOfLego is a thing). My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on my Flickr.
+  tags:
+    - hobbies
+  links:
+    - label: flickr album
+      url: https://www.flickr.com/photos/junongx/albums/72157715396303363
+
+- title: Mechanical keyboards
+  imgSrc: /images/keebs_in_film.jpg
+  imgAlt: Juno's collection of mechanical keyboards
+  summary: Keyboard is a programmer's best friend.
+  content: |
+    Started off as a utilitarian need to improve my sitting posture, this hobby, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how electric circuits work, mechanical keyboards offer a fascinating and endless world of self-expression.
+
+    For several years, I have been daily driving exclusively with the 4x12 ortholinear layout, popularised by the OLKB Planck. My personalised keymap, `junonum`, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal keymap.
+  tags:
+    - hobbies
+  links:
+    - label: qmk github
+      url: https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum
