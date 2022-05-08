@@ -16,6 +16,8 @@
 
 <style lang="sass">
 
+    @use './styles/vars' as v
+
     /* jost-300 - latin */
     @font-face
         font-family: 'Jost'
@@ -66,6 +68,7 @@
     
     :root
         font-family: "Jost", sans-serif
+        font-size: v.$font-size
 
     main
         text-align: center
