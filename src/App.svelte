@@ -105,7 +105,6 @@
         max-width: 300px
         max-height: 90vh
         position: sticky
-        top: 70px
 
     .content-wrapper
         flex-grow: 3
