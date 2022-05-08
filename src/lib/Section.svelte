@@ -60,8 +60,6 @@
             margin-top: 0
             font-size: 2rem
 
-        &__summary
-
         &__content
             max-height: 0
             overflow: hidden
