@@ -2,8 +2,9 @@
     import logo from "./assets/svelte.png"
     import Counter from "./lib/Counter.svelte"
 
-    import content from "./data/content.yaml"
+    import Footer from "./lib/BaseFooter.svelte"
     import Section from "./lib/Section.svelte"
+    import content from "./data/content.yaml"
 
     console.log(content)
 </script>
@@ -12,6 +13,7 @@
     main
         +each("content as entry")
             Section(entry!="{entry}")
+        Footer
 </template>
 
 <style lang="sass">
@@ -69,6 +71,19 @@
     :root
         font-family: "Jost", sans-serif
         font-size: v.$font-size
+        color: v.$col-pri
+
+    :global(a)
+        color: v.$col-pri
+        text-decoration: none
+        background-repeat: no-repeat
+        background-image: linear-gradient(to top, v.$col-acc 0% 90%, transparent 10%)
+        background-position: 50% 80%
+        background-size: 100% 30%
+        transition: background-size v.$trans-time-default*0.7 ease-out, background-position v.$trans-time-default*0.7 ease-out
+        &:hover 
+            background-position: 50% 50%
+            background-size: 100% 100%
 
     main
         text-align: center
