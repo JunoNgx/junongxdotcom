@@ -43,6 +43,7 @@
                 box-shadow: 4px 4px v.$col-pri
 
             &__item
+                margin-right: 0.5rem
                 display: block
                 background-image: none
                 +m.transition(padding, color, background-color)
@@ -50,7 +51,7 @@
                 &:hover
                     padding: 0 3rem 0 0.5rem
                     color: v.$col-bg
-                    background-color: v.$col-pri
+                    background-color: v.$col-acc
 
         &__settings
             &__title
