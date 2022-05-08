@@ -1,6 +1,7 @@
 declare type Entry = {
     title: String,
-    imageSrc: String,
+    imgSrc: String,
+    imgAlt: String,
     summary: String,
     content: String,
     tags: String[],
