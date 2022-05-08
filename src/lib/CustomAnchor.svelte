@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let link;
+    export let link: string
 </script>
 
 <template lang="pug">
