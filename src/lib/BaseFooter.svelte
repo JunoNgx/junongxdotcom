@@ -17,7 +17,7 @@
 
     footer
         font-size: v.$font-size
-        margin: 5rem auto 1rem auto
+        margin: 2.5rem auto 1rem auto
         text-align: center
         p
             margin: 0
