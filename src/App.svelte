@@ -1,19 +1,29 @@
 <script lang="ts">
     import Footer from "./lib/BaseFooter.svelte"
     import Section from "./lib/Section.svelte"
+    import Control from "./lib/BaseControl.svelte"
+
     import content from "./data/content.yaml"
 </script>
 
 <template lang="pug">
     main
-        +each("content as entry")
-            Section(entry!="{entry}")
-        Footer
+        div(class="leftside-wrapper")
+            div Juno Nguyen
+            div I'm a webdev by trade, an indie gamedev, and creative artist
+            Control
+
+        div(class="content-wrapper")
+            +each("content as entry")
+                Section(entry!="{entry}")
+
+    Footer
 </template>
 
 <style lang="sass">
 
     @use './styles/vars' as v
+    @use './styles/mixins' as m
 
     /* jost-300 - latin */
     @font-face
@@ -81,8 +91,28 @@
             background-size: 100% 100%
 
     main
-        text-align: center
-        padding: 1em
         margin: 0 auto
+        width: fit-content
+
+        display: flex
+        flex-flow: row nowrap
+        align-items: space-around
+
+        +m.mobile
+            flex-flow: column nowrap
+
+
+    .leftside-wrapper
+        max-width: 300px
+        max-height: 90vh
+        text-align: right
+        position: sticky
+        top: 70px
+
+        +m.mobile
+            text-align: left
+
+    .content-wrapper
+        flex-grow: 3
 
 </style>
