@@ -1,15 +1,11 @@
-<script lang="ts">
-    import CA from './CustomAnchor.svelte';
-</script>
-
 <template lang="pug">
     footer
         p made with 
-            CA(link="https://svelte.dev/") svelte
+            a(rel="noopener noreferrer" target="_blank" href="https://svelte.dev/") svelte
             |  and 
-            CA(link="https://sass-lang.com/") sass
+            a(rel="noopener noreferrer" target="_blank" href="https://sass-lang.com/") sass
         p uncopyrighted and 
-            CA(link="https://github.com/JunoNgx/junongxdotcom") open source
+            a(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx/junongxdotcom") open source
 </template>
 
 <style lang="sass">
