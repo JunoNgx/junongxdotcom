@@ -5,7 +5,8 @@
 <template lang="pug">
     header
         h1 Juno Nguyen
-        div I'm a webdev by trade, an indie gamedev, and creative artist
+        p web engineer by day
+        p hobbyist gamedev, creative coding artist, tinkerer, know-it-all-wannabe by night
 </template>
 
 <style lang="sass">
