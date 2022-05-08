@@ -1,5 +1,6 @@
 
-- title: Ebony Memo
+- title: manafarm
+  imageSrc: ./assets/manafarm_black_512.png
   summary: |
     I am a hobbyist gamedev and make an awful lot of videogames just for the sheer fun of it. My major videogame releases can be found on my [Itch.io page](https://JunoNgx.itch.io/).
   content: |
@@ -9,6 +10,34 @@
     
     It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
   tag: gamedev
-    
+  links:
+    - label: Itch.io page
+      url: https://junongx.itch.io/
 
-    
+
+- title: Wonyun Trench Run
+  summary: |
+    A shoot-em-up title for Pico-8 with an **entity-component-system** architecture.
+  content: |
+    One of the few larger-scale and more complete titles I have completed, this was my first dive into the very quirky and cozy ecosystem of Pico8. With a full suite of tools for pretty much all aspects of gamedev, I was able to create assets in a productive and convenient manner, without the overhead of tool switching. The minimalistic nature and limitations of Pico8 (which uses a highly limited subset of Lua) also made it an interesting challenge, both technically and artistically.
+
+    On the other hand, the technical highlight of the game is the implementation of **entity-component-system**, in which systems iterate over an entity container, and in turns, iterate over entities' components and perform the relevant logic when due. This allows an extremely modular architecture in which code reusability is high and adding new features is simple.
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/p8wonyun
+    - label: play on itch.io
+      url: https://junongx.itch.io/wonyun-trench-run
+
+
+- title: This website
+  summary: |
+    As a creative enthusiast, I have worked on many projects over the years, and a portfolio website has always been something important to me. This site has been revamped, redesigned, and reworked many times over the years, and is currently taking on a structured data approach like an application.
+  content: |
+    The current version is the result of several sessions of  thinking about data and brainstorming. While manually writing every single HTML tags certainly works (which was what I did for the previous iterations), I sought a more data-driven and automated approach, where data should be more standardized and components should be more reusable.
+
+    On the other hand, it also addressed a few usability issues. What if the visitor only wanted to skim through and not read everything in great details? What if the visitor is only interested in specific types of projects? How can I make the website more interactive and engaging?
+
+    After much research and digging deep into the problem, my answer for this was the `YAML` format.
+  links:
+    - label: source
+      url: https://junongx.com/

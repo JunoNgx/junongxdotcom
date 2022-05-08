@@ -3,20 +3,15 @@
     import Counter from "./lib/Counter.svelte"
 
     import content from "./data/content.yaml"
+    import Section from "./lib/Section.svelte"
+
     console.log(content)
 </script>
 
 <template lang="pug">
     main
-        img(src="{logo}" alt="Svelte Logo")
-        h1 Hello Typescript!
-        Counter
-        p Visit 
-            a(href="https://svelte.dev") svelte.dev
-            |  to learn how to build Svelte apps.
-        p Check out 
-            a(href="https://github.com/sveltejs/kit#readme") SvelteKit
-            |  for the officially supported framework, also powered by Vite!
+        +each("content as entry")
+            Section(entry!="{entry}")
 </template>
 
 <style lang="sass">

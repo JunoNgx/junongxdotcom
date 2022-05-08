@@ -1,6 +1,6 @@
 declare type Entry = {
-    imageSrc: String,
     title: String,
+    imageSrc: String,
     summary: String,
     content: String,
     tags: String[],
@@ -9,7 +9,7 @@ declare type Entry = {
 
 declare type CtaLink = {
     label: String,
-    link: String
+    url: String
 }
 
 declare module "*.yaml" {
