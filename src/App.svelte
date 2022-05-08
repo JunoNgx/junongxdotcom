@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
     import Section from "./lib/Section.svelte"
     import Control from "./lib/BaseControl.svelte"
@@ -9,8 +10,7 @@
 <template lang="pug">
     main
         div(class="leftside-wrapper")
-            div Juno Nguyen
-            div I'm a webdev by trade, an indie gamedev, and creative artist
+            Header
             Control
 
         div(class="content-wrapper")
@@ -105,12 +105,8 @@
     .leftside-wrapper
         max-width: 300px
         max-height: 90vh
-        text-align: right
         position: sticky
         top: 70px
-
-        +m.mobile
-            text-align: left
 
     .content-wrapper
         flex-grow: 3

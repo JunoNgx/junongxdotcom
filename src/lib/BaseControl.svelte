@@ -17,5 +17,11 @@
 </template>
 
 <style lang="sass">
+    @use "../styles/_mixins" as m
+    
+    .control
+        text-align: right
 
+        +m.mobile
+            text-align: left
 </style>
