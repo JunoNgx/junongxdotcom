@@ -33,7 +33,12 @@
     generateTagDataMap($entryList)
 
     if (localStorage.getItem('isDarkMode')) {
-        isDarkMode.set(JSON.parse(localStorage.getItem('isDarkMode')))
+        const storedValue = JSON.parse(localStorage.getItem('isDarkMode'))
+
+        isDarkMode.set(storedValue)
+
+        if (storedValue) document.body.classList.add("dark")
+        else document.body.classList.remove("dark")
     }
 </script>
 
@@ -108,10 +113,17 @@
         src: url('fonts/jost-v13-latin-700italic.eot')
         src: local(''), url('fonts/jost-v13-latin-700italic.eot?#iefix') format('embedded-opentype'), url('fonts/jost-v13-latin-700italic.woff') format('woff'), url('fonts/jost-v13-latin-700italic.ttf') format('truetype'), url('fonts/jost-v13-latin-700italic.svg#Jost') format('svg')
     
-    :root
+    :global(body)
         font-family: v.$fonts
         font-size: v.$font-size
         color: v.$col-pri
+        background-color: v.$col-bg
+        +m.transition(color, background-color)
+
+    :global(body.dark)
+        color: v.$col-bg
+        background-color: v.$col-pri
+
 
     :global(a)
         color: v.$col-pri
@@ -124,6 +136,11 @@
         &:hover 
             background-position: 50% 50%
             background-size: 100% 100%
+
+    :global(body.dark a)
+        color: v.$col-bg
+        background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
+
 
     main
         margin: 0 auto
