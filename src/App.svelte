@@ -24,7 +24,8 @@
         })
 
         tmpTagList.forEach(tag => {
-            $tagDataMap.set(tag, true)
+            if (tag === "archived") $tagDataMap.set(tag, false)
+            else $tagDataMap.set(tag, true)
         })
 
         tagDataMap.set($tagDataMap)
