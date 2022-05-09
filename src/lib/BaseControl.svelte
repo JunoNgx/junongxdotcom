@@ -69,6 +69,9 @@
                 +title
 
             &__tags
+                &__title
+                    font-weight: 700
+
                 &__list
                     display: flex
                     flex-flow: row wrap
