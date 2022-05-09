@@ -106,6 +106,9 @@
                     //     color: v.$col-bg
                     //     background-color: v.$col-acc
 
+                    +m.mobile
+                        text-decoration: underline
+
         &__settings
             &__title
                 +title
