@@ -22,7 +22,7 @@
     div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         ul(class="control__contacts")
-            h2(class="control__contacts__title") Find me elsewhere
+            h3(class="control__contacts__title") Find me elsewhere
             div(class="control__contacts__list")
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
@@ -33,7 +33,7 @@
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
         div(class="control__settings")
-            h2(class="control__settings__title") Settings
+            h3(class="control__settings__title") Settings
             // Dark mode control
             div(class="control__settings__dark-mode")
                 div(class="control__settings__dark-mode__icon-container" on:click!="{switchDarkMode}")
@@ -67,8 +67,8 @@
     @use "../styles/vars" as v
 
     @mixin title
-        font-size: 1.0rem
-        padding: 0.25rem
+        font-size: 1.2rem
+        padding: 0.1rem 0.25rem
         border-bottom: 2px dashed v.$col-pri
         border-top: 2px dashed v.$col-pri
         +m.transition(border)
