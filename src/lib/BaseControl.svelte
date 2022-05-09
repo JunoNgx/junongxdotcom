@@ -17,7 +17,7 @@
 </script>
 
 <template lang="pug">
-    div(class="control")
+    div(class="control {$isDarkMode ? 'control--dark' : ''}")
 
         ul(class="control__contacts")
             h2(class="control__contacts__title") Find me elsewhere
@@ -67,12 +67,13 @@
     @mixin title
         font-size: 1.0rem
         padding: 0.25rem
-        // color: v.$col-bg
-        // background-color: v.$col-pri
-        // box-shadow: 4px 4px v.$col-pri
-        border-bottom: 4px solid v.$col-pri
-        border-top: 4px solid v.$col-pri
-        // border-right: 4px solid v.$col-pri
+        border-bottom: 2px dashed v.$col-pri
+        border-top: 2px dashed v.$col-pri
+        +m.transition(border)
+
+    @mixin title--dark
+        border-bottom: 2px dashed v.$col-bg
+        border-top: 2px dashed v.$col-bg
     
     .control
         text-align: right
@@ -136,7 +137,6 @@
 
             &__tags
                 &__title
-                    font-weight: 700
 
                 &__list
                     display: flex
@@ -153,6 +153,22 @@
                         &--selected
                             color: v.$col-bg
                             background-color: v.$col-pri
+
+        &--dark
+            .control__contacts__title,
+            .control__settings__title
+                +title--dark
+            
+            .control__settings__dark-mode__icon-container:hover
+                border: 1px solid v.$col-bg
+
+            .control__settings__tags__list__item
+                border: 2px solid v.$col-bg
+
+                &--selected
+                    color: v.$col-pri
+                    background-color: v.$col-bg
+
 
         +m.mobile
             text-align: left

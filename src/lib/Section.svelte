@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { isDarkMode } from "../store"
     import { marked } from 'marked'
 
     export let entry: Entry
@@ -11,7 +12,7 @@
 </script>
 
 <template lang="pug">
-    section(class="section")
+    section(class="section {$isDarkMode ? 'section--dark' : ''}")
         h3(class="section__title") {entry.title}
         +if('entry.imgSrc && entry.imgAlt')
             img(class="section__banner" src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
@@ -118,6 +119,17 @@
 
         +m.mobile
             margin: 2rem 0.5rem
+
+        &--dark
+            border: 2px solid v.$col-bg
+
+            .section__buttons__expand-btn
+                color: v.$col-bg
+                border: 2px solid v.$col-bg
+
+                &:hover
+                    color: v.$col-pri
+                    background-color: v.$col-bg
 
 
     :global(.section__content p:first-child)
