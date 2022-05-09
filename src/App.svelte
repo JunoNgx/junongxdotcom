@@ -1,10 +1,52 @@
 <script lang="ts">
+    import { onDestroy, onMount } from "svelte";
+
     import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
     import Section from "./lib/Section.svelte"
     import Control from "./lib/BaseControl.svelte"
 
     import content from "./data/content.yaml"
+    import { entryList, tagDataList } from "./store"
+
+    const setFullEntryList = (inputEntryList: Array<Entry>) => {
+        $entryList = [...inputEntryList];
+    }
+
+    const generateTagDataList = (inputEntryList: Array<Entry>) => {
+        const tmpTagList = []
+
+        inputEntryList.forEach(entry => {
+            entry.tags.forEach(tag => {
+                if (!tmpTagList.includes(tag)) {
+                    tmpTagList.push(tag)
+                }
+            })
+        })
+
+        // tmpTagList.forEach(tag => {
+        //     $tagDataList.push({
+        //         tag,
+        //         isDisplayed: true
+        //     })
+        // })
+
+        tmpTagList.forEach(tag => {
+            $tagDataList.set(tag, true)
+        })
+    }
+
+    onMount(() => {
+        setFullEntryList(content)
+        generateTagDataList($entryList)
+        // setDefaultTagDataList($fullEntryList)
+        // setDisplayedEntryList($tagDataList)
+
+        console.log($entryList)
+        console.log($tagDataList)
+    })
+
+    // onDestroy()
 </script>
 
 <template lang="pug">
@@ -15,7 +57,7 @@
                 Control
 
         div(class="content-wrapper")
-            +each("content as entry")
+            +each("$entryList as entry")
                 Section(entry!="{entry}")
 
     Footer
