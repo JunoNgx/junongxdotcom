@@ -1,8 +1,9 @@
 <script lang="ts">
     import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
-    import Section from "./lib/Section.svelte"
     import Control from "./lib/BaseControl.svelte"
+    import ControlMobile from "./lib/BaseControlMobile.svelte"
+    import Section from "./lib/Section.svelte"
 
     import content from "./data/content.yaml"
     import { entryList, tagDataMap, isDarkMode, displayedEntryList } from "./store"
@@ -56,7 +57,8 @@
 
                 +else()
                     p(class="no-content") You have filtered out everything and there is nothing left to be displayed.
-
+                    
+    ControlMobile
     Footer
 </template>
 
@@ -119,6 +121,8 @@
         color: v.$col-pri
         background-color: v.$col-bg
         +m.transition(color, background-color)
+        +m.mobile
+            font-size: v.$font-size-mobile
 
     :global(body.dark)
         color: v.$col-pri-dark

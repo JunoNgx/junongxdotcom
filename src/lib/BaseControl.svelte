@@ -1,4 +1,6 @@
 <script lang="ts">
+    export let isForMobile = false
+
     import { tagDataMap, isDarkMode } from "../store"
 
     const switchTagData = (tag: string) => {
@@ -17,7 +19,7 @@
 </script>
 
 <template lang="pug">
-    div(class="control {$isDarkMode ? 'control--dark' : ''}")
+    div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         ul(class="control__contacts")
             h2(class="control__contacts__title") Find me elsewhere
@@ -169,7 +171,10 @@
                     color: v.$col-bg-dark
                     background-color: v.$col-pri-dark
 
-
         +m.mobile
             display: none
+
+        &.for-mobile
+            +m.mobile
+                display: block
 </style>
