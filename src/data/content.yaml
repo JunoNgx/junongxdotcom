@@ -16,7 +16,7 @@
     - web development
     - release
     - nodeJS
-    - ReactJS
+    - reactJS
   links:
     - label: EbonyMemo.com
       url: http://ebonymemo.com/
@@ -73,7 +73,7 @@
   tags:
     - web development
     - in active development
-    - ReactJS
+    - reactJS
     - svelte
   links:
     - label: source
@@ -137,7 +137,7 @@
     During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
   tags:
     - web development
-    - ReactJS
+    - reactJS
   links:
     - label: source
       url: https://github.com/JunoNgx/working-memory-test
