@@ -37,10 +37,13 @@
 
     @mixin title
         font-size: 1.0rem
-        padding: 0.25rem 1.5rem 0.25rem 0.5rem
-        color: v.$col-bg
-        background-color: v.$col-pri
+        padding: 0.25rem
+        // color: v.$col-bg
+        // background-color: v.$col-pri
         // box-shadow: 4px 4px v.$col-pri
+        border-bottom: 4px solid v.$col-pri
+        border-top: 4px solid v.$col-pri
+        // border-right: 4px solid v.$col-pri
     
     .control
         text-align: right
