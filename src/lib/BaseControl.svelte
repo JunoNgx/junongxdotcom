@@ -7,7 +7,9 @@
     }
 
     const switchDarkMode = () => {
-        isDarkMode.set(!$isDarkMode)
+        const newValue = !$isDarkMode
+        isDarkMode.set(newValue)
+        localStorage.setItem('isDarkMode', newValue.toString())
     }
 </script>
 

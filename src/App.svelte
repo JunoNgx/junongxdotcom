@@ -5,7 +5,7 @@
     import Control from "./lib/BaseControl.svelte"
 
     import content from "./data/content.yaml"
-    import { entryList, tagDataMap, displayedEntryList } from "./store"
+    import { entryList, tagDataMap, isDarkMode, displayedEntryList } from "./store"
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);
@@ -31,6 +31,10 @@
 
     setFullEntryList(content)
     generateTagDataMap($entryList)
+
+    if (localStorage.getItem('isDarkMode')) {
+        isDarkMode.set(JSON.parse(localStorage.getItem('isDarkMode')))
+    }
 </script>
 
 <template lang="pug">
