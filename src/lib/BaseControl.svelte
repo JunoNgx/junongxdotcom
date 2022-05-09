@@ -1,18 +1,21 @@
 <script lang="ts">
+    import { onDestroy } from "svelte";
     import { tagDataMap } from "../store"
 
     const switchTagData = (tag: string) => {
         console.log("switch " + tag + $tagDataMap.get(tag))
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
+        tagDataMap.set($tagDataMap)
     }
 
     let localtagDataMap: Map<string, boolean>
 
     const unsubscribe = tagDataMap.subscribe(value => {
+        console.log("tag value change")
         localtagDataMap = value
     })
 
-    // onDestroy(unsubscribe)
+    onDestroy(unsubscribe)
 </script>
 
 <template lang="pug">

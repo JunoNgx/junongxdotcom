@@ -10,7 +10,7 @@
     import { entryList, tagDataMap, displayedEntryList } from "./store"
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
-        $entryList = [...inputEntryList];
+        entryList.set([...inputEntryList]);
     }
 
     const generateTagDataMap = (inputEntryList: Array<Entry>) => {
@@ -34,6 +34,8 @@
         tmpTagList.forEach(tag => {
             $tagDataMap.set(tag, true)
         })
+        
+        tagDataMap.set($tagDataMap)
     }
 
     let localDisplayedEntryList: Array<Entry>
