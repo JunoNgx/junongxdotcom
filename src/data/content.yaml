@@ -115,6 +115,20 @@
       url: https://github.com/JunoNgx/p5js-gallery
 
 
+- title: Chattie
+  summary: A progress web app that generates topics for social chatting.
+  content: |
+    My dive into VueJS.
+  tags:
+    - web development
+    - release
+  links:
+    - label: source
+      url: https://github.com/JunoNgx/chattie
+    - label: deployment
+      url: https://chattie-juno.vercel.app/
+
+
 - title: Working Memory Test
   imgSrc: /images/WorkingMemoryTestTrailer.gif
   imgAlt: A gif trailer for the Working Memory Test tool
