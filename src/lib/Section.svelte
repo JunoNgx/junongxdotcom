@@ -46,9 +46,9 @@
                                     line(x1="10" y1="14" x2="21" y2="3")
             button(class="section__buttons__expand-btn" on:click!="{handleExpandClick}")
                 +if('isExpanded')
-                    span(class="section__buttons__expand-btn__label") Show less
+                    span(class="section__buttons__expand-btn__label") Less
                     +else()
-                        span Show more
+                        span More
 
 </template>
 
@@ -131,6 +131,7 @@
                 color: v.$col-pri
                 background-color: transparent
                 font-family: v.$fonts
+                font-size: v.$font-size
                 +m.transition(color, background-color)
 
                 &:hover
@@ -147,6 +148,7 @@
                 color: rgba(v.$col-pri-dark, 0.5)
 
             .section__buttons__expand-btn
+                font-size: v.$font-size-mobile
                 color: v.$col-pri-dark
                 border: 2px solid v.$col-pri-dark
 
