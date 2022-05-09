@@ -95,6 +95,7 @@
             display: flex
             flex-flow: row nowrap
             justify-content: space-between
+            gap: 1rem
 
             &__links
                 display: flex
@@ -124,7 +125,7 @@
 
 
             &__expand-btn
-                border: 2px solid v.$col-pri
+                border: 1px solid v.$col-pri
                 border-radius: 0
                 padding: 0.25rem 0.5rem
                 cursor: pointer
@@ -160,7 +161,7 @@
 
             .section__buttons__expand-btn
                 color: v.$col-pri-dark
-                border: 2px solid v.$col-pri-dark
+                border: 1px solid v.$col-pri-dark
 
                 &:hover
                     color: v.$col-bg-dark
