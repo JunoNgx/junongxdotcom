@@ -12,12 +12,22 @@
 </script>
 
 <template lang="pug">
+
     section(class="section {$isDarkMode ? 'section--dark' : ''}")
+
         h3(class="section__title") {entry.title}
+
+        div(class="section__tags")
+            +each("entry.tags as tag")
+                span(class="section__tags__item") {tag}
+
         +if('entry.imgSrc && entry.imgAlt')
             img(class="section__banner" src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
+
         p(class="section__summary") {@html marked(entry.summary)}
+
         p(class="section__content {isExpanded ? 'section__content--is-expanded' : ''}") {@html marked(entry.content)}
+
         div(class="section__buttons")
             div(class="section__buttons__links")
                 +each('entry.links as link')
@@ -60,8 +70,18 @@
             max-width: 100%
 
         &__title
-            margin-top: 0
+            margin: 0
             font-size: 2rem
+
+        &__tags
+            margin-bottom: 2rem
+            padding: 0
+            display: flex
+            flex-flow: row wrap
+            justify-content: flex-start
+            gap: 1rem
+            font-size: 0.8rem
+            color: rgba(v.$col-pri, 0.5)
 
         &__content
             max-height: 0
@@ -122,6 +142,9 @@
 
         &--dark
             border: 2px solid v.$col-bg
+
+            .section__tags
+                color: rgba(v.$col-bg, 0.5)
 
             .section__buttons__expand-btn
                 color: v.$col-bg
