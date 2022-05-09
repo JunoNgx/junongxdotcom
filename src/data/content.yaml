@@ -36,7 +36,7 @@
   tags:
     - game development
   links:
-    - label: Itch.io page
+    - label: itch.io
       url: https://junongx.itch.io/
 
 
@@ -44,7 +44,7 @@
   imgSrc: /images/wonyun_5.gif
   imgAlt: animated screenshot of the game Wonyun Trench Run
   summary: |
-    A shoot-em-up title for Pico-8 with an **entity-component-system** architecture.
+    A Pico-8 bullet hell implemented with the entity-component-system architecture.
   content: |
     One of the few larger-scale and more complete titles I have completed, this was my first dive into the very quirky and cozy ecosystem of Pico8. With a full suite of tools for pretty much all aspects of gamedev, I was able to create assets in a productive and convenient manner, without the overhead of tool switching. The minimalistic nature and limitations of Pico8 (which uses a highly limited subset of Lua) also made it an interesting challenge, both technically and artistically.
 
@@ -55,7 +55,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/p8wonyun
-    - label: play on itch.io
+    - label: itch.io
       url: https://junongx.itch.io/wonyun-trench-run
 
 
@@ -95,7 +95,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/crips-game-lib-collection
-    - label: itch.io page
+    - label: itch.io
       url: https://junongx.itch.io/crisp-webgame-collection
 
 
