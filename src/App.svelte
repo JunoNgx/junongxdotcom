@@ -75,7 +75,7 @@
         src: local(''), url('fonts/jost-v13-latin-700italic.eot?#iefix') format('embedded-opentype'), url('fonts/jost-v13-latin-700italic.woff') format('woff'), url('fonts/jost-v13-latin-700italic.ttf') format('truetype'), url('fonts/jost-v13-latin-700italic.svg#Jost') format('svg')
     
     :root
-        font-family: "Jost", sans-serif
+        font-family: v.$fonts
         font-size: v.$font-size
         color: v.$col-pri
 

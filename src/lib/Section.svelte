@@ -109,6 +109,7 @@
                 cursor: pointer
                 color: v.$col-pri
                 background-color: transparent
+                font-family: v.$fonts
                 +m.transition(color, background-color)
 
                 &:hover
