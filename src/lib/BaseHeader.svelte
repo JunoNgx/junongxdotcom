@@ -1,7 +1,3 @@
-<script lang="ts">
-
-</script>
-
 <template lang="pug">
     header
         h1 Juno Nguyen
@@ -18,9 +14,9 @@
 
         h1
             margin-top: 0
-            text-align: center
-            color: v.$col-bg
-            background-color: v.$col-acc
+            // text-align: center
+            // color: v.$col-bg
+            // background-color: v.$col-acc
             // +m.transition(padding-right, color, background-color)
 
             // &:hover
