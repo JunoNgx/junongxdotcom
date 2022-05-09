@@ -7,13 +7,13 @@
     import Control from "./lib/BaseControl.svelte"
 
     import content from "./data/content.yaml"
-    import { entryList, tagDataList } from "./store"
+    import { entryList, tagDataMap, displayedEntryList } from "./store"
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         $entryList = [...inputEntryList];
     }
 
-    const generateTagDataList = (inputEntryList: Array<Entry>) => {
+    const generateTagDataMap = (inputEntryList: Array<Entry>) => {
         const tmpTagList = []
 
         inputEntryList.forEach(entry => {
@@ -25,28 +25,35 @@
         })
 
         // tmpTagList.forEach(tag => {
-        //     $tagDataList.push({
+        //     $tagDataMap.push({
         //         tag,
         //         isDisplayed: true
         //     })
         // })
 
         tmpTagList.forEach(tag => {
-            $tagDataList.set(tag, true)
+            $tagDataMap.set(tag, true)
         })
     }
 
-    onMount(() => {
-        setFullEntryList(content)
-        generateTagDataList($entryList)
-        // setDefaultTagDataList($fullEntryList)
-        // setDisplayedEntryList($tagDataList)
+    let localDisplayedEntryList: Array<Entry>
 
-        console.log($entryList)
-        console.log($tagDataList)
+    // onMount(() => {
+    setFullEntryList(content)
+    generateTagDataMap($entryList)
+    // setDefaulttagDataMap($fullEntryList)
+    // setDisplayedEntryList($tagDataMap)
+
+    // console.log($entryList)
+    // console.log($tagDataMap)
+    // console.log($displayedEntryList)
+    // console.log(localDisplayedEntryList)
+    // })
+
+    const unsubscribe = displayedEntryList.subscribe(value => {
+        localDisplayedEntryList = value
     })
-
-    // onDestroy()
+    onDestroy(unsubscribe)
 </script>
 
 <template lang="pug">
@@ -57,7 +64,7 @@
                 Control
 
         div(class="content-wrapper")
-            +each("$entryList as entry")
+            +each("localDisplayedEntryList as entry")
                 Section(entry!="{entry}")
 
     Footer

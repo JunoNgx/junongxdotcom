@@ -1,5 +1,18 @@
 <script lang="ts">
+    import { tagDataMap } from "../store"
 
+    const switchTagData = (tag: string) => {
+        console.log("switch " + tag + $tagDataMap.get(tag))
+        $tagDataMap.set(tag, !$tagDataMap.get(tag))
+    }
+
+    let localtagDataMap: Map<string, boolean>
+
+    const unsubscribe = tagDataMap.subscribe(value => {
+        localtagDataMap = value
+    })
+
+    // onDestroy(unsubscribe)
 </script>
 
 <template lang="pug">
@@ -18,10 +31,11 @@
         div(class="control__settings")
             h2(class="control__settings__title") Settings
             p Dark mode: off
-            p Filtering tags
-                li gamedev
-                li webdev
-                li hobby
+            div(class="control__settings__tags")
+                p(class="control__settings__tags__title") Filtering tags
+                div(class="control__settings__tags__list")
+                    +each("[...$tagDataMap] as [tag, isDisplayed]")
+                        div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}") {tag}
 </template>
 
 <style lang="sass">
@@ -61,6 +75,23 @@
         &__settings
             &__title
                 +title
+
+            &__tags
+                &__list
+                    display: flex
+                    flex-flow: row wrap
+                    justify-content: flex-end
+                    gap: 0.5rem
+
+                    &__item
+                        border: 2px solid v.$col-pri
+                        padding: 0.1rem 0.2rem
+                        cursor: pointer
+                        +m.transition(color, background-color)
+
+                        &--selected
+                            color: v.$col-bg
+                            background-color: v.$col-pri
 
         +m.mobile
             text-align: left
