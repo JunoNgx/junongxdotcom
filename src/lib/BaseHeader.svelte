@@ -1,5 +1,9 @@
+<script lang="ts">
+    import { isDarkMode } from "../store"
+</script>
+
 <template lang="pug">
-    header
+    header(class!="{$isDarkMode ? 'dark' : ''}")
         h1 Juno Nguyen
         p web engineer by day
         p hobbyist gamedev, creative coding artist, tinkerer, know-it-all-wannabe by night
@@ -26,6 +30,12 @@
 
         +m.mobile
             text-align: left
-            margin-left: 1rem
+            margin-left: 0.5rem
             margin-top: 2rem
+            padding-left: 1rem
+            border-left: 2px dashed v.$col-pri
+
+        &.dark
+            +m.mobile
+                border-left: 2px dashed v.$col-pri-dark
 </style>
