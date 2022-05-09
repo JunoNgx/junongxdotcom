@@ -141,14 +141,24 @@
         +m.mobile
             margin: 2rem 0.5rem
 
+            .section__buttons__expand-btn
+                font-size: v.$font-size-mobile
+
         &--dark
             border: 2px solid v.$col-pri-dark
 
             .section__tags
                 color: rgba(v.$col-pri-dark, 0.5)
 
+            .section__buttons__links__item
+                background-color: v.$col-acc-dark
+
+                &:hover
+                        color: v.$col-bg-dark
+                        background-color: v.$col-acc2
+                        box-shadow: 4px 4px v.$col-pri-dark
+
             .section__buttons__expand-btn
-                font-size: v.$font-size-mobile
                 color: v.$col-pri-dark
                 border: 2px solid v.$col-pri-dark
 
