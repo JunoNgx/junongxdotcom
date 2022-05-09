@@ -41,8 +41,12 @@
                 Control
 
         div(class="content-wrapper")
-            +each("$displayedEntryList as entry")
-                Section(entry!="{entry}")
+            +if("$displayedEntryList && $displayedEntryList.length > 0")
+                +each("$displayedEntryList as entry")
+                    Section(entry!="{entry}")
+
+                +else()
+                    p(class="no-content") You have filtered out everything and there is nothing left to be displayed.
 
     Footer
 </template>
@@ -142,5 +146,10 @@
 
     .content-wrapper
         flex-grow: 3
+
+        .no-content
+            margin: 2rem
+            padding: 1rem
+            max-width: 400px
 
 </style>
