@@ -1,9 +1,13 @@
 <script lang="ts">
-    import { tagDataMap } from "../store"
+    import { tagDataMap, isDarkMode } from "../store"
 
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
         tagDataMap.set($tagDataMap)
+    }
+
+    const switchDarkMode = () => {
+        isDarkMode.set(!$isDarkMode)
     }
 </script>
 
@@ -25,23 +29,24 @@
             h2(class="control__settings__title") Settings
             // Dark mode control
             div(class="control__settings__dark-mode")
-                div(class="control__settings__dark-mode__icon-container")
+                div(class="control__settings__dark-mode__icon-container" on:click!="{switchDarkMode}")
+                    div(class="control__settings__dark-mode__icon-container__content {$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
 
-                    // The sun
-                    svg(class="control__settings__dark-mode__icon-container__icon control__settings__dark-mode__icon-container__icon--light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                        circle(cx="12" cy="12" r="5")
-                        line(x1="12" y1="1" x2="12" y2="3")
-                        line(x1="12" y1="21" x2="12" y2="23")
-                        line(x1="4.22" y1="4.22" x2="5.64" y2="5.64")
-                        line(x1="18.36" y1="18.36" x2="19.78" y2="19.78")
-                        line(x1="1" y1="12" x2="3" y2="12")
-                        line(x1="21" y1="12" x2="23" y2="12")
-                        line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
-                        line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
+                        // The sun
+                        svg(class="control__settings__dark-mode__icon-container__content__icon control__settings__dark-mode__icon-container__content__icon--light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                            circle(cx="12" cy="12" r="5")
+                            line(x1="12" y1="1" x2="12" y2="3")
+                            line(x1="12" y1="21" x2="12" y2="23")
+                            line(x1="4.22" y1="4.22" x2="5.64" y2="5.64")
+                            line(x1="18.36" y1="18.36" x2="19.78" y2="19.78")
+                            line(x1="1" y1="12" x2="3" y2="12")
+                            line(x1="21" y1="12" x2="23" y2="12")
+                            line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
+                            line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
-                    // The moon
-                    svg(class="control__settings__dark-mode__icon-container__icon control__settings__dark-mode__icon-container__icon--dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                        path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
+                        // The moon
+                        svg(class="control__settings__dark-mode__icon-container__content__icon control__settings__dark-mode__icon-container__content__icon--dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
             div(class="control__settings__tags")
                 p(class="control__settings__tags__title") Filtering tags
@@ -99,16 +104,30 @@
 
             &__dark-mode
                 &__icon-container
-                    width: 20px
-                    height: 20px
-                    padding: 2px
+                    position: relative
+                    width: 22px
+                    height: 22px
                     white-space: nowrap
-
-                    border: 2px solid transparent
+                    padding: 2px
+                    cursor: pointer
+                    border: 1px solid transparent
                     transition: border v.$trans-time-default ease-out
+                    overflow: hidden
 
                     &:hover
-                        border: 2px solid v.$col-pri
+                        border: 1px solid v.$col-pri
+
+                    &__content
+                        position: absolute
+                        white-space: nowrap
+                        transform: translateX(0)
+                        transition: transform v.$trans-time-default ease-out
+
+                        &--dark
+                            transform: translateX(-23px)
+
+                        &__icon
+                            margin: 1px
 
             &__tags
                 &__title
