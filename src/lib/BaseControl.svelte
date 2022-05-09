@@ -12,13 +12,14 @@
 
         ul(class="control__contacts")
             h2(class="control__contacts__title") Find me elsewhere
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
-            a(class="control__contacts__item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
+            div(class="control__contacts__list")
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
+                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
         div(class="control__settings")
             h2(class="control__settings__title") Settings
@@ -53,16 +54,22 @@
             &__title
                 +title
 
-            &__item
-                margin-right: 0.5rem
-                display: block
-                background-image: none
-                +m.transition(padding, color, background-color)
+            &__list
+                display: flex
+                flex-flow: row wrap
+                justify-content: flex-end
+                gap: 0.5rem 1rem
 
-                &:hover
-                    padding: 0 3rem 0 0.5rem
-                    color: v.$col-bg
-                    background-color: v.$col-acc
+                &__item
+                    // margin-right: 0.5rem
+                    // display: block
+                    // background-image: none
+                    // +m.transition(padding, color, background-color)
+
+                    // &:hover
+                    //     padding: 0 3rem 0 0.5rem
+                    //     color: v.$col-bg
+                    //     background-color: v.$col-acc
 
         &__settings
             &__title
