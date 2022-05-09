@@ -167,9 +167,15 @@
         justify-content: space-around
 
         +m.transition(border)
+        +m.mobile
+            position: static
+            border: none
 
         &.dark
             border-right: 2px dashed v.$col-pri-dark
+            +m.mobile
+                border: none
+
 
     .content-wrapper
         flex-grow: 3

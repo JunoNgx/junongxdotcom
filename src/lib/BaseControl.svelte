@@ -171,5 +171,5 @@
 
 
         +m.mobile
-            text-align: left
+            display: none
 </style>

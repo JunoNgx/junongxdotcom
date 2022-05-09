@@ -26,4 +26,6 @@
 
         +m.mobile
             text-align: left
+            margin-left: 1rem
+            margin-top: 2rem
 </style>
