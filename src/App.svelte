@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { onDestroy, onMount } from "svelte";
-
     import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
     import Section from "./lib/Section.svelte"
@@ -24,38 +22,15 @@
             })
         })
 
-        // tmpTagList.forEach(tag => {
-        //     $tagDataMap.push({
-        //         tag,
-        //         isDisplayed: true
-        //     })
-        // })
-
         tmpTagList.forEach(tag => {
             $tagDataMap.set(tag, true)
         })
-        
+
         tagDataMap.set($tagDataMap)
     }
 
-    let localDisplayedEntryList: Array<Entry>
-
-    // onMount(() => {
     setFullEntryList(content)
     generateTagDataMap($entryList)
-    // setDefaulttagDataMap($fullEntryList)
-    // setDisplayedEntryList($tagDataMap)
-
-    // console.log($entryList)
-    // console.log($tagDataMap)
-    // console.log($displayedEntryList)
-    // console.log(localDisplayedEntryList)
-    // })
-
-    const unsubscribe = displayedEntryList.subscribe(value => {
-        localDisplayedEntryList = value
-    })
-    onDestroy(unsubscribe)
 </script>
 
 <template lang="pug">
@@ -66,7 +41,7 @@
                 Control
 
         div(class="content-wrapper")
-            +each("localDisplayedEntryList as entry")
+            +each("$displayedEntryList as entry")
                 Section(entry!="{entry}")
 
     Footer
