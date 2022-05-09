@@ -118,6 +118,7 @@
     :global(body)
         font-family: v.$fonts
         font-size: v.$font-size
+        hyphens: auto
         color: v.$col-pri
         background-color: v.$col-bg
         +m.transition(color, background-color)
