@@ -141,18 +141,18 @@
             margin: 2rem 0.5rem
 
         &--dark
-            border: 2px solid v.$col-bg
+            border: 2px solid v.$col-pri-dark
 
             .section__tags
-                color: rgba(v.$col-bg, 0.5)
+                color: rgba(v.$col-pri-dark, 0.5)
 
             .section__buttons__expand-btn
-                color: v.$col-bg
-                border: 2px solid v.$col-bg
+                color: v.$col-pri-dark
+                border: 2px solid v.$col-pri-dark
 
                 &:hover
-                    color: v.$col-pri
-                    background-color: v.$col-bg
+                    color: v.$col-bg-dark
+                    background-color: v.$col-pri-dark
 
 
     :global(.section__content p:first-child)

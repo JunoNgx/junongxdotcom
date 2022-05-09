@@ -121,8 +121,8 @@
         +m.transition(color, background-color)
 
     :global(body.dark)
-        color: v.$col-bg
-        background-color: v.$col-pri
+        color: v.$col-pri-dark
+        background-color: v.$col-bg-dark
 
 
     :global(a)
@@ -139,7 +139,7 @@
             background-size: 100% 100%
 
     :global(body.dark a)
-        color: v.$col-bg
+        color: v.$col-pri-dark
         background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
 
 
@@ -169,7 +169,7 @@
         +m.transition(border)
 
         &.dark
-            border-right: 2px dashed v.$col-bg
+            border-right: 2px dashed v.$col-pri-dark
 
     .content-wrapper
         flex-grow: 3

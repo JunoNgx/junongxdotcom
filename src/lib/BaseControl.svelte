@@ -72,8 +72,8 @@
         +m.transition(border)
 
     @mixin title--dark
-        border-bottom: 2px dashed v.$col-bg
-        border-top: 2px dashed v.$col-bg
+        border-bottom: 2px dashed v.$col-pri-dark
+        border-top: 2px dashed v.$col-pri-dark
     
     .control
         text-align: right
@@ -160,14 +160,14 @@
                 +title--dark
             
             .control__settings__dark-mode__icon-container:hover
-                border: 1px solid v.$col-bg
+                border: 1px solid v.$col-pri-dark
 
             .control__settings__tags__list__item
-                border: 2px solid v.$col-bg
+                border: 2px solid v.$col-pri-dark
 
                 &--selected
-                    color: v.$col-pri
-                    background-color: v.$col-bg
+                    color: v.$col-bg-dark
+                    background-color: v.$col-pri-dark
 
 
         +m.mobile
