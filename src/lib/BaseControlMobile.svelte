@@ -53,7 +53,7 @@
             transition: clip-path v.$trans-time-default ease-out
 
             &__control-wrapper
-                padding: 5rem 2rem 1rem
+                padding: 3rem 2rem 1rem
 
             &--is-expanded
                 clip-path: circle(90vh at calc(100% - 2.5rem) calc(2.5rem))
