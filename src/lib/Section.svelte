@@ -20,7 +20,7 @@
         div(class="section__buttons")
             div(class="section__buttons__links")
                 +each('entry.links as link')
-                    a(class="section__buttons__links__item" href!="{link.url}")
+                    a(class="section__buttons__links__item" href!="{link.url}" rel="noopener noreferrer" target="_blank")
                         span {link.label}
                         +if("link.label === 'source'")
                             // External link
