@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { isDarkMode } from "../store"
     import Control from "./BaseControl.svelte"
 
     let isExpanded = false
@@ -9,7 +10,7 @@
 </script>
 
 <template lang="pug">
-    div(class="control-mobile")
+    div(class="control-mobile {$isDarkMode ? 'control-mobile--dark' : ''}")
         div(class="control-mobile__icon-container" on:click!="{handleSwitchExpand}")
             svg(class="control-mobile__icon-container__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                 line(x1="3" y1="12" x2="21" y2="12")
@@ -34,7 +35,7 @@
             width: 48px
             height: 48px
             color: v.$col-bg
-            background-color: v.$col-pri
+            background-color: v.$col-acc
             cursor: pointer
 
             display: flex
@@ -47,7 +48,7 @@
             right: 0
             height: 100vh
             width: 100vw
-            background-color: skyblue
+            background-color: v.$col-acc
             clip-path: circle(0 at calc(100% - 2.5rem) calc(2.5rem))
             transition: clip-path v.$trans-time-default ease-out
 
@@ -56,5 +57,12 @@
 
             &--is-expanded
                 clip-path: circle(90vh at calc(100% - 2.5rem) calc(2.5rem))
+
+        &--dark
+            .control-mobile__icon-container
+                background-color: v.$col-acc-dark
+            
+            .control-mobile__content
+                background-color: v.$col-acc-dark
 
 </style>
