@@ -1,16 +1,21 @@
 declare type Entry = {
-    title: String,
-    imgSrc: String,
-    imgAlt: String,
-    summary: String,
-    content: String,
-    tags: String[],
+    title: string,
+    imgSrc: string,
+    imgAlt: string,
+    summary: string,
+    content: string,
+    tags: string[],
     links: CtaLink[]
 }
 
+declare type TagData = {
+    tag: string,
+    isDisplayed: Boolean
+}
+
 declare type CtaLink = {
-    label: String,
-    url: String
+    label: string,
+    url: string
 }
 
 declare module "*.yaml" {
