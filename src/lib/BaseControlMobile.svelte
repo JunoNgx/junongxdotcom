@@ -71,7 +71,7 @@
                 width: 100vw
                 background-color: v.$col-acc
                 clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
-                transition: clip-path v.$trans-time-default ease-out
+                transition: clip-path 300ms ease-out
 
                 &__control-wrapper
                     padding: 3rem 2rem 1rem
