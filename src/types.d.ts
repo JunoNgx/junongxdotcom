@@ -13,11 +13,6 @@ declare type TagData = {
     isDisplayed: Boolean
 }
 
-declare type CtaLink = {
-    label: string,
-    url: string
-}
-
 declare module "*.yaml" {
     const entries: Entry[]
     export = entries
