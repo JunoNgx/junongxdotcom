@@ -150,7 +150,7 @@
                     gap: 0.5rem
 
                     &__item
-                        border: 2px solid v.$col-pri
+                        border: 1px solid v.$col-pri
                         padding: 0.1rem 0.2rem
                         cursor: pointer
                         font-size: 14px
