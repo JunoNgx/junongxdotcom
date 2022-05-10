@@ -113,7 +113,7 @@
                     padding: 0.25rem 0.5rem
                     background-image: none
                     background-color: v.$col-acc
-                    font-family: monospace
+                    font-family: "Noto Sans Mono", monospace
                     font-size: 12px
 
                     display: flex
