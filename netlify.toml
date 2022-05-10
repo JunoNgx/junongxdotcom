@@ -6,11 +6,6 @@
   publish = "dist"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
@@ -34,3 +29,8 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/font-woff"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
