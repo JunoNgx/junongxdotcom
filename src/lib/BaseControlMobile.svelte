@@ -55,14 +55,14 @@
                 height: 100vh
                 width: 100vw
                 background-color: v.$col-acc
-                clip-path: circle(0 at calc(100% - 2.5rem) calc(2.5rem))
+                clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
                 transition: clip-path v.$trans-time-default ease-out
 
                 &__control-wrapper
                     padding: 3rem 2rem 1rem
 
                 &--is-expanded
-                    clip-path: circle(90vh at calc(100% - 2.5rem) calc(2.5rem))
+                    clip-path: circle(90vh at calc(100% - 3rem) calc(3rem))
 
             &--dark
                 .control-mobile__icon-container
