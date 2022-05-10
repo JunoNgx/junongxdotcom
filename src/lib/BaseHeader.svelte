@@ -110,14 +110,14 @@
         0%, 60%
             opacity: 0
             transform: translateY(50px)
-        75%, 100%
+        70%, 100%
             opacity: 1
             transform: translateY(0)
 
     @keyframes name-frame-border
-        0%, 75%
+        0%, 70%
             border-bottom-width: 0px
-        85%, 90%
+        85%, 95%
             border-bottom-width: 15px
         100%
             border-bottom-width: 0px
