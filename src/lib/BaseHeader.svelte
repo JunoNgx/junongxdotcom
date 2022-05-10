@@ -4,7 +4,14 @@
 
 <template lang="pug">
     header(class!="{$isDarkMode ? 'dark' : ''}")
-        h1 Juno Nguyen
+        div
+            h1
+                span(class="first-name-j") J
+                span(class="first-name-u") u
+                span(class="first-name-n") n
+                span(class="first-name-o") o
+                | !{' '}
+                span(class="last-name") Nguyen
         p web engineer by day
         p hobbyist gamedev, creative coding artist, tinkerer, know-it-all-wannabe by night
 </template>
@@ -13,20 +20,43 @@
     @use "../styles/_mixins" as m
     @use "../styles/vars" as v
 
+    $anim-time: 3s
+
     header
         text-align: right
 
-        h1
-            margin-top: 0
-            // text-align: center
-            // color: v.$col-bg
-            // background-color: v.$col-acc
-            // +m.transition(padding-right, color, background-color)
+        div
 
-            // &:hover
-                // padding-right: 3rem
-                // color: v.$col-bg
-                // background-color: v.$col-acc
+            h1
+                display: inline-block
+                margin: 0
+                border-bottom-color: v.$col-pri
+                border-bottom-style: solid
+                border-bottom-width: 0
+                animation: name-frame-border $anim-time ease-out 0s
+
+                .first-name-j,
+                .first-name-u,
+                .first-name-n,
+                .first-name-o,
+                .last-name
+                    display: inline-block
+
+                .first-name-j
+                    animation: first-name-j $anim-time ease-out 0s
+
+                .first-name-u
+                    animation: first-name-u $anim-time ease-out 0s
+
+                .first-name-n
+                    animation: first-name-n $anim-time ease-out 0s
+
+                .first-name-o
+                    animation: first-name-o $anim-time ease-out 0s
+
+                .last-name
+                    animation: last-name $anim-time ease-out 0s
+
 
         +m.mobile
             text-align: left
@@ -36,6 +66,60 @@
             border-left: 2px dashed v.$col-pri
 
         &.dark
+
+            div
+                h1
+                    border-color: v.$col-pri-dark
+
             +m.mobile
                 border-left: 2px dashed v.$col-pri-dark
+
+    @keyframes first-name-j
+        0%, 10%
+            opacity: 0
+            transform: translateX(-70px)
+        20%, 100%
+            opacity: 1
+            transform: translateX(0)
+
+    @keyframes first-name-u
+        0%, 20%
+            opacity: 0
+            transform: translateY(40px)
+        30%, 100%
+            opacity: 1
+            transform: translateY(0)
+
+    @keyframes first-name-n
+        0%, 30%
+            opacity: 0
+            transform: translateY(-55px)
+        40%, 100%
+            opacity: 1
+            transform: translateY(0)
+
+    @keyframes first-name-o
+        0%, 40%
+            opacity: 0
+            transform: translateX(20px)
+        50%, 100%
+            opacity: 1
+            transform: translateX(0)
+
+    @keyframes last-name
+        0%, 60%
+            opacity: 0
+            transform: translateY(50px)
+        75%, 100%
+            opacity: 1
+            transform: translateY(0)
+    
+    @keyframes name-frame-border
+        0%, 75%
+            border-bottom-width: 0px
+        85%, 90%
+            border-bottom-width: 15px
+        100%
+            border-bottom-width: 0px
+
 </style>
