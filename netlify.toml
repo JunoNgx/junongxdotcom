@@ -18,14 +18,3 @@
     max-age=31536000,
     immutable
     '''
-
-[[headers]]
-  for = '/fonts/*'
-  [headers.values]
-    cache-control = 'public, max-age=31536000'
-
-[[headers]]
-  for = "/*.woff"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/font-woff"
