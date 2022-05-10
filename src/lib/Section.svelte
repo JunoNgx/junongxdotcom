@@ -24,6 +24,10 @@
         +if('entry.imgSrc && entry.imgAlt')
             img(class="section__banner" src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
 
+        // Exception: creative conding canvas
+        +if('entry.title === "Creative Coding"')
+            canvas(id="scroll-canvas")
+
         p(class="section__summary") {@html marked(entry.summary)}
 
         p(class="section__content {isExpanded ? 'section__content--is-expanded' : ''}") {@html marked(entry.content)}
@@ -64,7 +68,8 @@
         text-align: left
         hyphens: auto
 
-        &__banner
+        &__banner,
+        canvas
             display: block
             margin: auto
             max-width: 100%
