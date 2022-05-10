@@ -13,7 +13,7 @@
                 | !{' '}
                 span(class="last-name") Nguyen
         p web engineer by day
-        p hobbyist gamedev, creative coding artist, tinkerer, know-it-all-wannabe by night
+        p hobbyist gamedev, creative coding artist, dabbler, know-it-all-wannabe by night
 </template>
 
 <style lang="sass">
