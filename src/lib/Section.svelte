@@ -155,9 +155,9 @@
                 background-color: v.$col-acc-dark
 
                 &:hover
-                        color: v.$col-bg-dark
-                        background-color: v.$col-acc2
-                        box-shadow: 4px 4px v.$col-pri-dark
+                    color: v.$col-bg-dark
+                    background-color: v.$col-acc2
+                    box-shadow: 4px 4px v.$col-pri-dark
 
             .section__buttons__expand-btn
                 color: v.$col-pri-dark
