@@ -153,6 +153,7 @@
                         border: 2px solid v.$col-pri
                         padding: 0.1rem 0.2rem
                         cursor: pointer
+                        font-size: 14px
                         +m.transition(color, background-color)
 
                         &--selected
