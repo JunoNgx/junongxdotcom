@@ -29,8 +29,3 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/font-woff"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
