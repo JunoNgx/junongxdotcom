@@ -58,6 +58,10 @@
 
                 +else()
                     p(class="no-content") You have filtered out everything and there is nothing left to be displayed.
+        
+            section(class="contact-me {$isDarkMode ? 'dark' : ''}")
+                div(class="contact-me-content")
+                    p Would you like to say hello?
                     
     ControlMobile
     Footer
@@ -190,5 +194,33 @@
             margin: 2rem
             padding: 1rem
             max-width: 400px
+
+        .contact-me
+            background-color: transparent
+            border: none
+            margin: auto
+            text-align: center
+            max-width: 360px
+            padding: 0
+
+            p 
+                margin: 0
+
+            &-content
+                border: 2px solid v.$col-pri
+                margin: 1rem
+                padding: 1rem 1.5rem
+
+                &:after 
+                    content: "My contacts are to the left ←"
+
+            +m.mobile
+                &-content
+                    &:after 
+                        content: "My contacts are in the menu ↑"
+            
+            &.dark
+                .contact-me-content
+                    border: 2px solid v.$col-pri-dark
 
 </style>
