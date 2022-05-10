@@ -115,9 +115,9 @@
             transform: translateY(0)
 
     @keyframes name-frame-border
-        0%, 70%
+        0%, 80%
             border-bottom-width: 0px
-        85%, 95%
+        90%, 95%
             border-bottom-width: 24px
         100%
             border-bottom-width: 0px
