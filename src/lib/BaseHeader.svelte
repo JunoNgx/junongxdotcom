@@ -113,7 +113,7 @@
         75%, 100%
             opacity: 1
             transform: translateY(0)
-    
+
     @keyframes name-frame-border
         0%, 75%
             border-bottom-width: 0px
