@@ -118,7 +118,7 @@
         0%, 70%
             border-bottom-width: 0px
         85%, 95%
-            border-bottom-width: 15px
+            border-bottom-width: 24px
         100%
             border-bottom-width: 0px
 
