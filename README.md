@@ -1,48 +1,61 @@
-# Svelte + TS + Vite
+# Portfolio Website
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+My centralised portfolio website, where my works across fields and medium gather in one single place.
 
-## Recommended IDE Setup
+## Current deployment
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Netlify.
 
-## Need an official Svelte framework?
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff83aa39-9847-428e-ad7e-f63cb7fe6883/deploy-status)](https://app.netlify.com/sites/junongxdotcom/deploys)
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Tech stack
 
-## Technical considerations
+* [Vite](https://vitejs.dev/)
+* [Svelte](https://svelte.dev/)
+* [SASS](https://sass-lang.com/) (using BEM naming convention and indented syntax)
+* [TypeScript](https://www.typescriptlang.org/)
 
-**Why use this over SvelteKit?**
+## Environment variables
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+This project doesn't require any environment variable and no setup is neccessary for deployment.
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## Local deployment
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+First, clone the repository and move into the directory:
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```bash
+git clone git@github.com:JunoNgx/junongxdotcom.git
+cd junongxdotcom
 ```
+
+Then install the packages (`yarn` is required):
+```bash
+yarn
+```
+
+Then run the development server:
+```bash
+yarn dev
+```
+
+Alternatively, run the network-exposed development server with the flag `--host`:
+
+```bash
+yarn dev --host
+```
+
+Open [http://localhost:3000](http://localhost:3000) (by default) with your browser to see the result.
+
+This is a self-contained static site and doesn't require any data fetching.
+
+## Previous versions
+
+This website has gone through several major overhauls, including usage of other tech stacks. Previous versions can be found in other branches. Current domain is generally always deployed with the branch `production`.
+
+## Acknowledgement
+
+This website uses the typeface [Jost](https://indestructibletype.com/Jost.html) (via Google Fonts) by [Owen Earl](https://indestructibletype.com/), who has also influenced its overall design. Icons are from the [Feather project](https://feathericons.com/). The layout in the current iteration is heavily inspired by [Tim Holman](https://tholman.com/).
+
+## Contribution
+
+For suggestions and  criticism, please feel free to open an issue for this repository.
