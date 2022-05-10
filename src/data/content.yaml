@@ -1,5 +1,7 @@
 
 - title: Ebony Memo
+  imgSrc: /images/EbonyMemo.gif
+  imgAlt: A gif trailer for Ebony Memo
   summary: |
     As a videogame enthusiast, I seek out interesting titles across platforms, mobile nevertheless. [Ebony Memo](http://ebonymemo.com/) is an arthouse videogame curator website for mobile devices, and also a full custom content management system of MERN stack.
   content: |
@@ -14,6 +16,7 @@
     This was my attempt to dive into full-stack development and was an enlightening experience.
   tags:
     - web development
+    - progressive web app
     - release
     - nodeJS
     - reactJS
@@ -23,7 +26,7 @@
 
 
 - title: manafarm
-  imgSrc: /images/manafarm_black_512.png
+  imgSrc: /images/manafarm_withBg.jpg
   imgAlt: manafarm logo
   summary: |
     I am a hobbyist gamedev and make an awful lot of videogames just for the sheer fun of it. My major videogame releases can be found on my [Itch.io page](https://JunoNgx.itch.io/).
@@ -116,11 +119,19 @@
 
 
 - title: Chattie
+  imgSrc: /images/Chattie.gif
+  imgAlt: animated screenshot of the web application Chattie
   summary: A progress web app that generates topics for social chatting.
   content: |
-    My dive into VueJS.
+    This was my preparation for my first full-time software engineer employment. Created in December 2021, this was not long after VueJS going 3 by default.
+
+    In order to have a good understanding of the ecosystem, I went in deep with **vue router** and **vueX**. As a side objective, it was also my first exposure with the indented SASS syntax (which I aboslutely loved) and dark mode/theming.
+
+    It's also a progressive web app, because why not.
   tags:
     - web development
+    - progressive web app
+    - vueJS
     - release
   links:
     - label: source
