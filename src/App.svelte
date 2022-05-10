@@ -125,8 +125,8 @@
         font-family: 'Noto Sans Mono'
         font-style: normal
         font-weight: 400
-        src: url('../fonts/noto-sans-mono-v14-latin-regular.eot')
-        src: local(''), url('../fonts/noto-sans-mono-v14-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/noto-sans-mono-v14-latin-regular.woff2') format('woff2'), url('../fonts/noto-sans-mono-v14-latin-regular.woff') format('woff'), url('../fonts/noto-sans-mono-v14-latin-regular.ttf') format('truetype'), url('../fonts/noto-sans-mono-v14-latin-regular.svg#NotoSansMono') format('svg')
+        src: url('assets/fonts/noto-sans-mono-v14-latin-regular.eot')
+        src: local(''), url('assets/fonts/noto-sans-mono-v14-latin-regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/noto-sans-mono-v14-latin-regular.woff2') format('woff2'), url('assets/fonts/noto-sans-mono-v14-latin-regular.woff') format('woff'), url('assets/fonts/noto-sans-mono-v14-latin-regular.ttf') format('truetype'), url('assets/fonts/noto-sans-mono-v14-latin-regular.svg#NotoSansMono') format('svg')
     
     :global(body)
         font-family: v.$fonts
