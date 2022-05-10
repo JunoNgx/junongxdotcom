@@ -12,10 +12,17 @@
 <template lang="pug">
     div(class="control-mobile {$isDarkMode ? 'control-mobile--dark' : ''}")
         div(class="control-mobile__icon-container" on:click!="{handleSwitchExpand}")
-            svg(class="control-mobile__icon-container__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                line(x1="3" y1="12" x2="21" y2="12")
-                line(x1="3" y1="6" x2="21" y2="6")
-                line(x1="3" y1="18" x2="21" y2="18")
+            +if("isExpanded")
+                svg(class="control-mobile__icon-container__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                    line(x1="18" y1="6" x2="6" y2="18")
+                    line(x1="6" y1="6" x2="18" y2="18")
+
+                +else()
+                    svg(class="control-mobile__icon-container__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        line(x1="3" y1="12" x2="21" y2="12")
+                        line(x1="3" y1="6" x2="21" y2="6")
+                        line(x1="3" y1="18" x2="21" y2="18")
+
 
         div(class="control-mobile__content {isExpanded ? 'control-mobile__content--is-expanded' : ''}")
             div(class="control-mobile__content__control-wrapper")
