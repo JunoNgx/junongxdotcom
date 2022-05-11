@@ -59,7 +59,12 @@
                 p(class="control__settings__tags__title") Filtering tags
                 div(class="control__settings__tags__list")
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
-                        div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}") {tag}
+                        div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
+                            span {tag}
+                            +if('isDisplayed')
+                                span(class="control__settings__tags__list__item__mark") ✓
+                                +else()
+                                    span(class="control__settings__tags__list__item__mark") X
 </template>
 
 <style lang="sass">
@@ -151,10 +156,16 @@
 
                     &__item
                         border: 1px solid v.$col-pri
-                        padding: 0.1rem 0.2rem
+                        border-radius: 1rem
+                        padding: 0.1rem 0.5rem
                         cursor: pointer
                         font-size: 14px
                         +m.transition(color, background-color)
+
+                        &__mark
+                            display: inline-block
+                            width: 0.8rem
+                            margin-left: 0.15rem
 
                         &--selected
                             color: v.$col-bg
