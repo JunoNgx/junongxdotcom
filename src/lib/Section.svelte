@@ -85,7 +85,7 @@
             display: flex
             flex-flow: row wrap
             justify-content: flex-start
-            gap: 1rem
+            gap: 0.1rem 1rem
             font-size: 0.8rem
             color: rgba(v.$col-pri, 0.5)
 
