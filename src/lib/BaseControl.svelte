@@ -141,7 +141,7 @@
                             margin: 1px
 
             &__tags
-                &__title
+                // &__title
 
                 &__list
                     display: flex
