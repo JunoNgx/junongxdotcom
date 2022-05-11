@@ -12,3 +12,25 @@
     @each $el in $elements 
         $transition:append($transition, $el v.$trans-time-default ease-out, $separator: comma)
     transition: $transition
+
+@mixin button
+    border: 1px solid v.$col-pri
+    border-radius: 0
+    padding: 0.25rem 0.5rem
+    cursor: pointer
+    color: v.$col-pri
+    background-color: transparent
+    font-family: v.$fonts
+    font-size: v.$font-size
+    +transition(color, background-color)
+    &:hover
+        color: v.$col-bg
+        background-color: v.$col-pri
+
+@mixin button-dark
+    color: v.$col-pri-dark
+    border: 1px solid v.$col-pri-dark
+
+    &:hover
+        color: v.$col-bg-dark
+        background-color: v.$col-pri-dark
