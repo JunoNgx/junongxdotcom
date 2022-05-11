@@ -8,6 +8,12 @@
         tagDataMap.set($tagDataMap)
     }
 
+    const checkAll = (booleanValue: boolean) => {
+        // console.log("checked: " + booleanValue)
+        $tagDataMap.forEach((isDisplayed, tagName) => $tagDataMap.set(tagName, booleanValue))
+        tagDataMap.set($tagDataMap)
+    }
+
     const switchDarkMode = () => {
         const newValue = !$isDarkMode
         isDarkMode.set(newValue)
@@ -19,6 +25,7 @@
 </script>
 
 <template lang="pug">
+    
     div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         ul(class="control__contacts")
@@ -56,7 +63,13 @@
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
             div(class="control__settings__tags")
+
                 p(class="control__settings__tags__title") Filtering tags
+
+                div(class="control__settings__tags__buttons")
+                    button(class="control__settings__tags__buttons__button" type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
+                    button(class="control__settings__tags__buttons__button" type="button" on:click!="{() => {checkAll(true)}}") Check all
+
                 div(class="control__settings__tags__list")
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
                         div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
@@ -146,7 +159,16 @@
                             margin: 1px
 
             &__tags
-                // &__title
+                &__title
+                    margin-bottom: 0.5rem
+
+                &__buttons
+                    margin-bottom: 0.5rem
+
+                    &__button
+                        +m.button
+                        margin-left: 0.5rem
+                        font-size: 12px
 
                 &__list
                     display: flex
@@ -159,7 +181,7 @@
                         border-radius: 1rem
                         padding: 0.1rem 0.5rem
                         cursor: pointer
-                        font-size: 14px
+                        font-size: 12px
                         +m.transition(color, background-color)
 
                         &__mark
@@ -178,6 +200,9 @@
             
             .control__settings__dark-mode__icon-container:hover
                 border: 1px solid v.$col-pri-dark
+
+            .control__settings__tags__buttons__button
+                +m.button-dark
 
             .control__settings__tags__list__item
                 border: 1px solid v.$col-pri-dark
