@@ -188,6 +188,7 @@
         +m.mobile
             position: static
             border: none
+            max-width: none
 
         &.dark
             border-right: 2px dashed v.$col-pri-dark
