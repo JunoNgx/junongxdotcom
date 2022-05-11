@@ -15,7 +15,7 @@
 
     section(class="section {$isDarkMode ? 'section--dark' : ''}")
 
-        h3(class="section__title") {entry.title}
+        h2(class="section__title") {entry.title}
 
         div(class="section__tags")
             +each("entry.tags as tag")
