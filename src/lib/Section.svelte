@@ -175,6 +175,9 @@
                 //     background-color: v.$col-pri-dark
                 +m.button-dark
 
+        +m.mobile
+            max-width: none
+
 
     :global(.section__content p:first-child)
         margin-top: 0
