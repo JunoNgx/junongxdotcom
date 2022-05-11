@@ -28,7 +28,7 @@
     
     div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
-        ul(class="control__contacts")
+        div(class="control__contacts")
             h3(class="control__contacts__title") Find me elsewhere
             div(class="control__contacts__list")
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
@@ -111,7 +111,7 @@
                 display: flex
                 flex-flow: row wrap
                 justify-content: flex-end
-                gap: 0.5rem 1rem
+                gap: 0.5rem 1.5rem
 
                 &__item
                     // margin-right: 0.5rem
