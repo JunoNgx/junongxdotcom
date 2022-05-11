@@ -75,7 +75,7 @@
                 transition: clip-path 300ms ease-out
 
                 &__control-wrapper
-                    padding: 3rem 2rem 1rem
+                    padding: 4rem 2rem 1rem
 
                 &--is-expanded
                     clip-path: circle(90vh at calc(100% - 3rem) calc(3rem))
