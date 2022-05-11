@@ -89,12 +89,14 @@
             color: rgba(v.$col-pri, 0.5)
 
         &__content
-            max-height: 0
             overflow: hidden
-            transition: max-height v.$trans-time-default ease
+            opacity: 0
+            font-size: 0
+            transition: font-size v.$trans-time-default*0.5 ease-out, opacity v.$trans-time-default ease-out
 
             &--is-expanded
-                max-height: 500px
+                opacity: 1
+                font-size: v.$font-size
         
         &__buttons
             display: flex
