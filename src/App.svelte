@@ -131,8 +131,8 @@
     :global(body)
         font-family: v.$fonts
         font-size: v.$font-size
-        hyphens: auto
         -webkit-hyphens: auto
+        hyphens: auto
         color: v.$col-pri
         background-color: v.$col-bg
         +m.transition(color, background-color)
@@ -164,8 +164,8 @@
 
     main
         margin: 0 auto
-        width: fit-content
         width: -moz-fit-content
+        width: fit-content
 
         display: flex
         flex-flow: row nowrap
@@ -207,8 +207,8 @@
             padding: 1rem
             max-width: 400px
             text-align: left
-            hyphens: auto
             -webkit-hyphens: auto
+            hyphens: auto
 
         .contact-me
             background-color: transparent

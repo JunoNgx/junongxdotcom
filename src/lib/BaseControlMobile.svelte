@@ -42,8 +42,8 @@
                 color: v.$col-pri
                 background-color: v.$col-acc
                 cursor: pointer
-                user-select: none
                 -webkit-user-select: none
+                user-select: none
 
                 display: flex
                 justify-content: space-around

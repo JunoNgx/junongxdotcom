@@ -66,8 +66,8 @@
         max-width: 400px
         border: 2px solid v.$col-pri
         text-align: left
-        hyphens: auto
         -webkit-hyphens: auto
+        hyphens: auto
 
         &__banner,
         canvas
