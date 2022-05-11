@@ -29,7 +29,7 @@
     div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         div(class="control__contacts")
-            h3(class="control__contacts__title") Find me elsewhere
+            h2(class="control__contacts__title") Find me elsewhere
             div(class="control__contacts__list")
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
@@ -40,7 +40,7 @@
                 a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
         div(class="control__settings")
-            h3(class="control__settings__title") Settings
+            h2(class="control__settings__title") Settings
             // Dark mode control
             div(class="control__settings__dark-mode")
                 div(class="control__settings__dark-mode__icon-container" on:click!="{switchDarkMode}")
