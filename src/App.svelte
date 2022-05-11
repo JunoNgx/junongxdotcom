@@ -165,6 +165,7 @@
     main
         margin: 0 auto
         width: fit-content
+        width: -moz-fit-content
 
         display: flex
         flex-flow: row nowrap
