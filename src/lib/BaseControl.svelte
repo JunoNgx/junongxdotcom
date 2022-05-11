@@ -180,6 +180,7 @@
                         border: 1px solid v.$col-pri
                         border-radius: 1rem
                         padding: 0.1rem 0.5rem
+                        height: 1.2rem
                         cursor: pointer
                         font-size: 12px
                         +m.transition(color, background-color)
