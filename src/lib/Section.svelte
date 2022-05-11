@@ -100,13 +100,15 @@
             display: flex
             flex-flow: row nowrap
             justify-content: space-between
+            align-items: center
             gap: 1rem
 
             &__links
                 display: flex
-                flex-flow: row nowrap
+                flex-flow: row wrap
                 justify-content: space-around
                 align-items: center
+                gap: 0.2rem
                 flex-grow: 4
 
                 &__item
