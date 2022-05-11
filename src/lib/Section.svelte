@@ -98,7 +98,10 @@
             &--is-expanded
                 opacity: 1
                 font-size: v.$font-size
-        
+
+                +m.mobile
+                    font-size: v.$font-size-mobile
+
         &__buttons
             display: flex
             flex-flow: row nowrap
