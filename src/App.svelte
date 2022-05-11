@@ -132,6 +132,7 @@
         font-family: v.$fonts
         font-size: v.$font-size
         hyphens: auto
+        -webkit-hyphens: auto
         color: v.$col-pri
         background-color: v.$col-bg
         +m.transition(color, background-color)
@@ -206,6 +207,7 @@
             max-width: 400px
             text-align: left
             hyphens: auto
+            -webkit-hyphens: auto
 
         .contact-me
             background-color: transparent

@@ -67,6 +67,7 @@
         border: 2px solid v.$col-pri
         text-align: left
         hyphens: auto
+        -webkit-hyphens: auto
 
         &__banner,
         canvas
