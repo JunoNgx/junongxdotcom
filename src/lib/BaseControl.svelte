@@ -169,7 +169,7 @@
                 border: 1px solid v.$col-pri-dark
 
             .control__settings__tags__list__item
-                border: 2px solid v.$col-pri-dark
+                border: 1px solid v.$col-pri-dark
 
                 &--selected
                     color: v.$col-bg-dark
