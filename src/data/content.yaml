@@ -35,8 +35,8 @@
     - web development
     - progressive web app
     - release
-    - nodeJS
     - reactJS
+    - nodeJS
   links:
     - label: EbonyMemo.com
       url: http://ebonymemo.com/
@@ -132,8 +132,8 @@
   tags:
     - web development
     - in active development
-    - reactJS
     - svelte
+    - reactJS
   links:
     - label: source
       url: https://github.com/JunoNgx/junongxdotcom
