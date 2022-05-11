@@ -197,11 +197,14 @@
 
     .content-wrapper
         flex-grow: 3
+        min-height: 90vh
 
         .no-content
             margin: 2rem
             padding: 1rem
             max-width: 400px
+            text-align: left
+            hyphens: auto
 
         .contact-me
             background-color: transparent
@@ -226,9 +229,11 @@
                 &-content
                     &:after 
                         content: "My contacts are in the menu ↑"
-            
+
             &.dark
                 .contact-me-content
                     border: 2px solid v.$col-pri-dark
-
+        
+        +m.mobile
+            min-height: auto
 </style>
