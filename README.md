@@ -4,9 +4,7 @@ My centralised portfolio website, where my works across fields and medium gather
 
 ## Current deployment
 
-The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Netlify.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ff83aa39-9847-428e-ad7e-f63cb7fe6883/deploy-status)](https://app.netlify.com/sites/junongxdotcom/deploys)
+The website is currently deployed at [JunoNgx.com](https://junongx.com/) via Vercel.
 
 ## Tech stack
 
