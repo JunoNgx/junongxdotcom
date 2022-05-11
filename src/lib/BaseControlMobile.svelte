@@ -43,6 +43,7 @@
                 background-color: v.$col-acc
                 cursor: pointer
                 user-select: none
+                -webkit-user-select: none
 
                 display: flex
                 justify-content: space-around
