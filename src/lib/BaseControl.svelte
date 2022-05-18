@@ -75,9 +75,12 @@
                         div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
                             span {tag}
                             +if('isDisplayed')
-                                span(class="control__settings__tags__list__item__mark") ✓
+                                svg(class="control__settings__tags__list__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                    polyline(points="20 6 9 17 4 12")
                                 +else()
-                                    span(class="control__settings__tags__list__item__mark") X
+                                    svg(class="control__settings__tags__list__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                        line(x1="18" y1="6" x2="6" y2="18")
+                                        line(x1="6" y1="6" x2="18" y2="18")
 </template>
 
 <style lang="sass">
@@ -183,12 +186,17 @@
                         height: 1.2rem
                         cursor: pointer
                         font-size: 12px
+
+                        display: flex
+                        flex-flow: row wrap
+                        justify-content: space-between
+                        align-items: center
+                        gap: 0.15rem
+
                         +m.transition(color, background-color)
 
-                        &__mark
-                            display: inline-block
-                            width: 0.8rem
-                            margin-left: 0.15rem
+                        &__checkmark
+                            display: block
 
                         &--selected
                             color: v.$col-bg
