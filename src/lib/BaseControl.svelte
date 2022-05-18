@@ -26,28 +26,28 @@
 
 <template lang="pug">
     
-    div(class="control {$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
+    div.control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
-        div(class="control__contacts")
-            h2(class="control__contacts__title") Find me elsewhere
-            div(class="control__contacts__list")
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
-                a(class="control__contacts__list__item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
+        div.control__contacts
+            h2.control__contacts__title Find me elsewhere
+            div.control__contacts__list
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
+                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
-        div(class="control__settings")
-            h2(class="control__settings__title") Settings
+        div.control__settings
+            h2.control__settings__title Settings
             // Dark mode control
-            div(class="control__settings__dark-mode")
-                div(class="control__settings__dark-mode__icon-container" on:click!="{switchDarkMode}")
-                    div(class="control__settings__dark-mode__icon-container__content {$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
+            div.control__settings__dark-mode
+                div.control__settings__dark-mode__icon-container(on:click!="{switchDarkMode}")
+                    div.control__settings__dark-mode__icon-container__content(class!="{$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
 
                         // The sun
-                        svg(class="control__settings__dark-mode__icon-container__content__icon control__settings__dark-mode__icon-container__content__icon--light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="5")
                             line(x1="12" y1="1" x2="12" y2="3")
                             line(x1="12" y1="21" x2="12" y2="23")
@@ -59,26 +59,26 @@
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
                         // The moon
-                        svg(class="control__settings__dark-mode__icon-container__content__icon control__settings__dark-mode__icon-container__content__icon--dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
-            div(class="control__settings__tags")
+            div.control__settings__tags
 
-                p(class="control__settings__tags__title") Filtering tags
+                p.control__settings__tags__title Filtering tags
 
-                div(class="control__settings__tags__buttons")
-                    button(class="control__settings__tags__buttons__button" type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
-                    button(class="control__settings__tags__buttons__button" type="button" on:click!="{() => {checkAll(true)}}") Check all
+                div.control__settings__tags__buttons
+                    button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
+                    button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(true)}}") Check all
 
-                div(class="control__settings__tags__list")
+                div.control__settings__tags__list
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
-                        div(class="control__settings__tags__list__item {isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
+                        div.control__settings__tags__list__item(class!="{isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
                             span {tag}
                             +if('isDisplayed')
-                                svg(class="control__settings__tags__list__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                svg.control__settings__tags__list__item__checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                     polyline(points="20 6 9 17 4 12")
                                 +else()
-                                    svg(class="control__settings__tags__list__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                    svg.control__settings__tags__list__item__checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                         line(x1="18" y1="6" x2="6" y2="18")
                                         line(x1="6" y1="6" x2="18" y2="18")
 </template>
