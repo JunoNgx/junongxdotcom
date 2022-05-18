@@ -52,7 +52,7 @@ This website has gone through several major overhauls, including usage of other 
 
 ## Acknowledgement
 
-This website uses the typeface [Jost](https://indestructibletype.com/Jost.html) (via Google Fonts) by [Owen Earl](https://indestructibletype.com/), who has also influenced its overall design. Icons are from the [Feather project](https://feathericons.com/). The layout in the current iteration is heavily inspired by [Tim Holman](https://tholman.com/).
+This website uses the typeface [Jost](https://indestructibletype.com/Jost.html) by [Owen Earl](https://indestructibletype.com/), who has also influenced its overall design. Icons are from the [Feather project](https://feathericons.com/). The layout in the current iteration is heavily inspired by [Tim Holman](https://tholman.com/).
 
 ## Contribution
 
