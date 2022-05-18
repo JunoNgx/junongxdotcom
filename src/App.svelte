@@ -46,21 +46,21 @@
 
 <template lang="pug">
     main
-        div(class="leftside-wrapper {$isDarkMode ? 'dark' : ''}")
-            div(class="leftside-content")
+        div.leftside-wrapper(class!="{$isDarkMode ? 'dark' : ''}")
+            div.leftside-content
                 Header
                 Control
 
-        div(class="content-wrapper")
+        div.content-wrapper
             +if("$displayedEntryList && $displayedEntryList.length > 0")
                 +each("$displayedEntryList as entry")
                     Section(entry!="{entry}")
 
                 +else()
-                    p(class="no-content") You have filtered out everything and there is nothing left to be displayed.
-        
-            section(class="contact-me {$isDarkMode ? 'dark' : ''}")
-                div(class="contact-me-content")
+                    p.no-content You have filtered out everything and there is nothing left to be displayed.
+
+            section.contact-me(class!="{$isDarkMode ? 'dark' : ''}")
+                div.contact-me-content
                     p Would you like to say hello?
                     
     ControlMobile
