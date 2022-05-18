@@ -6,12 +6,12 @@
     header(class!="{$isDarkMode ? 'dark' : ''}")
         div
             h1
-                span(class="first-name-j") J
-                span(class="first-name-u") u
-                span(class="first-name-n") n
-                span(class="first-name-o") o
+                span.first-name-j J
+                span.first-name-u u
+                span.first-name-n n
+                span.first-name-o o
                 | !{' '}
-                span(class="last-name") Nguyen
+                span.last-name Nguyen
         p web engineer by day
         p hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
