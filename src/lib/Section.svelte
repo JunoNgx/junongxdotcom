@@ -13,44 +13,44 @@
 
 <template lang="pug">
 
-    section(class="section {$isDarkMode ? 'section--dark' : ''}")
+    section.section(class!="{$isDarkMode ? 'section--dark' : ''}")
 
-        h2(class="section__title") {entry.title}
+        h2.section__title {entry.title}
 
-        div(class="section__tags")
+        div.section__tags
             +each("entry.tags as tag")
-                span(class="section__tags__item") {tag}
+                span.section__tags__item {tag}
 
         +if('entry.imgSrc && entry.imgAlt')
-            img(class="section__banner" src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
+            img.section__banner(src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
 
         // Exception: creative conding canvas
         +if('entry.title === "Creative Coding"')
             canvas(id="scroll-canvas")
 
-        p(class="section__summary") {@html marked(entry.summary)}
+        p.section__summary {@html marked(entry.summary)}
 
-        p(class="section__content {isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}") {@html marked(entry.content)}
+        p.section__content(class!="{isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}") {@html marked(entry.content)}
 
-        div(class="section__buttons")
-            div(class="section__buttons__links")
+        div.section__buttons
+            div.section__buttons__links
                 +each('entry.links as link')
-                    a(class="section__buttons__links__item" href!="{link.url}" rel="noopener noreferrer" target="_blank")
+                    a.section__buttons__links__item(href!="{link.url}" rel="noopener noreferrer" target="_blank")
                         span {link.label}
                         +if("link.label === 'source'")
                             // External link
-                            svg(class="section__buttons__links__item__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                            svg.section__buttons__links__item__icon(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                 polyline(points="16 18 22 12 16 6")
                                 polyline(points="8 6 2 12 8 18")
                             +else()
                                 // Code
-                                svg(class="section__buttons__links__item__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                svg.section__buttons__links__item__icon(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                     path(d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6")
                                     polyline(points="15 3 21 3 21 9")
                                     line(x1="10" y1="14" x2="21" y2="3")
-            button(class="section__buttons__expand-btn" on:click!="{handleExpandClick}")
+            button.section__buttons__expand-btn(on:click!="{handleExpandClick}")
                 +if('isExpanded')
-                    span(class="section__buttons__expand-btn__label") Less
+                    span.section__buttons__expand-btn__label Less
                     +else()
                         span More
 
