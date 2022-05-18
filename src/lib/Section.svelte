@@ -30,7 +30,7 @@
 
         p(class="section__summary") {@html marked(entry.summary)}
 
-        p(class="section__content {isExpanded ? 'section__content--is-expanded' : ''}") {@html marked(entry.content)}
+        p(class="section__content {isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}") {@html marked(entry.content)}
 
         div(class="section__buttons")
             div(class="section__buttons__links")
@@ -90,14 +90,16 @@
             color: rgba(v.$col-pri, 0.5)
 
         &__content
-            overflow: hidden
-            opacity: 0
-            font-size: 0
-            transition: font-size v.$trans-time-default*0.5 ease-out, opacity v.$trans-time-default ease-out
+
+            &--is-collapsed
+                opacity: 0
+                font-size: 0
+                transition: opacity v.$trans-time-default ease-out, font-size v.$trans-time-default ease-out v.$trans-time-default
 
             &--is-expanded
                 opacity: 1
                 font-size: v.$font-size
+                transition: font-size v.$trans-time-default ease-out, opacity v.$trans-time-default ease-out v.$trans-time-default
 
                 +m.mobile
                     font-size: v.$font-size-mobile
