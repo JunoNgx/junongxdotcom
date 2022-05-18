@@ -94,12 +94,12 @@
             &--is-collapsed
                 opacity: 0
                 font-size: 0
-                transition: opacity v.$trans-time-default ease-out, font-size v.$trans-time-default ease-out v.$trans-time-default
+                transition: opacity v.$trans-time-default*0.5 ease-out, font-size v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
 
             &--is-expanded
                 opacity: 1
                 font-size: v.$font-size
-                transition: font-size v.$trans-time-default ease-out, opacity v.$trans-time-default ease-out v.$trans-time-default
+                transition: font-size v.$trans-time-default*0.5 ease-out, opacity v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
 
                 +m.mobile
                     font-size: v.$font-size-mobile
