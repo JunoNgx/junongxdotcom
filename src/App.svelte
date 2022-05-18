@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { afterUpdate } from "svelte";
+
     import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
     import Control from "./lib/BaseControl.svelte"
@@ -42,6 +44,12 @@
         if (storedValue) document.body.classList.add("dark")
         else document.body.classList.remove("dark")
     }
+
+    // Specifically handle the creative conding canvas
+    // Tell the script to look for the new <canvas>
+    afterUpdate(() => {
+        window.dispatchEvent(new Event('update-content'))
+    })
 </script>
 
 <template lang="pug">

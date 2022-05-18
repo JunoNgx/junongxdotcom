@@ -36,6 +36,8 @@ class ScrollCanvas {
 
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
+        if (!this.canvas) throw Error("No canvas found");
+
         this.ctx = this.canvas.getContext("2d");
 
         this.canvas.width = 720;
@@ -113,12 +115,16 @@ class ScrollCanvas {
 /** @type { ScrollCanvas } */
 let scrollCanvas;
 
-// window.onload = setup;
-window.addEventListener('DOMContentLoaded', () => setup());
+window.addEventListener('update-content', () => setup());
 
 function setup() {
-    scrollCanvas = new ScrollCanvas("scroll-canvas");
-    window.requestAnimationFrame(loop);
+    try {
+        scrollCanvas = new ScrollCanvas("scroll-canvas");
+        window.requestAnimationFrame(loop);
+    } catch(e) {
+        // console.log(e)
+        return;
+    }
 }
 
 function draw() {
