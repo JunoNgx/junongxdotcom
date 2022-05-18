@@ -56,4 +56,4 @@ This website uses the typeface [Jost](https://indestructibletype.com/Jost.html) 
 
 ## Contribution
 
-For suggestions and  criticism, please feel free to open an issue for this repository.
+For suggestions and criticism, please feel free to open issues for this repository.
