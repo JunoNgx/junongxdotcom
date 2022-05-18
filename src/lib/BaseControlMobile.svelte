@@ -10,15 +10,15 @@
 </script>
 
 <template lang="pug">
-    div(class="control-mobile {$isDarkMode ? 'control-mobile--dark' : ''}")
-        div(class="control-mobile__icon-container" on:click!="{handleSwitchExpand}")
-            svg(class="control-mobile__icon-container__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                line(class="icon-line1 {isExpanded ? 'icon-line1--expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
-                line(class="icon-line2 {isExpanded ? 'icon-line2--expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
-                line(class="icon-line3 {isExpanded ? 'icon-line3--expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
+    div.control-mobile(class!="{$isDarkMode ? 'control-mobile--dark' : ''}")
+        div.control-mobile__icon-container(on:click!="{handleSwitchExpand}")
+            svg.control-mobile__icon-container__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                line.icon-line1(class!="{isExpanded ? 'icon-line1--expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
+                line.icon-line2(class!="{isExpanded ? 'icon-line2--expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
+                line.icon-line3(class!="{isExpanded ? 'icon-line3--expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
-        div(class="control-mobile__content {isExpanded ? 'control-mobile__content--is-expanded' : ''}")
-            div(class="control-mobile__content__control-wrapper")
+        div.control-mobile__content(class!="{isExpanded ? 'control-mobile__content--is-expanded' : ''}")
+            div.control-mobile__content__control-wrapper
                 Control(isForMobile!="true")
 </template>
 
