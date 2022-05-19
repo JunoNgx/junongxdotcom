@@ -110,6 +110,7 @@
     - web development
     - progressive web app
     - vueJS
+    - typescript
     - release
   links:
     - label: source
@@ -134,6 +135,7 @@
     - in active development
     - svelte
     - reactJS
+    - typescript
   links:
     - label: source
       url: https://github.com/JunoNgx/junongxdotcom
