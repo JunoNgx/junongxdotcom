@@ -197,6 +197,7 @@
     - label: source
       url: https://github.com/JunoNgx/moon2p8-py
 
+
 - title: Photography
   imgSrc: /images/pavilion.jpg
   imgAlt: The pavillion at Gardens by the Bay, Singapore
@@ -211,6 +212,7 @@
     - label: flickr
       url: https://flickr.com/people/JunoNgx/
 
+
 - title: Lego StarCraft
   imgSrc: /images/siegetank.jpg
   imgAlt: Microscale StarCraft Siege Tank
@@ -222,6 +224,7 @@
   links:
     - label: flickr album
       url: https://www.flickr.com/photos/junongx/albums/72157715396303363
+
 
 - title: Mechanical keyboards
   imgSrc: /images/keebs_in_film.jpg
