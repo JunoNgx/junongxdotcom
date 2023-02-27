@@ -91,9 +91,9 @@
     - in active development
   links:
     - label: source
-      url: https://junongx.github.io/p5js-gallery/
-    - label: gallery
       url: https://github.com/JunoNgx/p5js-gallery
+    - label: gallery
+      url: https://junongx.github.io/p5js-gallery/
 
 
 - title: Chattie
