@@ -28,16 +28,16 @@
     
     .control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
-        .control__contacts
-            h2.control__contacts__title Find me elsewhere
-            .control__contacts__list
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
-                a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
+        .control__contact
+            h2.control__title-contact Find me elsewhere
+            .control__contact-list
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
+                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
         .control__settings
             h2.control__settings__title Settings
@@ -101,34 +101,34 @@
     .control
         text-align: right
 
-        &__contacts, &__settings
+        &__contact, &__settings
             display: flex
             flex-flow: column nowrap
             align-items: flex-end
 
-        &__contacts
-            &__title
-                +title
+        // &__contact
+        &__contact-title
+            +title
 
-            &__list
-                display: flex
-                flex-flow: row wrap
-                justify-content: flex-end
-                gap: 0.5rem 1.5rem
+        &__contact-list
+            display: flex
+            flex-flow: row wrap
+            justify-content: flex-end
+            gap: 0.5rem 1.5rem
 
-                &__item
-                    // margin-right: 0.5rem
-                    // display: block
-                    // background-image: none
-                    // +m.transition(padding, color, background-color)
+        &__contact-item
+            // margin-right: 0.5rem
+            // display: block
+            // background-image: none
+            // +m.transition(padding, color, background-color)
 
-                    // &:hover
-                    //     padding: 0 3rem 0 0.5rem
-                    //     color: v.$col-bg
-                    //     background-color: v.$col-acc
+            // &:hover
+            //     padding: 0 3rem 0 0.5rem
+            //     color: v.$col-bg
+            //     background-color: v.$col-acc
 
-                    +m.mobile
-                        text-decoration: underline
+            +m.mobile
+                text-decoration: underline
 
         &__settings
             &__title
