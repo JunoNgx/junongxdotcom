@@ -26,11 +26,11 @@
 
 <template lang="pug">
     
-    div.control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
+    .control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
-        div.control__contacts
+        .control__contacts
             h2.control__contacts__title Find me elsewhere
-            div.control__contacts__list
+            .control__contacts__list
                 a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
                 a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
                 a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
@@ -39,12 +39,12 @@
                 a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
                 a.control__contacts__list__item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
-        div.control__settings
+        .control__settings
             h2.control__settings__title Settings
             // Dark mode control
-            div.control__settings__dark-mode
-                div.control__settings__dark-mode__icon-container(on:click!="{switchDarkMode}")
-                    div.control__settings__dark-mode__icon-container__content(class!="{$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
+            .control__settings__dark-mode
+                .control__settings__dark-mode__icon-container(on:click!="{switchDarkMode}")
+                    .control__settings__dark-mode__icon-container__content(class!="{$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
 
                         // The sun
                         svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
@@ -62,17 +62,17 @@
                         svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
-            div.control__settings__tags
+            .control__settings__tags
 
                 p.control__settings__tags__title Filtering tags
 
-                div.control__settings__tags__buttons
+                .control__settings__tags__buttons
                     button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
                     button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(true)}}") Check all
 
-                div.control__settings__tags__list
+                .control__settings__tags__list
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
-                        div.control__settings__tags__list__item(class!="{isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
+                        .control__settings__tags__list__item(class!="{isDisplayed ? 'control__settings__tags__list__item--selected' : ''}" on:click!="{switchTagData(tag)}")
                             span {tag}
                             +if('isDisplayed')
                                 svg.control__settings__tags__list__item__checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
