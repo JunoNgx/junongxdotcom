@@ -42,12 +42,12 @@
         .control__settings
             h2.control__settings-title Settings
             // Dark mode control
-            .control__settings__dark-mode
-                .control__settings__dark-mode__icon-container(on:click!="{switchDarkMode}")
-                    .control__settings__dark-mode__icon-container__content(class!="{$isDarkMode ? 'control__settings__dark-mode__icon-container__content--dark' : ''}")
+            .control__settings-dark-mode
+                .control__settings-dark-mode-icon-container(on:click!="{switchDarkMode}")
+                    .control__settings-dark-mode-icon-content(class!="{$isDarkMode ? 'control__settings-dark-mode-icon-content--dark' : ''}")
 
                         // The sun
-                        svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="5")
                             line(x1="12" y1="1" x2="12" y2="3")
                             line(x1="12" y1="21" x2="12" y2="23")
@@ -59,7 +59,7 @@
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
                         // The moon
-                        svg.control__settings__dark-mode__icon-container__content__icon.control__settings__dark-mode__icon-container__content__icon--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
             .control__settings__tags
@@ -131,33 +131,6 @@
 
         &__settings
 
-            &__dark-mode
-                &__icon-container
-                    position: relative
-                    width: 22px
-                    height: 22px
-                    white-space: nowrap
-                    padding: 2px
-                    cursor: pointer
-                    border: 1px solid transparent
-                    transition: border v.$trans-time-default ease-out
-                    overflow: hidden
-
-                    &:hover
-                        border: 1px solid v.$col-pri
-
-                    &__content
-                        position: absolute
-                        white-space: nowrap
-                        transform: translateX(0)
-                        transition: transform v.$trans-time-default ease-out
-
-                        &--dark
-                            transform: translateX(-23px)
-
-                        &__icon
-                            margin: 1px
-
             &__tags
                 &__title
                     margin-bottom: 0.5rem
@@ -198,8 +171,36 @@
                         &--selected
                             color: v.$col-bg
                             background-color: v.$col-pri
+
         &__settings-title
             +title
+
+        &__settings-dark-mode
+            &-icon-container
+                position: relative
+                width: 22px
+                height: 22px
+                white-space: nowrap
+                padding: 2px
+                cursor: pointer
+                border: 1px solid transparent
+                transition: border v.$trans-time-default ease-out
+                overflow: hidden
+
+                &:hover
+                    border: 1px solid v.$col-pri
+
+            &-icon-content
+                position: absolute
+                white-space: nowrap
+                transform: translateX(0)
+                transition: transform v.$trans-time-default ease-out
+
+                &--dark
+                    transform: translateX(-23px)
+
+            &-icon-svg
+                margin: 1px
 
 
         &--dark
