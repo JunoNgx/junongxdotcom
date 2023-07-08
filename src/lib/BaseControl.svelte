@@ -29,7 +29,7 @@
     .control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         .control__contact
-            h2.control__title-contact Find me elsewhere
+            h2.control__contact-title Find me elsewhere
             .control__contact-list
                 a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
                 a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
