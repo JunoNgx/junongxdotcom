@@ -83,6 +83,7 @@
 
     @mixin title
         font-size: 1.2rem
+        margin: 2rem 0 0.75rem
         padding: 0.1rem 0.25rem
         border-bottom: 2px dashed v.$col-pri
         border-top: 2px dashed v.$col-pri
