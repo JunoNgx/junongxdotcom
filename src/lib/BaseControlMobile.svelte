@@ -13,9 +13,9 @@
     div.control-mobile(class!="{$isDarkMode ? 'control-mobile--is-dark' : ''}")
         div.control-mobile__icon-container(on:click!="{handleSwitchExpand}")
             svg.control-mobile__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                line.icon-line1(class!="{isExpanded ? 'icon-line1--expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
-                line.icon-line2(class!="{isExpanded ? 'icon-line2--expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
-                line.icon-line3(class!="{isExpanded ? 'icon-line3--expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
+                line.icon-line1(class!="{isExpanded ? 'icon-line1--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
+                line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
+                line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
         div.control-mobile__content-wrapper(class!="{isExpanded ? 'control-mobile__content-wrapper--is-expanded' : ''}")
             div.control-mobile__content
@@ -55,17 +55,17 @@
 
                 .icon-line1
                     transition: transform v.$trans-time-default ease-out
-                    &--expanded
+                    &--is-expanded
                         transform: rotate(45deg) translate(22.5%, -22.5%)
                 
                 .icon-line2
                     transition: opacity v.$trans-time-default ease-out
-                    &--expanded
+                    &--is-expanded
                         opacity: 0
 
                 .icon-line3
                     transition: transform v.$trans-time-default ease-out
-                    &--expanded
+                    &--is-expanded
                         transform: rotate(-45deg) translate(-50%, 0)
 
             &__content-wrapper
