@@ -7,6 +7,10 @@
     const handleSwitchExpand = () => {
         isExpanded = !isExpanded
     }
+
+    const collapseControl = () => {
+        isExpanded = false
+    }
 </script>
 
 <template lang="pug">
@@ -17,6 +21,7 @@
                 line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
                 line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
+        .control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}")
         .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
             .control-container__content
                 Control
@@ -68,6 +73,19 @@
                     transition: transform v.$trans-time-default ease-out
                     &--is-expanded
                         transform: rotate(-45deg) translate(-50%, 0)
+
+            &__collapse-trigger
+                width: 100vw
+                height: 100vh
+                top: 0
+                left: 0
+                position: fixed
+                pointer-events: none
+                display: none
+
+                &--is-expanded
+                    display: block
+                    pointer-events: auto
 
             &__content-wrapper
                 position: fixed
