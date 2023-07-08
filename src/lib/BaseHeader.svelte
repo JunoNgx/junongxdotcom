@@ -3,7 +3,7 @@
 </script>
 
 <template lang="pug">
-    header.header(class!="{$isDarkMode ? 'is-dark' : ''}")
+    header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
         div
             h1.header__name
                 span.header__first-name-j J
