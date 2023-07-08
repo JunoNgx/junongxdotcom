@@ -108,6 +108,9 @@
 
         &__contact-title
             +title
+            .control--is-dark &
+                +title--is-dark
+
 
         &__contact-list
             display: flex
@@ -121,6 +124,8 @@
 
         &__settings-title
             +title
+            .control--is-dark &
+                +title--is-dark
 
         &__settings-dark-mode
             &-icon-container
@@ -136,6 +141,8 @@
 
                 &:hover
                     border: 1px solid v.$col-pri
+                    .control--is-dark &
+                        border: 1px solid v.$col-pri-dark
 
             &-icon-content
                 position: absolute
@@ -160,6 +167,8 @@
                 +m.button
                 margin-left: 0.5rem
                 font-size: 12px
+                .control--is-dark &
+                    +m.button-dark
 
             &-list
                 display: flex
@@ -183,30 +192,18 @@
 
                 +m.transition(color, background-color)
 
+                .control--is-dark &
+                    border: 1px solid v.$col-pri-dark
+
                 &--selected
                     color: v.$col-bg
                     background-color: v.$col-pri
+                    .control--is-dark &
+                        color: v.$col-bg-dark
+                        background-color: v.$col-pri-dark
 
             &-checkmark
                 display: block
-
-        &--is-dark
-            .control__contacts__title,
-            .control__settings__title
-                +title--is-dark
-            
-            .control__settings__dark-mode__icon-container:hover
-                border: 1px solid v.$col-pri-dark
-
-            .control__settings__tags__buttons__button
-                +m.button-dark
-
-            .control__settings__tags__list__item
-                border: 1px solid v.$col-pri-dark
-
-                &--selected
-                    color: v.$col-bg-dark
-                    background-color: v.$col-pri-dark
 
         +m.mobile
             display: none
