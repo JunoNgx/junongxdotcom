@@ -26,7 +26,7 @@
 
 <template lang="pug">
     
-    .control(class!="{$isDarkMode ? 'control--dark' : ''} {isForMobile ? 'for-mobile' : ''}")
+    .control(class!="{$isDarkMode ? 'control--is-dark' : ''} {isForMobile ? 'for-mobile' : ''}")
 
         .control__contact
             h2.control__contact-title Find me elsewhere
@@ -44,7 +44,7 @@
             // Dark mode control
             .control__settings-dark-mode
                 .control__settings-dark-mode-icon-container(on:click!="{switchDarkMode}")
-                    .control__settings-dark-mode-icon-content(class!="{$isDarkMode ? 'control__settings-dark-mode-icon-content--dark' : ''}")
+                    .control__settings-dark-mode-icon-content(class!="{$isDarkMode ? 'control__settings-dark-mode-icon-content--is-dark' : ''}")
 
                         // The sun
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
@@ -59,7 +59,7 @@
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
                         // The moon
-                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
             .control__settings-tags
@@ -94,7 +94,7 @@
         border-top: 2px dashed v.$col-pri
         +m.transition(border)
 
-    @mixin title--dark
+    @mixin title--is-dark
         border-bottom: 2px dashed v.$col-pri-dark
         border-top: 2px dashed v.$col-pri-dark
     
@@ -143,7 +143,7 @@
                 transform: translateX(0)
                 transition: transform v.$trans-time-default ease-out
 
-                &--dark
+                &--is-dark
                     transform: translateX(-23px)
 
             &-icon-svg
@@ -190,10 +190,10 @@
             &-checkmark
                 display: block
 
-        &--dark
+        &--is-dark
             .control__contacts__title,
             .control__settings__title
-                +title--dark
+                +title--is-dark
             
             .control__settings__dark-mode__icon-container:hover
                 border: 1px solid v.$col-pri-dark
