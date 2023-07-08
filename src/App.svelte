@@ -57,7 +57,7 @@
         div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
             div.leftside-content
                 Header
-                Control
+                ControlMobile
 
         div.content-wrapper
             +if("$displayedEntryList && $displayedEntryList.length > 0")
@@ -70,8 +70,6 @@
             section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
                 div.contact-me-content
                     p Would you like to say hello?
-                    
-    ControlMobile
     Footer
 </template>
 
