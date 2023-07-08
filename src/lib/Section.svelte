@@ -13,7 +13,7 @@
 
 <template lang="pug">
 
-    section.section(class!="{$isDarkMode ? 'section--dark' : ''}")
+    section.section(class!="{$isDarkMode ? 'section--is-dark' : ''}")
 
         h2.section__title {entry.title}
 
@@ -162,7 +162,7 @@
             .section__buttons__expand-btn
                 font-size: v.$font-size-mobile
 
-        &--dark
+        &--is-dark
             border: 2px solid v.$col-pri-dark
 
             .section__tags
