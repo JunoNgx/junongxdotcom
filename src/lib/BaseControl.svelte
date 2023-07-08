@@ -66,9 +66,9 @@
 
                 p.control__settings-tags-title Filtering tags
 
-                .control__settings__tags__buttons
-                    button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
-                    button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(true)}}") Check all
+                .control__settings-tags-buttons-container
+                    button.control__settings-tags-button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
+                    button.control__settings-tags-button(type="button" on:click!="{() => {checkAll(true)}}") Check all
 
                 .control__settings__tags__list
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
@@ -163,19 +163,27 @@
             &-title
                 margin-bottom: 0.5rem
 
+            &-buttons-container
+                margin-bottom: 0.5rem
+
+            &-button
+                +m.button
+                margin-left: 0.5rem
+                font-size: 12px
+
         &__settings
 
             &__tags
                 // &__title
                 //     margin-bottom: 0.5rem
 
-                &__buttons
-                    margin-bottom: 0.5rem
+                // &__buttons
+                //     margin-bottom: 0.5rem
 
-                    &__button
-                        +m.button
-                        margin-left: 0.5rem
-                        font-size: 12px
+                //     &__button
+                //         +m.button
+                //         margin-left: 0.5rem
+                //         font-size: 12px
 
                 &__list
                     display: flex
