@@ -3,7 +3,7 @@
 </script>
 
 <template lang="pug">
-    header(class!="{$isDarkMode ? 'dark' : ''}")
+    header(class!="{$isDarkMode ? 'is-dark' : ''}")
         div
             h1
                 span.first-name-j J
@@ -65,7 +65,7 @@
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
 
-        &.dark
+        &.is-dark
 
             div
                 h1
