@@ -1,6 +1,7 @@
 <script lang="ts">
     export let isForMobile = false
 
+    import contacts from "../data/contacts.yaml"
     import { tagDataMap, isDarkMode } from "../store"
 
     const switchTagData = (tag: string) => {
@@ -31,13 +32,9 @@
         .control__contact
             h2.control__contact-title Find me elsewhere
             .control__contact-list
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://twitter.com/JunoNgx") Twitter
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx") GitHub
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://junongx.itch.io/") Itch.io
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://flickr.com/people/JunoNgx/") Flickr
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://instagram.com/scientistxprincess/") Instagram
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="mailto:juno.ngx@gmail.com") Email
-                a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
+                +if("contacts.length")
+                    +each("contacts as contact")
+                        a.control__contact-item(rel="noopener noreferrer" target="_blank" href!="{contact.url}") {contact.label}
 
         .control__settings
             h2.control__settings-title Settings
