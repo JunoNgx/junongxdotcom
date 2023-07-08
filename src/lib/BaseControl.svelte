@@ -40,7 +40,7 @@
                 a.control__contact-item(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/JunoNgx/") LinkedIn
 
         .control__settings
-            h2.control__settings__title Settings
+            h2.control__settings-title Settings
             // Dark mode control
             .control__settings__dark-mode
                 .control__settings__dark-mode__icon-container(on:click!="{switchDarkMode}")
@@ -106,7 +106,6 @@
             flex-flow: column nowrap
             align-items: flex-end
 
-        // &__contact
         &__contact-title
             +title
 
@@ -131,8 +130,6 @@
                 text-decoration: underline
 
         &__settings
-            &__title
-                +title
 
             &__dark-mode
                 &__icon-container
@@ -201,6 +198,9 @@
                         &--selected
                             color: v.$col-bg
                             background-color: v.$col-pri
+        &__settings-title
+            +title
+
 
         &--dark
             .control__contacts__title,
