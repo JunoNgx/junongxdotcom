@@ -129,6 +129,36 @@
             +m.mobile
                 text-decoration: underline
 
+        &__settings-title
+            +title
+
+        &__settings-dark-mode
+            &-icon-container
+                position: relative
+                width: 22px
+                height: 22px
+                white-space: nowrap
+                padding: 2px
+                cursor: pointer
+                border: 1px solid transparent
+                transition: border v.$trans-time-default ease-out
+                overflow: hidden
+
+                &:hover
+                    border: 1px solid v.$col-pri
+
+            &-icon-content
+                position: absolute
+                white-space: nowrap
+                transform: translateX(0)
+                transition: transform v.$trans-time-default ease-out
+
+                &--dark
+                    transform: translateX(-23px)
+
+            &-icon-svg
+                margin: 1px
+
         &__settings
 
             &__tags
@@ -171,37 +201,6 @@
                         &--selected
                             color: v.$col-bg
                             background-color: v.$col-pri
-
-        &__settings-title
-            +title
-
-        &__settings-dark-mode
-            &-icon-container
-                position: relative
-                width: 22px
-                height: 22px
-                white-space: nowrap
-                padding: 2px
-                cursor: pointer
-                border: 1px solid transparent
-                transition: border v.$trans-time-default ease-out
-                overflow: hidden
-
-                &:hover
-                    border: 1px solid v.$col-pri
-
-            &-icon-content
-                position: absolute
-                white-space: nowrap
-                transform: translateX(0)
-                transition: transform v.$trans-time-default ease-out
-
-                &--dark
-                    transform: translateX(-23px)
-
-            &-icon-svg
-                margin: 1px
-
 
         &--dark
             .control__contacts__title,
