@@ -27,7 +27,8 @@
     @use '../styles/mixins' as m
 
     .control-mobile
-        display: none
+        &__icon-container
+            display: none
 
         +m.mobile
             display: block
