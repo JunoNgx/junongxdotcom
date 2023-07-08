@@ -133,6 +133,7 @@
         max-height: 90vh
         padding-right: 2rem
         border-right: 2px dashed v.$col-pri
+        align-self: flex-start
 
         display: flex
         flex-flow: column nowrap
