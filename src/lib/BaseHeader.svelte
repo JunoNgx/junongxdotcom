@@ -33,6 +33,9 @@
             border-bottom-width: 0
             animation: name-frame-border $anim-time ease-out 0s
 
+            .header--is-dark &
+                border-color: v.$col-pri-dark
+
             .header__first-name-j,
             .header__first-name-u,
             .header__first-name-n,
@@ -63,11 +66,7 @@
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
 
-        &.is-dark
-            .header--name
-                border-color: v.$col-pri-dark
-
-            +m.mobile
+            &--is-dark
                 border-left: 2px dashed v.$col-pri-dark
 
     @keyframes header__first-name-j
