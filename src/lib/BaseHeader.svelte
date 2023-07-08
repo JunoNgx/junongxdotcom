@@ -26,7 +26,6 @@
         text-align: right
 
         div
-
             h1
                 display: inline-block
                 margin: 0
@@ -66,10 +65,8 @@
             border-left: 2px dashed v.$col-pri
 
         &.is-dark
-
-            div
-                h1
-                    border-color: v.$col-pri-dark
+            div h1
+                border-color: v.$col-pri-dark
 
             +m.mobile
                 border-left: 2px dashed v.$col-pri-dark
