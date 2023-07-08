@@ -1,6 +1,4 @@
 <script lang="ts">
-    export let isForMobile = false
-
     import contacts from "../data/contacts.yaml"
     import { tagDataMap, isDarkMode } from "../store"
 
@@ -26,7 +24,7 @@
 
 <template lang="pug">
     
-    .control(class!="{$isDarkMode ? 'control--is-dark' : ''} {isForMobile ? 'for-mobile' : ''}")
+    .control(class!="{$isDarkMode ? 'control--is-dark' : ''}")
 
         .control__contact
             h2.control__contact-title Find me elsewhere
@@ -201,10 +199,4 @@
             &-checkmark
                 display: block
 
-        +m.mobile
-            display: none
-
-        &.for-mobile
-            +m.mobile
-                display: block
 </style>

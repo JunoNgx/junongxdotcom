@@ -19,7 +19,7 @@
 
         .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
             .control-container__content
-                Control(isForMobile!="true")
+                Control
 </template>
 
 <style lang="sass">
