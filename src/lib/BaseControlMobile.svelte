@@ -49,6 +49,10 @@
                 justify-content: space-around
                 align-items: center
 
+                .control-mobile--is-dark &
+                    color: v.$col-pri-dark
+                    background-color: v.$col-acc-dark
+
                 .icon-line1
                     transition: transform v.$trans-time-default ease-out
                     &--expanded
@@ -77,15 +81,10 @@
                 &--is-expanded
                     clip-path: circle(90vh at calc(100% - 3rem) calc(3rem))
 
+                .control-mobile--is-dark &
+                    background-color: v.$col-acc-dark
+
             &__content
                 padding: 4rem 2rem 1rem
-
-            &--is-dark
-                .control-mobile__icon-container
-                    color: v.$col-pri-dark
-                    background-color: v.$col-acc-dark
-                
-                .control-mobile__content
-                    background-color: v.$col-acc-dark
 
 </style>
