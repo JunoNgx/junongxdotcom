@@ -17,7 +17,7 @@
 
         h2.section__title {entry.title}
 
-        div.section__tags
+        .section__tags
             +each("entry.tags as tag")
                 span.section__tags__item {tag}
 
@@ -32,8 +32,8 @@
 
         p.section__content(class!="{isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}") {@html marked(entry.content)}
 
-        div.section__buttons
-            div.section__buttons__links
+        .section__buttons
+            .section__buttons__links
                 +each('entry.links as link')
                     a.section__buttons__links__item(href!="{link.url}" rel="noopener noreferrer" target="_blank")
                         span {link.label}
