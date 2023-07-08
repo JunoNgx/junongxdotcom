@@ -3,17 +3,17 @@
 </script>
 
 <template lang="pug">
-    header(class!="{$isDarkMode ? 'dark' : ''}")
+    header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
         div
-            h1
-                span.first-name-j J
-                span.first-name-u u
-                span.first-name-n n
-                span.first-name-o o
+            h1.header__name
+                span.header__first-name-j J
+                span.header__first-name-u u
+                span.header__first-name-n n
+                span.header__first-name-o o
                 | !{' '}
-                span.last-name Nguyen
-        p web engineer by day
-        p hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
+                span.header__last-name Nguyen
+        p.header__desc web engineer by day
+        p.header__desc hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
 
 <style lang="sass">
@@ -22,40 +22,41 @@
 
     $anim-time: 3s
 
-    header
+    .header
         text-align: right
 
-        div
+        &__name
+            display: inline-block
+            margin: 0
+            border-bottom-color: v.$col-pri
+            border-bottom-style: solid
+            border-bottom-width: 0
+            animation: name-frame-border $anim-time ease-out 0s
 
-            h1
+            .header--is-dark &
+                border-color: v.$col-pri-dark
+
+            .header__first-name-j,
+            .header__first-name-u,
+            .header__first-name-n,
+            .header__first-name-o,
+            .header__last-name
                 display: inline-block
-                margin: 0
-                border-bottom-color: v.$col-pri
-                border-bottom-style: solid
-                border-bottom-width: 0
-                animation: name-frame-border $anim-time ease-out 0s
 
-                .first-name-j,
-                .first-name-u,
-                .first-name-n,
-                .first-name-o,
-                .last-name
-                    display: inline-block
+            .header__first-name-j
+                animation: header__first-name-j $anim-time ease-out 0s
 
-                .first-name-j
-                    animation: first-name-j $anim-time ease-out 0s
+            .header__first-name-u
+                animation: header__first-name-u $anim-time ease-out 0s
 
-                .first-name-u
-                    animation: first-name-u $anim-time ease-out 0s
+            .header__first-name-n
+                animation: header__first-name-n $anim-time ease-out 0s
 
-                .first-name-n
-                    animation: first-name-n $anim-time ease-out 0s
+            .header__first-name-o
+                animation: header__first-name-o $anim-time ease-out 0s
 
-                .first-name-o
-                    animation: first-name-o $anim-time ease-out 0s
-
-                .last-name
-                    animation: last-name $anim-time ease-out 0s
+            .header__last-name
+                animation: header__last-name $anim-time ease-out 0s
 
 
         +m.mobile
@@ -65,16 +66,10 @@
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
 
-        &.dark
-
-            div
-                h1
-                    border-color: v.$col-pri-dark
-
-            +m.mobile
+            &--is-dark
                 border-left: 2px dashed v.$col-pri-dark
 
-    @keyframes first-name-j
+    @keyframes header__first-name-j
         0%, 10%
             opacity: 0
             transform: translateX(-70px)
@@ -82,7 +77,7 @@
             opacity: 1
             transform: translateX(0)
 
-    @keyframes first-name-u
+    @keyframes header__first-name-u
         0%, 20%
             opacity: 0
             transform: translateY(40px)
@@ -90,7 +85,7 @@
             opacity: 1
             transform: translateY(0)
 
-    @keyframes first-name-n
+    @keyframes header__first-name-n
         0%, 30%
             opacity: 0
             transform: translateY(-55px)
@@ -98,7 +93,7 @@
             opacity: 1
             transform: translateY(0)
 
-    @keyframes first-name-o
+    @keyframes header__first-name-o
         0%, 40%
             opacity: 0
             transform: translateX(20px)
@@ -106,7 +101,7 @@
             opacity: 1
             transform: translateX(0)
 
-    @keyframes last-name
+    @keyframes header__last-name
         0%, 60%
             opacity: 0
             transform: translateY(50px)

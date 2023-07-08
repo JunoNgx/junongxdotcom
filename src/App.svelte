@@ -41,8 +41,8 @@
 
         isDarkMode.set(storedValue)
 
-        if (storedValue) document.body.classList.add("dark")
-        else document.body.classList.remove("dark")
+        if (storedValue) document.body.classList.add("is-dark")
+        else document.body.classList.remove("is-dark")
     }
 
     // Specifically handle the creative conding canvas
@@ -54,7 +54,7 @@
 
 <template lang="pug">
     main
-        div.leftside-wrapper(class!="{$isDarkMode ? 'dark' : ''}")
+        div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
             div.leftside-content
                 Header
                 Control
@@ -67,7 +67,7 @@
                 +else()
                     p.no-content You have filtered out everything and there is nothing left to be displayed.
 
-            section.contact-me(class!="{$isDarkMode ? 'dark' : ''}")
+            section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
                 div.contact-me-content
                     p Would you like to say hello?
                     
@@ -92,10 +92,9 @@
         +m.mobile
             font-size: v.$font-size-mobile
 
-    :global(body.dark)
+    :global(body.is-dark)
         color: v.$col-pri-dark
         background-color: v.$col-bg-dark
-
 
     :global(a)
         color: v.$col-pri
@@ -110,7 +109,7 @@
             background-position: 50% 50%
             background-size: 100% 100%
 
-    :global(body.dark a)
+    :global(body.is-dark a)
         color: v.$col-pri-dark
         background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
 
@@ -129,11 +128,12 @@
 
     .leftside-wrapper
         position: sticky
-        top: 20px
+        top: 40px
         max-width: 300px
         max-height: 90vh
         padding-right: 2rem
         border-right: 2px dashed v.$col-pri
+        align-self: flex-start
 
         display: flex
         flex-flow: column nowrap
@@ -145,7 +145,7 @@
             border: none
             max-width: none
 
-        &.dark
+        &.is-dark
             border-right: 2px dashed v.$col-pri-dark
             +m.mobile
                 border: none
@@ -159,6 +159,7 @@
             margin: 2rem
             padding: 1rem
             max-width: 400px
+            border: 2px solid transparent
             text-align: left
             -webkit-hyphens: auto
             hyphens: auto
@@ -171,7 +172,7 @@
             max-width: 360px
             padding: 0
 
-            p 
+            p
                 margin: 0
 
             &-content
@@ -187,10 +188,10 @@
                     &:after 
                         content: "My contacts are in the menu ↑"
 
-            &.dark
+            &.is-dark
                 .contact-me-content
                     border: 2px solid v.$col-pri-dark
-        
+
         +m.mobile
             min-height: auto
 </style>
