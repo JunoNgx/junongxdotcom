@@ -116,16 +116,6 @@
             gap: 0.5rem 1.5rem
 
         &__contact-item
-            // margin-right: 0.5rem
-            // display: block
-            // background-image: none
-            // +m.transition(padding, color, background-color)
-
-            // &:hover
-            //     padding: 0 3rem 0 0.5rem
-            //     color: v.$col-bg
-            //     background-color: v.$col-acc
-
             +m.mobile
                 text-decoration: underline
 
