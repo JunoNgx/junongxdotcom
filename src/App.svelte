@@ -96,7 +96,6 @@
         color: v.$col-pri-dark
         background-color: v.$col-bg-dark
 
-
     :global(a)
         color: v.$col-pri
         text-decoration: none
@@ -171,7 +170,7 @@
             max-width: 360px
             padding: 0
 
-            p 
+            p
                 margin: 0
 
             &-content
@@ -190,7 +189,7 @@
             &.is-dark
                 .contact-me-content
                     border: 2px solid v.$col-pri-dark
-        
+
         +m.mobile
             min-height: auto
 </style>
