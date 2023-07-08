@@ -12,8 +12,8 @@
                 span.header__first-name-o o
                 | !{' '}
                 span.header__last-name Nguyen
-        p web engineer by day
-        p hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
+        p.header__desc web engineer by day
+        p.header__desc hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
 
 <style lang="sass">
