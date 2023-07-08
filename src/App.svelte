@@ -3,8 +3,7 @@
 
     import Header from "./lib/BaseHeader.svelte"
     import Footer from "./lib/BaseFooter.svelte"
-    import Control from "./lib/BaseControl.svelte"
-    import ControlMobile from "./lib/BaseControlMobile.svelte"
+    import ControlContainer from "./lib/BaseControlContainer.svelte"
     import Section from "./lib/Section.svelte"
 
     import content from "./data/content.yaml"
@@ -57,7 +56,7 @@
         div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
             div.leftside-content
                 Header
-                ControlMobile
+                ControlContainer
 
         div.content-wrapper
             +if("$displayedEntryList && $displayedEntryList.length > 0")
