@@ -89,6 +89,9 @@
             font-size: 0.8rem
             color: rgba(v.$col-pri, 0.5)
 
+            .section--is-dark &
+                color: rgba(v.$col-pri-dark, 0.5)
+
         &__content
 
             &--is-collapsed
@@ -164,9 +167,6 @@
 
         &--is-dark
             border: 2px solid v.$col-pri-dark
-
-            .section__tags-container
-                color: rgba(v.$col-pri-dark, 0.5)
 
             .section__buttons__links__item
                 background-color: v.$col-acc-dark
