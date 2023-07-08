@@ -158,6 +158,7 @@
             margin: 2rem
             padding: 1rem
             max-width: 400px
+            border: 2px solid transparent
             text-align: left
             -webkit-hyphens: auto
             hyphens: auto
