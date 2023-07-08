@@ -17,9 +17,9 @@
 
         h2.section__title {entry.title}
 
-        .section__tags
+        .section__tags-container
             +each("entry.tags as tag")
-                span.section__tags__item {tag}
+                span.section__tag-item {tag}
 
         +if('entry.imgSrc && entry.imgAlt')
             img.section__banner(src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
@@ -79,7 +79,7 @@
             margin: 0
             font-size: 2rem
 
-        &__tags
+        &__tags-container
             margin-bottom: 2rem
             padding: 0
             display: flex
@@ -165,7 +165,7 @@
         &--is-dark
             border: 2px solid v.$col-pri-dark
 
-            .section__tags
+            .section__tags-container
                 color: rgba(v.$col-pri-dark, 0.5)
 
             .section__buttons__links__item
