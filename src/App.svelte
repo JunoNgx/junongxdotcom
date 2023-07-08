@@ -128,7 +128,7 @@
 
     .leftside-wrapper
         position: sticky
-        top: 20px
+        top: 40px
         max-width: 300px
         max-height: 90vh
         padding-right: 2rem
