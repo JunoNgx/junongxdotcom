@@ -152,19 +152,6 @@
                     box-shadow: 4px 4px v.$col-pri-dark
 
         &__expand-button
-            // border: 1px solid v.$col-pri
-            // border-radius: 0
-            // padding: 0.25rem 0.5rem
-            // cursor: pointer
-            // color: v.$col-pri
-            // background-color: transparent
-            // font-family: v.$fonts
-            // font-size: v.$font-size
-            // +m.transition(color, background-color)
-
-            // &:hover
-            //     color: v.$col-bg
-            //     background-color: v.$col-pri
             +m.button
 
             .section--is-dark &
@@ -175,16 +162,6 @@
 
             .section__buttons__expand-btn
                 font-size: v.$font-size-mobile
-
-        // &--is-dark
-        //     .section__buttons__expand-btn
-        //         // color: v.$col-pri-dark
-        //         // border: 1px solid v.$col-pri-dark
-
-        //         // &:hover
-        //         //     color: v.$col-bg-dark
-        //         //     background-color: v.$col-pri-dark
-        //         +m.button-dark
 
         +m.mobile
             max-width: none
