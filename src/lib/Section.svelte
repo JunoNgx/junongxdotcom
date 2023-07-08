@@ -69,6 +69,9 @@
         -webkit-hyphens: auto
         hyphens: auto
 
+        &--is-dark
+            border: 2px solid v.$col-pri-dark
+
         &__banner,
         canvas
             display: block
@@ -141,6 +144,12 @@
                         background-color: v.$col-acc2
                         box-shadow: 4px 4px v.$col-pri
 
+                    .section--is-dark &
+                        background-color: v.$col-acc-dark
+                        &:hover
+                            color: v.$col-bg-dark
+                            background-color: v.$col-acc2
+                            box-shadow: 4px 4px v.$col-pri-dark
 
             &__expand-btn
                 // border: 1px solid v.$col-pri
@@ -156,8 +165,10 @@
                 // &:hover
                 //     color: v.$col-bg
                 //     background-color: v.$col-pri
-
                 +m.button
+
+                .section--is-dark &
+                    +m.button-dark
 
         +m.mobile
             margin: 2rem 0.5rem
@@ -165,25 +176,15 @@
             .section__buttons__expand-btn
                 font-size: v.$font-size-mobile
 
-        &--is-dark
-            border: 2px solid v.$col-pri-dark
+        // &--is-dark
+        //     .section__buttons__expand-btn
+        //         // color: v.$col-pri-dark
+        //         // border: 1px solid v.$col-pri-dark
 
-            .section__buttons__links__item
-                background-color: v.$col-acc-dark
-
-                &:hover
-                    color: v.$col-bg-dark
-                    background-color: v.$col-acc2
-                    box-shadow: 4px 4px v.$col-pri-dark
-
-            .section__buttons__expand-btn
-                // color: v.$col-pri-dark
-                // border: 1px solid v.$col-pri-dark
-
-                // &:hover
-                //     color: v.$col-bg-dark
-                //     background-color: v.$col-pri-dark
-                +m.button-dark
+        //         // &:hover
+        //         //     color: v.$col-bg-dark
+        //         //     background-color: v.$col-pri-dark
+        //         +m.button-dark
 
         +m.mobile
             max-width: none
