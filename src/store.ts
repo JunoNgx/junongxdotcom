@@ -6,16 +6,16 @@ export const isDarkMode = writable(false)
 
 export const displayedEntryList = derived(
     [entryList, tagDataMap], ([$entryList, $tagDataMap]) => {
-        const displayedEntryList = $entryList.filter(entry => {
-            let shouldBeDisplayed = false
-    
-            entry.tags.forEach(tag => {
-                if ($tagDataMap.get(tag)) shouldBeDisplayed = true
-            })
-    
-            return shouldBeDisplayed
-        })
-
-        return displayedEntryList
+        return $entryList.filter(shouldEntryBeDisplayedFilterFunc($tagDataMap))
     }
 )
+
+const shouldEntryBeDisplayedFilterFunc = (tagDataMap: Map<string, boolean>) => {
+    return (entry: Entry) => {
+        for (const tag of entry.tags) {
+            if (tagDataMap.get(tag)) return true
+        }
+
+        return false
+    }
+}
