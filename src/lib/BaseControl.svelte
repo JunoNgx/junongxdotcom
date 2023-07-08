@@ -10,7 +10,6 @@
     }
 
     const checkAll = (booleanValue: boolean) => {
-        // console.log("checked: " + booleanValue)
         $tagDataMap.forEach((isDisplayed, tagName) => $tagDataMap.set(tagName, booleanValue))
         tagDataMap.set($tagDataMap)
     }
