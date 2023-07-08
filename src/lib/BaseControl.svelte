@@ -19,8 +19,8 @@
         isDarkMode.set(newValue)
         localStorage.setItem('isDarkMode', newValue.toString())
 
-        if (newValue) document.body.classList.add("dark")
-        else document.body.classList.remove("dark")
+        if (newValue) document.body.classList.add("is-dark")
+        else document.body.classList.remove("is-dark")
     }
 </script>
 

@@ -41,8 +41,8 @@
 
         isDarkMode.set(storedValue)
 
-        if (storedValue) document.body.classList.add("dark")
-        else document.body.classList.remove("dark")
+        if (storedValue) document.body.classList.add("is-dark")
+        else document.body.classList.remove("is-dark")
     }
 
     // Specifically handle the creative conding canvas
@@ -54,7 +54,7 @@
 
 <template lang="pug">
     main
-        div.leftside-wrapper(class!="{$isDarkMode ? 'dark' : ''}")
+        div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
             div.leftside-content
                 Header
                 Control
@@ -67,7 +67,7 @@
                 +else()
                     p.no-content You have filtered out everything and there is nothing left to be displayed.
 
-            section.contact-me(class!="{$isDarkMode ? 'dark' : ''}")
+            section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
                 div.contact-me-content
                     p Would you like to say hello?
                     
@@ -92,7 +92,7 @@
         +m.mobile
             font-size: v.$font-size-mobile
 
-    :global(body.dark)
+    :global(body.is-dark)
         color: v.$col-pri-dark
         background-color: v.$col-bg-dark
 
@@ -110,7 +110,7 @@
             background-position: 50% 50%
             background-size: 100% 100%
 
-    :global(body.dark a)
+    :global(body.is-dark a)
         color: v.$col-pri-dark
         background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
 
@@ -145,7 +145,7 @@
             border: none
             max-width: none
 
-        &.dark
+        &.is-dark
             border-right: 2px dashed v.$col-pri-dark
             +m.mobile
                 border: none
@@ -187,7 +187,7 @@
                     &:after 
                         content: "My contacts are in the menu ↑"
 
-            &.dark
+            &.is-dark
                 .contact-me-content
                     border: 2px solid v.$col-pri-dark
         
