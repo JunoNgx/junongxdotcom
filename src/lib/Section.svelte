@@ -30,7 +30,7 @@
 
         p.section__summary {@html marked(entry.summary)}
 
-        p.section__content(class!="{isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}") {@html marked(entry.content)}
+        p.section__content(class!="{isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}" aria-hidden!="{!isExpanded}") {@html marked(entry.content)}
 
         .section__buttons-container
             .section__links-container
@@ -98,11 +98,13 @@
         &__content
 
             &--is-collapsed
+                visibility: hidden
                 opacity: 0
                 font-size: 0
                 transition: opacity v.$trans-time-default*0.5 ease-out, font-size v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
 
             &--is-expanded
+                visibility: visible
                 opacity: 1
                 font-size: v.$font-size
                 transition: font-size v.$trans-time-default*0.5 ease-out, opacity v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
