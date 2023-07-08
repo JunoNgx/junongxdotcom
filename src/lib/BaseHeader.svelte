@@ -3,9 +3,9 @@
 </script>
 
 <template lang="pug">
-    header(class!="{$isDarkMode ? 'is-dark' : ''}")
+    header.header(class!="{$isDarkMode ? 'is-dark' : ''}")
         div
-            h1
+            h1.header__name
                 span.first-name-j J
                 span.first-name-u u
                 span.first-name-n n
@@ -22,39 +22,38 @@
 
     $anim-time: 3s
 
-    header
+    .header
         text-align: right
 
-        div
-            h1
+        &__name
+            display: inline-block
+            margin: 0
+            border-bottom-color: v.$col-pri
+            border-bottom-style: solid
+            border-bottom-width: 0
+            animation: name-frame-border $anim-time ease-out 0s
+
+            .first-name-j,
+            .first-name-u,
+            .first-name-n,
+            .first-name-o,
+            .last-name
                 display: inline-block
-                margin: 0
-                border-bottom-color: v.$col-pri
-                border-bottom-style: solid
-                border-bottom-width: 0
-                animation: name-frame-border $anim-time ease-out 0s
 
-                .first-name-j,
-                .first-name-u,
-                .first-name-n,
-                .first-name-o,
-                .last-name
-                    display: inline-block
+            .first-name-j
+                animation: first-name-j $anim-time ease-out 0s
 
-                .first-name-j
-                    animation: first-name-j $anim-time ease-out 0s
+            .first-name-u
+                animation: first-name-u $anim-time ease-out 0s
 
-                .first-name-u
-                    animation: first-name-u $anim-time ease-out 0s
+            .first-name-n
+                animation: first-name-n $anim-time ease-out 0s
 
-                .first-name-n
-                    animation: first-name-n $anim-time ease-out 0s
+            .first-name-o
+                animation: first-name-o $anim-time ease-out 0s
 
-                .first-name-o
-                    animation: first-name-o $anim-time ease-out 0s
-
-                .last-name
-                    animation: last-name $anim-time ease-out 0s
+            .last-name
+                animation: last-name $anim-time ease-out 0s
 
 
         +m.mobile
@@ -65,7 +64,7 @@
             border-left: 2px dashed v.$col-pri
 
         &.is-dark
-            div h1
+            .header--name
                 border-color: v.$col-pri-dark
 
             +m.mobile
