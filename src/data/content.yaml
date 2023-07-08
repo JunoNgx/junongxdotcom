@@ -207,7 +207,7 @@
 
     [My Flickr page](https://flickr.com/people/JunoNgx/) is a relatively incomplete compilation of my works (as a result of my old habit of not sharing), but is undergoing frequent updates.
   tags:
-    - hobbies
+    - hobby
   links:
     - label: flickr
       url: https://flickr.com/people/JunoNgx/
@@ -220,7 +220,7 @@
   content: |
     Having been a lifelong admirer of StarCraft from a game developer's perspective, I have been in and out of the game in peculiar ways. Not until my mid-20s had I realised the creative potential and elegance in tiny Lego models of 30 pieces (in case you're not aware, #AdultFansOfLego is a thing). My tiny curiosity crept into a relatively big project (and still ongoing) that you can find on my Flickr.
   tags:
-    - hobbies
+    - hobby
   links:
     - label: flickr album
       url: https://www.flickr.com/photos/junongx/albums/72157715396303363
@@ -235,7 +235,7 @@
 
     For several years, I have been daily driving exclusively with the 4x12 ortholinear layout, popularised by the OLKB Planck. My personalised keymap, `junonum`, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal keymap.
   tags:
-    - hobbies
+    - hobby
   links:
     - label: qmk github
       url: https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum
