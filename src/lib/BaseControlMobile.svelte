@@ -10,15 +10,15 @@
 </script>
 
 <template lang="pug">
-    div.control-mobile(class!="{$isDarkMode ? 'control-mobile--is-dark' : ''}")
-        div.control-mobile__icon-container(on:click!="{handleSwitchExpand}")
+    .control-mobile(class!="{$isDarkMode ? 'control-mobile--is-dark' : ''}")
+        .control-mobile__icon-container(on:click!="{handleSwitchExpand}")
             svg.control-mobile__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                 line.icon-line1(class!="{isExpanded ? 'icon-line1--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
                 line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
                 line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
-        div.control-mobile__content-wrapper(class!="{isExpanded ? 'control-mobile__content-wrapper--is-expanded' : ''}")
-            div.control-mobile__content
+        .control-mobile__content-wrapper(class!="{isExpanded ? 'control-mobile__content-wrapper--is-expanded' : ''}")
+            .control-mobile__content
                 Control(isForMobile!="true")
 </template>
 
