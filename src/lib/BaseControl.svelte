@@ -62,9 +62,9 @@
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
-            .control__settings__tags
+            .control__settings-tags
 
-                p.control__settings__tags__title Filtering tags
+                p.control__settings-tags-title Filtering tags
 
                 .control__settings__tags__buttons
                     button.control__settings__tags__buttons__button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
@@ -159,11 +159,15 @@
             &-icon-svg
                 margin: 1px
 
+        &__settings-tags
+            &-title
+                margin-bottom: 0.5rem
+
         &__settings
 
             &__tags
-                &__title
-                    margin-bottom: 0.5rem
+                // &__title
+                //     margin-bottom: 0.5rem
 
                 &__buttons
                     margin-bottom: 0.5rem
