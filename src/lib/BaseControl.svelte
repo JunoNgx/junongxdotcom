@@ -63,7 +63,7 @@
             // Dark mode control
             .control__settings-dark-mode
                 .control__settings-dark-mode-container
-                    .control__settings-dark-mode-indicator
+                    .control__settings-dark-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__settings-dark-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__settings-dark-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__settings-dark-mode-indicator--shift-two' : ''}")
 
                     button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.OS)}" aria-label="Dark mode: OS Settings")
                         // Gear
@@ -179,9 +179,16 @@
                 height: 30px
                 border: 1px solid v.$col-pri
                 pointer-events: none
+                +m.transition(translate)
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
+
+                &--shift-one
+                    translate: 32px
+
+                &--shift-two
+                    translate: 64px
                 // position: absolute
                 // white-space: nowrap
                 // transform: translateX(0)
