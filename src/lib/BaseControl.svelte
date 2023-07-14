@@ -37,14 +37,16 @@
             h2.control__settings-title Settings
             // Dark mode control
             .control__settings-dark-mode
-                .control__settings-dark-mode-icon-container(on:click!="{switchDarkMode}")
-                    .control__settings-dark-mode-icon-content(class!="{$isDarkMode ? 'control__settings-dark-mode-icon-content--is-dark' : ''}")
+                .control__settings-dark-mode-container(on:click!="{switchDarkMode}")
+                    .control__settings-dark-mode-indicator
 
+                    button.control__settings-dark-mode-button
                         // Gear
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--os-settings(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="3")
                             path(d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z")
 
+                    button.control__settings-dark-mode-button
                         // The sun
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="5")
@@ -57,6 +59,7 @@
                             line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
+                    button.control__settings-dark-mode-button
                         // The moon
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
@@ -128,33 +131,55 @@
                 +title--is-dark
 
         &__settings-dark-mode
-            &-icon-container
-                position: relative
-                width: 22px
-                height: 22px
-                white-space: nowrap
-                padding: 2px
-                cursor: pointer
-                border: 1px solid transparent
-                transition: border v.$trans-time-default ease-out
-                overflow: hidden
+            &-container
+                background-color: indianred
+                // position: relative
+                // width: 22px
+                // height: 22px
+                // white-space: nowrap
+                // padding: 2px
+                // cursor: pointer
+                // border: 1px solid transparent
+                // transition: border v.$trans-time-default ease-out
+                // overflow: hidden
+
+                // &:hover
+                //     border: 1px solid v.$col-pri
+                //     .control--is-dark &
+                //         border: 1px solid v.$col-pri-dark
+
+            &-indicator
+                position: absolute
+                width: 30px
+                height: 30px
+                border: 1px solid v.$col-pri
+
+                .control--is-dark &
+                    border: 1px solid v.$col-pri-dark
+                // position: absolute
+                // white-space: nowrap
+                // transform: translateX(0)
+                // transition: transform v.$trans-time-default ease-out
+
+                // &--is-dark
+                //     transform: translateX(-23px)
+
+            &-button
+                background-color: transparent
+                border-width: 0
+                padding: 0
 
                 &:hover
-                    border: 1px solid v.$col-pri
-                    .control--is-dark &
-                        border: 1px solid v.$col-pri-dark
-
-            &-icon-content
-                position: absolute
-                white-space: nowrap
-                transform: translateX(0)
-                transition: transform v.$trans-time-default ease-out
-
-                &--is-dark
-                    transform: translateX(-23px)
+                    background-color: transparent
+                    border-width: 0
+                    padding: 0
 
             &-icon-svg
-                margin: 1px
+                // margin: 1px
+                width: 22px
+                height: 22px
+                background-color: cyan
+                margin: 5px
 
         &__settings-tags
             &-title
