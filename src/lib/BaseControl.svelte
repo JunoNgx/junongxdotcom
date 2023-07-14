@@ -1,7 +1,7 @@
 <script lang="ts">
     import contacts from "../data/contacts.yaml"
     import { tagDataMap, darkModeSettings, isDarkMode } from "../store"
-    import DarkModeSettingsEnum from "../types/DarkModeSettingsEnum";
+    import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
 
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
@@ -23,13 +23,13 @@
     // }
 
     const switchToOsSettings = () => {
-        darkModeSettings.set(DarkModeSettingsEnum.OS)
+        darkModeSettings.set(DarkModeOptionsEnum.OS)
     }
     const switchToLight = () => {
-        darkModeSettings.set(DarkModeSettingsEnum.LIGHT)
+        darkModeSettings.set(DarkModeOptionsEnum.LIGHT)
     }
     const switchToDark = () => {
-        darkModeSettings.set(DarkModeSettingsEnum.DARK)
+        darkModeSettings.set(DarkModeOptionsEnum.DARK)
     }
 </script>
 

@@ -1,7 +1,9 @@
 import { writable, derived } from 'svelte/store'
+import DarkModeOptionsEnum from './types/DarkModeOptionsEnum'
 
 export const entryList = writable(new Array<Entry>())
 export const tagDataMap = writable(new Map<string, boolean>())
+export const darkModeSettings = writable(DarkModeOptionsEnum.OS)
 export const isDarkMode = writable(false)
 
 export const displayedEntryList = derived(
