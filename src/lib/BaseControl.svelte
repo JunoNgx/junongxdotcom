@@ -71,6 +71,7 @@
             h2.control__settings-title Settings
             // Dark mode control
             .control__settings-dark-mode
+                span.control__settings-dark-mode-text os settings
                 .control__settings-dark-mode-container
                     .control__settings-dark-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__settings-dark-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__settings-dark-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__settings-dark-mode-indicator--shift-two' : ''}")
 
@@ -167,7 +168,12 @@
                 +title--is-dark
 
         &__settings-dark-mode
+            &-text
+                vertical-align: middle
+
             &-container
+                display: inline-block
+                margin-left: 1rem
                 // background-color: indianred
                 // position: relative
                 // width: 22px
