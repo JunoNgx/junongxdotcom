@@ -147,6 +147,8 @@
             +title
             .control--is-dark &
                 +title--is-dark
+            +m.mobile
+                margin-top: 1rem
 
 
         &__contact-list
