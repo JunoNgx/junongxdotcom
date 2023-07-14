@@ -216,6 +216,10 @@
                 height: 22px
                 // background-color: cyan
                 margin: 5px
+                stroke: v.$col-pri
+
+                .control--is-dark &
+                    stroke: v.$col-pri-dark
 
         &__settings-tags
             &-title
