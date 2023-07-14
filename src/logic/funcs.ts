@@ -14,7 +14,8 @@ const writeDarkModeSettingToLocalStorage = (value: DarkModeOptionsEnum) => {
 
 const processShouldBeDarkMode = (darkModeSetting: DarkModeOptionsEnum) => {
     if (darkModeSetting === DarkModeOptionsEnum.OS) {
-        isDarkMode.set(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        const preferDarkMediaQueryList = window.matchMedia?.('(prefers-color-scheme: dark)')
+        return preferDarkMediaQueryList.matches
     }
 
     return darkModeSetting === DarkModeOptionsEnum.DARK
