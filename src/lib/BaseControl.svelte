@@ -1,6 +1,6 @@
 <script lang="ts">
     import contacts from "../data/contacts.yaml"
-    import { tagDataMap, darkModeSettings, isDarkMode } from "../store"
+    import { tagDataMap, darkModeSetting, isDarkMode } from "../store"
     import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
 
     const switchTagData = (tag: string) => {
@@ -23,18 +23,18 @@
     // }
 
     // const switchToOsSettings = () => {
-    //     darkModeSettings.set(DarkModeOptionsEnum.OS)
+    //     darkModeSetting.set(DarkModeOptionsEnum.OS)
     // }
     // const switchToLight = () => {
-    //     darkModeSettings.set(DarkModeOptionsEnum.LIGHT)
+    //     darkModeSetting.set(DarkModeOptionsEnum.LIGHT)
     // }
     // const switchToDark = () => {
-    //     darkModeSettings.set(DarkModeOptionsEnum.DARK)
+    //     darkModeSetting.set(DarkModeOptionsEnum.DARK)
     // }
 
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
-        darkModeSettings.set(newValue)
-        console.log($darkModeSettings)
+        darkModeSetting.set(newValue)
+        // console.log($darkModeSetting)
     }
 
     // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {

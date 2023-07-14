@@ -7,7 +7,7 @@
     import Section from "./lib/Section.svelte"
 
     import content from "./data/content.yaml"
-    import { entryList, tagDataMap, darkModeSettings, isDarkMode, displayedEntryList } from "./store"
+    import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
 
     import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
 
@@ -35,10 +35,10 @@
     }
 
     const retrieveLocalStorageData = () => {
-        const storedValue = JSON.parse(localStorage.getItem('darkModeSettings'))
+        const storedValue = JSON.parse(localStorage.getItem('darkModeSetting'))
 
-        if (localStorage.getItem('darkModeSettings')) darkModeSettings.set(storedValue)
-        else darkModeSettings.set(DarkModeOptionsEnum.OS)
+        if (localStorage.getItem('darkModeSetting')) darkModeSetting.set(storedValue)
+        else darkModeSetting.set(DarkModeOptionsEnum.OS)
     }
 
     setFullEntryList(content)
