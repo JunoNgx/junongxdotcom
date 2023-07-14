@@ -157,7 +157,7 @@
 
         &__settings-dark-mode
             &-container
-                background-color: indianred
+                // background-color: indianred
                 // position: relative
                 // width: 22px
                 // height: 22px
@@ -212,7 +212,7 @@
                 // margin: 1px
                 width: 22px
                 height: 22px
-                background-color: cyan
+                // background-color: cyan
                 margin: 5px
 
         &__settings-tags
