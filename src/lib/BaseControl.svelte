@@ -161,7 +161,6 @@
             &-button
                 +m.button
                 margin-left: 0.5rem
-                font-size: 12px
                 .control--is-dark &
                     +m.button-dark
 
