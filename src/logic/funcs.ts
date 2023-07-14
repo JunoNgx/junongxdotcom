@@ -20,8 +20,14 @@ const processShouldBeDarkMode = (darkModeSetting: DarkModeOptionsEnum) => {
     return darkModeSetting === DarkModeOptionsEnum.DARK
 }
 
+const processDocumentBodyFromDarkMode = (isDarkMode: boolean) => {
+    if (isDarkMode) document.body.classList.add("is-dark")
+    else document.body.classList.remove("is-dark")
+}
+
 export {
     retrieveDarkModeSettingFromLocalStorage,
     writeDarkModeSettingToLocalStorage,
     processShouldBeDarkMode,
+    processDocumentBodyFromDarkMode,
 }
