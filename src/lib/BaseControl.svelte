@@ -22,15 +22,26 @@
     //     else document.body.classList.remove("is-dark")
     // }
 
-    const switchToOsSettings = () => {
-        darkModeSettings.set(DarkModeOptionsEnum.OS)
+    // const switchToOsSettings = () => {
+    //     darkModeSettings.set(DarkModeOptionsEnum.OS)
+    // }
+    // const switchToLight = () => {
+    //     darkModeSettings.set(DarkModeOptionsEnum.LIGHT)
+    // }
+    // const switchToDark = () => {
+    //     darkModeSettings.set(DarkModeOptionsEnum.DARK)
+    // }
+
+    const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
+        darkModeSettings.set(newValue)
+        console.log($darkModeSettings)
     }
-    const switchToLight = () => {
-        darkModeSettings.set(DarkModeOptionsEnum.LIGHT)
-    }
-    const switchToDark = () => {
-        darkModeSettings.set(DarkModeOptionsEnum.DARK)
-    }
+
+    // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
+    //     console.log(e)
+    //     if (e.code !== "Enter" && e.code !== "Space") return;
+    //     switchDarkModeOption(newValue)
+    // }
 </script>
 
 <template lang="pug">
@@ -51,13 +62,13 @@
                 .control__settings-dark-mode-container
                     .control__settings-dark-mode-indicator
 
-                    button.control__settings-dark-mode-button(on:click!="{switchToOsSettings}" aria-label="Dark mode: OS Settings")
+                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.OS)}" aria-label="Dark mode: OS Settings")
                         // Gear
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--os-settings(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="3")
                             path(d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z")
 
-                    button.control__settings-dark-mode-button(on:click!="{switchToLight}" aria-label="Dark mode: Light")
+                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}" aria-label="Dark mode: Light")
                         // The sun
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="5")
@@ -70,7 +81,7 @@
                             line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
-                    button.control__settings-dark-mode-button(on:click!="{switchToDark}" aria-label="Dark mode: Dark")
+                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}" aria-label="Dark mode: Dark")
                         // The moon
                         svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
@@ -164,6 +175,7 @@
                 width: 30px
                 height: 30px
                 border: 1px solid v.$col-pri
+                pointer-events: none
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
@@ -179,6 +191,7 @@
                 background-color: transparent
                 border-width: 0
                 padding: 0
+                cursor: pointer
 
                 &:hover
                     background-color: transparent
