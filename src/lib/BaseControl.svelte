@@ -58,7 +58,7 @@
 
             .control__settings-tags
 
-                p.control__settings-tags-title Filtering tags
+                p.control__settings-tags-title Filter by tags
 
                 .control__settings-tags-buttons-container
                     button.control__settings-tags-button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
