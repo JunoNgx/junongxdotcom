@@ -6,6 +6,7 @@
         writeDarkModeSettingToLocalStorage,
         processShouldBeDarkMode,
         processDocumentBodyFromDarkMode,
+        handleOsSettingsListeners,
     } from "../logic/funcs"
 
     const switchTagData = (tag: string) => {
@@ -43,6 +44,7 @@
         // console.log($DarkModeSetting)
         isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
         processDocumentBodyFromDarkMode($isDarkMode)
+        handleOsSettingsListeners()
     }
 
     console.log($darkModeSetting)

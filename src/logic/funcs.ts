@@ -1,3 +1,5 @@
+import { get } from "svelte/store"
+
 import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum"
 
 import { darkModeSetting, isDarkMode } from "../store"
@@ -26,9 +28,33 @@ const processDocumentBodyFromDarkMode = (isDarkMode: boolean) => {
     else document.body.classList.remove("is-dark")
 }
 
+const handleOsSettingsListeners = () => {
+    const currDarkModeSetting = get(darkModeSetting)
+    const preferDarkMediaQueryList = window.matchMedia?.("(prefers-color-scheme: dark)")
+
+    if (currDarkModeSetting === DarkModeOptionsEnum.OS) {
+        console.log("add event listener")
+        preferDarkMediaQueryList.addEventListener("change", () => {
+        
+            // console.log("handler for prefer change")
+            // console.log(get(isDarkMode))
+            // console.log(preferDarkMediaQueryList)
+            isDarkMode.set(processShouldBeDarkMode(currDarkModeSetting))
+            // console.log(get(isDarkMode))
+            processDocumentBodyFromDarkMode(get(isDarkMode))
+        });
+        console.log(preferDarkMediaQueryList)
+    } else {
+        console.log("remove event listener")
+
+        preferDarkMediaQueryList.removeEventListener("change", () => {processDocumentBodyFromDarkMode(get(isDarkMode))});
+    }
+}
+
 export {
     retrieveDarkModeSettingFromLocalStorage,
     writeDarkModeSettingToLocalStorage,
     processShouldBeDarkMode,
     processDocumentBodyFromDarkMode,
+    handleOsSettingsListeners,
 }
