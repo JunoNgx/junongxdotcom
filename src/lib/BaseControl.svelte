@@ -40,6 +40,8 @@
         
     }
 
+    console.log($darkModeSetting)
+
     // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
     //     console.log(e)
     //     if (e.code !== "Enter" && e.code !== "Space") return;

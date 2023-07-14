@@ -8,6 +8,7 @@
 
     import content from "./data/content.yaml"
     import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
+    import { retrieveDarkModeSettingFromLocalStorage } from "./logic/funcs"
 
     import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
 
@@ -34,16 +35,9 @@
         tagDataMap.set($tagDataMap)
     }
 
-    const retrieveLocalStorageData = () => {
-        const storedValue = JSON.parse(localStorage.getItem('darkModeSetting'))
-
-        if (localStorage.getItem('darkModeSetting')) darkModeSetting.set(storedValue)
-        else darkModeSetting.set(DarkModeOptionsEnum.OS)
-    }
-
     setFullEntryList(content)
     generateTagDataMap($entryList)
-    retrieveLocalStorageData()
+    retrieveDarkModeSettingFromLocalStorage()
 
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>
