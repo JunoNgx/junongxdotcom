@@ -2,6 +2,7 @@
     import contacts from "../data/contacts.yaml"
     import { tagDataMap, darkModeSetting, isDarkMode } from "../store"
     import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
+    import { writeDarkModeSettingToLocalStorage } from "../logic/funcs"
 
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
@@ -34,7 +35,9 @@
 
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
         darkModeSetting.set(newValue)
-        // console.log($darkModeSetting)
+        writeDarkModeSettingToLocalStorage(newValue)
+        // console.log($DarkModeSetting)
+        
     }
 
     // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
