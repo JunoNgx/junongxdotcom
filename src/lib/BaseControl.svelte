@@ -213,6 +213,9 @@
                 border-width: 0
                 padding: 0
                 cursor: pointer
+                width: 22px
+                height: 22px
+                margin: 5px
 
                 &:hover
                     background-color: transparent
@@ -220,11 +223,10 @@
                     padding: 0
 
             &-icon-svg
+                display: inline-block
+                vertical-align: middle
                 // margin: 1px
-                width: 22px
-                height: 22px
                 // background-color: cyan
-                margin: 5px
                 stroke: v.$col-pri
 
                 .control--is-dark &
