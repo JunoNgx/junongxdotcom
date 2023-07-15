@@ -86,10 +86,10 @@
                         button.control__settings-tags-item(class!="{isDisplayed ? 'control__settings-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
                             span.control__settings-tags-item-label {tag}
                             +if('isDisplayed')
-                                svg.control__settings-tags-item-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                svg.control__settings-tags-item-icon.control__settings-tags-item-icon--is-selected(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                     polyline(points="20 6 9 17 4 12")
                                 +else()
-                                    svg.ccontrol__settings-tags-item-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                    svg.control__settings-tags-item-icon(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                         line(x1="18" y1="6" x2="6" y2="18")
                                         line(x1="6" y1="6" x2="18" y2="18")
 </template>
@@ -213,7 +213,6 @@
                 padding: 0.1rem 0.5rem
                 height: 1.2rem
                 cursor: pointer
-                font-size: 12px
 
                 display: flex
                 flex-flow: row nowrap
@@ -235,7 +234,13 @@
                         color: v.$col-bg-dark
                         background-color: v.$col-pri-dark
 
-            &-item-checkmark
+            &-item-label
+                display: block
+                font-size: 10px
+                font-family: monospace
+
+            &-item-icon
+                margin-top: 1px
                 display: block
 
 </style>
