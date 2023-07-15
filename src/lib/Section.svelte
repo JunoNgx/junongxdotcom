@@ -89,11 +89,14 @@
             flex-flow: row wrap
             justify-content: flex-start
             gap: 0.1rem 1rem
-            font-size: 0.8rem
-            color: rgba(v.$col-pri, 0.5)
+
+        &__tag-item
+            font-family: monospace
+            font-size: 10px
+            color: rgba(v.$col-pri, 0.8)
 
             .section--is-dark &
-                color: rgba(v.$col-pri-dark, 0.5)
+                color: rgba(v.$col-pri-dark, 0.8)
 
         &__content
 
