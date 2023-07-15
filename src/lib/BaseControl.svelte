@@ -19,35 +19,13 @@
         tagDataMap.set($tagDataMap)
     }
 
-    // const switchDarkMode = () => {
-    //     const newValue = !$isDarkMode
-    //     isDarkMode.set(newValue)
-    //     localStorage.setItem('isDarkMode', newValue.toString())
-
-    //     if (newValue) document.body.classList.add("is-dark")
-    //     else document.body.classList.remove("is-dark")
-    // }
-
-    // const switchToOsSettings = () => {
-    //     darkModeSetting.set(DarkModeOptionsEnum.OS)
-    // }
-    // const switchToLight = () => {
-    //     darkModeSetting.set(DarkModeOptionsEnum.LIGHT)
-    // }
-    // const switchToDark = () => {
-    //     darkModeSetting.set(DarkModeOptionsEnum.DARK)
-    // }
-
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
         darkModeSetting.set(newValue)
         writeDarkModeSettingToLocalStorage(newValue)
-        // console.log($DarkModeSetting)
         isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
         processDocumentBodyFromDarkMode($isDarkMode)
         handleOsSettingsListeners()
     }
-
-    console.log($darkModeSetting)
 
     // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
     //     console.log(e)
