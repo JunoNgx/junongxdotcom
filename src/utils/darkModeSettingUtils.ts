@@ -10,7 +10,7 @@ const retrieveDarkModeSettingFromLocalStorage = () => {
     else darkModeSetting.set(DarkModeOptionsEnum.DARK)
 }
 
-const writeDarkModeSettingToLocalStorage = (value: DarkModeOptionsEnum) => {
+const storeDarkModeSettingToLocalStorage = (value: DarkModeOptionsEnum) => {
     localStorage.setItem('darkModeSetting', value.toString())
 }
 
@@ -51,7 +51,7 @@ const handleDarkModeSettingChange = () => {
 
 export {
     retrieveDarkModeSettingFromLocalStorage,
-    writeDarkModeSettingToLocalStorage,
+    storeDarkModeSettingToLocalStorage,
     // processShouldBeDarkMode,
     // processDocumentBodyFromDarkMode,
     // handleOsSettingsListeners,

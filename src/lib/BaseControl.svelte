@@ -3,7 +3,7 @@
     import { tagDataMap, darkModeSetting, isDarkMode } from "../store"
     import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
     import {
-        writeDarkModeSettingToLocalStorage,
+        storeDarkModeSettingToLocalStorage,
         handleDarkModeSettingChange,
     } from "../utils/darkModeSettingUtils"
 
@@ -19,7 +19,7 @@
 
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
         darkModeSetting.set(newValue)
-        writeDarkModeSettingToLocalStorage(newValue)
+        storeDarkModeSettingToLocalStorage(newValue)
         handleDarkModeSettingChange()
     }
 
