@@ -220,12 +220,13 @@
                 justify-content: space-between
                 align-items: center
                 gap: 0.15rem
+                background-color: transparent
+
                 +m.transition(color, background-color)
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
                     color: v.$col-pri-dark
-                    background-color: v.$col-bg-dark
 
                 &--selected
                     color: v.$col-bg
