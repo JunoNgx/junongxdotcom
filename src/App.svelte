@@ -1,19 +1,19 @@
 <script lang="ts">
     import { afterUpdate } from "svelte";
 
-    import Header from "./lib/BaseHeader.svelte"
-    import Footer from "./lib/BaseFooter.svelte"
-    import ControlContainer from "./lib/BaseControlContainer.svelte"
-    import Section from "./lib/Section.svelte"
+    import Header from "src/lib/BaseHeader.svelte"
+    import Footer from "src/lib/BaseFooter.svelte"
+    import ControlContainer from "src/lib/BaseControlContainer.svelte"
+    import Section from "src/lib/Section.svelte"
 
-    import content from "./data/content.yaml"
+    import content from "src/data/content.yaml"
+    import { DarkModeOptionsEnum } from "src/common";
     import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
     import {
         retrieveDarkModeSettingFromLocalStorage,
         handleDarkModeSettingChange
-    } from "./utils/darkModeSettingUtils"
+    } from "src/utils/darkModeSettingUtils"
 
-    import { DarkModeOptionsEnum } from "./common";
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);

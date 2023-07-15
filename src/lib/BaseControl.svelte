@@ -1,11 +1,11 @@
 <script lang="ts">
-    import contacts from "../data/contacts.yaml"
-    import { tagDataMap, darkModeSetting, isDarkMode } from "../store"
-    import { DarkModeOptionsEnum } from "../common"
+    import contacts from "src/data/contacts.yaml"
+    import { tagDataMap, darkModeSetting, isDarkMode } from "src/store"
+    import { DarkModeOptionsEnum } from "src/common"
     import {
         storeDarkModeSettingToLocalStorage,
         handleDarkModeSettingChange,
-    } from "../utils/darkModeSettingUtils"
+    } from "src/utils/darkModeSettingUtils"
 
     const DARK_MODE_LABEL_DISPLAY_TIME = 2000
 

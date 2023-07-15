@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { isDarkMode } from "../store"
+    import { isDarkMode } from "src/store"
 </script>
 
 <template lang="pug">

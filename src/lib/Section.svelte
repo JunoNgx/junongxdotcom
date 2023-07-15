@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { isDarkMode } from "../store"
     import { marked } from 'marked'
+    import { isDarkMode } from "src/store"
 
     export let entry: Entry
 
