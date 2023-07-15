@@ -21,7 +21,7 @@
         darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
     }
 
-    const displayUpdateDarkModeSettingLabel = () => {
+    const displayDarkModeSettingLabel = () => {
         shouldDisplayDarkModeSettingLabel = true
         clearTimeout(darkModeSettingLabelDisplayTimeout)
         darkModeSettingLabelDisplayTimeout = setTimeout(() => {
@@ -44,7 +44,7 @@
         storeDarkModeSettingToLocalStorage(newValue)
         handleDarkModeSettingChange()
         updateDarkModeSettingLabel()
-        displayUpdateDarkModeSettingLabel()
+        displayDarkModeSettingLabel()
     }
 
     updateDarkModeSettingLabel()
