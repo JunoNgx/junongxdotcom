@@ -7,7 +7,13 @@
     import Section from "./lib/Section.svelte"
 
     import content from "./data/content.yaml"
-    import { entryList, tagDataMap, isDarkMode, displayedEntryList } from "./store"
+    import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
+    import {
+        retrieveDarkModeSettingFromLocalStorage,
+        handleDarkModeSettingChange
+    } from "./utils/darkModeSettingUtils"
+
+    import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);
@@ -35,14 +41,8 @@
     setFullEntryList(content)
     generateTagDataMap($entryList)
 
-    if (localStorage.getItem('isDarkMode')) {
-        const storedValue = JSON.parse(localStorage.getItem('isDarkMode'))
-
-        isDarkMode.set(storedValue)
-
-        if (storedValue) document.body.classList.add("is-dark")
-        else document.body.classList.remove("is-dark")
-    }
+    retrieveDarkModeSettingFromLocalStorage()
+    handleDarkModeSettingChange()
 
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>

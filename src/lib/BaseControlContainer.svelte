@@ -15,13 +15,13 @@
 
 <template lang="pug">
     .control-container(class!="{$isDarkMode ? 'control-container--is-dark' : ''}")
-        .control-container__icon-container(on:click!="{handleSwitchExpand}")
+        button.control-container__expand-button(on:click!="{handleSwitchExpand}" aria-label!="Expand toggle button")
             svg.control-container__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                 line.icon-line1(class!="{isExpanded ? 'icon-line1--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
                 line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
                 line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
-        .control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}")
+        button.control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}" aria-label!="Hidden collapse trigger button" aria-hidden="true")
         .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
             .control-container__content
                 Control
@@ -32,13 +32,15 @@
     @use '../styles/mixins' as m
 
     .control-container
-        &__icon-container
+        &__expand-button,
+        &__collapse-trigger
             display: none
 
         +m.mobile
             display: block
 
-            &__icon-container
+            &__expand-button
+                border-width: 0
                 z-index: 1
                 position: fixed
                 top: 1.5rem
@@ -75,6 +77,8 @@
                         transform: rotate(-45deg) translate(-50%, 0)
 
             &__collapse-trigger
+                border-width: 0
+                background-color: transparent
                 width: 100vw
                 height: 100vh
                 top: 0
