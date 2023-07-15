@@ -33,16 +33,15 @@ const handleOsSettingsListeners = () => {
     const preferDarkMediaQueryList = window.matchMedia?.("(prefers-color-scheme: dark)")
 
     if (currDarkModeSetting === DarkModeOptionsEnum.OS) {
-        preferDarkMediaQueryList.addEventListener("change", () => {
-            isDarkMode.set(processShouldBeDarkMode(currDarkModeSetting))
-            processDocumentBodyFromDarkMode(get(isDarkMode))
-        });
+        preferDarkMediaQueryList.addEventListener("change", handlePreferDarkQueryChange);
     } else {
-        preferDarkMediaQueryList.removeEventListener("change", () => {
-            isDarkMode.set(processShouldBeDarkMode(currDarkModeSetting))
-            processDocumentBodyFromDarkMode(get(isDarkMode))
-        });
+        preferDarkMediaQueryList.removeEventListener("change", handlePreferDarkQueryChange);
     }
+}
+
+const handlePreferDarkQueryChange = () => {
+    isDarkMode.set(processShouldBeDarkMode(get(darkModeSetting)))
+    processDocumentBodyFromDarkMode(get(isDarkMode))
 }
 
 const handleDarkModeSettingChange = () => {
