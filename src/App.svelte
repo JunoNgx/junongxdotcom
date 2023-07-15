@@ -13,6 +13,7 @@
         processShouldBeDarkMode,
         processDocumentBodyFromDarkMode,
         handleOsSettingsListeners,
+        handleDarkModeSettingChange
     } from "./logic/funcs"
 
     import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
@@ -42,10 +43,12 @@
 
     setFullEntryList(content)
     generateTagDataMap($entryList)
+
     retrieveDarkModeSettingFromLocalStorage()
-    isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
-    processDocumentBodyFromDarkMode($isDarkMode)
-    handleOsSettingsListeners()
+    // isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
+    // processDocumentBodyFromDarkMode($isDarkMode)
+    // handleOsSettingsListeners()
+    handleDarkModeSettingChange()
 
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>

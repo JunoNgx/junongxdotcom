@@ -51,10 +51,17 @@ const handleOsSettingsListeners = () => {
     }
 }
 
+const handleDarkModeSettingChange = () => {
+    isDarkMode.set(processShouldBeDarkMode(get(darkModeSetting)))
+    processDocumentBodyFromDarkMode(get(isDarkMode))
+    handleOsSettingsListeners()
+}
+
 export {
     retrieveDarkModeSettingFromLocalStorage,
     writeDarkModeSettingToLocalStorage,
     processShouldBeDarkMode,
     processDocumentBodyFromDarkMode,
     handleOsSettingsListeners,
+    handleDarkModeSettingChange,
 }
