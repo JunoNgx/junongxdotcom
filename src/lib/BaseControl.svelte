@@ -152,21 +152,6 @@
             &-container
                 display: inline-block
                 margin-left: 1rem
-                // background-color: indianred
-                // position: relative
-                // width: 22px
-                // height: 22px
-                // white-space: nowrap
-                // padding: 2px
-                // cursor: pointer
-                // border: 1px solid transparent
-                // transition: border v.$trans-time-default ease-out
-                // overflow: hidden
-
-                // &:hover
-                //     border: 1px solid v.$col-pri
-                //     .control--is-dark &
-                //         border: 1px solid v.$col-pri-dark
 
             &-indicator
                 position: absolute
@@ -184,13 +169,6 @@
 
                 &--shift-two
                     translate: 64px
-                // position: absolute
-                // white-space: nowrap
-                // transform: translateX(0)
-                // transition: transform v.$trans-time-default ease-out
-
-                // &--is-dark
-                //     transform: translateX(-23px)
 
             &-button
                 background-color: transparent
@@ -209,8 +187,6 @@
             &-icon-svg
                 display: inline-block
                 vertical-align: middle
-                // margin: 1px
-                // background-color: cyan
                 stroke: v.$col-pri
 
                 .control--is-dark &
