@@ -7,7 +7,11 @@
         handleDarkModeSettingChange,
     } from "../utils/darkModeSettingUtils"
 
+    const DARK_MODE_LABEL_DISPLAY_TIME = 2000
+
     let darkModeSettingLabel: string
+    let shouldDisplayDarkModeSettingLabel: boolean = false
+    let darkModeSettingLabelDisplayTimeout: ReturnType<typeof setTimeout>
     const darkModeSettingLabelOptions = [
         "os settings",
         "light mode",
@@ -15,6 +19,14 @@
     ]
     const updateDarkModeSettingLabel = () => {
         darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
+    }
+
+    const displayUpdateDarkModeSettingLabel = () => {
+        shouldDisplayDarkModeSettingLabel = true
+        clearTimeout(darkModeSettingLabelDisplayTimeout)
+        darkModeSettingLabelDisplayTimeout = setTimeout(() => {
+            shouldDisplayDarkModeSettingLabel = false
+        }, DARK_MODE_LABEL_DISPLAY_TIME)
     }
 
     const switchTagData = (tag: string) => {
@@ -32,6 +44,7 @@
         storeDarkModeSettingToLocalStorage(newValue)
         handleDarkModeSettingChange()
         updateDarkModeSettingLabel()
+        displayUpdateDarkModeSettingLabel()
     }
 
     updateDarkModeSettingLabel()
@@ -52,7 +65,7 @@
             h2.control__settings-title Settings
             // Dark mode control
             .control__settings-dark-mode
-                span.control__settings-dark-mode-text {darkModeSettingLabel}
+                span.control__settings-dark-mode-label(class!="{shouldDisplayDarkModeSettingLabel ? 'control__settings-dark-mode-label--is-displayed' : ''}") {darkModeSettingLabel}
                 .control__settings-dark-mode-container
                     .control__settings-dark-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__settings-dark-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__settings-dark-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__settings-dark-mode-indicator--shift-two' : ''}")
 
@@ -149,8 +162,13 @@
                 +title--is-dark
 
         &__settings-dark-mode
-            &-text
+            &-label
                 vertical-align: middle
+                opacity: 0
+                +m.transition(opacity)
+
+                &--is-displayed
+                    opacity: 1
 
             &-container
                 display: inline-block
