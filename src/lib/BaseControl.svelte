@@ -22,12 +22,6 @@
         storeDarkModeSettingToLocalStorage(newValue)
         handleDarkModeSettingChange()
     }
-
-    // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
-    //     console.log(e)
-    //     if (e.code !== "Enter" && e.code !== "Space") return;
-    //     switchDarkModeOption(newValue)
-    // }
 </script>
 
 <template lang="pug">
