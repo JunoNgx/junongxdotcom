@@ -8,6 +8,11 @@ declare type Entry = {
     links: CtaLink[]
 }
 
+declare type CtaLink = {
+    label: string,
+    url: string
+}
+
 declare type TagData = {
     tag: string,
     isDisplayed: Boolean
