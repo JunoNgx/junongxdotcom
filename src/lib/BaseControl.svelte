@@ -4,9 +4,10 @@
     import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
     import {
         writeDarkModeSettingToLocalStorage,
-        processShouldBeDarkMode,
-        processDocumentBodyFromDarkMode,
-        handleOsSettingsListeners,
+        // processShouldBeDarkMode,
+        // processDocumentBodyFromDarkMode,
+        // handleOsSettingsListeners,
+        handleDarkModeSettingChange,
     } from "../logic/funcs"
 
     const switchTagData = (tag: string) => {
@@ -22,9 +23,10 @@
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
         darkModeSetting.set(newValue)
         writeDarkModeSettingToLocalStorage(newValue)
-        isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
-        processDocumentBodyFromDarkMode($isDarkMode)
-        handleOsSettingsListeners()
+        // isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
+        // processDocumentBodyFromDarkMode($isDarkMode)
+        // handleOsSettingsListeners()
+        handleDarkModeSettingChange()
     }
 
     // const handleKeyPress = (e: KeyboardEvent, newValue: DarkModeOptionsEnum) => {
