@@ -13,7 +13,7 @@
         handleDarkModeSettingChange
     } from "./utils/darkModeSettingUtils"
 
-    import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
+    import { DarkModeOptionsEnum } from "./common";
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);

@@ -4,4 +4,4 @@ enum DarkModeOptionsEnum {
     DARK = 2
 }
 
-export default DarkModeOptionsEnum
+export { DarkModeOptionsEnum }

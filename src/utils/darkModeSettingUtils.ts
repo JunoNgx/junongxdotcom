@@ -1,7 +1,5 @@
 import { get } from "svelte/store"
-
-import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum"
-
+import { DarkModeOptionsEnum } from "../common"
 import { darkModeSetting, isDarkMode } from "../store"
 
 const retrieveDarkModeSettingFromLocalStorage = () => {
