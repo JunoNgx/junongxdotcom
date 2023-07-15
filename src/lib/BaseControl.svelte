@@ -17,6 +17,7 @@
         "light mode",
         "dark mode"
     ]
+
     const updateDarkModeSettingLabel = () => {
         darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
     }
