@@ -158,6 +158,7 @@
 
         &__expand-button
             +m.button
+            width: 60px
 
             +m.mobile
                 font-size: v.$font-size-mobile
