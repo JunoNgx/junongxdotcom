@@ -166,6 +166,7 @@
             &-label
                 vertical-align: middle
                 opacity: 0
+                user-select: none
                 +m.transition(opacity)
 
                 &--is-displayed
