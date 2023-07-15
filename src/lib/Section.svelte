@@ -159,15 +159,16 @@
         &__expand-button
             +m.button
 
+            +m.mobile
+                font-size: v.$font-size-mobile
+
             .section--is-dark &
                 +m.button-dark
+
 
         +m.mobile
             margin: 2rem 0.5rem
             max-width: none
-
-            .section__buttons__expand-btn
-                font-size: v.$font-size-mobile
 
     :global(.section__content p:first-child)
         margin-top: 0
