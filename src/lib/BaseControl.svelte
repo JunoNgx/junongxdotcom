@@ -7,6 +7,16 @@
         handleDarkModeSettingChange,
     } from "../utils/darkModeSettingUtils"
 
+    let darkModeSettingLabel: string
+    const darkModeSettingLabelOptions = [
+        "os settings",
+        "light mode",
+        "dark mode"
+    ]
+    const updateDarkModeSettingLabel = () => {
+        darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
+    }
+
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
         tagDataMap.set($tagDataMap)
@@ -21,7 +31,10 @@
         darkModeSetting.set(newValue)
         storeDarkModeSettingToLocalStorage(newValue)
         handleDarkModeSettingChange()
+        updateDarkModeSettingLabel()
     }
+
+    updateDarkModeSettingLabel()
 </script>
 
 <template lang="pug">
@@ -39,7 +52,7 @@
             h2.control__settings-title Settings
             // Dark mode control
             .control__settings-dark-mode
-                span.control__settings-dark-mode-text os settings
+                span.control__settings-dark-mode-text {darkModeSettingLabel}
                 .control__settings-dark-mode-container
                     .control__settings-dark-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__settings-dark-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__settings-dark-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__settings-dark-mode-indicator--shift-two' : ''}")
 
