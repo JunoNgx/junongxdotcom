@@ -83,13 +83,13 @@
 
                 .control__settings-tags-list
                     +each("[...$tagDataMap] as [tag, isDisplayed]")
-                        .control__settings-tags-item(class!="{isDisplayed ? 'control__settings-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
-                            span {tag}
+                        button.control__settings-tags-item(class!="{isDisplayed ? 'control__settings-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
+                            span.control__settings-tags-item-label {tag}
                             +if('isDisplayed')
-                                svg.control__settings-tags-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                svg.control__settings-tags-item-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                     polyline(points="20 6 9 17 4 12")
                                 +else()
-                                    svg.ccontrol__settings-tags-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                    svg.ccontrol__settings-tags-item-checkmark(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                                         line(x1="18" y1="6" x2="6" y2="18")
                                         line(x1="6" y1="6" x2="18" y2="18")
 </template>
@@ -216,15 +216,16 @@
                 font-size: 12px
 
                 display: flex
-                flex-flow: row wrap
+                flex-flow: row nowrap
                 justify-content: space-between
                 align-items: center
                 gap: 0.15rem
-
                 +m.transition(color, background-color)
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
+                    color: v.$col-pri-dark
+                    background-color: v.$col-bg-dark
 
                 &--selected
                     color: v.$col-bg
@@ -233,7 +234,7 @@
                         color: v.$col-bg-dark
                         background-color: v.$col-pri-dark
 
-            &-checkmark
+            &-item-checkmark
                 display: block
 
 </style>
