@@ -1,7 +1,7 @@
 <script lang="ts">
     import contacts from "../data/contacts.yaml"
     import { tagDataMap, darkModeSetting, isDarkMode } from "../store"
-    import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
+    import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum"
     import {
         storeDarkModeSettingToLocalStorage,
         handleDarkModeSettingChange,
