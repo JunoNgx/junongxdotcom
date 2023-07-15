@@ -21,7 +21,7 @@
                 line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
                 line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
-        button.control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}" aria-label!="Collapse trigger button" aria-hidden="true")
+        button.control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}" aria-label!="Hidden collapse trigger button" aria-hidden="true")
         .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
             .control-container__content
                 Control
