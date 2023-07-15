@@ -29,10 +29,9 @@ const processDocumentBodyFromDarkMode = (isDarkMode: boolean) => {
 }
 
 const handleOsSettingsListeners = () => {
-    const currDarkModeSetting = get(darkModeSetting)
     const preferDarkMediaQueryList = window.matchMedia?.("(prefers-color-scheme: dark)")
 
-    if (currDarkModeSetting === DarkModeOptionsEnum.OS) {
+    if (get(darkModeSetting) === DarkModeOptionsEnum.OS) {
         preferDarkMediaQueryList.addEventListener("change", handlePreferDarkQueryChange);
     } else {
         preferDarkMediaQueryList.removeEventListener("change", handlePreferDarkQueryChange);
