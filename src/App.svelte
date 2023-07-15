@@ -11,7 +11,7 @@
     import {
         retrieveDarkModeSettingFromLocalStorage,
         handleDarkModeSettingChange
-    } from "./logic/funcs"
+    } from "./utils/darkModeSettingUtils"
 
     import DarkModeOptionsEnum from "./types/DarkModeOptionsEnum";
 

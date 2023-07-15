@@ -5,7 +5,7 @@
     import {
         writeDarkModeSettingToLocalStorage,
         handleDarkModeSettingChange,
-    } from "../logic/funcs"
+    } from "../utils/darkModeSettingUtils"
 
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
