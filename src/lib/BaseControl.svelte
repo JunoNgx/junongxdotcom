@@ -4,9 +4,6 @@
     import DarkModeOptionsEnum from "../types/DarkModeOptionsEnum";
     import {
         writeDarkModeSettingToLocalStorage,
-        // processShouldBeDarkMode,
-        // processDocumentBodyFromDarkMode,
-        // handleOsSettingsListeners,
         handleDarkModeSettingChange,
     } from "../logic/funcs"
 
@@ -23,9 +20,6 @@
     const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
         darkModeSetting.set(newValue)
         writeDarkModeSettingToLocalStorage(newValue)
-        // isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
-        // processDocumentBodyFromDarkMode($isDarkMode)
-        // handleOsSettingsListeners()
         handleDarkModeSettingChange()
     }
 

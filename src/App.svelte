@@ -10,9 +10,6 @@
     import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
     import {
         retrieveDarkModeSettingFromLocalStorage,
-        processShouldBeDarkMode,
-        processDocumentBodyFromDarkMode,
-        handleOsSettingsListeners,
         handleDarkModeSettingChange
     } from "./logic/funcs"
 
@@ -45,9 +42,6 @@
     generateTagDataMap($entryList)
 
     retrieveDarkModeSettingFromLocalStorage()
-    // isDarkMode.set(processShouldBeDarkMode($darkModeSetting))
-    // processDocumentBodyFromDarkMode($isDarkMode)
-    // handleOsSettingsListeners()
     handleDarkModeSettingChange()
 
     // Specifically handle the creative conding canvas
