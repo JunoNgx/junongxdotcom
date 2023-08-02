@@ -235,24 +235,15 @@
                 gap: 0.5rem
 
             &-item
-                border: 1px solid v.$col-pri
                 border-radius: 1rem
                 padding: 0.1rem 0.5rem
                 height: 1.2rem
                 cursor: pointer
-
                 display: flex
                 flex-flow: row nowrap
                 justify-content: space-between
                 align-items: center
                 gap: 0.15rem
-                background-color: transparent
-
-                +m.transition(color, background-color)
-
-                .control--is-dark &
-                    border: 1px solid v.$col-pri-dark
-                    color: v.$col-pri-dark
 
                 &-label
                     display: block
@@ -263,12 +254,36 @@
                     margin-top: 1px
                     display: block
 
+                // States transitions
+                background-color: transparent
+                border: 1px solid v.$col-pri
+                +m.transition(background-color, border-color)
+
+                &-label, &-icon
+                    color: v.$col-pri
+                    +m.transition(color)
+
                 &--selected
-                    color: v.$col-bg
                     background-color: v.$col-pri
-                    .control--is-dark &
-                        color: v.$col-bg-dark
+
+                    & .control__settings-tags-item-label,
+                    & .control__settings-tags-item-icon
+                        color: v.$col-bg
+
+                .control--is-dark &
+                    border: 1px solid v.$col-pri-dark
+                    color: v.$col-pri-dark
+
+                    & .control__settings-tags-item-label,
+                    & .control__settings-tags-item-icon
+                        color: v.$col-pri-dark
+
+                    &--selected
                         background-color: v.$col-pri-dark
+
+                        & .control__settings-tags-item-label,
+                        & .control__settings-tags-item-icon
+                            color: v.$col-bg-dark
 
 
 </style>
