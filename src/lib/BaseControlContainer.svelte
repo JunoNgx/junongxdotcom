@@ -104,7 +104,7 @@
                 transition: clip-path 300ms ease-out
 
                 &--is-expanded
-                    clip-path: circle(90vh at calc(100% - 3rem) calc(3rem))
+                    clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
 
                 .control-container--is-dark &
                     background-color: v.$col-acc-dark
