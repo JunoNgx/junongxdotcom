@@ -254,6 +254,15 @@
                     border: 1px solid v.$col-pri-dark
                     color: v.$col-pri-dark
 
+                &-label
+                    display: block
+                    font-size: 10px
+                    font-family: monospace
+
+                &-icon
+                    margin-top: 1px
+                    display: block
+
                 &--selected
                     color: v.$col-bg
                     background-color: v.$col-pri
@@ -261,13 +270,5 @@
                         color: v.$col-bg-dark
                         background-color: v.$col-pri-dark
 
-            &-item-label
-                display: block
-                font-size: 10px
-                font-family: monospace
-
-            &-item-icon
-                margin-top: 1px
-                display: block
 
 </style>
