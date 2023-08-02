@@ -17,9 +17,9 @@
     .control-container(class!="{$isDarkMode ? 'control-container--is-dark' : ''}")
         button.control-container__expand-button(on:click!="{handleSwitchExpand}" aria-label!="Expand toggle button")
             svg.control-container__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                line.icon-line1(class!="{isExpanded ? 'icon-line1--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
-                line.icon-line2(class!="{isExpanded ? 'icon-line2--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
-                line.icon-line3(class!="{isExpanded ? 'icon-line3--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
+                line.icon-line.icon-line--1(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
+                line.icon-line.icon-line--2(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
+                line.icon-line.icon-line--3(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
 
         button.control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}" aria-label!="Hidden collapse trigger button" aria-hidden="true")
         .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
@@ -60,21 +60,23 @@
                 .control-container--is-dark &
                     color: v.$col-pri-dark
                     background-color: v.$col-acc-dark
-
-                .icon-line1
-                    transition: transform v.$trans-time-default ease-out
-                    &--is-expanded
-                        transform: rotate(45deg) translate(22.5%, -22.5%)
                 
-                .icon-line2
-                    transition: opacity v.$trans-time-default ease-out
-                    &--is-expanded
-                        opacity: 0
+                .icon-line
+                    transform-origin: center
+                    &--1
+                        transition: transform v.$trans-time-default ease-in-out
+                        &.icon-line--is-expanded
+                            transform: rotate(405deg) translate(0%, 25%)
+                    
+                    &--2
+                        transition: opacity v.$trans-time-default ease-in-out
+                        &.icon-line--is-expanded
+                            opacity: 0
 
-                .icon-line3
-                    transition: transform v.$trans-time-default ease-out
-                    &--is-expanded
-                        transform: rotate(-45deg) translate(-50%, 0)
+                    &--3
+                        transition: transform v.$trans-time-default ease-in-out
+                        &.icon-line--is-expanded
+                            transform: rotate(-45deg) translate(0%, -25%)
 
             &__collapse-trigger
                 border-width: 0
