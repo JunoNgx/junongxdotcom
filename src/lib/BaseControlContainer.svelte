@@ -69,9 +69,9 @@
                             transform: rotate(405deg) translate(0%, 25%)
                     
                     &--2
-                        transition: opacity v.$trans-time-icon-expand-animation ease-in-out
+                        transition: transform v.$trans-time-icon-expand-animation ease-in-out
                         &.icon-line--is-expanded
-                            opacity: 0
+                            transform: rotate(75deg) translate(-30%, 75%)
 
                     &--3
                         transition: transform v.$trans-time-icon-expand-animation ease-in-out
