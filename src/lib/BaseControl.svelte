@@ -272,7 +272,6 @@
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
-                    color: v.$col-pri-dark
 
                     & .control__settings-tags-item-label,
                     & .control__settings-tags-item-icon
