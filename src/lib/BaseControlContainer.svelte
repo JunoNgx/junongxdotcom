@@ -64,17 +64,17 @@
                 .icon-line
                     transform-origin: center
                     &--1
-                        transition: transform v.$trans-time-default ease-in-out
+                        transition: transform v.$trans-time-icon-expand-animation ease-in-out
                         &.icon-line--is-expanded
                             transform: rotate(405deg) translate(0%, 25%)
                     
                     &--2
-                        transition: opacity v.$trans-time-default ease-in-out
+                        transition: opacity v.$trans-time-icon-expand-animation ease-in-out
                         &.icon-line--is-expanded
                             opacity: 0
 
                     &--3
-                        transition: transform v.$trans-time-default ease-in-out
+                        transition: transform v.$trans-time-icon-expand-animation ease-in-out
                         &.icon-line--is-expanded
                             transform: rotate(-45deg) translate(0%, -25%)
 
