@@ -135,7 +135,7 @@
         text-align: right
 
         // Contact list
-        &__contact, &__settings
+        &__contact
             display: flex
             flex-flow: column nowrap
             align-items: flex-end
@@ -158,12 +158,17 @@
             +m.mobile
                 text-decoration: underline
 
+        // Display mode
+        &__settings
+            display: flex
+            flex-flow: column nowrap
+            align-items: flex-end
+
         &__settings-title
             +title
             .control--is-dark &
                 +title--is-dark
 
-        // Display mode
         &__settings-dark-mode
             &-label
                 vertical-align: middle
