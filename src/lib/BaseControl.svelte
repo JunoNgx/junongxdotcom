@@ -93,25 +93,22 @@
                         svg.control__display-mode-icon-svg.control__display-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
-            .control__settings-tags
-
-                p.control__settings-tags-title Filter by tags
-
-                .control__settings-tags-buttons-container
-                    button.control__settings-tags-button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
-                    button.control__settings-tags-button(type="button" on:click!="{() => {checkAll(true)}}") Check all
-
-                .control__settings-tags-list
-                    +each("[...$tagDataMap] as [tag, isDisplayed]")
-                        button.control__settings-tags-item(class!="{isDisplayed ? 'control__settings-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
-                            span.control__settings-tags-item-label {tag}
-                            +if('isDisplayed')
-                                svg.control__settings-tags-item-icon.control__settings-tags-item-icon--is-selected(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                    polyline(points="20 6 9 17 4 12")
-                                +else()
-                                    svg.control__settings-tags-item-icon(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                        line(x1="18" y1="6" x2="6" y2="18")
-                                        line(x1="6" y1="6" x2="18" y2="18")
+        .control__filter-tags-wrapper
+            h2.control__filter-tags-title Filter by tags
+            .control__filter-tags-buttons-container
+                button.control__filter-tags-button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
+                button.control__filter-tags-button(type="button" on:click!="{() => {checkAll(true)}}") Check all
+            .control__filter-tags-list
+                +each("[...$tagDataMap] as [tag, isDisplayed]")
+                    button.control__filter-tags-item(class!="{isDisplayed ? 'control__filter-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
+                        span.control__filter-tags-item-label {tag}
+                        +if('isDisplayed')
+                            svg.control__filter-tags-item-icon.control__filter-tags-item-icon--is-selected(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                polyline(points="20 6 9 17 4 12")
+                            +else()
+                                svg.control__filter-tags-item-icon(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                                    line(x1="18" y1="6" x2="6" y2="18")
+                                    line(x1="6" y1="6" x2="18" y2="18")
 </template>
 
 <style lang="sass">
@@ -224,9 +221,14 @@
                     stroke: v.$col-pri-dark
 
         // Tag filter
-        &__settings-tags
+        &__filter-tags-wrapper
+            +wrapper 
+
+        &__filter-tags
             &-title
-                margin-bottom: 0.5rem
+                +title
+                .control--is-dark &
+                    +title--is-dark
 
             &-buttons-container
                 margin-bottom: 0.5rem
@@ -275,22 +277,22 @@
                 &--selected
                     background-color: v.$col-pri
 
-                    & .control__settings-tags-item-label,
-                    & .control__settings-tags-item-icon
+                    & .control__filter-tags-item-label,
+                    & .control__filter-tags-item-icon
                         color: v.$col-bg
 
                 .control--is-dark &
                     border: 1px solid v.$col-pri-dark
 
-                    & .control__settings-tags-item-label,
-                    & .control__settings-tags-item-icon
+                    & .control__filter-tags-item-label,
+                    & .control__filter-tags-item-icon
                         color: v.$col-pri-dark
 
                     &--selected
                         background-color: v.$col-pri-dark
 
-                        & .control__settings-tags-item-label,
-                        & .control__settings-tags-item-icon
+                        & .control__filter-tags-item-label,
+                        & .control__filter-tags-item-icon
                             color: v.$col-bg-dark
 
 
