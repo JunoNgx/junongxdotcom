@@ -68,7 +68,9 @@
 
             section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
                 div.contact-me-content
-                    p Would you like to say hello?
+                    p.contact-me-say-hello Would you like to say hello?
+                    p.contact-me-contact-dir My contacts are to the left ←
+                    p.contact-me-contact-dir.contact-me-contact-dir--is-mobile My contacts are in the menu ↑
     Footer
 </template>
 
@@ -176,14 +178,18 @@
                 border: 2px solid v.$col-pri
                 margin: 1rem
                 padding: 1rem 1.5rem
-
-                &:after 
-                    content: "My contacts are to the left ←"
+            
+            &-contact-dir
+                display: block
+                &--is-mobile
+                    display: none
 
             +m.mobile
-                &-content
-                    &:after 
-                        content: "My contacts are in the menu ↑"
+                &-contact-dir
+                    display: none
+                    &--is-mobile
+                        display: block
+                
 
             &.is-dark
                 .contact-me-content
