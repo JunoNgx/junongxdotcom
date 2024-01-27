@@ -80,6 +80,9 @@
     @use './styles/vars' as v
     @use './styles/mixins' as m
 
+    :global(html)
+        overflow-y: scroll
+
     :global(body)
         font-family: v.$fonts
         font-size: v.$font-size
