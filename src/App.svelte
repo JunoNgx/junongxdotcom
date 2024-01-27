@@ -67,8 +67,10 @@
                     p.no-content You have filtered out everything and there is nothing left to be displayed.
 
             section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
-                div.contact-me-content
-                    p Would you like to say hello?
+                div.contact-me__content
+                    p.contact-me__say-hello Would you like to say hello?
+                    p.contact-me__contact-dir My contacts are to the left ←
+                    p.contact-me__contact-dir.contact-me__contact-dir--is-mobile My contacts are in the menu ↑
     Footer
 </template>
 
@@ -172,18 +174,22 @@
             p
                 margin: 0
 
-            &-content
+            &__content
                 border: 2px solid v.$col-pri
                 margin: 1rem
                 padding: 1rem 1.5rem
-
-                &:after 
-                    content: "My contacts are to the left ←"
+            
+            &__contact-dir
+                display: block
+                &--is-mobile
+                    display: none
 
             +m.mobile
-                &-content
-                    &:after 
-                        content: "My contacts are in the menu ↑"
+                &__contact-dir
+                    display: none
+                    &--is-mobile
+                        display: block
+                
 
             &.is-dark
                 .contact-me-content
