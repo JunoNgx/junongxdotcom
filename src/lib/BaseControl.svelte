@@ -117,7 +117,7 @@
 
     @mixin title
         font-size: 1.2rem
-        margin: 2rem 0 0.75rem
+        margin: 0.75rem 0
         padding: 0.1rem 0.25rem
         border-bottom: 2px dashed v.$col-pri
         border-top: 2px dashed v.$col-pri
@@ -134,6 +134,11 @@
         align-items: flex-end
     
     .control
+        margin-top: 2rem
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        gap: 2rem
 
         // Contact list
         &__contact-wrapper
