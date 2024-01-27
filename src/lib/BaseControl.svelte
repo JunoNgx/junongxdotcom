@@ -139,6 +139,9 @@
         flex-direction: column
         flex-wrap: nowrap
         gap: 2rem
+        +m.mobile
+            margin-top: 0
+            gap: 1.25rem
 
         // Contact list
         &__contact-wrapper
@@ -148,9 +151,6 @@
             +title
             .control--is-dark &
                 +title--is-dark
-            +m.mobile
-                margin-top: 1rem
-
 
         &__contact-list
             display: flex
