@@ -134,6 +134,7 @@
     .control
         text-align: right
 
+        // Contact list
         &__contact, &__settings
             display: flex
             flex-flow: column nowrap
@@ -162,6 +163,7 @@
             .control--is-dark &
                 +title--is-dark
 
+        // Display mode
         &__settings-dark-mode
             &-label
                 vertical-align: middle
@@ -215,6 +217,7 @@
                 .control--is-dark &
                     stroke: v.$col-pri-dark
 
+        // Tag filter
         &__settings-tags
             &-title
                 margin-bottom: 0.5rem
