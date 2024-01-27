@@ -62,23 +62,22 @@
                     +each("contacts as contact")
                         a.control__contact-item(rel="noopener noreferrer" target="_blank" href!="{contact.url}") {contact.label}
 
-        .control__settings
-            h2.control__settings-title Settings
-            // Dark mode control
-            .control__settings-dark-mode
-                span.control__settings-dark-mode-label(class!="{shouldDisplayDarkModeSettingLabel ? 'control__settings-dark-mode-label--is-displayed' : ''}") {darkModeSettingLabel}
-                .control__settings-dark-mode-container
-                    .control__settings-dark-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__settings-dark-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__settings-dark-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__settings-dark-mode-indicator--shift-two' : ''}")
+        .control__display-mode-wrapper
+            h2.control__display-mode-title Settings
+            .control__display-mode
+                span.control__display-mode-label(class!="{shouldDisplayDarkModeSettingLabel ? 'control__display-mode-label--is-displayed' : ''}") {darkModeSettingLabel}
+                .control__display-mode-option-list
+                    .control__display-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__display-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__display-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__display-mode-indicator--shift-two' : ''}")
 
-                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.OS)}" aria-label="Switch to dark mode option: uses OS Settings")
+                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.OS)}" aria-label="Switch to dark mode option: uses OS Settings")
                         // Gear
-                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--os-settings(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--os-settings(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="3")
                             path(d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z")
 
-                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}" aria-label="Switch to dark mode option: Light mode")
+                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}" aria-label="Switch to dark mode option: Light mode")
                         // The sun
-                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             circle(cx="12" cy="12" r="5")
                             line(x1="12" y1="1" x2="12" y2="3")
                             line(x1="12" y1="21" x2="12" y2="23")
@@ -89,9 +88,9 @@
                             line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
                             line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
 
-                    button.control__settings-dark-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}" aria-label="Switch to dark mode option: Dark mode")
+                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}" aria-label="Switch to dark mode option: Dark mode")
                         // The moon
-                        svg.control__settings-dark-mode-icon-svg.control__settings-dark-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
                             path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
 
             .control__settings-tags
@@ -125,6 +124,7 @@
         padding: 0.1rem 0.25rem
         border-bottom: 2px dashed v.$col-pri
         border-top: 2px dashed v.$col-pri
+        width: fit-content
         +m.transition(border)
 
     @mixin title--is-dark
@@ -159,17 +159,17 @@
                 text-decoration: underline
 
         // Display mode
-        &__settings
+        &__display-mode-wrapper
             display: flex
             flex-flow: column nowrap
             align-items: flex-end
 
-        &__settings-title
+        &__display-mode-title
             +title
             .control--is-dark &
                 +title--is-dark
 
-        &__settings-dark-mode
+        &__display-mode
             &-label
                 vertical-align: middle
                 opacity: 0
@@ -179,7 +179,7 @@
                 &--is-displayed
                     opacity: 1
 
-            &-container
+            &-option-list
                 display: inline-block
                 margin-left: 1rem
 
