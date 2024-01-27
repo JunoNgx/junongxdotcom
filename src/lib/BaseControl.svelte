@@ -55,7 +55,7 @@
     
     .control(class!="{$isDarkMode ? 'control--is-dark' : ''}")
 
-        .control__contact
+        .control__contact-wrapper
             h2.control__contact-title Find me elsewhere
             .control__contact-list
                 +if("contacts.length")
@@ -131,14 +131,17 @@
         border-bottom: 2px dashed v.$col-pri-dark
         border-top: 2px dashed v.$col-pri-dark
     
+    @mixin wrapper
+        display: flex
+        flex-flow: column nowrap
+        align-items: flex-end
+    
     .control
         text-align: right
 
         // Contact list
-        &__contact
-            display: flex
-            flex-flow: column nowrap
-            align-items: flex-end
+        &__contact-wrapper
+            +wrapper
 
         &__contact-title
             +title
@@ -160,9 +163,7 @@
 
         // Display mode
         &__display-mode-wrapper
-            display: flex
-            flex-flow: column nowrap
-            align-items: flex-end
+            +wrapper
 
         &__display-mode-title
             +title
