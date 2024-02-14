@@ -47,7 +47,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 3s
+    $strip-anim-time: 4.5s
 
     .header
         display: flex
@@ -210,25 +210,25 @@
     @keyframes anim-strip-two
         0%
             width: 0
-        10%, 60%
+        10%, 40%
             width: 75%
-        80%
+        70%
             width: 0
 
     @keyframes anim-strip-three
         0%
             width: 0
-        10%, 45%
+        10%, 35%
             width: 50%
-        80%
+        60%
             width: 0
 
     @keyframes anim-strip-four
         0%
             width: 0
-        10%, 30%
+        10%, 15%
             width: 25%
-        80%
+        30%
             width: 0
 
 </style>
