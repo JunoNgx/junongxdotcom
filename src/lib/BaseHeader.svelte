@@ -4,7 +4,7 @@
 
 <template lang="pug">
     header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
-        div.header__name-container
+        .header__name-container
             h1.header__name
                 span.header__first-name-j J
                 span.header__first-name-u u
@@ -12,7 +12,7 @@
                 span.header__first-name-o o
                 | !{' '}
                 span.header__last-name Nguyen
-            div.header__underliner
+            .header__underliner
         p.header__desc.header__desc--title web engineer by day
         p.header__desc.header__desc--long-paragraph hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
