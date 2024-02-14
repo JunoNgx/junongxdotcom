@@ -3,7 +3,6 @@
     import { onMount } from "svelte";
 
     const animateStrip = () => {
-        console.log("animate strip")
         const stripContainer = document.querySelector(".header__strip-container")
         for (const strip of stripContainer.children) {
             strip.classList.remove("header__strip--is-animating")
