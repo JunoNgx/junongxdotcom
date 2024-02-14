@@ -103,16 +103,16 @@
 
             &--one
                 // width: 100%
-                background-color: indianred
+                background-color: v.$col-strip-1
             &--two
                 // width: 75%
-                background-color: mediumturquoise
+                background-color: v.$col-strip-2
             &--three
                 // width: 50%
-                background-color: lemonchiffon
+                background-color: v.$col-strip-3
             &--four
                 // width: 25%
-                background-color: mediumorchid
+                background-color: v.$col-strip-4
 
         &__desc
             margin-top: 0
