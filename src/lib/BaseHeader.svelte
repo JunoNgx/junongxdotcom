@@ -2,7 +2,7 @@
     import { isDarkMode } from "src/store"
     import { onMount } from "svelte";
 
-    const animateStrip = () => {
+    const restartStripAnimation = () => {
         const stripContainer = document.querySelector(".header__strip-container")
         for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
             stripEl.style.animation = "none"
@@ -26,7 +26,7 @@
 <template lang="pug">
     header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
         .header__name-container
-            h1.header__name(on:click!="{animateStrip}")
+            h1.header__name(on:click!="{restartStripAnimation}")
                 span.header__first-name-j J
                 span.header__first-name-u u
                 span.header__first-name-n n
