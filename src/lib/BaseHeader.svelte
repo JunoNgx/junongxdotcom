@@ -11,8 +11,15 @@
         }
     }
 
+    const enableStripAnimation = () => {
+        const stripContainer = document.querySelector(".header__strip-container")
+        for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
+            stripEl.classList.add("header__strip--can-animate")
+        }
+    }
+
     onMount(() => {
-        setTimeout(animateStrip, 3000)
+        setTimeout(enableStripAnimation, 3000)
     })
 </script>
 
@@ -97,19 +104,15 @@
             &--one
                 // width: 100%
                 background-color: indianred
-                animation: anim-strip-one $strip-anim-time ease-out 0s
             &--two
                 // width: 75%
                 background-color: mediumturquoise
-                animation: anim-strip-two $strip-anim-time ease-out 0s
             &--three
                 // width: 50%
                 background-color: lemonchiffon
-                animation: anim-strip-three $strip-anim-time ease-out 0s
             &--four
                 // width: 25%
                 background-color: mediumorchid
-                animation: anim-strip-four $strip-anim-time ease-out 0s
 
         &__desc
             margin-top: 0
@@ -133,6 +136,16 @@
 
             &--is-dark
                 border-left: 2px dashed v.$col-pri-dark
+
+    // Unhashed modifier classes
+    :global(.header__strip--can-animate.header__strip--one)
+        animation: anim-strip-one $strip-anim-time ease-out 0s
+    :global(.header__strip--can-animate.header__strip--two)
+        animation: anim-strip-two $strip-anim-time ease-out 0s
+    :global(.header__strip--can-animate.header__strip--three)
+        animation: anim-strip-three $strip-anim-time ease-out 0s
+    :global(.header__strip--can-animate.header__strip--four)
+        animation: anim-strip-four $strip-anim-time ease-out 0s
 
     // Animations
     @keyframes header__first-name-j
