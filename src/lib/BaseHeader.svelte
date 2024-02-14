@@ -4,7 +4,7 @@
 
 <template lang="pug">
     header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
-        div
+        div.header__name-container
             h1.header__name
                 span.header__first-name-j J
                 span.header__first-name-u u
@@ -12,7 +12,8 @@
                 span.header__first-name-o o
                 | !{' '}
                 span.header__last-name Nguyen
-        p.header__desc web engineer by day
+            div.header__underliner
+        p.header__desc.header__desc--title web engineer by day
         p.header__desc hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
 
@@ -25,13 +26,15 @@
     .header
         text-align: right
 
+        &__name-container
+            width: fit-content
+
         &__name
             display: inline-block
             margin: 0
             border-bottom-color: v.$col-pri
             border-bottom-style: solid
             border-bottom-width: 0
-            animation: name-frame-border $anim-time ease-out 0s
 
             .header--is-dark &
                 border-color: v.$col-pri-dark
@@ -57,6 +60,14 @@
 
             .header__last-name
                 animation: header__last-name $anim-time ease-out 0s
+
+        &__underliner
+            height: 1rem
+            animation: underliner-salutation $anim-time*2 ease-out 0s
+
+
+        &__desc--title
+            margin-top: 0
 
 
         +m.mobile
@@ -109,12 +120,17 @@
             opacity: 1
             transform: translateY(0)
 
-    @keyframes name-frame-border
-        0%, 80%
-            border-bottom-width: 0px
+    @keyframes underliner-salutation
+        0%, 70%
+            width: 0
+            background-color: transparent
         90%, 95%
-            border-bottom-width: 24px
+            width: 100%
+            background-color: red
         100%
-            border-bottom-width: 0px
+            width: 0
+            background-color: transparent
+
+
 
 </style>
