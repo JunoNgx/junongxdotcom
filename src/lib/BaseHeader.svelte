@@ -186,7 +186,7 @@
     @keyframes anim-strip-two
         0%
             width: 0
-        10%, 85%
+        10%, 80%
             width: 75%
         100%
             width: 0
@@ -202,7 +202,7 @@
     @keyframes anim-strip-four
         0%
             width: 0
-        10%, 60%
+        10%, 50%
             width: 25%
         100%
             width: 0
