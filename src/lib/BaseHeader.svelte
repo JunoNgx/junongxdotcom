@@ -119,6 +119,17 @@
             
             &--long-paragraph
                 text-align: right
+        
+        &--is-dark
+            .header__strip
+                &--one
+                    background-color: v.$col-strip-1-dark
+                &--two
+                    background-color: v.$col-strip-2-dark
+                &--three
+                    background-color: v.$col-strip-3-dark
+                &--four
+                    background-color: v.$col-strip-4-dark
 
         +m.mobile
             align-items: flex-start
