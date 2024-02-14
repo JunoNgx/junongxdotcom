@@ -26,7 +26,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 5s
+    $strip-anim-time: 7s
 
     .header
         display: flex
@@ -78,19 +78,19 @@
             height: 1rem
 
             &--one
-                width: 100%
+                // width: 100%
                 background-color: indianred
                 animation: anim-strip-one $strip-anim-time ease-out 0s
             &--two
-                width: 75%
+                // width: 75%
                 background-color: mediumturquoise
                 animation: anim-strip-two $strip-anim-time ease-out 0s
             &--three
-                width: 50%
+                // width: 50%
                 background-color: lemonchiffon
                 animation: anim-strip-three $strip-anim-time ease-out 0s
             &--four
-                width: 25%
+                // width: 25%
                 background-color: mediumorchid
                 animation: anim-strip-four $strip-anim-time ease-out 0s
 
@@ -153,36 +153,36 @@
             opacity: 1
             transform: translateY(0)
 
-    // @keyframes anim-strip-one
-    //     0%, 60%
-    //         width: 0
-    //     90%, 95%
-    //         width: 100%
-    //     100%
-    //         width: 0
+    @keyframes anim-strip-one
+        0%, 50%
+            width: 0
+        60%, 90%
+            width: 100%
+        100%
+            width: 0
 
-    // @keyframes anim-strip-two
-    //     0%, 60%
-    //         width: 0
-    //     90%, 95%
-    //         width: 75%
-    //     100%
-    //         width: 0
+    @keyframes anim-strip-two
+        0%, 50%
+            width: 0
+        60%, 87%
+            width: 75%
+        100%
+            width: 0
 
-    // @keyframes anim-strip-three
-    //     0%, 60%
-    //         width: 0
-    //     90%, 95%
-    //         width: 50%
-    //     100%
-    //         width: 0
+    @keyframes anim-strip-three
+        0%, 50%
+            width: 0
+        60%, 82%
+            width: 50%
+        100%
+            width: 0
 
-    // @keyframes anim-strip-four
-    //     0%, 70%
-    //         width: 0
-    //     90%, 95%
-    //         width: 25%
-    //     100%
-    //         width: 0
+    @keyframes anim-strip-four
+        0%, 50%
+            width: 0
+        60%, 94%
+            width: 25%
+        100%
+            width: 0
 
 </style>
