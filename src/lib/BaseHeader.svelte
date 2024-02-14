@@ -76,6 +76,8 @@
         &__strip
             position: absolute
             height: 1rem
+            left: auto
+            right: 0
 
             &--one
                 // width: 100%
@@ -106,6 +108,10 @@
             margin-top: 2rem
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
+
+            &__strip
+                left: 0
+                right: auto
 
             &__desc--long-paragraph
                 text-align: left
