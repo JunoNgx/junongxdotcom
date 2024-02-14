@@ -47,7 +47,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 4s
+    $strip-anim-time: 3s
 
     .header
         display: flex
@@ -115,7 +115,7 @@
                 background-color: v.$col-strip-4
 
         &__desc
-            margin-top: 0
+            margin-top: 0.25rem
             
             &--long-paragraph
                 text-align: right
@@ -202,7 +202,7 @@
     @keyframes anim-strip-one
         0%
             width: 0
-        10%, 90%
+        10%, 95%
             width: 100%
         100%
             width: 0
@@ -210,25 +210,25 @@
     @keyframes anim-strip-two
         0%
             width: 0
-        10%, 80%
+        10%, 60%
             width: 75%
-        100%
+        80%
             width: 0
 
     @keyframes anim-strip-three
         0%
             width: 0
-        10%, 65%
+        10%, 45%
             width: 50%
-        100%
+        80%
             width: 0
 
     @keyframes anim-strip-four
         0%
             width: 0
-        10%, 50%
+        10%, 30%
             width: 25%
-        100%
+        80%
             width: 0
 
 </style>
