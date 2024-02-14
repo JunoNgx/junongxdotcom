@@ -14,7 +14,7 @@
                 span.header__last-name Nguyen
             div.header__underliner
         p.header__desc.header__desc--title web engineer by day
-        p.header__desc hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
+        p.header__desc.header__desc--long-paragraph hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
 </template>
 
 <style lang="sass">
@@ -24,9 +24,12 @@
     $anim-time: 3s
 
     .header
-        text-align: right
+        display: flex
+        flex-direction: column
+        align-items: flex-end
 
         &__name-container
+            text-align: right
             width: fit-content
 
         &__name
@@ -65,17 +68,21 @@
             height: 1rem
             animation: underliner-salutation $anim-time*2 ease-out 0s
 
-
-        &__desc--title
+        &__desc
             margin-top: 0
-
+            
+            &--long-paragraph
+                text-align: right
 
         +m.mobile
-            text-align: left
+            align-items: flex-start
             margin-left: 0.5rem
             margin-top: 2rem
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
+
+            &__desc--long-paragraph
+                text-align: left
 
             &--is-dark
                 border-left: 2px dashed v.$col-pri-dark
