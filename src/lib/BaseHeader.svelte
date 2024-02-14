@@ -62,9 +62,6 @@
         &__name
             display: inline-block
             margin: 0
-            border-bottom-color: v.$col-pri
-            border-bottom-style: solid
-            border-bottom-width: 0
 
             .header--is-dark &
                 border-color: v.$col-pri-dark
