@@ -138,6 +138,9 @@
             padding-left: 1rem
             border-left: 2px dashed v.$col-pri
 
+            &__name-container
+                text-align: left
+
             &__strip
                 left: 0
                 right: auto
