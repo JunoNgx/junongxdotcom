@@ -11,7 +11,9 @@
         }
     }
 
-    onMount(animateStrip)
+    onMount(() => {
+        setTimeout(animateStrip, 3000)
+    })
 </script>
 
 <template lang="pug">
@@ -38,7 +40,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 7s
+    $strip-anim-time: 4s
 
     .header
         display: flex
@@ -179,33 +181,33 @@
             transform: translateY(0)
 
     @keyframes anim-strip-one
-        0%, 50%
+        0%
             width: 0
-        60%, 90%
+        10%, 90%
             width: 100%
         100%
             width: 0
 
     @keyframes anim-strip-two
-        0%, 50%
+        0%
             width: 0
-        60%, 87%
+        10%, 85%
             width: 75%
         100%
             width: 0
 
     @keyframes anim-strip-three
-        0%, 50%
+        0%
             width: 0
-        60%, 82%
+        10%, 65%
             width: 50%
         100%
             width: 0
 
     @keyframes anim-strip-four
-        0%, 50%
+        0%
             width: 0
-        60%, 94%
+        10%, 60%
             width: 25%
         100%
             width: 0
