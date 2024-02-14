@@ -47,7 +47,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 4.5s
+    $strip-anim-time: 5s
 
     .header
         display: flex
