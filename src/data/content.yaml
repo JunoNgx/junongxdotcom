@@ -121,13 +121,11 @@
 
 - title: This Website
   summary: |
-    As a creative enthusiast, I have worked on many projects over the years, and a portfolio website has always been something important to me. This site has been revamped, redesigned, and reworked many times over the years, and is currently taking on a structured data approach like an application.
+    As a creative individual, I have worked on many projects over the years, and the idea of a portfolio has always been something endearing and important to me. This web page has been revamped, redesigned, and reworked many times over the years.
   content: |
-    The current version is the result of several sessions of  thinking about data and brainstorming. While manually writing every single HTML tags certainly works (which was what I did for the previous iterations), I sought a more data-driven and automated approach, where data should be more standardized and components should be more reusable.
+    The current version is the result of multiple sessions of brainstorming and thinking about data. While manually writing every single HTML tags certainly works (which was my implementation for previous versions), the repetition was inefficient, and editing content in the middle of source codes was both unsafe and unfun. What I ended up is an application-like data-driven approach, where content and technical implementation are separated, as they should be.
 
-    On the other hand, it also addressed a few usability issues. What if the visitor only wanted to skim through and not read everything in great details? What if the visitor is only interested in specific types of projects? How can I make the website more interactive and engaging?
-
-    After much research and digging deep into the problem, my answer for this was [YAML](https://yaml.org/), a highly human-friendly markup language. Each and every one of these entries you are reading is stored as Markdown syntaxes inside a list in a YAML file. The front-end (Svelte) then reads this file, iterates over the array while also extracting other data in each object (e.g. the section title, the summary, external links) to use as `prop` for a series of repeated component. Writing content for this site has since been a great pleasure.
+    While JSON is the more common and obvious choice, its limitation in display content makes unfit for a good content editing experience. As a result, each and every one of these entries you are reading is stored as Markdown syntaxes in a [YAML](https://yaml.org/) file. Imported as an array of objects, these content are then processed and iteratively displayed.
 
     This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax) and the template language [pug](https://pugjs.org/api/getting-started.html), makes this my most human-readable and elegant codebase yet.
   tags:
