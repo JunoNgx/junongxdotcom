@@ -195,7 +195,7 @@
                 
 
             &.is-dark
-                .contact-me-content
+                .contact-me__content
                     border: 2px solid v.$col-pri-dark
 
         +m.mobile
