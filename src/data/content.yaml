@@ -233,9 +233,9 @@
   content: |
     Started off as a utilitarian need to improve my sitting posture, this hobby, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how electric circuits work, mechanical keyboards offer a fascinating and endless world of self-expression.
 
-    For several years, I have been daily driving exclusively with the 4x12 ortholinear layout, popularised by the OLKB Planck. My personalised keymap, `junonum`, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal keymap.
+    For several years, I have been daily driving exclusively with the 4x12 ortholinear layout, popularised by the OLKB Planck. My personalised keymap, `junonum`, having undergone years of updates and optimisation, has been contributed to QMK Firmware as a universal keymap (though the community layouts have since been removed in favour of user-maintained personal userspaces).
   tags:
     - hobby
   links:
-    - label: qmk github
-      url: https://github.com/qmk/qmk_firmware/tree/master/layouts/community/ortho_4x12/junonum
+    - label: qmk_userspace repo
+      url: https://github.com/JunoNgx/qmk_userspace/tree/junongx/layouts/ortho_4x12/junonum
