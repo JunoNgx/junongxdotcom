@@ -138,10 +138,9 @@
         display: flex
         flex-direction: column
         flex-wrap: nowrap
-        gap: 2rem
+        gap: 1rem
         +m.mobile
             margin-top: 0.5rem
-            gap: 1.5rem
 
         // Contact list
         &__contact-wrapper
