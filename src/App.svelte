@@ -81,7 +81,7 @@
     @use './styles/mixins' as m
 
     :global(html)
-        overflow-y: scroll
+        scrollbar-gutter: stable
 
     :global(body)
         font-family: v.$fonts
