@@ -63,7 +63,7 @@
                         a.control__contact-item(rel="noopener noreferrer" target="_blank" href!="{contact.url}") {contact.label}
 
         .control__display-mode-wrapper
-            h2.control__display-mode-title Display mode
+            //- h2.control__display-mode-title Display mode
             .control__display-mode
                 span.control__display-mode-label(class!="{shouldDisplayDarkModeSettingLabel ? 'control__display-mode-label--is-displayed' : ''}") {darkModeSettingLabel}
                 .control__display-mode-option-list
