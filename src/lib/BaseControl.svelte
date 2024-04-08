@@ -134,7 +134,7 @@
         align-items: flex-end
     
     .control
-        margin-top: 2rem
+        margin-top: 0.5rem
         display: flex
         flex-direction: column
         flex-wrap: nowrap
