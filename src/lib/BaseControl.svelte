@@ -140,7 +140,7 @@
         flex-wrap: nowrap
         gap: 1rem
         +m.mobile
-            margin-top: 0.5rem
+            margin-top: 1rem
 
         // Contact list
         &__contact-wrapper
