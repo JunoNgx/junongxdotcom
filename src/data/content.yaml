@@ -1,3 +1,28 @@
+- title: JustJot
+  imgSrc: /images/JustJotTrailer.apng
+  imgAlt: Demonstration of the app JustJot
+  summary: |
+    A full-featured keyboard-first note-taking Progressive Web App made with [React](https://react.dev/) and [PocketBase](https://pocketbase.io/).
+  content: |
+    JustJot is the serendipitous outcome of many things: my desire to work on a side project; my needs to efficiently use time and handle my multitude of interests (spending over 300 hours on this project to perform 10-second tasks more efficiently; such a programmer's classic); my encounter with the brilliantly designed [bmrks](https://bmrks.com/) (unfortunately, not open-source); and [Casey](https://caseykwokdinata.webflow.io/), my collaborator for this project, showing up a lot in the office.
+
+    Aiming for an enterprise-like approach, I chose React and [TypeScript](https://www.typescriptlang.org/), the de facto template that would very likely be used, if a new project is created at the time of writing. Breaking away from my usual tradition to write everything myself, a UI library (cues in [Mantine](https://mantine.dev/)) was used for the first time, which provided me with a lot of valuable insights and experiences. I was alsso introduced to the world of Backend-as-a-Service, as [PocketBase](https://pocketbase.io/) helmed the backend implementation.
+
+    Most noteworthy of all, in an era surrounded by touchscreens and trackpads, the keyboard-first approach raised numerous interesting challenges, in terms of both design and engineering. Casey and I found ourselves in uncharted territory most of the times. With development tools overwhelmingly catered to pointer-based input devices, it was difficult to find examples and documentations I needed. A keystroke does not simply have an effect on JustJot's main input (which already does much more than one thing); it also manages the app, and even the browser itself.
+
+    JustJot is aruguably my most impactful and valuable project yet: more than a project I worked on just for sheer fun, this is an application I use everyday.
+  tags:
+    - web development
+    - progressive web app
+    - reactJS
+    - in active development
+    - release
+  links:
+    - label: JustJot.app
+      url: https://justjot.app
+    - label: frontend repo
+      url: https://github.com/JunoNgx/justjot-frontend
+
 - title: manafarm
   imgSrc: /images/manafarm_withBg.jpg
   imgAlt: manafarm logo
