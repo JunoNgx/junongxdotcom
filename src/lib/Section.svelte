@@ -49,10 +49,9 @@
                                     polyline(points="15 3 21 3 21 9")
                                     line(x1="10" y1="14" x2="21" y2="3")
             button.section__expand-button(on:click!="{handleExpandClick}")
-                +if('isExpanded')
-                    span.section__expand-button-label Less
-                    +else()
-                        span More
+                .section__expand-button-label-wrapper(class!="{isExpanded && 'section__expand-button-label-wrapper--is-expanded'}")
+                    span.section__expand-button-label.section__expand-button-label--more More
+                    span.section__expand-button-label.section__expand-button-label--less Less
 
 </template>
 
@@ -159,6 +158,8 @@
         &__expand-button
             +m.button
             width: 60px
+            height: 33px
+            overflow: hidden
 
             +m.mobile
                 font-size: v.$font-size-mobile
@@ -166,6 +167,30 @@
             .section--is-dark &
                 +m.button-dark
 
+        &__expand-button-label-wrapper
+            display: flex
+            flex-direction: column
+
+            transition-property: transform, opacity
+            transition-duration: v.$trans-time-default 
+            transition-timing-function: ease-out
+
+            .section__expand-button-label--more
+                opacity: 1
+
+            .section__expand-button-label--less
+                opacity: 0
+
+            &--is-expanded
+                transform: translateY(-50%)
+
+                .section__expand-button-label--more
+                    opacity: 0
+                .section__expand-button-label--less
+                    opacity: 1
+        
+        &__expand-button-label
+            transition: transform v.$trans-time-default ease-out
 
         +m.mobile
             margin: 2rem 0.5rem
