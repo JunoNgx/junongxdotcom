@@ -50,8 +50,8 @@
                                     line(x1="10" y1="14" x2="21" y2="3")
             button.section__expand-button(on:click!="{handleExpandClick}")
                 .section__expand-button-label-wrapper(class!="{isExpanded && 'section__expand-button-label-wrapper--is-expanded'}")
-                    span.section__expand-button-label.section__expand-button-label--more More
-                    span.section__expand-button-label.section__expand-button-label--less Less
+                    span.section__expand-button-label.section__expand-button-label--more(aria-hidden!="{isExpanded}") More
+                    span.section__expand-button-label.section__expand-button-label--less(aria-hidden!="{!isExpanded}") Less
 
 </template>
 
