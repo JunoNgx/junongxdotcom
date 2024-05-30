@@ -86,8 +86,6 @@
     @use './styles/vars' as v
     @use './styles/mixins' as m
 
-    @use './styles/_vars.css' as v2
-
     :global(html)
         scrollbar-gutter: stable
 
