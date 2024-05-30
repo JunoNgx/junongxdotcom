@@ -1,0 +1,13 @@
+:root {
+    --font-family: "Jost", sans-serif;
+}
+
+:root[data-isdarkmode="false"] {
+    --col-pri: #445;
+    --col-bg: #eee;
+}
+
+:root[data-isdarkmode="true"] {
+    --col-pri: #ddd;
+    --col-bg: #333;
+}

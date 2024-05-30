@@ -82,10 +82,11 @@
 </template>
 
 <style lang="sass">
-
     @use './styles/fonts'
     @use './styles/vars' as v
     @use './styles/mixins' as m
+
+    @use './styles/_vars.css' as v2
 
     :global(html)
         scrollbar-gutter: stable
@@ -95,18 +96,18 @@
         font-size: v.$font-size
         -webkit-hyphens: auto
         hyphens: auto
-        color: v.$col-pri
-        background-color: v.$col-bg
+        color: var(--col-pri)
+        background-color: var(--col-bg)
         +m.transition(color, background-color)
         +m.mobile
             font-size: v.$font-size-mobile
 
-    :global(body.is-dark)
-        color: v.$col-pri-dark
-        background-color: v.$col-bg-dark
+    // :global(body.is-dark)
+    //     color: v.$col-pri-dark
+    //     background-color: v.$col-bg-dark
 
     :global(a)
-        color: v.$col-pri
+        color: var(--col-pri)
         text-decoration: none
         background-repeat: no-repeat
         background-image: linear-gradient(to top, v.$col-acc 0% 90%, transparent 10%)
@@ -154,8 +155,8 @@
             border: none
             max-width: none
 
-        &.is-dark
-            border-right: 2px dashed v.$col-pri-dark
+        [data-isdarkmode="true"] &
+            // border-right: 2px dashed v.$col-pri-dark
             +m.mobile
                 border: none
 
@@ -199,9 +200,8 @@
                     display: none
                     &--is-mobile
                         display: block
-                
 
-            &.is-dark
+            [data-isdarkmode="true"] &
                 .contact-me__content
                     border: 2px solid v.$col-pri-dark
 
