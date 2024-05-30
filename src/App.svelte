@@ -153,10 +153,10 @@
             border: none
             max-width: none
 
-        [data-isdarkmode="true"] &
-            // border-right: 2px dashed v.$col-pri-dark
-            +m.mobile
-                border: none
+        // [data-isdarkmode="true"] &
+        //     // border-right: 2px dashed v.$col-pri-dark
+        //     +m.mobile
+        //         border: none
 
 
     .content-wrapper
