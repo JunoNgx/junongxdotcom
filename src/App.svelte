@@ -51,27 +51,34 @@
     })
 </script>
 
-<template lang="pug">
-    main
-        div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
-            div.leftside-content
-                Header
-                ControlContainer
+<template>
+    <main>
+        <div class="leftside-wrapper">
+            <div class="leftside-content">
+                <Header />
+                <ControlContainer />
+            </div>
+        </div>
 
-        div.content-wrapper
-            +if("$displayedEntryList && $displayedEntryList.length > 0")
-                +each("$displayedEntryList as entry")
-                    Section(entry!="{entry}")
+        <div class="content-wrapper">
+            {#if $displayedEntryList && $displayedEntryList.length > 0}
+                {#each $displayedEntryList as entry}
+                    <Section entry={entry} />
+                {/each}
+            {:else}
+                <p class="no-content">You have filtered out everything and there is nothing left to be displayed.</p>
+            {/if}
 
-                +else()
-                    p.no-content You have filtered out everything and there is nothing left to be displayed.
-
-            section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
-                div.contact-me__content
-                    p.contact-me__say-hello Would you like to say hello?
-                    p.contact-me__contact-dir My contacts are to the left ←
-                    p.contact-me__contact-dir.contact-me__contact-dir--is-mobile My contacts are in the menu ↑
-    Footer
+            <section class="contact-me">
+                <div class="contact-me__content">
+                    <p class="contact-me__say-hello">Would you like to say hello?</p>
+                    <p class="contact-me__contact-dir">My contacts are to the left ←</p>
+                    <p class="contact-me__contact-dir contact-me__contact-dir--is-mobile">My contacts are in the menu ↑</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <Footer />
 </template>
 
 <style lang="sass">
