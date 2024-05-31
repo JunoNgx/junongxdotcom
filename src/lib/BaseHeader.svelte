@@ -2,25 +2,26 @@
     import { isDarkMode } from "src/store"
     import { onMount } from "svelte";
 
-    const restartStripAnimation = () => {
-        const stripContainer = document.querySelector(".header__strip-container")
-        for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
-            stripEl.style.animation = "none"
-            stripEl.offsetHeight // Manually trigger reflow to restart animation
-            stripEl.style.animation = null
-        }
-    }
+    // const restartStripAnimation = () => {
+    //     const stripContainer = document.querySelector(".header__strip-container")
+    //     for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
+    //         stripEl.style.animation = "none"
+    //         stripEl.offsetHeight // Manually trigger reflow to restart animation
+    //         stripEl.style.animation = null
+    //     }
+    //     console.log("restart")
+    // }
 
-    const enableStripAnimation = () => {
-        const stripContainer = document.querySelector(".header__strip-container")
-        for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
-            stripEl.classList.add("header__strip--can-animate")
-        }
-    }
+    // const enableStripAnimation = () => {
+    //     const stripContainer = document.querySelector(".header__strip-container")
+    //     for (const stripEl of stripContainer.children as HTMLCollectionOf<HTMLElement>) {
+    //         stripEl.classList.add("header__strip--can-animate")
+    //     }
+    // }
 
-    onMount(() => {
-        setTimeout(enableStripAnimation, 3000)
-    })
+    // onMount(() => {
+    //     setTimeout(enableStripAnimation, 3000)
+    // })
 
     // TODO: decide what to do about the colour strip
 </script>
@@ -28,18 +29,12 @@
 <template>
     <header class="header">
         <div class="header__name-container">
-            <h1 class="header__name"
-                on:click={restartStripAnimation}
-                on:keydown={restartStripAnimation}
-            >
+            <h1 class="header__name">
                 <span class="header__first-name-j">J</span><span class="header__first-name-u">u</span><span class="header__first-name-n">n</span><span class="header__first-name-o">o</span>
                 <span class="header__last-name">Nguyen</span>
             </h1>
             <div class="header__strip-container">
-                <header class="header__strip header__strip--one" />
-                <header class="header__strip header__strip--two" />
-                <header class="header__strip header__strip--three" />
-                <header class="header__strip header__strip--four" />
+                <div class="header__strip" />
             </div>
         </div>
         <p class="header__desc header__desc--title">web engineer by day</p>
@@ -52,7 +47,7 @@
     @use "../styles/vars" as v
 
     $anim-time: 3s
-    $strip-anim-time: 5s
+    $strip-anim-time: 1.5s
 
     .header
         display: flex
@@ -99,22 +94,23 @@
 
         &__strip
             position: absolute
-            height: 1rem
+            height: 100%
             left: auto
             right: 0
+            background-color: var(--col-acc)
 
-            &--one
-                // width: 100%
-                background-color: v.$col-strip-1
-            &--two
-                // width: 75%
-                background-color: v.$col-strip-2
-            &--three
-                // width: 50%
-                background-color: v.$col-strip-3
-            &--four
-                // width: 25%
-                background-color: v.$col-strip-4
+            // &--one
+            //     // width: 100%
+            //     background-color: v.$col-strip-1
+            // &--two
+            //     // width: 75%
+            //     background-color: v.$col-strip-2
+            // &--three
+            //     // width: 50%
+            //     background-color: v.$col-strip-3
+            // &--four
+            //     // width: 25%
+            //     background-color: v.$col-strip-4
 
         &__desc
             margin-top: 0.25rem
@@ -154,14 +150,16 @@
             //     border-left: 2px dashed var(--col-pri)-dark
 
     // Unhashed modifier classes
-    :global(.header__strip--can-animate.header__strip--one)
-        animation: anim-strip-one $strip-anim-time ease-out 0s
-    :global(.header__strip--can-animate.header__strip--two)
-        animation: anim-strip-two $strip-anim-time ease-out 0s
-    :global(.header__strip--can-animate.header__strip--three)
-        animation: anim-strip-three $strip-anim-time ease-out 0s
-    :global(.header__strip--can-animate.header__strip--four)
-        animation: anim-strip-four $strip-anim-time ease-out 0s
+    // :global(.header__strip--can-animate.header__strip--one)
+    //     animation: anim-strip-one $strip-anim-time ease-out 0s
+    // :global(.header__strip--can-animate.header__strip--two)
+    //     animation: anim-strip-two $strip-anim-time ease-out 0s
+    // :global(.header__strip--can-animate.header__strip--three)
+    //     animation: anim-strip-three $strip-anim-time ease-out 0s
+    // :global(.header__strip--can-animate.header__strip--four)
+    //     animation: anim-strip-four $strip-anim-time ease-out 0s
+    :global(.header__strip)
+        animation: anim-strip $strip-anim-time ease-out $anim-time
 
     // Animations
     @keyframes header__first-name-j
@@ -204,36 +202,47 @@
             opacity: 1
             transform: translateY(0)
 
-    @keyframes anim-strip-one
+    @keyframes anim-strip
         0%
-            width: 0
-        10%, 95%
             width: 100%
+            height: 0
+        30%, 85%
+            width: 100%
+            height: 100%
         100%
-            width: 0
+            width: 0%
+            height: 100%
 
-    @keyframes anim-strip-two
-        0%
-            width: 0
-        10%, 40%
-            width: 75%
-        70%
-            width: 0
+    // @keyframes anim-strip-one
+    //     0%
+    //         width: 0
+    //     10%, 95%
+    //         width: 100%
+    //     100%
+    //         width: 0
 
-    @keyframes anim-strip-three
-        0%
-            width: 0
-        10%, 35%
-            width: 50%
-        60%
-            width: 0
+    // @keyframes anim-strip-two
+    //     0%
+    //         width: 0
+    //     10%, 40%
+    //         width: 75%
+    //     70%
+    //         width: 0
 
-    @keyframes anim-strip-four
-        0%
-            width: 0
-        10%, 15%
-            width: 25%
-        30%
-            width: 0
+    // @keyframes anim-strip-three
+    //     0%
+    //         width: 0
+    //     10%, 35%
+    //         width: 50%
+    //     60%
+    //         width: 0
+
+    // @keyframes anim-strip-four
+    //     0%
+    //         width: 0
+    //     10%, 15%
+    //         width: 25%
+    //     30%
+    //         width: 0
 
 </style>
