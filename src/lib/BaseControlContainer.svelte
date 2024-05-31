@@ -1,30 +1,81 @@
 <script lang="ts">
-    import { isDarkMode } from "src/store"
-    import Control from "./BaseControl.svelte"
+    import { isDarkMode } from "src/store";
+    import Control from "./BaseControl.svelte";
 
-    let isExpanded = false
+    let isExpanded = false;
 
     const handleSwitchExpand = () => {
-        isExpanded = !isExpanded
-    }
+        isExpanded = !isExpanded;
+    };
 
     const collapseControl = () => {
-        isExpanded = false
-    }
+        isExpanded = false;
+    };
 </script>
 
-<template lang="pug">
-    .control-container(class!="{$isDarkMode ? 'control-container--is-dark' : ''}")
-        button.control-container__expand-button(on:click!="{handleSwitchExpand}" aria-label!="Expand toggle button")
-            svg.control-container__icon(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                line.icon-line.icon-line--1(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="6" x2="21" y2="6")
-                line.icon-line.icon-line--2(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="12" x2="21" y2="12")
-                line.icon-line.icon-line--3(class!="{isExpanded ? 'icon-line--is-expanded' : ''}" x1="3" y1="18" x2="21" y2="18")
+<template>
+    <div class="control-container">
+        <button
+            class="control-container__expand-button"
+            aria-label="Toggle expand button"
+            on:click={handleSwitchExpand}
+        >
+            <svg
+                class="control-container__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <line
+                    class="icon-line icon-line--1 {isExpanded
+                        ? 'icon-line--is-expanded'
+                        : ''}"
+                    x1="3" y1="6" x2="21" y2="6"
+                />
+                <line
+                    class="icon-line icon-line--2 {isExpanded
+                        ? 'icon-line--is-expanded'
+                        : ''}"
+                    x1="3" y1="12" x2="21" y2="12"
+                />
+                <line
+                    class="icon-line icon-line--3 {isExpanded
+                        ? 'icon-line--is-expanded'
+                        : ''}"
+                    x1="3" y1="18" x2="21" y2="18"
+                />
+            </svg>
+        </button>
 
-        button.control-container__collapse-trigger(class!="{isExpanded ? 'control-container__collapse-trigger--is-expanded' : ''}" on:click!="{collapseControl}" aria-label!="Hidden collapse trigger button" aria-hidden="true")
-        .control-container__content-wrapper(class!="{isExpanded ? 'control-container__content-wrapper--is-expanded' : ''}")
-            .control-container__content
-                Control
+        <button
+            class="control-container__collapse-trigger
+                {isExpanded
+                ? 'control-container__collapse-trigger--is-expanded'
+                : ''}
+            "
+            aria-label="Alternative button to collapse the control menu"
+            aria-hidden={isExpanded}
+            on:click={collapseControl}
+        >
+            <div
+                class="control-container__content-wrapper
+                    {isExpanded
+                    ? 'control-container__content-wrapper--is-expanded'
+                    : ''}
+                "
+            >
+                <div class="control-container__content">
+                    <Control />
+                </div>
+            </div>
+        </button>
+    </div>
 </template>
 
 <style lang="sass">
