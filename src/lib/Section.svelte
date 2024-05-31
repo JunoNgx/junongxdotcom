@@ -152,7 +152,7 @@
 
         &__content
             // CSS-only accordion button
-            $duration: calc(var(--transition-time-default) * 0.5)
+            $duration: var(--transition-time-content)
             will-change: opacity, font-size
 
             &--is-collapsed
