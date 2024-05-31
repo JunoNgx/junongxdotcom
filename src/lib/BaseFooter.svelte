@@ -20,6 +20,18 @@
 
         .love
             color: var(--col-acc-alt)
+            text-decoration: none
+            background: url("/images/wave.svg")
+            background-repeat: repeat-x
+            background-size: 9px 3px
+            background-position: 0px 19px
+            animation: move 2s linear 2s infinite
+
+    @keyframes move
+        from
+            background-position: 2px 19px
+        to
+            background-position: 45px 19px
 
 </style>
 
