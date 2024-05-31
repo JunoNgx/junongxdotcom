@@ -159,8 +159,8 @@
                 visibility: hidden
                 opacity: 0
                 font-size: 0
-                // Delay font-size
-                transition: opacity $duration ease-out, font-size $duration ease-out $duration
+                // Delay font-size; also transitions visibility
+                transition: opacity $duration ease-out, font-size $duration ease-out $duration, visibility $duration
 
             &--is-expanded
                 visibility: visible
