@@ -151,18 +151,23 @@
             //     color: rgba(v.$col-pri-dark, 0.8)
 
         &__content
+            // CSS-only accordion button
+            $duration: calc(var(--transition-time-default) * 0.5)
+            will-change: opacity, font-size
 
             &--is-collapsed
                 visibility: hidden
                 opacity: 0
                 font-size: 0
-                transition: opacity v.$trans-time-default*0.5 ease-out, font-size v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
+                // Delay font-size
+                transition: opacity $duration ease-out, font-size $duration ease-out $duration
 
             &--is-expanded
                 visibility: visible
                 opacity: 1
                 font-size: v.$font-size
-                transition: font-size v.$trans-time-default*0.5 ease-out, opacity v.$trans-time-default*0.5 ease-out v.$trans-time-default*0.5
+                // Delay opacity
+                transition: font-size $duration ease-out, opacity $duration ease-out $duration
 
                 +m.mobile
                     font-size: v.$font-size-mobile
