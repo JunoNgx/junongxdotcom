@@ -114,7 +114,7 @@
         transition: background-size v.$trans-time-default*0.7 ease-out, background-position v.$trans-time-default*0.7 ease-out
 
         &:hover
-            background-position: 50% 50%
+            // background-position: 50% 80%
             background-size: 100% 100%
 
     :global(body.is-dark a)
