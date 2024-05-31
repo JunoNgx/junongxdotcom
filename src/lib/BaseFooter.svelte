@@ -1,15 +1,12 @@
-<template lang="pug">
-    footer
-        p made with 
-            a(rel="noopener noreferrer" target="_blank" href="https://svelte.dev/") svelte
-            | , 
-            a(rel="noopener noreferrer" target="_blank" href="https://pugjs.org/") pug
-            | , 
-            a(rel="noopener noreferrer" target="_blank" href="https://sass-lang.com/") sass
-            | , and 
-            a(rel="noopener noreferrer" target="_blank" href="https://www.typescriptlang.org/") typescript
-        p uncopyrighted and 
-            a(rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx/junongxdotcom") open source
+<template>
+    <footer>
+        <p>
+            made with <a rel="noopener noreferrer" target="_blank" href="https://svelte.dev/">svelte</a>, <a rel="noopener noreferrer" target="_blank" href="https://sass-lang.com/">sass</a>, <a rel="noopener noreferrer" target="_blank" href="https://www.typescriptlang.org/">typescript</a> and <span class="love">love</span>.
+        </p>
+        <p>
+            uncopyrighted and <a rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx/junongxdotcom">open source</a>
+        </p>
+    </footer>
 </template>
 
 <style lang="sass">
@@ -21,6 +18,9 @@
         text-align: center
         p
             margin: 0
+
+        .love
+            color: var(--col-acc-alt)
 
 </style>
 
