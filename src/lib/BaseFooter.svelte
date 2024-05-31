@@ -23,15 +23,15 @@
             text-decoration: none
             background: url("/images/wave.svg")
             background-repeat: repeat-x
-            background-size: 9px 3px
-            background-position: 0px 19px
+            background-size: 10px 3px
+            background-position: 0px 20px
             animation: move 2s linear 2s infinite
 
     @keyframes move
         from
-            background-position: 2px 19px
+            background-position: 0px 20px
         to
-            background-position: 45px 19px
+            background-position: 40px 20px
 
 </style>
 
