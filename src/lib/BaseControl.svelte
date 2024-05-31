@@ -309,8 +309,8 @@
                 pointer-events: none
                 +m.transition(translate)
 
-                .control--is-dark &
-                    border-color: var(--col-pri)
+                // .control--is-dark &
+                //     border-color: var(--col-pri)
 
                 &--shift-one
                     translate: 32px
