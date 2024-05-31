@@ -233,14 +233,14 @@
         font-size: 1.2rem
         margin: 0.75rem 0
         padding: 0.1rem 0.25rem
-        border-bottom: 2px dashed v.$col-pri
-        border-top: 2px dashed v.$col-pri
+        border-bottom: 2px dashed var(--col-pri)
+        border-top: 2px dashed var(--col-pri)
         width: fit-content
         +m.transition(border)
 
-    @mixin title--is-dark
-        border-bottom: 2px dashed v.$col-pri-dark
-        border-top: 2px dashed v.$col-pri-dark
+    // @mixin title--is-dark
+    //     border-bottom: 2px dashed v.$col-pri-dark
+    //     border-top: 2px dashed v.$col-pri-dark
     
     @mixin wrapper
         display: flex
@@ -262,8 +262,8 @@
 
         &__contact-title
             +title
-            .control--is-dark &
-                +title--is-dark
+            // .control--is-dark &
+            //     +title--is-dark
 
         &__contact-list
             display: flex
@@ -281,8 +281,8 @@
 
         &__display-mode-title
             +title
-            .control--is-dark &
-                +title--is-dark
+            // .control--is-dark &
+            //     +title--is-dark
 
         &__display-mode
             &-label
@@ -303,12 +303,14 @@
                 position: absolute
                 width: 30px
                 height: 30px
-                border: 1px solid v.$col-pri
+                border-style: solid
+                border-width: 1px
+                border-color: var(--col-pri)
                 pointer-events: none
                 +m.transition(translate)
 
                 .control--is-dark &
-                    border: 1px solid v.$col-pri-dark
+                    border-color: var(--col-pri)
 
                 &--shift-one
                     translate: 32px
@@ -333,10 +335,10 @@
             &-icon-svg
                 display: inline-block
                 vertical-align: middle
-                stroke: v.$col-pri
+                stroke: var(--col-pri)
 
-                .control--is-dark &
-                    stroke: v.$col-pri-dark
+                // .control--is-dark &
+                //     stroke: var(--col-pri)
 
         // Tag filter
         &__filter-tags-wrapper
@@ -345,8 +347,8 @@
         &__filter-tags
             &-title
                 +title
-                .control--is-dark &
-                    +title--is-dark
+                // .control--is-dark &
+                //     +title--is-dark
 
             &-buttons-container
                 margin-bottom: 0.5rem
@@ -354,8 +356,8 @@
             &-button
                 +m.button
                 margin-left: 0.5rem
-                .control--is-dark &
-                    +m.button-dark
+                // .control--is-dark &
+                //     +m.button-dark
 
             &-list
                 display: flex
@@ -385,33 +387,33 @@
 
                 // States transitions
                 background-color: transparent
-                border: 1px solid v.$col-pri
+                border: 1px solid var(--col-pri)
                 +m.transition(background-color, border-color)
 
                 &-label, &-icon
-                    color: v.$col-pri
+                    color: var(--col-pri)
                     +m.transition(color)
 
                 &--selected
-                    background-color: v.$col-pri
+                    background-color: var(--col-pri)
 
                     & .control__filter-tags-item-label,
                     & .control__filter-tags-item-icon
-                        color: v.$col-bg
+                        color: var(--col-bg)
 
-                .control--is-dark &
-                    border: 1px solid v.$col-pri-dark
+                // .control--is-dark &
+                //     border: 1px solid v.$col-pri-dark
 
-                    & .control__filter-tags-item-label,
-                    & .control__filter-tags-item-icon
-                        color: v.$col-pri-dark
+                //     & .control__filter-tags-item-label,
+                //     & .control__filter-tags-item-icon
+                //         color: v.$col-pri-dark
 
-                    &--selected
-                        background-color: v.$col-pri-dark
+                //     &--selected
+                //         background-color: v.$col-pri-dark
 
-                        & .control__filter-tags-item-label,
-                        & .control__filter-tags-item-icon
-                            color: v.$col-bg-dark
+                //         & .control__filter-tags-item-label,
+                //         & .control__filter-tags-item-icon
+                //             color: v.$col-bg-dark
 
 
 </style>
