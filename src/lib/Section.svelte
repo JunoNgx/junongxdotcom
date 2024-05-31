@@ -116,13 +116,13 @@
         margin: 2rem
         padding: 1rem
         max-width: 400px
-        border: 2px solid v.$col-pri
+        border: 2px solid var(--col-pri)
         text-align: left
         -webkit-hyphens: auto
         hyphens: auto
 
-        &--is-dark
-            border: 2px solid v.$col-pri-dark
+        // &--is-dark
+        //     border: 2px solid v.$col-pri-dark
 
         &__banner,
         canvas
@@ -145,10 +145,10 @@
         &__tag-item
             font-family: monospace
             font-size: 10px
-            color: rgba(v.$col-pri, 0.8)
+            color: rgba(var(--col-pri), 0.8)
 
-            .section--is-dark &
-                color: rgba(v.$col-pri-dark, 0.8)
+            // .section--is-dark &
+            //     color: rgba(v.$col-pri-dark, 0.8)
 
         &__content
 
@@ -197,16 +197,16 @@
             +m.transition(background-color, color, box-shadow)
 
             &:hover
-                color: v.$col-bg
-                background-color: v.$col-acc2
-                box-shadow: 4px 4px v.$col-pri
+                color: var(--col-bg)
+                background-color: var(--col-acc-alt)
+                box-shadow: 4px 4px var(--col-pri)
 
-            .section--is-dark &
-                background-color: v.$col-acc-dark
-                &:hover
-                    color: v.$col-bg-dark
-                    background-color: v.$col-acc2
-                    box-shadow: 4px 4px v.$col-pri-dark
+            // .section--is-dark &
+            //     background-color: v.$col-acc-dark
+            //     &:hover
+            //         color: v.$col-bg-dark
+            //         background-color: v.$col-acc2
+            //         box-shadow: 4px 4px v.$col-pri-dark
 
         &__expand-button
             +m.button
