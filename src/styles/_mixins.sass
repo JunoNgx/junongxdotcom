@@ -1,7 +1,7 @@
 @use './vars' as v
 
 @mixin std-border
-    border: 2px solid v.$pri-col
+    border: 2px solid var(--col-pri)
 
 @mixin mobile
     @media screen and (max-width: v.$breakpoint)
@@ -14,19 +14,20 @@
     transition: $transition
 
 @mixin button
-    border: 1px solid v.$col-pri
+    border: 1px solid var(--col-pri)
     border-radius: 0
     padding: 0.25rem 0.5rem
     cursor: pointer
-    color: v.$col-pri
+    color: var(--col-pri)
     background-color: transparent
     font-family: v.$fonts
     font-size: v.$font-size
     +transition(color, background-color)
     &:hover
-        color: v.$col-bg
-        background-color: v.$col-pri
+        color: var(--col-bg)
+        background-color: var(--col-pri)
 
+// TODO: to remove
 @mixin button-dark
     color: v.$col-pri-dark
     border: 1px solid v.$col-pri-dark
