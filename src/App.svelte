@@ -88,14 +88,14 @@
 
     :global(html)
         scrollbar-gutter: stable
-
-    :global(body)
         font-family: var(--font-family)
         font-size: var(--font-size)
-        -webkit-hyphens: auto
-        hyphens: auto
+
+    :global(body)
         color: var(--col-pri)
         background-color: var(--col-bg)
+        -webkit-hyphens: auto
+        hyphens: auto
         +m.transition(color, background-color)
         +m.mobile
             font-size: var(--font-size-mobile)
