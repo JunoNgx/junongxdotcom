@@ -111,7 +111,7 @@
         background-image: linear-gradient(to top, var(--col-acc) 0% 90%, transparent 10%)
         background-position: 50% 80%
         background-size: 100% 30%
-        transition: background-size v.$trans-time-default*0.7 ease-out, background-position v.$trans-time-default*0.7 ease-out
+        transition: background-size var(--transition-time-anchor) ease-in, background-position var(--transition-time-anchor) ease-out
 
         &:hover
             // background-position: 50% 80%
