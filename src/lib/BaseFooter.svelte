@@ -13,7 +13,6 @@
     @use "../styles/vars" as v
 
     footer
-        font-size: v.$font-size
         margin: 1rem auto 0 auto
         text-align: center
         p
