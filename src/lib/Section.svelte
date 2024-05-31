@@ -9,6 +9,8 @@
     function handleExpandClick() {
         isExpanded = !isExpanded
     }
+
+    // TODO: rename to `Article` or `Entry`
 </script>
 
 <template lang="pug">
