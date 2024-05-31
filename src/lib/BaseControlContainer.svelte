@@ -97,8 +97,8 @@
                 right: 1.5rem
                 width: 48px
                 height: 48px
-                color: v.$col-pri
-                background-color: v.$col-acc
+                color: var(--col-pri)
+                background-color: var(--col-acc)
                 cursor: pointer
                 -webkit-user-select: none
                 user-select: none
@@ -108,8 +108,8 @@
                 align-items: center
 
                 // .control-container--is-dark &
-                //     color: v.$col-pri-dark
-                //     background-color: v.$col-acc-dark
+                //     color: var(--col-pri)-dark
+                //     background-color: var(--col-acc)-dark
                 
             &__collapse-trigger
                 border-width: 0
@@ -132,7 +132,7 @@
                 right: 0
                 height: 100vh
                 width: 100vw
-                background-color: v.$col-acc
+                background-color: var(--col-acc)
                 clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
                 transition: clip-path 300ms ease-out
 
@@ -140,7 +140,7 @@
                     clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
 
                 // .control-container--is-dark &
-                //     background-color: v.$col-acc-dark
+                //     background-color: var(--col-acc)-dark
 
             &__content
                 padding: 4rem 2rem 1rem
