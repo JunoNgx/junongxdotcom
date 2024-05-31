@@ -60,7 +60,7 @@
                 : ''}
             "
             aria-label="Alternative button to collapse the control menu"
-            aria-hidden={isExpanded}
+            aria-hidden={!isExpanded}
             on:click={collapseControl}
         >
             <div
