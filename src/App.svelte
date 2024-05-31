@@ -199,9 +199,9 @@
                     &--is-mobile
                         display: block
 
-            [data-isdarkmode="true"] &
-                .contact-me__content
-                    border: 2px solid var(--col-pri)-dark
+            // [data-isdarkmode="true"] &
+            //     .contact-me__content
+            //         border: 2px solid var(--col-pri)-dark
 
         +m.mobile
             min-height: auto
