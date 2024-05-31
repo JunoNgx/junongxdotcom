@@ -90,25 +90,25 @@
         scrollbar-gutter: stable
 
     :global(body)
-        font-family: v.$fonts
-        font-size: v.$font-size
+        font-family: var(--font-family)
+        font-size: var(--font-size)
         -webkit-hyphens: auto
         hyphens: auto
         color: var(--col-pri)
         background-color: var(--col-bg)
         +m.transition(color, background-color)
         +m.mobile
-            font-size: v.$font-size-mobile
+            font-size: var(--font-size-mobile)
 
     // :global(body.is-dark)
-    //     color: v.$col-pri-dark
+    //     color: var(--col-pri)-dark
     //     background-color: v.$col-bg-dark
 
     :global(a)
         color: var(--col-pri)
         text-decoration: none
         background-repeat: no-repeat
-        background-image: linear-gradient(to top, v.$col-acc 0% 90%, transparent 10%)
+        background-image: linear-gradient(to top, var(--col-acc) 0% 90%, transparent 10%)
         background-position: 50% 80%
         background-size: 100% 30%
         transition: background-size v.$trans-time-default*0.7 ease-out, background-position v.$trans-time-default*0.7 ease-out
@@ -117,9 +117,9 @@
             // background-position: 50% 80%
             background-size: 100% 100%
 
-    :global(body.is-dark a)
-        color: v.$col-pri-dark
-        background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
+    // :global(body.is-dark a)
+    //     color: var(--col-pri)-dark
+    //     background-image: linear-gradient(to top, var(--col-acc)-dark 0% 90%, transparent 10%)
 
 
     main
@@ -140,7 +140,7 @@
         max-width: 320px
         max-height: 90vh
         padding-right: 2rem
-        border-right: 2px dashed v.$col-pri
+        border-right: 2px dashed var(--col-pri)
         align-self: flex-start
 
         display: flex
@@ -154,7 +154,7 @@
             max-width: none
 
         // [data-isdarkmode="true"] &
-        //     // border-right: 2px dashed v.$col-pri-dark
+        //     // border-right: 2px dashed var(--col-pri)-dark
         //     +m.mobile
         //         border: none
 
@@ -184,7 +184,7 @@
                 margin: 0
 
             &__content
-                border: 2px solid v.$col-pri
+                border: 2px solid var(--col-pri)
                 margin: 1rem
                 padding: 1rem 1.5rem
             
@@ -201,7 +201,7 @@
 
             [data-isdarkmode="true"] &
                 .contact-me__content
-                    border: 2px solid v.$col-pri-dark
+                    border: 2px solid var(--col-pri)-dark
 
         +m.mobile
             min-height: auto
