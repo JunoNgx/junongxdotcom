@@ -10,7 +10,7 @@
 @mixin transition($elements...)
     $transition: ()
     @each $el in $elements 
-        $transition:append($transition, $el v.$trans-time-default ease-out, $separator: comma)
+        $transition:append($transition, $el var(--transition-time-default) ease-out, $separator: comma)
     transition: $transition
 
 @mixin button
@@ -20,8 +20,8 @@
     cursor: pointer
     color: var(--col-pri)
     background-color: transparent
-    font-family: v.$fonts
-    font-size: v.$font-size
+    font-family: var(--font-family)
+    font-size: var(--font-size)
     +transition(color, background-color)
     &:hover
         color: var(--col-bg)
