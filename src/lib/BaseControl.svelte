@@ -166,13 +166,13 @@
                 Filter by tags
             </h2>
             <div class="control__filter-tags-buttons-container">
-                <button class="control__filter-tags-buttons"
+                <button class="control__filter-tags-button"
                     on:click={() => checkAll(false)}
                 >
                     Uncheck all
                 </button>
 
-                <button class="control__filter-tags-buttons"
+                <button class="control__filter-tags-button"
                     on:click={() => checkAll(true)}
                 >
                     Check all
