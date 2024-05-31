@@ -81,6 +81,10 @@
     @use '../styles/vars' as v
     @use '../styles/mixins' as m
 
+    $btn-width: 48px
+    $btn-height: 48px
+    $btn-spacing: 1.5rem
+
     .control-container
         &__expand-button,
         &__collapse-trigger
@@ -93,10 +97,10 @@
                 border-width: 0
                 z-index: 1
                 position: fixed
-                top: 1.5rem
-                right: 1.5rem
-                width: 48px
-                height: 48px
+                top: $btn-spacing
+                right: $btn-spacing
+                width: $btn-width
+                height: $btn-height
                 color: var(--col-pri)
                 background-color: var(--col-acc)
                 cursor: pointer
@@ -133,11 +137,14 @@
                 height: 100vh
                 width: 100vw
                 background-color: var(--col-acc)
-                clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
-                transition: clip-path 300ms ease-out
+                // clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
+                // clip-path: polygon(calc(100% - 1.5rem - $btn-width) calc(1.5rem), 100% - 1.5rem 1.5rem)
+                clip-path: polygon(calc(100% - 1.5rem - $btn-width) 1.5rem, calc(100% - 1.5rem) 1.5rem, calc(100% - 1.5rem) calc(1.5rem + $btn-height), calc(100% - 1.5rem - $btn-width) calc(1.5rem + $btn-height))
+                transition: clip-path 300ms ease-in-out
 
                 &--is-expanded
-                    clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
+                    // clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
+                    clip-path: polygon(0 0, 125vw -25vh, 150vw 92vh, -20vw 82vh)
 
                 // .control-container--is-dark &
                 //     background-color: var(--col-acc)-dark
