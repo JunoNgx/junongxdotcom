@@ -158,6 +158,8 @@
         //     +m.mobile
         //         border: none
 
+    .leftside-content
+        z-index: 1
 
     .content-wrapper
         flex-grow: 3
