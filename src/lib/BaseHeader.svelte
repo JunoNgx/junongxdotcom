@@ -21,6 +21,8 @@
     onMount(() => {
         setTimeout(enableStripAnimation, 3000)
     })
+
+    // TODO: decide what to do about the colour strip
 </script>
 
 <template>
