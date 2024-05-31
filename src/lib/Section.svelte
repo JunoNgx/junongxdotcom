@@ -165,12 +165,12 @@
             &--is-expanded
                 visibility: visible
                 opacity: 1
-                font-size: v.$font-size
+                font-size: var(--font-size)
                 // Delay opacity
                 transition: font-size $duration ease-out, opacity $duration ease-out $duration
 
                 +m.mobile
-                    font-size: v.$font-size-mobile
+                    font-size: var(--font-size-mobile)
 
         &__buttons-container
             display: flex
@@ -190,7 +190,7 @@
         &__link-item
             padding: 0.25rem 0.5rem
             background-image: none
-            background-color: v.$col-acc
+            background-color: var(--col-acc)
             font-family: "Noto Sans Mono", monospace
             font-size: 12px
 
@@ -221,17 +221,17 @@
 
             +m.mobile
                 height: 36px
-                font-size: v.$font-size-mobile
+                font-size: var(--font-size-mobile)
 
-            .section--is-dark &
-                +m.button-dark
+            // .section--is-dark &
+            //     +m.button-dark
 
         &__expand-button-label-wrapper
             display: flex
             flex-direction: column
 
             transition-property: transform, opacity
-            transition-duration: v.$trans-time-default 
+            transition-duration: var(--transition-time-default)
             transition-timing-function: ease-out
 
             .section__expand-button-label--more
@@ -249,7 +249,7 @@
                     opacity: 1
         
         &__expand-button-label
-            transition: transform v.$trans-time-default ease-out
+            transition: transform var(--transition-time-default) ease-out
 
         +m.mobile
             margin: 2rem 0.5rem
