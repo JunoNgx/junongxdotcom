@@ -20,8 +20,10 @@
   links:
     - label: JustJot.app
       url: https://justjot.app
+      type: deployment
     - label: frontend repo
       url: https://github.com/JunoNgx/justjot-frontend
+      type: source
 
 - title: manafarm
   imgSrc: /images/manafarm_withBg.jpg
@@ -65,6 +67,7 @@
   links:
     - label: EbonyMemo.com
       url: http://ebonymemo.com/
+      type: deployment
 
 
 - title: Wonyun Trench Run
@@ -82,8 +85,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/p8wonyun
+      type: source
     - label: itch.io
       url: https://junongx.itch.io/wonyun-trench-run
+      type: deployment
 
 
 - title: CrispGameLib Collection
@@ -101,8 +106,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/crips-game-lib-collection
+      type: source
     - label: itch.io
       url: https://junongx.itch.io/crisp-webgame-collection
+      type: generic
 
 
 - title: Creative Coding
@@ -117,8 +124,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/p5js-gallery
+      type: source
     - label: gallery
       url: https://junongx.github.io/p5js-gallery/
+      type: generic
 
 
 - title: Chattie
@@ -140,8 +149,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/chattie
+      type: source
     - label: deployment
       url: https://chattie-juno.vercel.app/
+      type: deployment
 
 
 - title: This Website
@@ -162,6 +173,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/junongxdotcom
+      type: source
 
 
 - title: Working Memory Test
@@ -176,8 +188,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/working-memory-test
+      type: source
     - label: deployment
       url: https://workingmemorytest.netlify.app/
+      type: generic
 
 
 - title: Pura
@@ -193,8 +207,10 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/flutter-pura
+      type: source
     - label: Play Store
       url: https://play.google.com/store/apps/details?id=com.junongx.wallpaper
+      type: generic
 
 
 - title: Lutro Mega Input Library
@@ -206,6 +222,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/LutroMegaInput
+      type: source
 
 
 - title: Moon2P8
@@ -219,6 +236,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/moon2p8-py
+      type: source
 
 
 - title: Photography
@@ -234,6 +252,7 @@
   links:
     - label: flickr
       url: https://flickr.com/people/JunoNgx/
+      type: generic
 
 
 - title: Lego StarCraft
@@ -249,6 +268,7 @@
   links:
     - label: flickr album
       url: https://www.flickr.com/photos/junongx/albums/72157715396303363
+      type: generic
 
 
 - title: Mechanical keyboards
@@ -266,5 +286,7 @@
   links:
     - label: sakata
       url: https://github.com/JunoNgx/sakata
+      type: generic
     - label: qmk_userspace
       url: https://github.com/JunoNgx/qmk_userspace/tree/junongx/layouts/ortho_4x12/junonum
+      type: source
