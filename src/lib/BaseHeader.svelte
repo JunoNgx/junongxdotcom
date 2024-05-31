@@ -68,8 +68,8 @@
             display: inline-block
             margin: 0
 
-            .header--is-dark &
-                border-color: var(--col-pri)-dark
+            // .header--is-dark &
+            //     border-color: var(--col-pri)-dark
 
             .header__first-name-j,
             .header__first-name-u,
@@ -122,16 +122,16 @@
             &--long-paragraph
                 text-align: right
         
-        &--is-dark
-            .header__strip
-                &--one
-                    background-color: v.$col-strip-1-dark
-                &--two
-                    background-color: v.$col-strip-2-dark
-                &--three
-                    background-color: v.$col-strip-3-dark
-                &--four
-                    background-color: v.$col-strip-4-dark
+        // &--is-dark
+        //     .header__strip
+        //         &--one
+        //             background-color: v.$col-strip-1-dark
+        //         &--two
+        //             background-color: v.$col-strip-2-dark
+        //         &--three
+        //             background-color: v.$col-strip-3-dark
+        //         &--four
+        //             background-color: v.$col-strip-4-dark
 
         +m.mobile
             align-items: flex-start
@@ -150,8 +150,8 @@
             &__desc--long-paragraph
                 text-align: left
 
-            &--is-dark
-                border-left: 2px dashed var(--col-pri)-dark
+            // &--is-dark
+            //     border-left: 2px dashed var(--col-pri)-dark
 
     // Unhashed modifier classes
     :global(.header__strip--can-animate.header__strip--one)
