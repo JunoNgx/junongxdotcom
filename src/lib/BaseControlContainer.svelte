@@ -108,9 +108,9 @@
                 justify-content: space-around
                 align-items: center
 
-                .control-container--is-dark &
-                    color: v.$col-pri-dark
-                    background-color: v.$col-acc-dark
+                // .control-container--is-dark &
+                //     color: v.$col-pri-dark
+                //     background-color: v.$col-acc-dark
                 
                 .icon-line
                     transform-origin: center
@@ -157,8 +157,8 @@
                 &--is-expanded
                     clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
 
-                .control-container--is-dark &
-                    background-color: v.$col-acc-dark
+                // .control-container--is-dark &
+                //     background-color: v.$col-acc-dark
 
             &__content
                 padding: 4rem 2rem 1rem
