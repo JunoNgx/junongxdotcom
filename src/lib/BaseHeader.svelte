@@ -69,7 +69,7 @@
             margin: 0
 
             .header--is-dark &
-                border-color: v.$col-pri-dark
+                border-color: var(--col-pri)-dark
 
             .header__first-name-j,
             .header__first-name-u,
@@ -138,7 +138,7 @@
             margin-left: 0.5rem
             margin-top: 2rem
             padding-left: 1rem
-            border-left: 2px dashed v.$col-pri
+            border-left: 2px dashed var(--col-pri)
 
             &__name-container
                 text-align: left
@@ -151,7 +151,7 @@
                 text-align: left
 
             &--is-dark
-                border-left: 2px dashed v.$col-pri-dark
+                border-left: 2px dashed var(--col-pri)-dark
 
     // Unhashed modifier classes
     :global(.header__strip--can-animate.header__strip--one)
