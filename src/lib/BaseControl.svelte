@@ -51,64 +51,178 @@
     updateDarkModeSettingLabel()
 </script>
 
-<template lang="pug">
-    
-    .control(class!="{$isDarkMode ? 'control--is-dark' : ''}")
+<template>
+    <div class="control">
 
-        .control__contact-wrapper
-            h2.control__contact-title Find me elsewhere
-            .control__contact-list
-                +if("contacts.length")
-                    +each("contacts as contact")
-                        a.control__contact-item(rel="noopener noreferrer" target="_blank" href!="{contact.url}") {contact.label}
+        <!-- Contacts -->
+        <div class="control__contact-wrapper">
+            <h2 class="control__contact-title">
+                Find me elsewhere
+            </h2>
+            <div class="control__contact-list">
+                {#if contacts.length > 0}
+                    {#each contacts as contact}
+                        <a class="control__contact-item"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href={contact.url}
+                        >
+                            {contact.label}
+                        </a>
+                    {/each}
+                {/if}
+            </div>
+        </div>
 
-        .control__display-mode-wrapper
-            //- h2.control__display-mode-title Display mode
-            .control__display-mode
-                span.control__display-mode-label(class!="{shouldDisplayDarkModeSettingLabel ? 'control__display-mode-label--is-displayed' : ''}") {darkModeSettingLabel}
-                .control__display-mode-option-list
-                    .control__display-mode-indicator(class!="{$darkModeSetting === DarkModeOptionsEnum.OS ? '.control__display-mode-indicator--shift-zero' : ''} {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__display-mode-indicator--shift-one' : ''}  {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__display-mode-indicator--shift-two' : ''}")
+        <!-- Display mode -->
+        <div class="control__display-mode-wrapper">
+            <div class="control__display-mode">
+                <span class="control__display-mode-label
+                        {shouldDisplayDarkModeSettingLabel ? 'control__display-mode-label--is-displayed' : ''}
+                    "
+                >
+                    {darkModeSettingLabel}
+                </span>
+                <div class="control__display-mode-option-list">
+                    <div class="control__display-mode-indicator
+                        {$darkModeSetting === DarkModeOptionsEnum.OS ? 'control__display-mode-indicator--shift-zero' : ''}
+                        {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__display-mode-indicator--shift-one' : ''}
+                        {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__display-mode-indicator--shift-two' : ''}
+                    "/>
+                    <button class="control__display-mode-button"
+                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
+                        aria-label="Switch to dark mode option: uses OS Settings"
+                    >
+                        <!-- Gear -->
+                        <svg class="control__display-mode-icon-svg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </button>
+                    <button class="control__display-mode-button"
+                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
+                        aria-label="Switch to dark mode option: Light mode"
+                    >
+                        <!-- Sun -->
+                        <svg class="control__display-mode-icon-svg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                    <button class="control__display-mode-button"
+                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
+                        aria-label="Switch to dark mode option: Dark mode"
+                    >
+                        <!-- Moon -->
+                        <svg class="control__display-mode-icon-svg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
 
-                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.OS)}" aria-label="Switch to dark mode option: uses OS Settings")
-                        // Gear
-                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--os-settings(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                            circle(cx="12" cy="12" r="3")
-                            path(d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z")
+                </div>
+            </div>
+        </div>
 
-                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}" aria-label="Switch to dark mode option: Light mode")
-                        // The sun
-                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--light(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                            circle(cx="12" cy="12" r="5")
-                            line(x1="12" y1="1" x2="12" y2="3")
-                            line(x1="12" y1="21" x2="12" y2="23")
-                            line(x1="4.22" y1="4.22" x2="5.64" y2="5.64")
-                            line(x1="18.36" y1="18.36" x2="19.78" y2="19.78")
-                            line(x1="1" y1="12" x2="3" y2="12")
-                            line(x1="21" y1="12" x2="23" y2="12")
-                            line(x1="4.22" y1="19.78" x2="5.64" y2="18.36")
-                            line(x1="18.36" y1="5.64" x2="19.78" y2="4.22")
+        <!-- Tag filter -->
+        <div class="control__filter-tags-wrapper">
+            <h2 class="control__filter-tags-title">
+                Filter by tags
+            </h2>
+            <div class="control__filter-tags-buttons-container">
+                <button class="control__filter-tags-buttons"
+                    on:click={() => checkAll(false)}
+                >
+                    Uncheck all
+                </button>
 
-                    button.control__display-mode-button(on:click!="{() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}" aria-label="Switch to dark mode option: Dark mode")
-                        // The moon
-                        svg.control__display-mode-icon-svg.control__display-mode-icon-svg--is-dark(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                            path(d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z")
-
-        .control__filter-tags-wrapper
-            h2.control__filter-tags-title Filter by tags
-            .control__filter-tags-buttons-container
-                button.control__filter-tags-button(type="button" on:click!="{() => {checkAll(false)}}") Uncheck all
-                button.control__filter-tags-button(type="button" on:click!="{() => {checkAll(true)}}") Check all
-            .control__filter-tags-list
-                +each("[...$tagDataMap] as [tag, isDisplayed]")
-                    button.control__filter-tags-item(class!="{isDisplayed ? 'control__filter-tags-item--selected' : ''}" on:click!="{switchTagData(tag)}")
-                        span.control__filter-tags-item-label {tag}
-                        +if('isDisplayed')
-                            svg.control__filter-tags-item-icon.control__filter-tags-item-icon--is-selected(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                polyline(points="20 6 9 17 4 12")
-                            +else()
-                                svg.control__filter-tags-item-icon(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                    line(x1="18" y1="6" x2="6" y2="18")
-                                    line(x1="6" y1="6" x2="18" y2="18")
+                <button class="control__filter-tags-buttons"
+                    on:click={() => checkAll(true)}
+                >
+                    Check all
+                </button>
+            </div>
+            <div class="control__filter-tags-list">
+                {#each [...$tagDataMap] as [tag, isDisplayed]}
+                    <button class="control__filter-tags-item
+                            {isDisplayed && 'control__filter-tags-item--selected'}
+                        "
+                        on:click={() => switchTagData(tag)}
+                    >
+                        <span class="control__filter-tags-item-label">
+                            {tag}
+                        </span>
+                        {#if isDisplayed}
+                            <svg class="control__filter-tags-item-icon control__filter-tags-item-icon--is-selected"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        {:else}
+                            <svg class="control__filter-tags-item-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        {/if}
+                    </button>
+                {/each}
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="sass">
