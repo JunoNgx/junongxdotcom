@@ -366,8 +366,9 @@
                 gap: 0.5rem
 
             &-item
-                border-radius: 1rem
-                padding: 0.1rem 0.5rem
+                // border-radius: 1rem
+                padding: 0.1rem
+                padding-left: 0.25rem
                 height: 1.2rem
                 cursor: pointer
                 display: flex
@@ -387,7 +388,9 @@
 
                 // States transitions
                 background-color: transparent
-                border: 1px solid var(--col-pri)
+                border-width: 1px
+                border-style: solid
+                border-color: var(--col-pri)
                 +m.transition(background-color, border-color)
 
                 &-label, &-icon
