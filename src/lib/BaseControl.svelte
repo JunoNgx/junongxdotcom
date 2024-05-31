@@ -165,19 +165,6 @@
             <h2 class="control__filter-tags-title">
                 Filter by tags
             </h2>
-            <div class="control__filter-tags-buttons-container">
-                <button class="control__filter-tags-button"
-                    on:click={() => checkAll(false)}
-                >
-                    Uncheck all
-                </button>
-
-                <button class="control__filter-tags-button"
-                    on:click={() => checkAll(true)}
-                >
-                    Check all
-                </button>
-            </div>
             <div class="control__filter-tags-list">
                 {#each [...$tagDataMap] as [tag, isDisplayed]}
                     <button class="control__filter-tags-item
@@ -220,6 +207,19 @@
                         {/if}
                     </button>
                 {/each}
+            </div>
+            <div class="control__filter-tags-buttons-container">
+                <button class="control__filter-tags-button"
+                    on:click={() => checkAll(false)}
+                >
+                    Uncheck all
+                </button>
+
+                <button class="control__filter-tags-button"
+                    on:click={() => checkAll(true)}
+                >
+                    Check all
+                </button>
             </div>
         </div>
     </div>
@@ -351,7 +351,7 @@
                 //     +title--is-dark
 
             &-buttons-container
-                margin-bottom: 0.5rem
+                margin-top: 1rem
 
             &-button
                 +m.button
