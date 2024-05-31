@@ -23,23 +23,26 @@
     })
 </script>
 
-<template lang="pug">
-    header.header(class!="{$isDarkMode ? 'header--is-dark' : ''}")
-        .header__name-container
-            h1.header__name(on:click!="{restartStripAnimation}" on:keydown!="{restartStripAnimation}")
-                span.header__first-name-j J
-                span.header__first-name-u u
-                span.header__first-name-n n
-                span.header__first-name-o o
-                | !{' '}
-                span.header__last-name Nguyen
-            .header__strip-container
-                .header__strip.header__strip--one
-                .header__strip.header__strip--two
-                .header__strip.header__strip--three
-                .header__strip.header__strip--four
-        p.header__desc.header__desc--title web engineer by day
-        p.header__desc.header__desc--long-paragraph hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
+<template>
+    <header class="header">
+        <div class="header__name-container">
+            <h1 class="header__name"
+                on:click={restartStripAnimation}
+                on:keydown={restartStripAnimation}
+            >
+                <span class="header__first-name-j">J</span><span class="header__first-name-u">u</span><span class="header__first-name-n">n</span><span class="header__first-name-o">o</span>
+                <span class="header__last-name">Nguyen</span>
+            </h1>
+            <div class="header__strip-container">
+                <header class="header__strip header__strip--one" />
+                <header class="header__strip header__strip--two" />
+                <header class="header__strip header__strip--three" />
+                <header class="header__strip header__strip--four" />
+            </div>
+        </div>
+        <p class="header__desc header__desc--title">web engineer by day</p>
+        <p class="header__desc header__desc--long-paragraph">hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night</p>
+    </header>
 </template>
 
 <style lang="sass">
