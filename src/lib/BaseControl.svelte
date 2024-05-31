@@ -295,7 +295,8 @@
                     opacity: 1
 
             &-option-list
-                display: inline-block
+                display: inline-flex
+                flex-direction: row
                 margin-left: 1rem
 
             &-indicator
