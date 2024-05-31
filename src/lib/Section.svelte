@@ -13,48 +13,99 @@
     // TODO: rename to `Article` or `Entry`
 </script>
 
-<template lang="pug">
+<template>
+    <section class="section">
+        <h2 class="section__title">{entry.title}</h2>
+        <div class="section__tags-container">
+            {#each entry.tags as tag}
+                <span class="section__tag-item">{tag}</span>
+            {/each}
+        </div>
 
-    section.section(class!="{$isDarkMode ? 'section--is-dark' : ''}")
+        {#if entry.imgSrc && entry.imgAlt}
+            <img class="section__banner"
+                src={entry.imgSrc}
+                alt={entry.imgAlt}
+            />
+        {/if}
 
-        h2.section__title {entry.title}
+        {#if entry.title === "Creative Coding"}
+            <canvas id="scroll-canvas" />
+        {/if}
 
-        .section__tags-container
-            +each("entry.tags as tag")
-                span.section__tag-item {tag}
+        <p class="section__summary">
+            {@html marked(entry.summary)}
+        </p>
 
-        +if('entry.imgSrc && entry.imgAlt')
-            img.section__banner(src!="{entry.imgSrc}" alt!="{entry.imgAlt}")
+        <p class="section__content {isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}"
+            aria-hidden={!isExpanded}
+        >
+            {@html marked(entry.content)}
+        </p>
 
-        // Exception: creative conding canvas
-        +if('entry.title === "Creative Coding"')
-            canvas(id="scroll-canvas")
+        <div class="section__buttons-container">
+            <div class="section__links-container">
+                {#each entry.links as link}
+                    <a class="section__link-item"
+                        href={link.url}
+                        rel="noopener noreferrer" target="_blank"
+                    >
+                        {link.label}
 
-        p.section__summary {@html marked(entry.summary)}
+                        {#if link.label === "source"}
+                            <svg class="section__link-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        {:else}
+                            <svg class="section__link-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        {/if}
+                    </a>
+                {/each}
+            </div>
 
-        p.section__content(class!="{isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}" aria-hidden!="{!isExpanded}") {@html marked(entry.content)}
-
-        .section__buttons-container
-            .section__links-container
-                +each('entry.links as link')
-                    a.section__link-item(href!="{link.url}" rel="noopener noreferrer" target="_blank")
-                        span {link.label}
-                        +if("link.label === 'source'")
-                            // External link
-                            svg.section__link-icon(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                polyline(points="16 18 22 12 16 6")
-                                polyline(points="8 6 2 12 8 18")
-                            +else()
-                                // Code
-                                svg.section__link-icon(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
-                                    path(d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6")
-                                    polyline(points="15 3 21 3 21 9")
-                                    line(x1="10" y1="14" x2="21" y2="3")
-            button.section__expand-button(on:click!="{handleExpandClick}")
-                .section__expand-button-label-wrapper(class!="{isExpanded && 'section__expand-button-label-wrapper--is-expanded'}")
-                    span.section__expand-button-label.section__expand-button-label--more(aria-hidden!="{isExpanded}") More
-                    span.section__expand-button-label.section__expand-button-label--less(aria-hidden!="{!isExpanded}") Less
-
+            <button class="section__expand-button"
+                on:click={handleExpandClick}
+            >
+                <div class="section__expand-button-label-wrapper {isExpanded ? 'section__expand-button-label-wrapper--is-expanded' : ''}">
+                    <span class="section__expand-button-label section__expand-button-label--more"
+                        aria-hidden={isExpanded}
+                    >
+                        More
+                    </span>
+                    <span class="section__expand-button-label section__expand-button-label--less"
+                        aria-hidden={!isExpanded}
+                    >
+                        Less
+                    </span>
+                </div>
+            </button>
+        </div>
+    </section>
 </template>
 
 <style lang="sass">
