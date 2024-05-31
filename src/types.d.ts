@@ -18,7 +18,12 @@ declare type TagData = {
     isDisplayed: Boolean
 }
 
-declare module "*.yaml" {
+declare module "src/data/content.yaml" {
     const entries: Entry[]
+    export = entries
+}
+
+declare module "src/data/contacts.yaml" {
+    const entries: CtaLink[]
     export = entries
 }
