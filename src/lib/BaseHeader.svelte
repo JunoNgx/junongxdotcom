@@ -57,7 +57,6 @@
         &__name-container
             text-align: right
             width: fit-content
-            cursor: pointer
 
         &__name
             display: inline-block
