@@ -144,7 +144,7 @@
 
                 &--is-expanded
                     // clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
-                    clip-path: polygon(0 0, 125vw -25vh, 150vw 92vh, -20vw 82vh)
+                    clip-path: polygon(12vw 7vh, 97vw 0vh, 150vw 92vh, -12vw 82vh)
 
                 // .control-container--is-dark &
                 //     background-color: var(--col-acc)-dark
