@@ -188,6 +188,7 @@
             flex-grow: 4
 
         &__link-item
+            margin: 0.25rem 0 0.25rem
             padding: 0.25rem 0.5rem
             background-image: none
             background-color: var(--col-acc)
