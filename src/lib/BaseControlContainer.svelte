@@ -62,19 +62,18 @@
             aria-label="Alternative button to collapse the control menu"
             aria-hidden={!isExpanded}
             on:click={collapseControl}
+        />
+        <div
+            class="control-container__content-wrapper
+                {isExpanded
+                ? 'control-container__content-wrapper--is-expanded'
+                : ''}
+            "
         >
-            <div
-                class="control-container__content-wrapper
-                    {isExpanded
-                    ? 'control-container__content-wrapper--is-expanded'
-                    : ''}
-                "
-            >
-                <div class="control-container__content">
-                    <Control />
-                </div>
+            <div class="control-container__content">
+                <Control />
             </div>
-        </button>
+        </div>
     </div>
 </template>
 
