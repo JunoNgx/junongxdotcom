@@ -112,23 +112,6 @@
                 //     color: v.$col-pri-dark
                 //     background-color: v.$col-acc-dark
                 
-                .icon-line
-                    transform-origin: center
-                    &--1
-                        transition: transform v.$trans-time-icon-expand-animation-base*1.0 ease-in-out
-                        &.icon-line--is-expanded
-                            transform: rotate(405deg) translate(0%, 25%)
-                    
-                    &--2
-                        transition: transform v.$trans-time-icon-expand-animation-base*0.5 ease-in-out
-                        &.icon-line--is-expanded
-                            transform: rotate(75deg) translate(-30%, 75%)
-
-                    &--3
-                        transition: transform v.$trans-time-icon-expand-animation-base*0.7 ease-in-out
-                        &.icon-line--is-expanded
-                            transform: rotate(-45deg) translate(0%, -25%)
-
             &__collapse-trigger
                 border-width: 0
                 background-color: transparent
@@ -163,4 +146,20 @@
             &__content
                 padding: 4rem 2rem 1rem
 
+    .icon-line
+        transform-origin: center
+        &--1
+            transition: transform v.$trans-time-icon-expand-animation-base*1.0 ease-in-out
+            &.icon-line--is-expanded
+                transform: rotate(405deg) translate(0%, 25%)
+        
+        &--2
+            transition: transform v.$trans-time-icon-expand-animation-base*0.5 ease-in-out
+            &.icon-line--is-expanded
+                transform: rotate(75deg) translate(-30%, 75%)
+
+        &--3
+            transition: transform v.$trans-time-icon-expand-animation-base*0.7 ease-in-out
+            &.icon-line--is-expanded
+                transform: rotate(-45deg) translate(0%, -25%)
 </style>
