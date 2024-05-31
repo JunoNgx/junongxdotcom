@@ -162,6 +162,7 @@
             overflow: hidden
 
             +m.mobile
+                height: 36px
                 font-size: v.$font-size-mobile
 
             .section--is-dark &
