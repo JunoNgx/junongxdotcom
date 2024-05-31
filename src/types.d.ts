@@ -10,12 +10,18 @@ declare type Entry = {
 
 declare type CtaLink = {
     label: string,
-    url: string
+    url: string,
+    type: "deployment" | "source" | "generic"
 }
 
 declare type TagData = {
     tag: string,
     isDisplayed: Boolean
+}
+
+declare type Link = {
+    label: string,
+    url: string,
 }
 
 declare module "src/data/content.yaml" {
@@ -24,6 +30,6 @@ declare module "src/data/content.yaml" {
 }
 
 declare module "src/data/contacts.yaml" {
-    const entries: CtaLink[]
+    const entries: Link[]
     export = entries
 }
