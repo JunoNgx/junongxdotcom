@@ -1,6 +1,6 @@
 <script lang="ts">
     import { isDarkMode } from "src/store";
-    import Control from "./BaseControl.svelte";
+    import Control from "./ControlMain.svelte";
 
     let isExpanded = false;
 
