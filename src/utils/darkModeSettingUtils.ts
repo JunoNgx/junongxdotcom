@@ -52,8 +52,5 @@ const handleDarkModeSettingChange = () => {
 export {
     retrieveDarkModeSettingFromLocalStorage,
     storeDarkModeSettingToLocalStorage,
-    // processShouldBeDarkMode,
-    // processDocumentBodyFromDarkMode,
-    // handleOsSettingsListeners,
     handleDarkModeSettingChange,
 }
