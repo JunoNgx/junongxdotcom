@@ -137,7 +137,7 @@
             flex-flow: row wrap
             justify-content: space-around
             align-items: center
-            gap: 0.2rem
+            gap: 0.5rem
             flex-grow: 4
 
         &__expand-button
