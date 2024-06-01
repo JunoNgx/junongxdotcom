@@ -156,7 +156,7 @@
             gap: 0.1rem 1rem
 
         &__tag-item
-            font-family: monospace
+            font-family: var(--font-family-monospace)
             font-size: 10px
             color: rgba(var(--col-pri), 0.8)
 
@@ -201,7 +201,7 @@
             padding: 0.25rem 0.5rem
             background-image: none
             background-color: var(--col-acc)
-            font-family: "Noto Sans Mono", monospace
+            font-family: var(--font-family-monospace)
             font-size: 12px
 
             display: flex
