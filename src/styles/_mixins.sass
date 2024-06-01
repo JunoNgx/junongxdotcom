@@ -27,6 +27,20 @@
         color: var(--col-bg)
         background-color: var(--col-pri)
 
+@mixin control-wrapper
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-end
+
+@mixin control-title
+    font-size: 1.2rem
+    margin: 0.75rem 0
+    padding: 0.1rem 0.25rem
+    border-bottom: 2px dashed var(--col-pri)
+    border-top: 2px dashed var(--col-pri)
+    width: fit-content
+    +transition(border-color)
+
 // TODO: to remove
 // @mixin button-dark
 //     color: v.$col-pri-dark
