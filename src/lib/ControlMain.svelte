@@ -1,6 +1,7 @@
 <script lang="ts">
     import ContactList from "./ContactList.svelte";
     import DisplayMode from "./DisplayMode.svelte";
+    import FilterTags from "./FilterTags.svelte";
 
     // import contacts from "src/data/contacts.yaml"
     import { tagDataMap, darkModeSetting, isDarkMode } from "src/store"
@@ -58,69 +59,7 @@
     <div class="control">
         <ContactList />
         <DisplayMode />
-
-        <!-- Tag filter -->
-        <div class="control__filter-tags-wrapper">
-            <h2 class="control__filter-tags-title">
-                Filter by tags
-            </h2>
-            <div class="control__filter-tags-list">
-                {#each [...$tagDataMap] as [tag, isDisplayed]}
-                    <button class="control__filter-tags-item
-                            {isDisplayed && 'control__filter-tags-item--selected'}
-                        "
-                        on:click={() => switchTagData(tag)}
-                    >
-                        <span class="control__filter-tags-item-label">
-                            {tag}
-                        </span>
-                        {#if isDisplayed}
-                            <svg class="control__filter-tags-item-icon control__filter-tags-item-icon--is-selected"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                        {:else}
-                            <svg class="control__filter-tags-item-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <line x1="18" y1="6" x2="6" y2="18" />
-                                <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg>
-                        {/if}
-                    </button>
-                {/each}
-            </div>
-            <div class="control__filter-tags-buttons-container">
-                <button class="control__filter-tags-button"
-                    on:click={() => checkAll(false)}
-                >
-                    Uncheck all
-                </button>
-
-                <button class="control__filter-tags-button"
-                    on:click={() => checkAll(true)}
-                >
-                    Check all
-                </button>
-            </div>
-        </div>
+        <FilterTags />
     </div>
 </template>
 
@@ -221,82 +160,5 @@
         //         //     stroke: var(--col-pri)
 
         // Tag filter
-        &__filter-tags-wrapper
-            +wrapper 
-
-        &__filter-tags
-            &-title
-                +title
-                // .control--is-dark &
-                //     +title--is-dark
-
-            &-buttons-container
-                margin-top: 1rem
-
-            &-button
-                +m.button
-                margin-left: 0.5rem
-                // .control--is-dark &
-                //     +m.button-dark
-
-            &-list
-                display: flex
-                flex-flow: row wrap
-                justify-content: flex-end
-                gap: 0.5rem
-
-            &-item
-                // border-radius: 1rem
-                padding: 0.1rem
-                padding-left: 0.25rem
-                height: 1.2rem
-                cursor: pointer
-                display: flex
-                flex-flow: row nowrap
-                justify-content: space-between
-                align-items: center
-                gap: 0.15rem
-
-                &-label
-                    display: block
-                    font-size: 10px
-                    font-family: monospace
-
-                &-icon
-                    margin-top: 1px
-                    display: block
-
-                // States transitions
-                background-color: transparent
-                border-width: 1px
-                border-style: solid
-                border-color: var(--col-pri)
-                +m.transition(background-color, border-color)
-
-                &-label, &-icon
-                    color: var(--col-pri)
-                    +m.transition(color)
-
-                &--selected
-                    background-color: var(--col-pri)
-
-                    & .control__filter-tags-item-label,
-                    & .control__filter-tags-item-icon
-                        color: var(--col-bg)
-
-                // .control--is-dark &
-                //     border: 1px solid v.$col-pri-dark
-
-                //     & .control__filter-tags-item-label,
-                //     & .control__filter-tags-item-icon
-                //         color: v.$col-pri-dark
-
-                //     &--selected
-                //         background-color: v.$col-pri-dark
-
-                //         & .control__filter-tags-item-label,
-                //         & .control__filter-tags-item-icon
-                //             color: v.$col-bg-dark
-
-
+        
 </style>
