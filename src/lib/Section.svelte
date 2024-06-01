@@ -222,10 +222,6 @@
             height: 33px
             overflow: hidden
 
-            +m.mobile
-                height: 36px
-                font-size: var(--font-size-mobile)
-
         &__expand-button-label-wrapper
             display: flex
             flex-direction: column
