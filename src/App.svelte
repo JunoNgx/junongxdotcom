@@ -150,42 +150,43 @@
         flex-grow: 3
         min-height: 90vh
 
-        .no-content
-            margin: 2rem
-            padding: 1rem
-            max-width: 400px
-            border: 2px solid transparent
-            text-align: left
-            -webkit-hyphens: auto
-            hyphens: auto
-
-        .contact-me
-            background-color: transparent
-            border: none
-            margin: auto
-            text-align: center
-            max-width: 360px
-            padding: 0
-
-            p
-                margin: 0
-
-            &__content
-                border: 2px solid var(--col-pri)
-                margin: 1rem
-                padding: 1rem 1.5rem
-            
-            &__contact-dir
-                display: block
-                &--is-mobile
-                    display: none
-
-            +m.mobile
-                &__contact-dir
-                    display: none
-                    &--is-mobile
-                        display: block
-
         +m.mobile
             min-height: auto
+
+    .no-content
+        margin: 2rem
+        padding: 1rem
+        max-width: 400px
+        border: 2px solid transparent
+        text-align: left
+        -webkit-hyphens: auto
+        hyphens: auto
+
+    .contact-me
+        background-color: transparent
+        border: none
+        margin: auto
+        text-align: center
+        max-width: 360px
+        padding: 0
+
+        p
+            margin: 0
+
+        &__content
+            border: 2px solid var(--col-pri)
+            margin: 1rem
+            padding: 1rem 1.5rem
+        
+        &__contact-dir
+            display: block
+            &--is-mobile
+                display: none
+
+        +m.mobile
+            &__contact-dir
+                display: none
+                &--is-mobile
+                    display: block
+
 </style>
