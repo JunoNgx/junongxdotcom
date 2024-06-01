@@ -3,7 +3,7 @@
 
     import Header from "src/lib/BaseHeader.svelte"
     import Footer from "src/lib/BaseFooter.svelte"
-    import ControlContainer from "src/lib/BaseControlContainer.svelte"
+    import ControlContainer from "src/lib/ControlContainer.svelte"
     import Section from "src/lib/Section.svelte"
 
     import content from "src/data/content.yaml"
