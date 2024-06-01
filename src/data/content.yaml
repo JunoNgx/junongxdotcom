@@ -83,12 +83,12 @@
     - game development
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/p8wonyun
-      type: source
     - label: itch.io
       url: https://junongx.itch.io/wonyun-trench-run
       type: deployment
+    - label: source
+      url: https://github.com/JunoNgx/p8wonyun
+      type: source
 
 
 - title: CrispGameLib Collection
@@ -104,12 +104,12 @@
     - in active development
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/crips-game-lib-collection
-      type: source
     - label: itch.io
       url: https://junongx.itch.io/crisp-webgame-collection
       type: generic
+    - label: source
+      url: https://github.com/JunoNgx/crips-game-lib-collection
+      type: source
 
 
 - title: Creative Coding
@@ -122,12 +122,12 @@
     - creative coding
     - in active development
   links:
-    - label: source
-      url: https://github.com/JunoNgx/p5js-gallery
-      type: source
     - label: gallery
       url: https://junongx.github.io/p5js-gallery/
       type: generic
+    - label: source
+      url: https://github.com/JunoNgx/p5js-gallery
+      type: source
 
 
 - title: Chattie
@@ -147,12 +147,12 @@
     - typescript
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/chattie
-      type: source
     - label: deployment
       url: https://chattie-juno.vercel.app/
       type: deployment
+    - label: source
+      url: https://github.com/JunoNgx/chattie
+      type: source
 
 
 - title: This Website
@@ -186,12 +186,12 @@
     - web development
     - reactJS
   links:
-    - label: source
-      url: https://github.com/JunoNgx/working-memory-test
-      type: source
     - label: deployment
       url: https://workingmemorytest.netlify.app/
       type: generic
+    - label: source
+      url: https://github.com/JunoNgx/working-memory-test
+      type: source
 
 
 - title: Pura
@@ -205,12 +205,12 @@
     - flutter
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/flutter-pura
-      type: source
     - label: Play Store
       url: https://play.google.com/store/apps/details?id=com.junongx.wallpaper
       type: generic
+    - label: source
+      url: https://github.com/JunoNgx/flutter-pura
+      type: source
 
 
 - title: Lutro Mega Input Library
@@ -250,7 +250,7 @@
   tags:
     - hobby
   links:
-    - label: flickr
+    - label: flickr page
       url: https://flickr.com/people/JunoNgx/
       type: generic
 
