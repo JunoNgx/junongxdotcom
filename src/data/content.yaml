@@ -163,7 +163,7 @@
 
     While JSON is the more common and obvious choice, its limitation in display content makes unfit for a good content editing experience. As a result, each and every one of these entries you are reading is stored as Markdown syntaxes in a [YAML](https://yaml.org/) file. Imported as an array of objects, these content are then processed and iteratively displayed.
 
-    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax) and the template language [pug](https://pugjs.org/api/getting-started.html), makes this my most human-readable and elegant codebase yet.
+    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax), makes this my most human-readable and elegant codebase yet.
   tags:
     - web development
     - in active development
