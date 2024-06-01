@@ -138,7 +138,7 @@
 
                 &--is-expanded
                     // clip-path: polygon(12vw 7vh, 97vw 1vh, 120vw 87vh, 80vw 97vh, -12vw 82vh)
-                    clip-path: polygon(-50vw 0vh, 120vw 0vh, 120vw 87vh, 77vw 97vh, -50vw 80vh)
+                    clip-path: polygon(-50vw 0vh, 120vw 0vh, 120vw 82vh, 77vw 95vh, -50vw 77vh)
 
             &__content
                 padding: 4rem 2rem 1rem
