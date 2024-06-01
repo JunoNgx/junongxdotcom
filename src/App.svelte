@@ -1,8 +1,8 @@
 <script lang="ts">
     import { afterUpdate } from "svelte";
 
-    import Header from "src/lib/BaseHeader.svelte"
-    import Footer from "src/lib/BaseFooter.svelte"
+    import Header from "src/lib/Header.svelte"
+    import Footer from "src/lib/Footer.svelte"
     import ControlContainer from "src/lib/ControlContainer.svelte"
     import Section from "src/lib/Section.svelte"
 
