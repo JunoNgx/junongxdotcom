@@ -7,8 +7,7 @@
     import Article from "src/lib/Article.svelte"
 
     import content from "src/data/content.yaml"
-    import { DarkModeOptionsEnum } from "src/common";
-    import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
+    import { entryList, tagDataMap, displayedEntryList } from "./store"
     import {
         retrieveDarkModeSettingFromLocalStorage,
         handleDarkModeSettingChange
@@ -100,10 +99,6 @@
         +m.mobile
             font-size: var(--font-size-mobile)
 
-    // :global(body.is-dark)
-    //     color: var(--col-pri)-dark
-    //     background-color: v.$col-bg-dark
-
     :global(a)
         color: var(--col-pri)
         text-decoration: none
@@ -116,11 +111,6 @@
         &:hover
             // background-position: 50% 80%
             background-size: 100% 100%
-
-    // :global(body.is-dark a)
-    //     color: var(--col-pri)-dark
-    //     background-image: linear-gradient(to top, var(--col-acc)-dark 0% 90%, transparent 10%)
-
 
     main
         margin: 0 auto
@@ -152,11 +142,6 @@
             position: static
             border: none
             max-width: none
-
-        // [data-isdarkmode="true"] &
-        //     // border-right: 2px dashed var(--col-pri)-dark
-        //     +m.mobile
-        //         border: none
 
     .leftside-content
         z-index: 1
@@ -200,10 +185,6 @@
                     display: none
                     &--is-mobile
                         display: block
-
-            // [data-isdarkmode="true"] &
-            //     .contact-me__content
-            //         border: 2px solid var(--col-pri)-dark
 
         +m.mobile
             min-height: auto
