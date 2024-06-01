@@ -123,20 +123,6 @@
                 .filter-tags__item-icon
                     color: var(--col-bg)
 
-            // .control--is-dark &
-            //     border: 1px solid v.$col-pri-dark
-
-            //     & .control__filter-tags-item-label,
-            //     & .control__filter-tags-item-icon
-            //         color: v.$col-pri-dark
-
-            //     &--selected
-            //         background-color: v.$col-pri-dark
-
-            //         & .control__filter-tags-item-label,
-            //         & .control__filter-tags-item-icon
-            //             color: v.$col-bg-dark
-
         &__item-label,
         &__item-icon
             color: var(--col-pri)
@@ -157,7 +143,5 @@
         &__button
             +m.button
             margin-left: 0.5rem
-            // .control--is-dark &
-            //     +m.button-dark
 
 </style>
