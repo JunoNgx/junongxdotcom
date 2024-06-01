@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import contacts from "src/data/contacts.yaml";
 </script>
 
