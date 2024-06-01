@@ -23,7 +23,7 @@
 </template>
 
 <style lang="sass">
-    @use "../styles/_mixins" as m
+    @use "../styles/mixins" as m
     @use "../styles/vars" as v
 
     .contacts

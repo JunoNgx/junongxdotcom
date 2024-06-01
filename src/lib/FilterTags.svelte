@@ -82,8 +82,8 @@
 </template>
 
 <style lang="sass">
-    @use "../styles/_mixins" as m
-    @use "../styles/_vars" as v
+    @use "../styles/mixins" as m
+    @use "../styles/vars" as v
 
     .filter-tags
         +m.control-wrapper 
