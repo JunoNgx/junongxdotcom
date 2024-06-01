@@ -52,12 +52,12 @@
 
 <template>
     <main>
-        <div class="leftside-wrapper">
+        <aside class="leftside-wrapper">
             <div class="leftside-content">
                 <Header />
                 <ControlContainer />
             </div>
-        </div>
+        </aside>
 
         <div class="content-wrapper">
             {#if $displayedEntryList && $displayedEntryList.length > 0}
