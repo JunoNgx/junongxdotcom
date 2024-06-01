@@ -1,7 +1,7 @@
 <template>
     <footer>
         <p>
-            made with <a rel="noopener noreferrer" target="_blank" href="https://svelte.dev/">svelte</a>, <a rel="noopener noreferrer" target="_blank" href="https://sass-lang.com/">sass</a>, <a rel="noopener noreferrer" target="_blank" href="https://www.typescriptlang.org/">typescript</a> and <span class="love">love</span>
+            made with <a rel="noopener noreferrer" target="_blank" href="https://svelte.dev/">svelte</a>, <a rel="noopener noreferrer" target="_blank" href="https://sass-lang.com/">sass</a>, <a rel="noopener noreferrer" target="_blank" href="https://www.typescriptlang.org/">typescript</a>, and <span class="love">love</span>
         </p>
         <p>
             uncopyrighted and <a rel="noopener noreferrer" target="_blank" href="https://github.com/JunoNgx/junongxdotcom">open source</a>
