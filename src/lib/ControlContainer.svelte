@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { isDarkMode } from "src/store";
     import Control from "./ControlMain.svelte";
 
     let isExpanded = false;
@@ -111,10 +110,6 @@
                 justify-content: space-around
                 align-items: center
 
-                // .control-container--is-dark &
-                //     color: var(--col-pri)-dark
-                //     background-color: var(--col-acc)-dark
-                
             &__collapse-trigger
                 border-width: 0
                 background-color: transparent
@@ -137,18 +132,13 @@
                 height: 100vh
                 width: 100vw
                 background-color: var(--col-acc)
-                // clip-path: circle(0 at calc(100% - 3rem) calc(3rem))
                 // clip-path: polygon(calc(100% - 1.5rem - $btn-width) calc(1.5rem), 100% - 1.5rem 1.5rem)
                 clip-path: polygon(calc(100% - 1.5rem - $btn-width) 1.5rem, calc(100% - 1.5rem) 1.5rem, calc(100% - 1.5rem) calc(1.5rem + $btn-height), calc(100% - 1.5rem - $btn-width/2) calc(1.5rem + $btn-height), calc(100% - 1.5rem - $btn-width) calc(1.5rem + $btn-height))
                 transition: clip-path 300ms ease-in-out
 
                 &--is-expanded
-                    // clip-path: circle(90lvh at calc(100% - 3rem) calc(3rem))
                     // clip-path: polygon(12vw 7vh, 97vw 1vh, 120vw 87vh, 80vw 97vh, -12vw 82vh)
                     clip-path: polygon(-50vw 0vh, 120vw 0vh, 120vw 87vh, 77vw 97vh, -50vw 80vh)
-
-                // .control-container--is-dark &
-                //     background-color: var(--col-acc)-dark
 
             &__content
                 padding: 4rem 2rem 1rem
