@@ -8,21 +8,19 @@
     function handleExpandClick() {
         isExpanded = !isExpanded
     }
-
-    // TODO: rename to `Article` or `Entry`
 </script>
 
 <template>
-    <section class="section">
-        <h2 class="section__title">{entry.title}</h2>
-        <div class="section__tags-container">
+    <article class="article">
+        <h2 class="article__title">{entry.title}</h2>
+        <div class="article__tags-container">
             {#each entry.tags as tag}
-                <span class="section__tag-item">{tag}</span>
+                <span class="article__tag-item">{tag}</span>
             {/each}
         </div>
 
         {#if entry.imgSrc && entry.imgAlt}
-            <img class="section__banner"
+            <img class="article__banner"
                 src={entry.imgSrc}
                 alt={entry.imgAlt}
             />
@@ -32,27 +30,27 @@
             <canvas id="scroll-canvas" />
         {/if}
 
-        <p class="section__summary">
+        <p class="article__summary">
             {@html marked(entry.summary)}
         </p>
 
-        <p class="section__content {isExpanded ? 'section__content--is-expanded' : 'section__content--is-collapsed'}"
+        <p class="article__content {isExpanded ? 'article__content--is-expanded' : 'article__content--is-collapsed'}"
             aria-hidden={!isExpanded}
         >
             {@html marked(entry.content)}
         </p>
 
-        <div class="section__buttons-container">
-            <div class="section__links-container">
+        <div class="article__buttons-container">
+            <div class="article__links-container">
                 {#each entry.links as link}
-                    <a class="section__link-item"
+                    <a class="article__link-item"
                         href={link.url}
                         rel="noopener noreferrer" target="_blank"
                     >
                         {link.label}
 
                         {#if link.type === "deployment"}
-                            <svg class="section__link-icon"
+                            <svg class="article__link-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
                                 height="20"
@@ -68,7 +66,7 @@
                                 <polygon points="10 8 16 12 10 16 10 8" />
                             </svg>
                         {:else if link.type === "source"}
-                            <svg class="section__link-icon"
+                            <svg class="article__link-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
                                 height="20"
@@ -84,7 +82,7 @@
                                 <polyline points="8 6 2 12 8 18" />
                             </svg>
                         {:else}
-                            <svg class="section__link-icon"
+                            <svg class="article__link-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
                                 height="20"
@@ -104,16 +102,16 @@
                 {/each}
             </div>
 
-            <button class="section__expand-button"
+            <button class="article__expand-button"
                 on:click={handleExpandClick}
             >
-                <div class="section__expand-button-label-wrapper {isExpanded ? 'section__expand-button-label-wrapper--is-expanded' : ''}">
-                    <span class="section__expand-button-label section__expand-button-label--more"
+                <div class="article__expand-button-label-wrapper {isExpanded ? 'article__expand-button-label-wrapper--is-expanded' : ''}">
+                    <span class="article__expand-button-label article__expand-button-label--more"
                         aria-hidden={isExpanded}
                     >
                         More
                     </span>
-                    <span class="section__expand-button-label section__expand-button-label--less"
+                    <span class="article__expand-button-label article__expand-button-label--less"
                         aria-hidden={!isExpanded}
                     >
                         Less
@@ -121,14 +119,14 @@
                 </div>
             </button>
         </div>
-    </section>
+    </article>
 </template>
 
 <style lang="sass">
     @use "../styles/vars" as v
     @use "../styles/mixins" as m
 
-    .section
+    .article
         margin: 2rem
         padding: 1rem
         max-width: 400px
@@ -230,18 +228,18 @@
             transition-duration: var(--transition-time-default)
             transition-timing-function: ease-out
 
-            .section__expand-button-label--more
+            .article__expand-button-label--more
                 opacity: 1
 
-            .section__expand-button-label--less
+            .article__expand-button-label--less
                 opacity: 0
 
             &--is-expanded
                 transform: translateY(-50%)
 
-                .section__expand-button-label--more
+                .article__expand-button-label--more
                     opacity: 0
-                .section__expand-button-label--less
+                .article__expand-button-label--less
                     opacity: 1
         
         &__expand-button-label
@@ -251,7 +249,7 @@
             margin: 2rem 0.5rem
             max-width: none
 
-    :global(.section__content p:first-child)
+    :global(.article__content p:first-child)
         margin-top: 0
 
 </style>
