@@ -4,7 +4,7 @@
     import Header from "src/lib/Header.svelte"
     import Footer from "src/lib/Footer.svelte"
     import ControlContainer from "src/lib/ControlContainer.svelte"
-    import Section from "src/lib/Section.svelte"
+    import Article from "src/lib/Article.svelte"
 
     import content from "src/data/content.yaml"
     import { DarkModeOptionsEnum } from "src/common";
@@ -63,7 +63,7 @@
         <div class="content-wrapper">
             {#if $displayedEntryList && $displayedEntryList.length > 0}
                 {#each $displayedEntryList as entry}
-                    <Section entry={entry} />
+                    <Article entry={entry} />
                 {/each}
             {:else}
                 <p class="no-content">You have filtered out everything and there is nothing left to be displayed.</p>
