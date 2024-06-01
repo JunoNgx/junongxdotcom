@@ -1,5 +1,6 @@
 <script lang="ts">
-    import contacts from "src/data/contacts.yaml"
+    import ContactList from "./ContactList.svelte";
+    // import contacts from "src/data/contacts.yaml"
     import { tagDataMap, darkModeSetting, isDarkMode } from "src/store"
     import { DarkModeOptionsEnum } from "src/common"
     import {
@@ -53,26 +54,7 @@
 
 <template>
     <div class="control">
-
-        <!-- Contacts -->
-        <div class="control__contact-wrapper">
-            <h2 class="control__contact-title">
-                Find me elsewhere
-            </h2>
-            <div class="control__contact-list">
-                {#if contacts.length > 0}
-                    {#each contacts as contact}
-                        <a class="control__contact-item"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            href={contact.url}
-                        >
-                            {contact.label}
-                        </a>
-                    {/each}
-                {/if}
-            </div>
-        </div>
+        <ContactList />
 
         <!-- Display mode -->
         <div class="control__display-mode-wrapper">
@@ -255,25 +237,6 @@
         gap: 1rem
         +m.mobile
             margin-top: 1rem
-
-        // Contact list
-        &__contact-wrapper
-            +wrapper
-
-        &__contact-title
-            +title
-            // .control--is-dark &
-            //     +title--is-dark
-
-        &__contact-list
-            display: flex
-            flex-flow: row wrap
-            justify-content: flex-end
-            gap: 0.5rem 1.5rem
-
-        &__contact-item
-            +m.mobile
-                text-decoration: underline
 
         // Display mode
         &__display-mode-wrapper
