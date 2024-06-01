@@ -1,35 +1,37 @@
 <script lang="ts">
     import ContactList from "./ContactList.svelte";
+    import DisplayMode from "./DisplayMode.svelte";
+
     // import contacts from "src/data/contacts.yaml"
     import { tagDataMap, darkModeSetting, isDarkMode } from "src/store"
-    import { DarkModeOptionsEnum } from "src/common"
-    import {
-        storeDarkModeSettingToLocalStorage,
-        handleDarkModeSettingChange,
-    } from "src/utils/darkModeSettingUtils"
+    // import { DarkModeOptionsEnum } from "src/common"
+    // import {
+    //     storeDarkModeSettingToLocalStorage,
+    //     handleDarkModeSettingChange,
+    // } from "src/utils/darkModeSettingUtils"
 
-    const DARK_MODE_LABEL_DISPLAY_TIME = 2000
+    // const DARK_MODE_LABEL_DISPLAY_TIME = 2000
 
-    let darkModeSettingLabel: string
-    let shouldDisplayDarkModeSettingLabel: boolean = false
-    let darkModeSettingLabelDisplayTimeout: ReturnType<typeof setTimeout>
-    const darkModeSettingLabelOptions = [
-        "os settings",
-        "light mode",
-        "dark mode"
-    ]
+    // let darkModeSettingLabel: string
+    // let shouldDisplayDarkModeSettingLabel: boolean = false
+    // let darkModeSettingLabelDisplayTimeout: ReturnType<typeof setTimeout>
+    // const darkModeSettingLabelOptions = [
+    //     "os settings",
+    //     "light mode",
+    //     "dark mode"
+    // ]
 
-    const updateDarkModeSettingLabel = () => {
-        darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
-    }
+    // const updateDarkModeSettingLabel = () => {
+    //     darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
+    // }
 
-    const displayDarkModeSettingLabel = () => {
-        shouldDisplayDarkModeSettingLabel = true
-        clearTimeout(darkModeSettingLabelDisplayTimeout)
-        darkModeSettingLabelDisplayTimeout = setTimeout(() => {
-            shouldDisplayDarkModeSettingLabel = false
-        }, DARK_MODE_LABEL_DISPLAY_TIME)
-    }
+    // const displayDarkModeSettingLabel = () => {
+    //     shouldDisplayDarkModeSettingLabel = true
+    //     clearTimeout(darkModeSettingLabelDisplayTimeout)
+    //     darkModeSettingLabelDisplayTimeout = setTimeout(() => {
+    //         shouldDisplayDarkModeSettingLabel = false
+    //     }, DARK_MODE_LABEL_DISPLAY_TIME)
+    // }
 
     const switchTagData = (tag: string) => {
         $tagDataMap.set(tag, !$tagDataMap.get(tag))
@@ -41,106 +43,21 @@
         tagDataMap.set($tagDataMap)
     }
 
-    const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
-        darkModeSetting.set(newValue)
-        storeDarkModeSettingToLocalStorage(newValue)
-        handleDarkModeSettingChange()
-        updateDarkModeSettingLabel()
-        displayDarkModeSettingLabel()
-    }
+    // const switchDarkModeOption = (newValue: DarkModeOptionsEnum) => {
+    //     darkModeSetting.set(newValue)
+    //     storeDarkModeSettingToLocalStorage(newValue)
+    //     handleDarkModeSettingChange()
+    //     updateDarkModeSettingLabel()
+    //     displayDarkModeSettingLabel()
+    // }
 
-    updateDarkModeSettingLabel()
+    // updateDarkModeSettingLabel()
 </script>
 
 <template>
     <div class="control">
         <ContactList />
-
-        <!-- Display mode -->
-        <div class="control__display-mode-wrapper">
-            <div class="control__display-mode">
-                <span class="control__display-mode-label
-                        {shouldDisplayDarkModeSettingLabel ? 'control__display-mode-label--is-displayed' : ''}
-                    "
-                >
-                    {darkModeSettingLabel}
-                </span>
-                <div class="control__display-mode-option-list">
-                    <div class="control__display-mode-indicator
-                        {$darkModeSetting === DarkModeOptionsEnum.OS ? 'control__display-mode-indicator--shift-zero' : ''}
-                        {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'control__display-mode-indicator--shift-one' : ''}
-                        {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'control__display-mode-indicator--shift-two' : ''}
-                    "/>
-                    <button class="control__display-mode-button"
-                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
-                        aria-label="Switch to dark mode option: uses OS Settings"
-                    >
-                        <!-- Gear -->
-                        <svg class="control__display-mode-icon-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="3" />
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                        </svg>
-                    </button>
-                    <button class="control__display-mode-button"
-                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
-                        aria-label="Switch to dark mode option: Light mode"
-                    >
-                        <!-- Sun -->
-                        <svg class="control__display-mode-icon-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="5" />
-                            <line x1="12" y1="1" x2="12" y2="3" />
-                            <line x1="12" y1="21" x2="12" y2="23" />
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                            <line x1="1" y1="12" x2="3" y2="12" />
-                            <line x1="21" y1="12" x2="23" y2="12" />
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                        </svg>
-                    </button>
-                    <button class="control__display-mode-button"
-                        on:click={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
-                        aria-label="Switch to dark mode option: Dark mode"
-                    >
-                        <!-- Moon -->
-                        <svg class="control__display-mode-icon-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                        </svg>
-                    </button>
-
-                </div>
-            </div>
-        </div>
+        <DisplayMode />
 
         <!-- Tag filter -->
         <div class="control__filter-tags-wrapper">
@@ -238,70 +155,70 @@
         +m.mobile
             margin-top: 1rem
 
-        // Display mode
-        &__display-mode-wrapper
-            +wrapper
+        // // Display mode
+        // &__display-mode-wrapper
+        //     +wrapper
 
-        &__display-mode-title
-            +title
-            // .control--is-dark &
-            //     +title--is-dark
+        // &__display-mode-title
+        //     +title
+        //     // .control--is-dark &
+        //     //     +title--is-dark
 
-        &__display-mode
-            &-label
-                vertical-align: middle
-                opacity: 0
-                user-select: none
-                +m.transition(opacity)
+        // &__display-mode
+        //     &-label
+        //         vertical-align: middle
+        //         opacity: 0
+        //         user-select: none
+        //         +m.transition(opacity)
 
-                &--is-displayed
-                    opacity: 1
+        //         &--is-displayed
+        //             opacity: 1
 
-            &-option-list
-                display: inline-flex
-                flex-direction: row
-                margin-left: 1rem
+        //     &-option-list
+        //         display: inline-flex
+        //         flex-direction: row
+        //         margin-left: 1rem
 
-            &-indicator
-                position: absolute
-                width: 30px
-                height: 30px
-                border-style: solid
-                border-width: 1px
-                border-color: var(--col-pri)
-                pointer-events: none
-                +m.transition(translate)
+        //     &-indicator
+        //         position: absolute
+        //         width: 30px
+        //         height: 30px
+        //         border-style: solid
+        //         border-width: 1px
+        //         border-color: var(--col-pri)
+        //         pointer-events: none
+        //         +m.transition(translate)
 
-                // .control--is-dark &
-                //     border-color: var(--col-pri)
+        //         // .control--is-dark &
+        //         //     border-color: var(--col-pri)
 
-                &--shift-one
-                    translate: 32px
+        //         &--shift-one
+        //             translate: 32px
 
-                &--shift-two
-                    translate: 64px
+        //         &--shift-two
+        //             translate: 64px
 
-            &-button
-                background-color: transparent
-                border-width: 0
-                padding: 0
-                cursor: pointer
-                width: 22px
-                height: 22px
-                margin: 5px
+        //     &-button
+        //         background-color: transparent
+        //         border-width: 0
+        //         padding: 0
+        //         cursor: pointer
+        //         width: 22px
+        //         height: 22px
+        //         margin: 5px
 
-                &:hover
-                    background-color: transparent
-                    border-width: 0
-                    padding: 0
+        //         &:hover
+        //             background-color: transparent
+        //             border-width: 0
+        //             padding: 0
 
-            &-icon-svg
-                display: inline-block
-                vertical-align: middle
-                stroke: var(--col-pri)
+        //     &-icon-svg
+        //         display: inline-block
+        //         vertical-align: middle
+        //         stroke: var(--col-pri)
 
-                // .control--is-dark &
-                //     stroke: var(--col-pri)
+        //         // .control--is-dark &
+        //         //     stroke: var(--col-pri)
 
         // Tag filter
         &__filter-tags-wrapper
