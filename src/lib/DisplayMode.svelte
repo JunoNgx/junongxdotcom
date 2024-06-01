@@ -134,11 +134,6 @@
     .display-mode
         +m.control-wrapper
 
-        // &__display-mode-title
-        //     +m.control-title
-        //     // .control--is-dark &
-        //     //     +title--is-dark
-
         // For pontential usage of __title
 
         &__content-wrapper
@@ -167,9 +162,6 @@
             pointer-events: none
             +m.transition(translate)
 
-            // .control--is-dark &
-            //     border-color: var(--col-pri)
-
             &--shift-one
                 translate: 32px
 
@@ -194,8 +186,5 @@
             display: inline-block
             vertical-align: middle
             stroke: var(--col-pri)
-
-            // .control--is-dark &
-            //     stroke: var(--col-pri)
 
 </style>
