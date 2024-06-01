@@ -21,7 +21,7 @@
     - label: JustJot.app
       url: https://justjot.app
       type: deployment
-    - label: frontend repo
+    - label: frontend
       url: https://github.com/JunoNgx/justjot-frontend
       type: source
 
