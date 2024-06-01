@@ -1,6 +1,5 @@
 <script lang="ts">
     import { marked } from 'marked'
-    import { isDarkMode } from "src/store"
 
     export let entry: Entry
 
@@ -138,9 +137,6 @@
         -webkit-hyphens: auto
         hyphens: auto
 
-        // &--is-dark
-        //     border: 2px solid v.$col-pri-dark
-
         &__banner,
         canvas
             display: block
@@ -163,9 +159,6 @@
             font-family: monospace
             font-size: 10px
             color: rgba(var(--col-pri), 0.8)
-
-            // .section--is-dark &
-            //     color: rgba(v.$col-pri-dark, 0.8)
 
         &__content
             // CSS-only accordion button
@@ -223,13 +216,6 @@
                 background-color: var(--col-acc-alt)
                 box-shadow: 4px 4px var(--col-pri)
 
-            // .section--is-dark &
-            //     background-color: v.$col-acc-dark
-            //     &:hover
-            //         color: v.$col-bg-dark
-            //         background-color: v.$col-acc2
-            //         box-shadow: 4px 4px v.$col-pri-dark
-
         &__expand-button
             +m.button
             width: 60px
@@ -239,9 +225,6 @@
             +m.mobile
                 height: 36px
                 font-size: var(--font-size-mobile)
-
-            // .section--is-dark &
-            //     +m.button-dark
 
         &__expand-button-label-wrapper
             display: flex
@@ -275,7 +258,4 @@
     :global(.section__content p:first-child)
         margin-top: 0
 
-    :global(.section__buttons__links__item a)
-        background-image: none
-        display: block
 </style>
