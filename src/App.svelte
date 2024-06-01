@@ -1,19 +1,18 @@
 <script lang="ts">
     import { afterUpdate } from "svelte";
 
-    import Header from "src/lib/BaseHeader.svelte"
-    import Footer from "src/lib/BaseFooter.svelte"
-    import ControlContainer from "src/lib/BaseControlContainer.svelte"
-    import Section from "src/lib/Section.svelte"
+    import Header from "src/lib/Header.svelte"
+    import Footer from "src/lib/Footer.svelte"
+    import ControlContainer from "src/lib/ControlContainer.svelte"
+    import Article from "src/lib/Article.svelte"
+    import ContactMe from "./lib/ContactMe.svelte";
 
     import content from "src/data/content.yaml"
-    import { DarkModeOptionsEnum } from "src/common";
-    import { entryList, tagDataMap, darkModeSetting, isDarkMode, displayedEntryList } from "./store"
+    import { entryList, tagDataMap, displayedEntryList } from "./store"
     import {
         retrieveDarkModeSettingFromLocalStorage,
         handleDarkModeSettingChange
     } from "src/utils/darkModeSettingUtils"
-
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);
@@ -51,70 +50,61 @@
     })
 </script>
 
-<template lang="pug">
-    main
-        div.leftside-wrapper(class!="{$isDarkMode ? 'is-dark' : ''}")
-            div.leftside-content
-                Header
-                ControlContainer
+<template>
+    <main>
+        <aside class="leftside-wrapper">
+            <div class="leftside-content">
+                <Header />
+                <ControlContainer />
+            </div>
+        </aside>
 
-        div.content-wrapper
-            +if("$displayedEntryList && $displayedEntryList.length > 0")
-                +each("$displayedEntryList as entry")
-                    Section(entry!="{entry}")
+        <div class="content-wrapper">
+            {#if $displayedEntryList && $displayedEntryList.length > 0}
+                {#each $displayedEntryList as entry}
+                    <Article entry={entry} />
+                {/each}
+            {:else}
+                <p class="no-content">You have filtered out everything and there is nothing left to be displayed.</p>
+            {/if}
 
-                +else()
-                    p.no-content You have filtered out everything and there is nothing left to be displayed.
-
-            section.contact-me(class!="{$isDarkMode ? 'is-dark' : ''}")
-                div.contact-me__content
-                    p.contact-me__say-hello Would you like to say hello?
-                    p.contact-me__contact-dir My contacts are to the left ←
-                    p.contact-me__contact-dir.contact-me__contact-dir--is-mobile My contacts are in the menu ↑
-    Footer
+            <ContactMe />
+        </div>
+    </main>
+    <Footer />
 </template>
 
 <style lang="sass">
-
     @use './styles/fonts'
     @use './styles/vars' as v
     @use './styles/mixins' as m
 
     :global(html)
         scrollbar-gutter: stable
+        font-family: var(--font-family)
+        font-size: var(--font-size)
 
     :global(body)
-        font-family: v.$fonts
-        font-size: v.$font-size
+        color: var(--col-pri)
+        background-color: var(--col-bg)
         -webkit-hyphens: auto
         hyphens: auto
-        color: v.$col-pri
-        background-color: v.$col-bg
         +m.transition(color, background-color)
         +m.mobile
-            font-size: v.$font-size-mobile
-
-    :global(body.is-dark)
-        color: v.$col-pri-dark
-        background-color: v.$col-bg-dark
+            font-size: var(--font-size-mobile)
 
     :global(a)
-        color: v.$col-pri
+        color: var(--col-pri)
         text-decoration: none
         background-repeat: no-repeat
-        background-image: linear-gradient(to top, v.$col-acc 0% 90%, transparent 10%)
+        background-image: linear-gradient(to top, var(--col-acc) 0% 90%, transparent 10%)
         background-position: 50% 80%
         background-size: 100% 30%
-        transition: background-size v.$trans-time-default*0.7 ease-out, background-position v.$trans-time-default*0.7 ease-out
+        transition: background-size var(--transition-time-anchor) ease-in, background-position var(--transition-time-anchor) ease-out
 
         &:hover
-            background-position: 50% 50%
+            // background-position: 50% 80%
             background-size: 100% 100%
-
-    :global(body.is-dark a)
-        color: v.$col-pri-dark
-        background-image: linear-gradient(to top, v.$col-acc-dark 0% 90%, transparent 10%)
-
 
     main
         margin: 0 auto
@@ -134,7 +124,7 @@
         max-width: 320px
         max-height: 90vh
         padding-right: 2rem
-        border-right: 2px dashed v.$col-pri
+        border-right: 2px dashed var(--col-pri)
         align-self: flex-start
 
         display: flex
@@ -147,57 +137,23 @@
             border: none
             max-width: none
 
-        &.is-dark
-            border-right: 2px dashed v.$col-pri-dark
-            +m.mobile
-                border: none
-
+    .leftside-content
+        z-index: 1
 
     .content-wrapper
         flex-grow: 3
         min-height: 90vh
 
-        .no-content
-            margin: 2rem
-            padding: 1rem
-            max-width: 400px
-            border: 2px solid transparent
-            text-align: left
-            -webkit-hyphens: auto
-            hyphens: auto
-
-        .contact-me
-            background-color: transparent
-            border: none
-            margin: auto
-            text-align: center
-            max-width: 360px
-            padding: 0
-
-            p
-                margin: 0
-
-            &__content
-                border: 2px solid v.$col-pri
-                margin: 1rem
-                padding: 1rem 1.5rem
-            
-            &__contact-dir
-                display: block
-                &--is-mobile
-                    display: none
-
-            +m.mobile
-                &__contact-dir
-                    display: none
-                    &--is-mobile
-                        display: block
-                
-
-            &.is-dark
-                .contact-me__content
-                    border: 2px solid v.$col-pri-dark
-
         +m.mobile
             min-height: auto
+
+    .no-content
+        margin: 2rem
+        padding: 1rem
+        max-width: 400px
+        border: 2px solid transparent
+        text-align: left
+        -webkit-hyphens: auto
+        hyphens: auto
+
 </style>

@@ -22,8 +22,10 @@ const processShouldBeDarkMode = (darkModeSetting: DarkModeOptionsEnum) => {
 }
 
 const processDocumentBodyFromDarkMode = (isDarkMode: boolean) => {
-    if (isDarkMode) document.body.classList.add("is-dark")
-    else document.body.classList.remove("is-dark")
+    document.documentElement.setAttribute(
+        "data-isdarkmode",
+        isDarkMode.toString()
+    );
 }
 
 const handleOsSettingsListeners = () => {
@@ -50,8 +52,5 @@ const handleDarkModeSettingChange = () => {
 export {
     retrieveDarkModeSettingFromLocalStorage,
     storeDarkModeSettingToLocalStorage,
-    // processShouldBeDarkMode,
-    // processDocumentBodyFromDarkMode,
-    // handleOsSettingsListeners,
     handleDarkModeSettingChange,
 }
