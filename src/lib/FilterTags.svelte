@@ -98,7 +98,6 @@
             gap: 0.5rem
 
         &__item
-            // border-radius: 1rem
             padding: 0.1rem
             padding-left: 0.25rem
             height: 1.2rem
