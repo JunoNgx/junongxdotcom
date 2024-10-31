@@ -27,7 +27,7 @@
         {/if}
 
         {#if entry.title === "Creative Coding"}
-            <canvas id="scroll-canvas" />
+            <canvas id="scroll-canvas"></canvas>
         {/if}
 
         <p class="article__summary">
@@ -48,7 +48,7 @@
             </div>
 
             <button class="article__expand-button"
-                on:click={handleExpandClick}
+                onclick={handleExpandClick}
             >
                 <div class="article__expand-button-label-wrapper {isExpanded ? 'article__expand-button-label-wrapper--is-expanded' : ''}">
                     <span class="article__expand-button-label article__expand-button-label--more"
