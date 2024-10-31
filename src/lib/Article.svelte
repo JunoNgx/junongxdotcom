@@ -1,10 +1,9 @@
 <script lang="ts">
     import { marked } from 'marked'
-    import ArticleCtaLink from './ArticleCtaLink.svelte';
+    import ArticleCtaLink from './ArticleCtaLink.svelte'
 
-    export let entry: Entry
-
-    let isExpanded: boolean = false
+    let { entry }: { entry: Entry} = $props()
+    let isExpanded: boolean = $state(false)
 
     function handleExpandClick() {
         isExpanded = !isExpanded
