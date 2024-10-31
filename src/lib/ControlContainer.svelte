@@ -1,7 +1,7 @@
 <script lang="ts">
     import Control from "./ControlMain.svelte";
 
-    let isExpanded = false;
+    let isExpanded = $state(false);
 
     const handleSwitchExpand = () => {
         isExpanded = !isExpanded;
