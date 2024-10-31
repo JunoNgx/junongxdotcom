@@ -3,7 +3,7 @@ import { DarkModeOptionsEnum } from "src/common"
 import { darkModeSetting, isDarkMode } from "src/store"
 
 const retrieveDarkModeSettingFromLocalStorage = () => {
-    const storedValue = parseInt(localStorage.getItem('darkModeSetting'))
+    const storedValue = parseInt(localStorage.getItem('darkModeSetting') || "0")
     if (storedValue !== null) darkModeSetting.set(storedValue)
     else darkModeSetting.set(DarkModeOptionsEnum.DARK)
 }
