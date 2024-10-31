@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let link: CtaLink;
+    let { link }: {link: CtaLink } = $props();
 </script>
 
 <template>
