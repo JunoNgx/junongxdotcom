@@ -13,9 +13,10 @@
         "dark mode"
     ]
 
-    let darkModeSettingLabel: string
-    let shouldDisplayDarkModeSettingLabel: boolean = false
+    let darkModeSettingLabel: string = $state("")
+    let shouldDisplayDarkModeSettingLabel: boolean = $state(false)
     let darkModeSettingLabelDisplayTimeout: ReturnType<typeof setTimeout>
+        = $state(setTimeout(() => {}, 0))
 
     const updateDarkModeSettingLabel = () => {
         darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
