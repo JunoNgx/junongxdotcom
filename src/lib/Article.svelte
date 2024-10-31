@@ -1,10 +1,9 @@
 <script lang="ts">
     import { marked } from 'marked'
-    import ArticleCtaLink from './ArticleCtaLink.svelte';
+    import ArticleCtaLink from './ArticleCtaLink.svelte'
 
-    export let entry: Entry
-
-    let isExpanded: boolean = false
+    let { entry }: { entry: Entry} = $props()
+    let isExpanded: boolean = $state(false)
 
     function handleExpandClick() {
         isExpanded = !isExpanded
@@ -28,7 +27,7 @@
         {/if}
 
         {#if entry.title === "Creative Coding"}
-            <canvas id="scroll-canvas" />
+            <canvas id="scroll-canvas"></canvas>
         {/if}
 
         <p class="article__summary">
@@ -49,7 +48,7 @@
             </div>
 
             <button class="article__expand-button"
-                on:click={handleExpandClick}
+                onclick={handleExpandClick}
             >
                 <div class="article__expand-button-label-wrapper {isExpanded ? 'article__expand-button-label-wrapper--is-expanded' : ''}">
                     <span class="article__expand-button-label article__expand-button-label--more"

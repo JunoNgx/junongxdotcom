@@ -13,9 +13,10 @@
         "dark mode"
     ]
 
-    let darkModeSettingLabel: string
-    let shouldDisplayDarkModeSettingLabel: boolean = false
+    let darkModeSettingLabel: string = $state("")
+    let shouldDisplayDarkModeSettingLabel: boolean = $state(false)
     let darkModeSettingLabelDisplayTimeout: ReturnType<typeof setTimeout>
+        = $state(setTimeout(() => {}, 0))
 
     const updateDarkModeSettingLabel = () => {
         darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
@@ -54,9 +55,9 @@
                     {$darkModeSetting === DarkModeOptionsEnum.OS ? 'display-mode__indicator--shift-zero' : ''}
                     {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'display-mode__indicator--shift-one' : ''}
                     {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
-                "/>
+                "></div>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
                     aria-label="Switch to dark mode option: uses OS Settings"
                 >
                     <!-- Gear -->
@@ -76,7 +77,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
                     aria-label="Switch to dark mode option: Light mode"
                 >
                     <!-- Sun -->
@@ -103,7 +104,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
                     aria-label="Switch to dark mode option: Dark mode"
                 >
                     <!-- Moon -->
@@ -136,7 +137,7 @@
 
         // For pontential usage of __title
 
-        &__content-wrapper
+        // &__content-wrapper
 
         &__current-label
             vertical-align: middle

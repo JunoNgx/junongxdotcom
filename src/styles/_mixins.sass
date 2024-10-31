@@ -1,3 +1,5 @@
+@use "sass:list"
+
 @use './vars' as v
 
 @mixin std-border
@@ -10,7 +12,7 @@
 @mixin transition($elements...)
     $transition: ()
     @each $el in $elements 
-        $transition:append($transition, $el var(--transition-time-default) ease-out, $separator: comma)
+        $transition:list.append($transition, $el var(--transition-time-default) ease-out, $separator: comma)
     transition: $transition
 
 @mixin button
