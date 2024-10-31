@@ -136,7 +136,7 @@
 
         // For pontential usage of __title
 
-        &__content-wrapper
+        // &__content-wrapper
 
         &__current-label
             vertical-align: middle
