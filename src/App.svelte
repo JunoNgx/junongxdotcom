@@ -19,7 +19,7 @@
     }
 
     const generateTagDataMap = (inputEntryList: Array<Entry>) => {
-        const tmpTagList = []
+        const tmpTagList: string[] = []
 
         inputEntryList.forEach(entry => {
             entry.tags.forEach(tag => {
