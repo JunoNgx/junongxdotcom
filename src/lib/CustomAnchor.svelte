@@ -1,9 +1,10 @@
 <script lang="ts">
-    export let link: string
+    // TODO: not sure if this is the best way; find out how to declare chidlren as Snippet
+    let { link, children }: { link: string, children?: any } = $props()
 </script>
 
 <template>
     <a href={link} rel="noopener noreferrer" target="_blank">
-        <slot />
+        {@render children()}
     </a>
 </template>
