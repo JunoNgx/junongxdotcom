@@ -17,7 +17,7 @@
         <button
             class="control-container__expand-button"
             aria-label="Toggle expand button"
-            on:click={handleSwitchExpand}
+            onclick={handleSwitchExpand}
         >
             <svg
                 class="control-container__icon"
@@ -60,8 +60,8 @@
             "
             aria-label="Alternative button to collapse the control menu"
             aria-hidden={!isExpanded}
-            on:click={collapseControl}
-        />
+            onclick={collapseControl}
+        ></button>
         <div
             class="control-container__content-wrapper
                 {isExpanded

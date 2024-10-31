@@ -55,9 +55,9 @@
                     {$darkModeSetting === DarkModeOptionsEnum.OS ? 'display-mode__indicator--shift-zero' : ''}
                     {$darkModeSetting === DarkModeOptionsEnum.LIGHT ? 'display-mode__indicator--shift-one' : ''}
                     {$darkModeSetting === DarkModeOptionsEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
-                "/>
+                "></div>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.OS)}
                     aria-label="Switch to dark mode option: uses OS Settings"
                 >
                     <!-- Gear -->
@@ -77,7 +77,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.LIGHT)}
                     aria-label="Switch to dark mode option: Light mode"
                 >
                     <!-- Sun -->
@@ -104,7 +104,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    on:click={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
+                    onclick={() => switchDarkModeOption(DarkModeOptionsEnum.DARK)}
                     aria-label="Switch to dark mode option: Dark mode"
                 >
                     <!-- Moon -->
