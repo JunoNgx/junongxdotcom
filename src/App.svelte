@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { afterUpdate } from "svelte";
-
     import Header from "src/lib/Header.svelte"
     import Footer from "src/lib/Footer.svelte"
     import ControlContainer from "src/lib/ControlContainer.svelte"
@@ -45,7 +43,7 @@
 
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>
-    afterUpdate(() => {
+    $effect(() => {
         window.dispatchEvent(new Event('update-content'))
     })
 </script>
