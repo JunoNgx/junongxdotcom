@@ -1,7 +1,9 @@
+@use "sass:list"
+
 @use './vars' as v
 
 @mixin std-border
-    border: 2px solid v.$pri-col
+    border: 2px solid var(--col-pri)
 
 @mixin mobile
     @media screen and (max-width: v.$breakpoint)
@@ -10,27 +12,33 @@
 @mixin transition($elements...)
     $transition: ()
     @each $el in $elements 
-        $transition:append($transition, $el v.$trans-time-default ease-out, $separator: comma)
+        $transition:list.append($transition, $el var(--transition-time-default) ease-out, $separator: comma)
     transition: $transition
 
 @mixin button
-    border: 1px solid v.$col-pri
+    border: 1px solid var(--col-pri)
     border-radius: 0
     padding: 0.25rem 0.5rem
     cursor: pointer
-    color: v.$col-pri
+    color: var(--col-pri)
     background-color: transparent
-    font-family: v.$fonts
-    font-size: v.$font-size
+    font-family: var(--font-family)
+    font-size: var(--font-size)
     +transition(color, background-color)
     &:hover
-        color: v.$col-bg
-        background-color: v.$col-pri
+        color: var(--col-bg)
+        background-color: var(--col-pri)
 
-@mixin button-dark
-    color: v.$col-pri-dark
-    border: 1px solid v.$col-pri-dark
+@mixin control-wrapper
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-end
 
-    &:hover
-        color: v.$col-bg-dark
-        background-color: v.$col-pri-dark
+@mixin control-title
+    font-size: 1.2rem
+    margin: 0.75rem 0
+    padding: 0.1rem 0.25rem
+    border-bottom: 2px dashed var(--col-pri)
+    border-top: 2px dashed var(--col-pri)
+    width: fit-content
+    +transition(border-color)

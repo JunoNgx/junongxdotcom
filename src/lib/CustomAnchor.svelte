@@ -1,8 +1,10 @@
 <script lang="ts">
-    export let link: string
+    // TODO: not sure if this is the best way; find out how to declare chidlren as Snippet
+    let { link, children }: { link: string, children?: any } = $props()
 </script>
 
-<template lang="pug">
-    a(href!="{link}" rel="noopener noreferrer" target="_blank")
-        slot
+<template>
+    <a href={link} rel="noopener noreferrer" target="_blank">
+        {@render children()}
+    </a>
 </template>

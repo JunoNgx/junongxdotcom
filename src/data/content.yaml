@@ -20,8 +20,10 @@
   links:
     - label: JustJot.app
       url: https://justjot.app
-    - label: frontend repo
+      type: deployment
+    - label: frontend
       url: https://github.com/JunoNgx/justjot-frontend
+      type: source
 
 - title: manafarm
   imgSrc: /images/manafarm_withBg.jpg
@@ -65,6 +67,7 @@
   links:
     - label: EbonyMemo.com
       url: http://ebonymemo.com/
+      type: deployment
 
 
 - title: Wonyun Trench Run
@@ -80,10 +83,12 @@
     - game development
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/p8wonyun
     - label: itch.io
       url: https://junongx.itch.io/wonyun-trench-run
+      type: deployment
+    - label: source
+      url: https://github.com/JunoNgx/p8wonyun
+      type: source
 
 
 - title: CrispGameLib Collection
@@ -99,10 +104,12 @@
     - in active development
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/crips-game-lib-collection
     - label: itch.io
       url: https://junongx.itch.io/crisp-webgame-collection
+      type: generic
+    - label: source
+      url: https://github.com/JunoNgx/crips-game-lib-collection
+      type: source
 
 
 - title: Creative Coding
@@ -115,10 +122,12 @@
     - creative coding
     - in active development
   links:
-    - label: source
-      url: https://github.com/JunoNgx/p5js-gallery
     - label: gallery
       url: https://junongx.github.io/p5js-gallery/
+      type: generic
+    - label: source
+      url: https://github.com/JunoNgx/p5js-gallery
+      type: source
 
 
 - title: Chattie
@@ -138,10 +147,12 @@
     - typescript
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/chattie
     - label: deployment
       url: https://chattie-juno.vercel.app/
+      type: deployment
+    - label: source
+      url: https://github.com/JunoNgx/chattie
+      type: source
 
 
 - title: This Website
@@ -152,7 +163,7 @@
 
     While JSON is the more common and obvious choice, its limitation in display content makes unfit for a good content editing experience. As a result, each and every one of these entries you are reading is stored as Markdown syntaxes in a [YAML](https://yaml.org/) file. Imported as an array of objects, these content are then processed and iteratively displayed.
 
-    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax) and the template language [pug](https://pugjs.org/api/getting-started.html), makes this my most human-readable and elegant codebase yet.
+    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax), makes this my most human-readable and elegant codebase yet.
   tags:
     - web development
     - in active development
@@ -162,6 +173,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/junongxdotcom
+      type: source
 
 
 - title: Working Memory Test
@@ -174,10 +186,12 @@
     - web development
     - reactJS
   links:
-    - label: source
-      url: https://github.com/JunoNgx/working-memory-test
     - label: deployment
       url: https://workingmemorytest.netlify.app/
+      type: generic
+    - label: source
+      url: https://github.com/JunoNgx/working-memory-test
+      type: source
 
 
 - title: Pura
@@ -191,10 +205,12 @@
     - flutter
     - release
   links:
-    - label: source
-      url: https://github.com/JunoNgx/flutter-pura
     - label: Play Store
       url: https://play.google.com/store/apps/details?id=com.junongx.wallpaper
+      type: generic
+    - label: source
+      url: https://github.com/JunoNgx/flutter-pura
+      type: source
 
 
 - title: Lutro Mega Input Library
@@ -206,6 +222,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/LutroMegaInput
+      type: source
 
 
 - title: Moon2P8
@@ -219,6 +236,7 @@
   links:
     - label: source
       url: https://github.com/JunoNgx/moon2p8-py
+      type: source
 
 
 - title: Photography
@@ -232,8 +250,9 @@
   tags:
     - hobby
   links:
-    - label: flickr
+    - label: flickr page
       url: https://flickr.com/people/JunoNgx/
+      type: generic
 
 
 - title: Lego StarCraft
@@ -249,6 +268,7 @@
   links:
     - label: flickr album
       url: https://www.flickr.com/photos/junongx/albums/72157715396303363
+      type: generic
 
 
 - title: Mechanical keyboards
@@ -266,5 +286,7 @@
   links:
     - label: sakata
       url: https://github.com/JunoNgx/sakata
+      type: generic
     - label: qmk_userspace
       url: https://github.com/JunoNgx/qmk_userspace/tree/junongx/layouts/ortho_4x12/junonum
+      type: source
