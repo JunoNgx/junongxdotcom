@@ -43,7 +43,7 @@ const handlePreferDarkQueryChange = () => {
     processDocumentBodyFromDarkMode(get(isDarkMode))
 }
 
-const handleDarkModeSettingChange = () => {
+const handleDisplayModeChange = () => {
     isDarkMode.set(processShouldBeDarkMode(get(darkModeSetting)))
     processDocumentBodyFromDarkMode(get(isDarkMode))
     handleOsSettingsListeners()
@@ -52,5 +52,5 @@ const handleDarkModeSettingChange = () => {
 export {
     retrieveDarkModeSettingFromLocalStorage,
     storeDarkModeSettingToLocalStorage,
-    handleDarkModeSettingChange,
+    handleDisplayModeChange,
 }

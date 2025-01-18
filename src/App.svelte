@@ -11,7 +11,7 @@
     import { entryList, tagDataMap, displayedEntryList } from "./store"
     import {
         retrieveDarkModeSettingFromLocalStorage,
-        handleDarkModeSettingChange
+        handleDisplayModeChange
     } from "src/utils/displayModeUtils"
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
@@ -41,7 +41,7 @@
     generateTagDataMap($entryList)
 
     retrieveDarkModeSettingFromLocalStorage()
-    handleDarkModeSettingChange()
+    handleDisplayModeChange()
 
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>
