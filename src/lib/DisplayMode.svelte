@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onDestroy } from "svelte";
+
     import { darkModeSetting } from "src/store"
     import { DisplayModeEnum } from "src/common"
     import {
@@ -16,7 +18,6 @@
     let darkModeSettingLabel: string = $state("")
     let shouldShowDisplayModeLabel: boolean = $state(false)
     let displayModeLabelDisplayTimeout: ReturnType<typeof setTimeout>
-        = $state(setTimeout(() => {}, 0))
 
     const updateDisplayModeLabel = () => {
         darkModeSettingLabel = labelOptions[$darkModeSetting]
@@ -33,11 +34,16 @@
     const handleSwitchDisplayMode = (newValue: DisplayModeEnum) => {
         storeDisplayModeValue(newValue)
         handleDisplayModeChange()
+
         updateDisplayModeLabel()
         showDisplayModeLabel()
     }
 
     updateDisplayModeLabel()
+
+    onDestroy(() => {
+        clearTimeout(displayModeLabelDisplayTimeout)
+    })
 </script>
 
 <template>
