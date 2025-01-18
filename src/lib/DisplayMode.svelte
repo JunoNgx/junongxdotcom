@@ -7,7 +7,7 @@
     } from "src/utils/displayModeUtils"
 
     const DISPLAY_MODE_LABEL_DISPLAY_TIME = 2000
-    const darkModeSettingLabelOptions = [
+    const labelOptions = [
         "os settings",
         "light mode",
         "dark mode"
@@ -18,11 +18,11 @@
     let displayModeLabelDisplayTimeout: ReturnType<typeof setTimeout>
         = $state(setTimeout(() => {}, 0))
 
-    const updateDarkModeSettingLabel = () => {
-        darkModeSettingLabel = darkModeSettingLabelOptions[$darkModeSetting]
+    const updateDisplayModeLabel = () => {
+        darkModeSettingLabel = labelOptions[$darkModeSetting]
     }
 
-    const displayDarkModeSettingLabel = () => {
+    const showDisplayModeLabel = () => {
         shouldShowDisplayModeLabel = true
         clearTimeout(displayModeLabelDisplayTimeout)
         displayModeLabelDisplayTimeout = setTimeout(() => {
@@ -30,14 +30,14 @@
         }, DISPLAY_MODE_LABEL_DISPLAY_TIME)
     }
 
-    const switchDarkModeOption = (newValue: DisplayModeEnum) => {
+    const handleSwitchDisplayMode = (newValue: DisplayModeEnum) => {
         storeDisplayModeValue(newValue)
         handleDisplayModeChange()
-        updateDarkModeSettingLabel()
-        displayDarkModeSettingLabel()
+        updateDisplayModeLabel()
+        showDisplayModeLabel()
     }
 
-    updateDarkModeSettingLabel()
+    updateDisplayModeLabel()
 </script>
 
 <template>
@@ -56,7 +56,7 @@
                     {$darkModeSetting === DisplayModeEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
                 "></div>
                 <button class="display-mode__option-btn"
-                    onclick={() => switchDarkModeOption(DisplayModeEnum.OS)}
+                    onclick={() => handleSwitchDisplayMode(DisplayModeEnum.OS)}
                     aria-label="Switch to dark mode option: uses OS Settings"
                 >
                     <!-- Gear -->
@@ -76,7 +76,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    onclick={() => switchDarkModeOption(DisplayModeEnum.LIGHT)}
+                    onclick={() => handleSwitchDisplayMode(DisplayModeEnum.LIGHT)}
                     aria-label="Switch to dark mode option: Light mode"
                 >
                     <!-- Sun -->
@@ -103,7 +103,7 @@
                     </svg>
                 </button>
                 <button class="display-mode__option-btn"
-                    onclick={() => switchDarkModeOption(DisplayModeEnum.DARK)}
+                    onclick={() => handleSwitchDisplayMode(DisplayModeEnum.DARK)}
                     aria-label="Switch to dark mode option: Dark mode"
                 >
                     <!-- Moon -->
