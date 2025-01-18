@@ -2,7 +2,7 @@
     import { darkModeSetting } from "src/store"
     import { DisplayModeEnum } from "src/common"
     import {
-        storeDarkModeSettingToLocalStorage,
+        storeDisplayModeValue,
         handleDisplayModeChange,
     } from "src/utils/displayModeUtils"
 
@@ -31,8 +31,7 @@
     }
 
     const switchDarkModeOption = (newValue: DisplayModeEnum) => {
-        darkModeSetting.set(newValue)
-        storeDarkModeSettingToLocalStorage(newValue)
+        storeDisplayModeValue(newValue)
         handleDisplayModeChange()
         updateDarkModeSettingLabel()
         displayDarkModeSettingLabel()

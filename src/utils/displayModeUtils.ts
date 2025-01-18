@@ -8,10 +8,6 @@ const retrieveDarkModeSettingFromLocalStorage = () => {
     else darkModeSetting.set(DisplayModeEnum.DARK)
 }
 
-const storeDarkModeSettingToLocalStorage = (value: DisplayModeEnum) => {
-    localStorage.setItem('darkModeSetting', value.toString())
-}
-
 const processShouldBeDarkMode = (darkModeSetting: DisplayModeEnum) => {
     if (darkModeSetting === DisplayModeEnum.OS) {
         const preferDarkMediaQueryList = window.matchMedia?.('(prefers-color-scheme: dark)')
@@ -49,8 +45,13 @@ const handleDisplayModeChange = () => {
     handleOsSettingsListeners()
 }
 
+const storeDisplayModeValue = (newValue: DisplayModeEnum) => {
+    darkModeSetting.set(newValue);
+    localStorage.setItem('darkModeSetting', newValue.toString())
+}
+
 export {
     retrieveDarkModeSettingFromLocalStorage,
-    storeDarkModeSettingToLocalStorage,
+    storeDisplayModeValue,
     handleDisplayModeChange,
 }
