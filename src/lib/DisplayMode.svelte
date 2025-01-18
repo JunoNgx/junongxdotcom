@@ -14,7 +14,7 @@
     ]
 
     let darkModeSettingLabel: string = $state("")
-    let shouldDisplayDarkModeSettingLabel: boolean = $state(false)
+    let shouldShowDisplayModeLabel: boolean = $state(false)
     let displayModeLabelDisplayTimeout: ReturnType<typeof setTimeout>
         = $state(setTimeout(() => {}, 0))
 
@@ -23,10 +23,10 @@
     }
 
     const displayDarkModeSettingLabel = () => {
-        shouldDisplayDarkModeSettingLabel = true
+        shouldShowDisplayModeLabel = true
         clearTimeout(displayModeLabelDisplayTimeout)
         displayModeLabelDisplayTimeout = setTimeout(() => {
-            shouldDisplayDarkModeSettingLabel = false
+            shouldShowDisplayModeLabel = false
         }, DARK_MODE_LABEL_DISPLAY_TIME)
     }
 
@@ -44,7 +44,7 @@
     <div class="display-mode">
         <div class="display-mode__content-wrapper">
             <span class="display-mode__current-label
-                    {shouldDisplayDarkModeSettingLabel ? 'display-mode__current-label--is-displayed' : ''}
+                    {shouldShowDisplayModeLabel ? 'display-mode__current-label--is-displayed' : ''}
                 "
             >
                 {darkModeSettingLabel}
