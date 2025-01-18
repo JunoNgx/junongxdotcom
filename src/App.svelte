@@ -10,7 +10,7 @@
     import content from "src/data/content.yaml"
     import { entryList, tagDataMap, displayedEntryList } from "./store"
     import {
-        retrieveDarkModeSettingFromLocalStorage,
+        loadDisplayModeFromLocalStorage,
         handleDisplayModeChange
     } from "src/utils/displayModeUtils"
 
@@ -40,7 +40,7 @@
     setFullEntryList(content)
     generateTagDataMap($entryList)
 
-    retrieveDarkModeSettingFromLocalStorage()
+    loadDisplayModeFromLocalStorage()
     handleDisplayModeChange()
 
     // Specifically handle the creative conding canvas
