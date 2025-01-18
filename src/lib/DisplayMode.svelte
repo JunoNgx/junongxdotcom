@@ -6,7 +6,7 @@
         handleDisplayModeChange,
     } from "src/utils/displayModeUtils"
 
-    const DARK_MODE_LABEL_DISPLAY_TIME = 2000
+    const DISPLAY_MODE_LABEL_DISPLAY_TIME = 2000
     const darkModeSettingLabelOptions = [
         "os settings",
         "light mode",
@@ -27,7 +27,7 @@
         clearTimeout(displayModeLabelDisplayTimeout)
         displayModeLabelDisplayTimeout = setTimeout(() => {
             shouldShowDisplayModeLabel = false
-        }, DARK_MODE_LABEL_DISPLAY_TIME)
+        }, DISPLAY_MODE_LABEL_DISPLAY_TIME)
     }
 
     const switchDarkModeOption = (newValue: DisplayModeEnum) => {
