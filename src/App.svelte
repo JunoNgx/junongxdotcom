@@ -12,7 +12,7 @@
     import {
         retrieveDarkModeSettingFromLocalStorage,
         handleDarkModeSettingChange
-    } from "src/utils/darkModeSettingUtils"
+    } from "src/utils/displayModeUtils"
 
     const setFullEntryList = (inputEntryList: Array<Entry>) => {
         entryList.set([...inputEntryList]);
