@@ -1,11 +1,11 @@
 import { get } from "svelte/store"
 import { DisplayModeEnum } from "src/common"
-import { darkModeSetting, isDarkMode } from "src/store"
+import { displayMode, isDarkMode } from "src/store"
 
 const loadDisplayModeFromLocalStorage = () => {
     const storedValue = parseInt(localStorage.getItem('darkModeSetting') || "0")
-    if (storedValue !== null) darkModeSetting.set(storedValue)
-    else darkModeSetting.set(DisplayModeEnum.DARK)
+    if (storedValue !== null) displayMode.set(storedValue)
+    else displayMode.set(DisplayModeEnum.DARK)
 }
 
 const processShouldBeDarkMode = (darkModeSetting: DisplayModeEnum) => {
@@ -27,7 +27,7 @@ const setDisplayModeAttributeInDocument = (isDarkMode: boolean) => {
 const setupQueryListener = () => {
     const preferDarkMediaQueryList = window.matchMedia?.("(prefers-color-scheme: dark)")
 
-    if (get(darkModeSetting) === DisplayModeEnum.OS) {
+    if (get(displayMode) === DisplayModeEnum.OS) {
         preferDarkMediaQueryList.addEventListener("change", handlePreferDarkQueryChange);
     } else {
         preferDarkMediaQueryList.removeEventListener("change", handlePreferDarkQueryChange);
@@ -35,18 +35,18 @@ const setupQueryListener = () => {
 }
 
 const handlePreferDarkQueryChange = () => {
-    isDarkMode.set(processShouldBeDarkMode(get(darkModeSetting)))
+    isDarkMode.set(processShouldBeDarkMode(get(displayMode)))
     setDisplayModeAttributeInDocument(get(isDarkMode))
 }
 
 const handleDisplayModeChange = () => {
-    isDarkMode.set(processShouldBeDarkMode(get(darkModeSetting)))
+    isDarkMode.set(processShouldBeDarkMode(get(displayMode)))
     setDisplayModeAttributeInDocument(get(isDarkMode))
     setupQueryListener()
 }
 
 const storeDisplayModeValue = (newValue: DisplayModeEnum) => {
-    darkModeSetting.set(newValue);
+    displayMode.set(newValue);
     localStorage.setItem('darkModeSetting', newValue.toString())
 }
 

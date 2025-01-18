@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onDestroy } from "svelte";
 
-    import { darkModeSetting } from "src/store"
+    import { displayMode } from "src/store"
     import { DisplayModeEnum } from "src/common"
     import {
         storeDisplayModeValue,
@@ -20,7 +20,7 @@
     let displayModeLabelDisplayTimeout: ReturnType<typeof setTimeout>
 
     const updateDisplayModeLabel = () => {
-        darkModeSettingLabel = labelOptions[$darkModeSetting]
+        darkModeSettingLabel = labelOptions[$displayMode]
     }
 
     const showDisplayModeLabel = () => {
@@ -57,9 +57,9 @@
             </span>
             <div class="display-mode__option-list">
                 <div class="display-mode__indicator
-                    {$darkModeSetting === DisplayModeEnum.OS ? 'display-mode__indicator--shift-zero' : ''}
-                    {$darkModeSetting === DisplayModeEnum.LIGHT ? 'display-mode__indicator--shift-one' : ''}
-                    {$darkModeSetting === DisplayModeEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
+                    {$displayMode === DisplayModeEnum.OS ? 'display-mode__indicator--shift-zero' : ''}
+                    {$displayMode === DisplayModeEnum.LIGHT ? 'display-mode__indicator--shift-one' : ''}
+                    {$displayMode === DisplayModeEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
                 "></div>
                 <button class="display-mode__option-btn"
                     onclick={() => handleSwitchDisplayMode(DisplayModeEnum.OS)}

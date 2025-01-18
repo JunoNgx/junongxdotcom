@@ -3,7 +3,7 @@ import { DisplayModeEnum } from 'src/common'
 
 export const entryList = writable(new Array<Entry>())
 export const tagDataMap = writable(new Map<string, boolean>())
-export const darkModeSetting = writable(DisplayModeEnum.OS)
+export const displayMode = writable(DisplayModeEnum.OS)
 export const isDarkMode = writable(false)
 
 export const displayedEntryList = derived(
