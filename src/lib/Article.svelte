@@ -177,4 +177,11 @@
     :global(.article__content p:first-child)
         margin-top: 0
 
+    :global(.article__content--is-collapsed code)
+        transition: font-size var(--transition-time-content) ease-out var(--transition-time-content)
+        font-size: 0
+
+    :global(.article__content--is-expanded code)
+        transition: font-size var(--transition-time-content) ease-out
+
 </style>
