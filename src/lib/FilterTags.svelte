@@ -23,7 +23,7 @@
         <div class="filter-tags__list">
             {#each [...$tagDataMap] as [tag, isDisplayed]}
                 <button class="filter-tags__item
-                        {isDisplayed && 'filter-tags__item--is-selected'}
+                        {isDisplayed && "filter-tags__item--is-selected"}
                     "
                     on:click={() => switchTagData(tag)}
                 >
@@ -130,7 +130,7 @@
         &__item-label
             display: block
             font-size: 10px
-            font-family: var(--font-family-monospace)
+            font-family: var(--font-family-link)
 
         &__item-icon
             margin-top: 1px
