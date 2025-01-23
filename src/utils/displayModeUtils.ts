@@ -3,7 +3,7 @@ import { DisplayModeEnum } from "src/common"
 import { displayMode, isComputedDarkMode } from "src/store"
 
 const loadDisplayModeFromLocalStorage = () => {
-    const storedValue = parseInt(localStorage.getItem('darkModeSetting') || "0")
+    const storedValue = parseInt(localStorage.getItem("darkModeSetting") || "0")
     if (storedValue !== null) displayMode.set(storedValue)
     else displayMode.set(DisplayModeEnum.DARK)
 }
@@ -34,7 +34,7 @@ const handleDisplayModeChange = () => {
 
 const storeDisplayModeValue = (newValue: DisplayModeEnum) => {
     displayMode.set(newValue);
-    localStorage.setItem('darkModeSetting', newValue.toString())
+    localStorage.setItem("darkModeSetting", newValue.toString())
 }
 
 export {

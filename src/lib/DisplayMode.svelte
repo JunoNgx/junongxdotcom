@@ -50,16 +50,16 @@
     <div class="display-mode">
         <div class="display-mode__content-wrapper">
             <span class="display-mode__current-label
-                    {shouldShowDisplayModeLabel ? 'display-mode__current-label--is-displayed' : ''}
+                    {shouldShowDisplayModeLabel ? "display-mode__current-label--is-displayed" : ""}
                 "
             >
                 {darkModeSettingLabel}
             </span>
             <div class="display-mode__option-list">
                 <div class="display-mode__indicator
-                    {$displayMode === DisplayModeEnum.OS ? 'display-mode__indicator--shift-zero' : ''}
-                    {$displayMode === DisplayModeEnum.LIGHT ? 'display-mode__indicator--shift-one' : ''}
-                    {$displayMode === DisplayModeEnum.DARK ? 'display-mode__indicator--shift-two' : ''}
+                    {$displayMode === DisplayModeEnum.OS ? "display-mode__indicator--shift-zero" : ""}
+                    {$displayMode === DisplayModeEnum.LIGHT ? "display-mode__indicator--shift-one" : ""}
+                    {$displayMode === DisplayModeEnum.DARK ? "display-mode__indicator--shift-two" : ""}
                 "></div>
                 <button class="display-mode__option-btn"
                     onclick={() => handleSwitchDisplayMode(DisplayModeEnum.OS)}

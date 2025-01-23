@@ -23,7 +23,7 @@
         <div class="filter-tags__list">
             {#each [...$tagDataMap] as [tag, isDisplayed]}
                 <button class="filter-tags__item
-                        {isDisplayed && 'filter-tags__item--is-selected'}
+                        {isDisplayed && "filter-tags__item--is-selected"}
                     "
                     on:click={() => switchTagData(tag)}
                 >

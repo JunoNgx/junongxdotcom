@@ -33,20 +33,20 @@
             >
                 <line
                     class="icon-line icon-line--1 {isExpanded
-                        ? 'icon-line--is-expanded'
-                        : ''}"
+                        ? "icon-line--is-expanded"
+                        : ""}"
                     x1="3" y1="6" x2="21" y2="6"
                 />
                 <line
                     class="icon-line icon-line--2 {isExpanded
-                        ? 'icon-line--is-expanded'
-                        : ''}"
+                        ? "icon-line--is-expanded"
+                        : ""}"
                     x1="3" y1="12" x2="21" y2="12"
                 />
                 <line
                     class="icon-line icon-line--3 {isExpanded
-                        ? 'icon-line--is-expanded'
-                        : ''}"
+                        ? "icon-line--is-expanded"
+                        : ""}"
                     x1="3" y1="18" x2="21" y2="18"
                 />
             </svg>
@@ -55,8 +55,8 @@
         <button
             class="control-container__collapse-trigger
                 {isExpanded
-                ? 'control-container__collapse-trigger--is-expanded'
-                : ''}
+                ? "control-container__collapse-trigger--is-expanded"
+                : ""}
             "
             aria-label="Alternative button to collapse the control menu"
             aria-hidden={!isExpanded}
@@ -65,8 +65,8 @@
         <div
             class="control-container__content-wrapper
                 {isExpanded
-                ? 'control-container__content-wrapper--is-expanded'
-                : ''}
+                ? "control-container__content-wrapper--is-expanded"
+                : ""}
             "
         >
             <div class="control-container__content">
@@ -77,8 +77,8 @@
 </template>
 
 <style lang="sass">
-    @use '../styles/vars' as v
-    @use '../styles/mixins' as m
+    @use "../styles/vars" as v
+    @use "../styles/mixins" as m
 
     $btn-width: 48px
     $btn-height: 48px

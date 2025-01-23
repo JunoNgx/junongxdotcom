@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { marked } from 'marked'
-    import ArticleCtaLink from './ArticleCtaLink.svelte'
+    import { marked } from "marked"
+    import ArticleCtaLink from "./ArticleCtaLink.svelte"
 
     let { entry }: { entry: Entry} = $props()
     let isExpanded: boolean = $state(false)
@@ -34,7 +34,7 @@
             {@html marked(entry.summary)}
         </p>
 
-        <p class="article__content {isExpanded ? 'article__content--is-expanded' : 'article__content--is-collapsed'}"
+        <p class="article__content {isExpanded ? "article__content--is-expanded" : "article__content--is-collapsed"}"
             aria-hidden={!isExpanded}
         >
             {@html marked(entry.content)}
@@ -50,7 +50,7 @@
             <button class="article__expand-button"
                 onclick={handleExpandClick}
             >
-                <div class="article__expand-button-label-wrapper {isExpanded ? 'article__expand-button-label-wrapper--is-expanded' : ''}">
+                <div class="article__expand-button-label-wrapper {isExpanded ? "article__expand-button-label-wrapper--is-expanded" : ""}">
                     <span class="article__expand-button-label article__expand-button-label--more"
                         aria-hidden={isExpanded}
                     >

@@ -44,7 +44,7 @@
     // Specifically handle the creative conding canvas
     // Tell the script to look for the new <canvas>
     $effect(() => {
-        window.dispatchEvent(new Event('update-content'))
+        window.dispatchEvent(new Event("update-content"))
     })
 </script>
 
@@ -73,9 +73,9 @@
 </template>
 
 <style lang="sass">
-    @use './styles/fonts'
-    @use './styles/vars' as v
-    @use './styles/mixins' as m
+    @use "./styles/fonts"
+    @use "./styles/vars" as v
+    @use "./styles/mixins" as m
 
     :global(html)
         scrollbar-gutter: stable
