@@ -47,7 +47,7 @@
   imgSrc: /images/EbonyMemo.gif
   imgAlt: A gif trailer for Ebony Memo
   summary: |
-    As a videogame enthusiast, I seek out interesting titles across platforms, mobile nevertheless. [Ebony Memo](http://ebonymemo.com/) is an arthouse videogame curator website for mobile devices, and also a full custom content management system of MERN stack.
+    As a videogame enthusiast, I seek out interesting titles across platforms, mobile nevertheless. [Ebony Memo](https://ebonymemo.vercel.app/) is an arthouse videogame curator website for mobile devices, and also a full custom content management system of MERN stack.
   content: |
     The system consists of three parts:
 
@@ -65,8 +65,8 @@
     - reactJS
     - nodeJS
   links:
-    - label: EbonyMemo.com
-      url: http://ebonymemo.com/
+    - label: home page
+      url: https://ebonymemo.vercel.app/
       type: deployment
 
 
