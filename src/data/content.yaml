@@ -200,14 +200,13 @@
   summary: A minimalist wallpaper generator made with Flutter for Android.
   content: |
     As one of my earliest dabbles into mobile app development, Pura was created with both technical curiosity and personal needs in mind (the existing apps with similar functions were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's [Flutter](https://flutter.dev/), a promising up-and-coming multi-platform framework.
+
+    The release was unfortunately delisted from Play Store and succeeded by an [alternative progressive web app](https://pura-tela.vercel.app/).
   tags:
     - app development
     - flutter
     - release
   links:
-    - label: Play Store
-      url: https://play.google.com/store/apps/details?id=com.junongx.wallpaper
-      type: generic
     - label: source
       url: https://github.com/JunoNgx/flutter-pura
       type: source
