@@ -99,7 +99,7 @@
             gap: 0.1rem 1rem
 
         &__tag-item
-            font-family: var(--font-family-monospace)
+            font-family: var(--font-family-link)
             font-size: 10px
             color: rgba(var(--col-pri), 0.8)
 

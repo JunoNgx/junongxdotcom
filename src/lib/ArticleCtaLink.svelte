@@ -70,7 +70,7 @@
         padding: 0.25rem 0.5rem
         background-image: none
         background-color: var(--col-acc)
-        font-family: var(--font-family-monospace)
+        font-family: var(--font-family-link)
         font-size: 12px
 
         display: flex

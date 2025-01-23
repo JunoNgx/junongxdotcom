@@ -130,7 +130,7 @@
         &__item-label
             display: block
             font-size: 10px
-            font-family: var(--font-family-monospace)
+            font-family: var(--font-family-link)
 
         &__item-icon
             margin-top: 1px
