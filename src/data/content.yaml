@@ -159,11 +159,11 @@
   summary: |
     As a creative individual, I have worked on many projects over the years, and the idea of a portfolio has always been something endearing and important to me. This web page has been revamped, redesigned, and reworked many times over the years.
   content: |
-    The current version is the result of multiple sessions of brainstorming and thinking about data. While manually writing every single HTML tags certainly works (which was my implementation for previous versions), the repetition was inefficient, and editing content in the middle of source codes was both unsafe and unfun. What I ended up is an application-like data-driven approach, where content and technical implementation are separated, as they should be.
+    The current version is the result of multiple sessions of brainstorming and thinking about the process. While manually writing every single HTML tags certainly works (which was my implementation for multiple previous versions), the repetition was inefficient, and editing content in the middle of massive file was both unsafe and unfun. This prompted to approach it in a more data-driven like manner, where data is fed in as input to be processed and displayed appropriately.
 
-    While JSON is the more common and obvious choice, its limitation in display content makes unfit for a good content editing experience. As a result, each and every one of these entries you are reading is stored as Markdown syntaxes in a [YAML](https://yaml.org/) file. Imported as an array of objects, these content are then processed and iteratively displayed.
+    While JSON is the common obvious choice for the data format, its strict syntaxes make unsuitable for a good content editing experience. I eventually came across [YAML](https://yaml.org/), whose flexibility was perfect for what I needed. With a very well-formatted data system, adding in tags and filtering was a breeze. Beyond functionality, the tag system also doubles as a showcase of my skillset and brief overview of technologies I have worked with.
 
-    This, combined with the use of [indented SASS](https://sass-lang.com/documentation/syntax), makes this my most human-readable and elegant codebase yet.
+    The current version has seen the longest deployment and is something I highly take pride in.
   tags:
     - web development
     - in active development
