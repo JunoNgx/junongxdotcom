@@ -26,23 +26,6 @@
       url: https://github.com/JunoNgx/justjot-frontend
       type: source
 
-- title: manafarm
-  imgSrc: /images/manafarm_withBg.jpg
-  imgAlt: manafarm logo
-  summary: |
-    I am a hobbyist gamedev and make an awful lot of videogames just for the sheer fun of it. My major videogame releases can be found on my [Itch.io page](https://JunoNgx.itch.io/).
-  content: |
-    I have been making videogames since 2013, under the moniker Aureoline Tetrahedron. The *manafarm* rebranding was made in 2019, after several years of hiatus. I have tried many languages, engines, tools, and everything in between, for all sort of devices and platforms, and still counting.
-
-    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone. 
-    
-    It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
-  tags:
-    - game development
-  links:
-    - label: itch.io
-      url: https://junongx.itch.io/
-
 - title: Pura
   imgSrc: /images/PuraTelaTrailer.apng
   imgAlt: Demonstration of the app Pura Tela
@@ -98,6 +81,22 @@
       url: https://ebonymemo.vercel.app/
       type: deployment
 
+- title: manafarm
+  imgSrc: /images/manafarm_withBg.jpg
+  imgAlt: manafarm logo
+  summary: |
+    I am a hobbyist gamedev and make an awful lot of videogames just for the sheer fun of it. My major videogame releases can be found on my [Itch.io page](https://JunoNgx.itch.io/).
+  content: |
+    I have been making videogames since 2013, under the moniker Aureoline Tetrahedron. The *manafarm* rebranding was made in 2019, after several years of hiatus. I have tried many languages, engines, tools, and everything in between, for all sort of devices and platforms, and still counting.
+
+    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone. 
+    
+    It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
+  tags:
+    - game development
+  links:
+    - label: itch.io
+      url: https://junongx.itch.io/
 
 - title: Wonyun Trench Run
   imgSrc: /images/wonyun_5.gif
