@@ -6,7 +6,7 @@
     import ContactMe from "./lib/ContactMe.svelte";
 
     import content from "src/data/content.yaml"
-    import { entryList, tagDataMap, displayedEntryList } from "./store"
+    import { entryList, tagDisplayStatusMap, displayedEntryList } from "./store"
     import {
         loadDisplayModeFromLocalStorage,
         handleDisplayModeChange
@@ -16,7 +16,7 @@
         entryList.set([...inputEntryList]);
     }
 
-    const generateTagDataMap = (inputEntryList: Array<Entry>) => {
+    const generateTagDisplayStatusMap = (inputEntryList: Array<Entry>) => {
         const tmpTagList: string[] = []
 
         inputEntryList.forEach(entry => {
@@ -28,22 +28,22 @@
         })
 
         tmpTagList.forEach(tag => {
-            if (tag === "archived") $tagDataMap.set(tag, false)
-            else $tagDataMap.set(tag, true)
+            if (tag === "archived") $tagDisplayStatusMap.set(tag, false)
+            else $tagDisplayStatusMap.set(tag, true)
         })
 
-        tagDataMap.set($tagDataMap)
+        tagDisplayStatusMap.set($tagDisplayStatusMap)
     }
 
     setFullEntryList(content)
-    generateTagDataMap($entryList)
+    generateTagDisplayStatusMap($entryList)
 
     loadDisplayModeFromLocalStorage()
     handleDisplayModeChange()
 
     $effect(() => {
         // Specifically handle the creative coding canvas
-        if ($tagDataMap.get("creative coding")) {
+        if ($tagDisplayStatusMap.get("creative coding")) {
             window.dispatchEvent(new Event("attach-canvas"))
         }
     })
