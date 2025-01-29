@@ -114,7 +114,7 @@
     :global(code)
         font-family: var(--font-family-code)
         font-size: 0.9rem
-        background-color: #222
+        background-color: var(--col-code-bg)
         padding: 0.1rem 0.25rem
         border-radius: 0.25rem
 
