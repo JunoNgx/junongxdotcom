@@ -6,7 +6,7 @@
                 <span class="header__last-name">Nguyen</span>
             </h1>
             <div class="header__strip-container">
-                <div class="header__strip" />
+                <div class="header__strip"></div>
             </div>
         </div>
         <p class="header__desc header__desc--title">web engineer by day</p>
