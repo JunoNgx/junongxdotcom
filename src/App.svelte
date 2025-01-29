@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { slide } from 'svelte/transition';
+
     import Header from "src/lib/Header.svelte"
     import Footer from "src/lib/Footer.svelte"
     import ControlContainer from "src/lib/ControlContainer.svelte"
@@ -64,7 +66,11 @@
                     <Article entry={entry} />
                 {/each}
             {:else}
-                <p class="no-content">You have filtered out everything and there is nothing left to be displayed.</p>
+                <p class="no-content"
+                    transition:slide
+                >
+                    You have filtered out everything and there is nothing left to be displayed.
+                </p>
             {/if}
 
             <ContactMe />
