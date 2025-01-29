@@ -2,7 +2,7 @@ import { writable, derived, type Readable } from 'svelte/store'
 import { DisplayModeEnum } from 'src/common'
 
 export const entryList = writable(new Array<Entry>())
-export const tagDataMap = writable(new Map<string, boolean>())
+export const tagDisplayStatusMap = writable(new Map<string, boolean>())
 export const displayMode = writable(DisplayModeEnum.OS)
 // Calculate from auto to determine whether the final mode is actually dark
 export const isComputedDarkMode = derived<Readable<DisplayModeEnum>, boolean>(
@@ -21,15 +21,15 @@ export const isComputedDarkMode = derived<Readable<DisplayModeEnum>, boolean>(
 )
 
 export const displayedEntryList = derived(
-    [entryList, tagDataMap], ([$entryList, $tagDataMap]) => {
-        return $entryList.filter(shouldEntryBeDisplayedFilterFunc($tagDataMap))
+    [entryList, tagDisplayStatusMap], ([$entryList, $tagDisplayStatusMap]) => {
+        return $entryList.filter(shouldEntryBeDisplayedFilterFunc($tagDisplayStatusMap))
     }
 )
 
-const shouldEntryBeDisplayedFilterFunc = (tagDataMap: Map<string, boolean>) => {
+const shouldEntryBeDisplayedFilterFunc = (tagDisplayStatusMap: Map<string, boolean>) => {
     return (entry: Entry) => {
         for (const tag of entry.tags) {
-            if (tagDataMap.get(tag)) return true
+            if (tagDisplayStatusMap.get(tag)) return true
         }
 
         return false

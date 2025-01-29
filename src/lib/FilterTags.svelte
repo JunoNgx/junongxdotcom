@@ -1,14 +1,14 @@
 <script lang="ts">
-    import { tagDataMap } from "src/store"
+    import { tagDisplayStatusMap } from "src/store"
 
     const switchTagData = (tag: string) => {
-        $tagDataMap.set(tag, !$tagDataMap.get(tag))
-        tagDataMap.set($tagDataMap)
+        $tagDisplayStatusMap.set(tag, !$tagDisplayStatusMap.get(tag))
+        tagDisplayStatusMap.set($tagDisplayStatusMap)
     }
 
     const checkAll = (booleanValue: boolean) => {
-        $tagDataMap.forEach((_isDisplayed, tagName) => $tagDataMap.set(tagName, booleanValue))
-        tagDataMap.set($tagDataMap)
+        $tagDisplayStatusMap.forEach((_isDisplayed, tagName) => $tagDisplayStatusMap.set(tagName, booleanValue))
+        tagDisplayStatusMap.set($tagDisplayStatusMap)
     }
 
 </script>
@@ -21,7 +21,7 @@
         </h2>
 
         <div class="filter-tags__list">
-            {#each [...$tagDataMap] as [tag, isDisplayed]}
+            {#each [...$tagDisplayStatusMap] as [tag, isDisplayed]}
                 <button class="filter-tags__item
                         {isDisplayed && "filter-tags__item--is-selected"}
                     "
