@@ -26,13 +26,13 @@
       url: https://github.com/JunoNgx/justjot-frontend
       type: source
 
-- title: Pura
+- title: Pura Tela
   imgSrc: /images/PuraTelaTrailer.apng
   imgAlt: Demonstration of the app Pura Tela
   summary: |
     A minimalist solid colour wallpaper generator made for the web.
   content: |
-    In a trendy fashion in recent entertainment, Pura Tela is the "enhanced remake" of Pura (a native Android app made with Flutter), now as a Progressive Web App.
+    In a trendy fashion in recent entertainment, Pura Tela is the "enhanced remake" of Pura (a native Android app made with Flutter), now as a Progressive Web App ("tela" means "web" in Latin).
 
     With a new demand for new platform, but a clear set of existing specifications, the development was an opportunity to review and improve the user interface and experience. This was once again a collaboration with [Casey Kwokdinata](https://caseykwokdinata.webflow.io/), a professional UI/UX designer. We opted for a minimal and brutalist-like style to match the aesthetic of plain colour wallpapers.
 
