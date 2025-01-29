@@ -41,10 +41,11 @@
     loadDisplayModeFromLocalStorage()
     handleDisplayModeChange()
 
-    // Specifically handle the creative conding canvas
-    // Tell the script to look for the new <canvas>
     $effect(() => {
-        window.dispatchEvent(new Event("update-content"))
+        // Specifically handle the creative coding canvas
+        if ($tagDataMap.get("creative coding")) {
+            window.dispatchEvent(new Event("attach-canvas"))
+        }
     })
 </script>
 

@@ -115,7 +115,9 @@ class ScrollCanvas {
 /** @type { ScrollCanvas } */
 let scrollCanvas;
 
-window.addEventListener('update-content', () => setup());
+window.addEventListener('attach-canvas', () => {
+    setup()
+});
 
 function setup() {
     try {
