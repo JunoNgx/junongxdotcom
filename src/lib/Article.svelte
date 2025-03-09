@@ -106,6 +106,7 @@
         &__content
             // CSS-only accordion button
             $duration: var(--transition-time-content)
+            $duration-expand-delay: 500ms
 
             &--is-collapsed
                 visibility: hidden
@@ -119,7 +120,7 @@
                 opacity: 1
                 font-size: var(--font-size)
                 // Delay opacity
-                transition: font-size $duration ease-out, opacity $duration ease-out $duration
+                transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out $duration-expand-delay
 
                 +m.mobile
                     font-size: var(--font-size-mobile)
