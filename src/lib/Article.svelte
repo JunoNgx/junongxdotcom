@@ -111,15 +111,22 @@
                 visibility: hidden
                 opacity: 0
                 font-size: 0
-                // Delay font-size; also transitions visibility
-                transition: opacity $duration ease-out, font-size $duration ease-out $duration, visibility $duration
+                // This is COLLAPSE animation
+                // `opacity` goes first, but long enough for the button animation to be visible
+                // `visibility` waits for opacity
+                // `font-size` waits for everything else, then transitions while not visible
+                $duration-collapse-delay: 500ms
+                transition: opacity $duration ease-out, font-size $duration ease-out calc($duration-collapse-delay + $duration), visibility ease-out $duration
 
             &--is-expanded
                 visibility: visible
                 opacity: 1
                 font-size: var(--font-size)
-                // Delay opacity
-                transition: font-size $duration ease-out, opacity $duration ease-out $duration
+                // This is EXPAND animation
+                // `font-size` waits for the button animation, then transitions while not visible
+                // `opacity` waits for button animation first, then wait for `font-size`
+                $duration-expand-delay: 500ms
+                transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out calc($duration + $duration-expand-delay)
 
                 +m.mobile
                     font-size: var(--font-size-mobile)
