@@ -106,8 +106,6 @@
         &__content
             // CSS-only accordion button
             $duration: var(--transition-time-content)
-            $duration-collapse-delay: 500ms
-            $duration-expand-delay: 500ms
 
             &--is-collapsed
                 visibility: hidden
@@ -117,6 +115,7 @@
                 // `opacity` goes first, but long enough for the button animation to be visible
                 // `visibility` waits for opacity
                 // `font-size` waits for everything else, then transitions while not visible
+                $duration-collapse-delay: 500ms
                 transition: opacity $duration ease-out, font-size $duration ease-out calc($duration-collapse-delay + $duration), visibility ease-out $duration
 
             &--is-expanded
@@ -126,6 +125,7 @@
                 // This is EXPAND animation
                 // `font-size` waits for the button animation, then transitions while not visible
                 // `opacity` waits for button animation first, then wait for `font-size`
+                $duration-expand-delay: 500ms
                 transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out calc($duration + $duration-expand-delay)
 
                 +m.mobile
