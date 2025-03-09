@@ -120,7 +120,7 @@
                 opacity: 1
                 font-size: var(--font-size)
                 // Delay opacity
-                transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out $duration-expand-delay
+                transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out calc($duration + $duration-expand-delay)
 
                 +m.mobile
                     font-size: var(--font-size-mobile)
