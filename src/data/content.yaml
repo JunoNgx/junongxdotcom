@@ -47,8 +47,8 @@
     - in active development
     - release
   links:
-    - label: deployment
-      url: https://pura-tela.vercel.app
+    - label: pura.blue
+      url: https://pura.blue
       type: deployment
     - label: source
       url: https://github.com/JunoNgx/pura-tela
