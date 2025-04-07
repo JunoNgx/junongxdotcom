@@ -29,6 +29,19 @@
         color: var(--col-bg)
         background-color: var(--col-pri)
 
+@mixin tertiary-btn
+    border: none
+    font-family: var(--font-family)
+    font-size: var(--font-size)
+    cursor: pointer 
+    text-decoration: underline
+    color: var(--col-pri)
+    background-color: transparent
+    +transition(color, background-color)
+    &:hover
+        color: var(--col-bg)
+        background-color: var(--col-pri)
+
 @mixin control-wrapper
     display: flex
     flex-flow: column nowrap
