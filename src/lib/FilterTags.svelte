@@ -140,7 +140,7 @@
             margin-top: 1rem
 
         &__button
-            +m.button
+            +m.tertiary-btn
             margin-left: 0.5rem
 
 </style>
