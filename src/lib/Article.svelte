@@ -71,6 +71,9 @@
     @use "../styles/vars" as v
     @use "../styles/mixins" as m
 
+    $duration-collapse-delay: 500ms
+    $duration-expand-delay: 500ms
+
     .article
         margin: 2rem
         padding: 1rem
@@ -115,7 +118,6 @@
                 // `opacity` goes first, but long enough for the button animation to be visible
                 // `visibility` waits for opacity
                 // `font-size` waits for everything else, then transitions while not visible
-                $duration-collapse-delay: 500ms
                 transition: opacity $duration ease-out, font-size $duration ease-out calc($duration-collapse-delay + $duration), visibility ease-out $duration
 
             &--is-expanded
@@ -125,7 +127,6 @@
                 // This is EXPAND animation
                 // `font-size` waits for the button animation, then transitions while not visible
                 // `opacity` waits for button animation first, then wait for `font-size`
-                $duration-expand-delay: 500ms
                 transition: font-size $duration ease-out $duration-expand-delay, opacity $duration ease-out calc($duration + $duration-expand-delay)
 
                 +m.mobile
@@ -189,6 +190,6 @@
         font-size: 0
 
     :global(.article__content--is-expanded code)
-        transition: font-size var(--transition-time-content) ease-out
+        transition: font-size var(--transition-time-content) ease-out $duration-expand-delay
 
 </style>
