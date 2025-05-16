@@ -190,6 +190,6 @@
         font-size: 0
 
     :global(.article__content--is-expanded code)
-        transition: font-size var(--transition-time-content) ease-out
+        transition: font-size var(--transition-time-content) ease-out $duration-expand-delay
 
 </style>
