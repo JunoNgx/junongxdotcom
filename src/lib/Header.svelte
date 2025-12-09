@@ -9,7 +9,7 @@
                 <div class="header__strip"></div>
             </div>
         </div>
-        <p class="header__desc header__desc--title">web engineer by day</p>
+        <p class="header__desc header__desc--title">Singapore-based frontend engineer by day</p>
         <p class="header__desc header__desc--long-paragraph">hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night</p>
     </header>
 </template>
