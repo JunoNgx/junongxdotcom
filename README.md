@@ -1,6 +1,6 @@
 # Portfolio Website
 
-My centralised portfolio website, where my works across fields and medium gather in one single place.
+My centralised portfolio website, where my works across fields and medium gather in one single place. This is the accumulation of my works and expression of my values.
 
 ## Current deployment
 
