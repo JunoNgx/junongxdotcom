@@ -15,15 +15,6 @@
         <p class="header__desc header__desc--long-paragraph">
             small web enthusiast, hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
         </p>
-        <div class="header__desc header__desc--cta">
-            <p>drop me a message for:</p>
-            <ul class=header__cta-ul>
-                <li>- small software, videogames, or creative projects you'd like to share or collaborate on</li>
-                <li>- help with something you're working on</li>
-                <li>- opportunities that fit what I do</li>
-                <li>- just saying hi</li>
-            </ul>
-        </div>
     </header>
 </template>
 
