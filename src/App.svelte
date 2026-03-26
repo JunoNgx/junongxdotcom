@@ -88,6 +88,7 @@
         scrollbar-gutter: stable
         font-family: var(--font-family)
         font-size: var(--font-size)
+        scroll-behavior: smooth
 
     :global(body)
         color: var(--col-pri)
