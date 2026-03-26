@@ -44,7 +44,7 @@
 
     Enter Pangolog, which was inevitable, after many conversations with [Casey](https://caseykwokdinata.webflow.io/) (our third collaboration). At its core, it is the smartphone-friendly evolution of my spreadsheet system: transactions are separated in the same way (now dubbed "small dimes" and "big bucks"); the same categories still exist; and my financial data continues to live on Google Drive.
 
-    The decision to use Google Drive probably had the most impact. [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) became a necessity to persist a large volume of data; the app should naturally function without an internet connection; and interacting with Google API accounts for (pun not intended) the majority of the app's complexity.
+    The decision to use Google Drive probably had the most impact. [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) became a necessity to persist a large volume of data; the app should naturally function without an internet connection; a new Google Cloud project is needed (and with it, lots of paperworks); and interacting with Google API accounts for (pun not intended) the majority of the app's complexity.
 
     On another note, Pangolog was also my first attempt to dive deep into the world of spec-driven and AI-assisted software development. The specifications, including the database schemas; user interface details; conflict resolution logic, were written thoroughly before anything else.
 
