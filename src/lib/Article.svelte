@@ -24,7 +24,9 @@
         <h2 class="article__title"
             id="article-title-{entry.id}"
         >
-            {entry.title}
+            <a class="article__link" href="#article-{entry.id}">
+                {entry.title}
+            </a>
         </h2>
         <div class="article__tags-container"
             id="article-tag-list-{entry.id}"
@@ -118,6 +120,12 @@
         &__title
             margin: 0
             font-size: 2rem
+
+        &__link
+            background: none
+
+            &:hover
+                text-decoration: underline
 
         &__tags-container
             margin-bottom: 2rem
