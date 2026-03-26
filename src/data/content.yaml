@@ -28,6 +28,49 @@
       url: https://github.com/JunoNgx/justjot-frontend
       type: source
 
+- title: Pangolog
+  id: pangolog
+  # imgSrc: /images/JustJotTrailer.apng
+  imgAlt: Demonstration of the app Pangolog
+  summary: |
+    A minimalist personal expense tracking app with focus on data ownership, local-first operations, and ease of use. Created to replace my highly formulated spreadsheets. Made with [Next.js](https://nextjs.org/) and Google Drive API.
+  content: |
+    For many years, preceding my career in software development, my finances were held together by a system of spreadsheets that I had perfected over time:
+    - One file for each year
+    - Small and regular expenses are stored in monthly tabs
+    - Large purchases are stored in their own tab in each file (highly categorised to find out which ones are expensive)
+    - Expenses are formulated and calculated by month, and across all workbooks
+
+    The system had one fatal flaw: the smartphone was not the ideal form factor, and managing it from the Google Sheets mobile app with a touchscreen, was nothing but excruciating. It was something I did not want to do half the times, when I was not on my desktop.
+
+    Enter Pangolog, which was inevitable, after many conversations with [Casey](https://caseykwokdinata.webflow.io/) (our third collaboration). In all its essence, it is the smartphone-friendly evolution of my spreadsheet system: transactions are separated in the same way (now dubbed "small dimes" and "big bucks"); the same categories still exist; and my financial data continues to live on Google Drive.
+
+    The decision to use Google Drive probably had the most impact. [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) became a necessity to persist a large volume of data; the app should naturally function without an internet connection; and interacting with Google API accounts for (pun not intended) the majority of the app's complexity.
+
+    On another note, Pangolog was also my first attempt to dive deep into the world of spec-driven and AI-assisted software development. The specifications, including the database schemas; user interface details; conflict resolution logic, were written thoroughly before anything else.
+
+    Despite all the wrestling matches with Claude Code (which was anywhere between entertaining and insanity-induced), including: ignoring instructions, convention-defying practices, poor variable names, bad file or logic organisation, highly questionable UI choices, and straight-up incorrect commit messages, two things were clear to me: 1) Pangolog was shipped way earlier than I could imagine, and 2) Software development was undergoing a major transformation.
+
+    Beyond the technical generation, Pangolog is our very personal project. The name is a portmanteau of our favourite animal and the act of recording (log) in bookkeeping. Many of the UI/UX choices only came from daily actual usage with real data. The product diverged from my first imagination in a good way. As per my tradition, the app comes with a healthy dose of hotkey shortcuts (nothing beats a good keyboard flow), which I achieved with many trials and errors.
+
+    If anything, I no longer dread accounting on a smartphone, and that's a big win.
+  tags:
+    - web development
+    - progressive web app
+    - nextjs
+    - reactJS
+    - indexedDB
+    - typescript
+    - in active development
+    - release
+  links:
+    - label: pangolog.app
+      url: https://pangolog.app
+      type: deployment
+    - label: source
+      url: https://github.com/JunoNgx/pangolog
+      type: source
+
 - title: Pura Tela
   id: pura-tela
   imgSrc: /images/Pura2Trailer.apng
@@ -80,6 +123,7 @@
     - web development
     - progressive web app
     - release
+    - nextjs
     - reactJS
     - nodeJS
   links:
