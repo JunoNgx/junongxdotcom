@@ -15,7 +15,7 @@
   tags:
     - web development
     - progressive web app
-    - reactJS
+    - react
     - typescript
     - creative coding
     - in active development
@@ -58,7 +58,7 @@
     - web development
     - progressive web app
     - nextjs
-    - reactJS
+    - react
     - indexedDB
     - typescript
     - in active development
@@ -114,7 +114,7 @@
 
     * **Backend** (NodeJS/Express, [source](https://github.com/JunoNgx/ebonymemo-backend-nodejs)): A serverless RESTful API handling CRUD operations and authorisations for data modification. The database is stored on MongoDB Atlas.
 
-    * **Content management application** (ReactJS, [source](https://github.com/JunoNgx/ebonymemo-admin-reactjs), [deployment](https://eleum-loyce.netlify.app/)): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not mobile-responsive.
+    * **Content management application** (React, [source](https://github.com/JunoNgx/ebonymemo-admin-react), [deployment](https://eleum-loyce.netlify.app/)): A simple web application used by contributors to create and edit content. While most of the content is not locked behind credentials and authorisations, data-modifying actions are. Due to its purpose, it is not mobile-responsive.
 
     * **Frontend** (NextJS, [source](https://github.com/JunoNgx/ebonymemo-frontend-next), [deployment](http://ebonymemo.com/)): The only publicised user-facing portion of the system. The vast majority of the content is server-side rendered and heavily optimized for SEO.
 
@@ -124,7 +124,7 @@
     - progressive web app
     - release
     - nextjs
-    - reactJS
+    - react
     - nodeJS
   links:
     - label: home page
@@ -252,7 +252,7 @@
     - web development
     - in active development
     - svelte
-    - reactJS
+    - react
     - typescript
   links:
     - label: source
@@ -266,10 +266,10 @@
   imgAlt: A gif trailer for the Working Memory Test tool
   summary: A research tool I made for a university project.
   content: |
-    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software development experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
+    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software development experience in the team, I created the bulk of the application with react and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
   tags:
     - web development
-    - reactJS
+    - react
   links:
     - label: deployment
       url: https://workingmemorytest.netlify.app/
