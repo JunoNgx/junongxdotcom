@@ -17,9 +17,8 @@
     - progressive web app
     - react
     - typescript
-    - creative coding
+    - pocketbase
     - in active development
-    - release
   links:
     - label: JustJot.app
       url: https://justjot.app
@@ -62,7 +61,6 @@
     - indexedDB
     - typescript
     - in active development
-    - release
   links:
     - label: pangolog.app
       url: https://pangolog.app
@@ -92,8 +90,7 @@
     - progressive web app
     - svelte
     - typescript
-    - in active development
-    - release
+    - creative coding
   links:
     - label: pura.blue
       url: https://pura.blue
@@ -122,10 +119,9 @@
   tags:
     - web development
     - progressive web app
-    - release
     - nextjs
     - react
-    - nodeJS
+    - nodejs
   links:
     - label: home page
       url: https://ebonymemo.vercel.app/
@@ -161,7 +157,7 @@
     On the other hand, the technical highlight of the game is the implementation of **entity-component-system**, in which systems iterate over an entity container, and in turns, iterate over entities' components and perform the relevant logic when due. This allows an extremely modular architecture in which code reusability is high and adding new features is simple.
   tags:
     - game development
-    - release
+    - lua
   links:
     - label: itch.io
       url: https://junongx.itch.io/wonyun-trench-run
@@ -182,8 +178,8 @@
     Easily one of my best development experiences ever, with CrispGameLib, I have been making web games at a rapid pace and building up a collection. I have also written [a long and detailed tutorial](https://github.com/abagames/crisp-game-lib) and occasionally contributed back to the library.
   tags:
     - game development
-    - in active development
-    - release
+    - javascript
+    - jsdoc
   links:
     - label: itch.io
       url: https://junongx.itch.io/crisp-webgame-collection
@@ -226,9 +222,8 @@
   tags:
     - web development
     - progressive web app
-    - vueJS
+    - vue
     - typescript
-    - release
   links:
     - label: deployment
       url: https://chattie-juno.vercel.app/
