@@ -81,10 +81,6 @@
             margin-top: 0.25rem
             text-align: right
 
-        &__cta-ul
-            padding-inline-start: 1rem
-            list-style: none
-
         +m.mobile
             align-items: flex-start
             margin-left: 0.5rem
