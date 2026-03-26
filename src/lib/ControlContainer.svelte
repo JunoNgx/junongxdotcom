@@ -10,6 +10,8 @@
     const collapseControl = () => {
         isExpanded = false;
     };
+
+    const controlContentId = "control-content-wrapper";
 </script>
 
 <template>
@@ -17,6 +19,8 @@
         <button
             class="control-container__expand-button"
             aria-label="Toggle expand button"
+            aria-expanded={isExpanded}
+            aria-controls={controlContentId}
             onclick={handleSwitchExpand}
         >
             <svg
@@ -59,10 +63,10 @@
                 : ""}
             "
             aria-label="Alternative button to collapse the control menu"
-            aria-hidden={!isExpanded}
             onclick={collapseControl}
         ></button>
         <div
+            id={controlContentId}
             class="control-container__content-wrapper
                 {isExpanded
                 ? "control-container__content-wrapper--is-expanded"
@@ -149,7 +153,7 @@
             transition: transform calc(var(--transition-time-icon-expand-base)*1.0) ease-in-out
             &.icon-line--is-expanded
                 transform: rotate(405deg) translate(0%, 25%)
-        
+
         &--2
             transition: transform calc(var(--transition-time-icon-expand-base)*0.5) ease-in-out
             &.icon-line--is-expanded
