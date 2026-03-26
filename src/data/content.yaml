@@ -33,18 +33,17 @@
   imgSrc: /images/Pura2Trailer.apng
   imgAlt: Demonstration of the app Pura Tela
   summary: |
-    A minimalist wallpaper generator and a colour palette toolkit, made for the web.
+    A minimalist but highly customisable wallpaper generator and a colour palette toolkit. The app that has replaced every other wallpaper on my phone.
   content: |
-    In a trendy fashion in recent entertainment, Pura Tela is the "enhanced remake" of Pura (a native Android app made with Flutter), now as a Progressive Web App ("tela" means "web" in Latin).
+    Following the trends of "enhanced remakes" at the time, Pura Tela is the evolved version of Pura (a native Android app made with Flutter), reimagined as a Progressive Web App ("tela" means "web" in Latin).
 
-    With a new demand for new platform, but a clear set of existing specifications, the development was an opportunity to review and improve the user interface and experience. This was once again a collaboration with [Casey Kwokdinata](https://caseykwokdinata.webflow.io/), a professional UI/UX designer.
+    With the demand for a new platform, but clear existing specifications, the development was an opportunity to review and improve the user interface and experience. This was once again a collaboration with [Casey Kwokdinata](https://caseykwokdinata.webflow.io/), a professional UI/UX designer.
 
-    It is interesting to observe how the application has evolved compared to the [first](https://pura-tela-prime.vercel.app/) and [second](https://pura-tela-bravo.vercel.app/) major version. Each new features demands changes from the UI; sometimes, dramatically. My development log of Pura Tela is an excellent demonstration of a product management process.
+    Originally an experiment to try out SvelteKit, the development experience showed Svelte's ease of learning and setup as its strengths, though the rune syntax could get unwieldy at times, and its TypeScript support felt like an afterthought at the time. To keep the architecture lean, I stripped away most dependencies, unless absolutely necessary, which was a good lesson about how Sass still earns its keep even in a small codebase.
 
-    Technical-wise, the application was an experiment to try out Svelte 5 and SvelteKit in a more complex feature set. While Svelte's ease of learning and setup as its strengths shone, the rune syntaxes could get unwieldy at times, and the lack of TypeScript-first approach can make certain tasks difficult. I also attempted to minimise the amount of dependencies, limiting to only SvelteKit, TypeScript, vanilla CSS (in a way, it did prove Sass' worthiness, even in a small codebase), a colour picker library, and a drag-and-drop library specific to Svelte.
+    It has been a wild ride to see how the app has evolved from its [first](https://pura-tela-prime.vercel.app/) and [second](https://pura-tela-bravo.vercel.app/) major versions. Many of its best parts were spontaneous happenstances: an intuitive UI for palette generation, shareable URLs that store the configuration of the wallpapers, offline functionalities, and integration with LLM to generate palette based on theme prompting.
 
-    Outside of the complex canvas rendering logic, some highlightable advanced features in Pura Tela includes: an intuitive UI for palette generation, shareable URLs that store the configuration of the wallpapers, offline functionalities, and integration with LLM to generate palette based on theme prompting.
-
+    My phone wallpaper has been nothing but Pura Tela's output since it was made. I am forever grateful for the day I decided to work on this.
   tags:
     - web development
     - progressive web app
