@@ -76,7 +76,7 @@
   summary: |
     A minimalist but highly customisable wallpaper generator and a colour palette toolkit. The app that has replaced every other wallpaper on my phone.
   content: |
-    Following the trends of "enhanced remakes" at the time, Pura Tela is the evolved version of Pura (a native Android app made with Flutter), reimagined as a Progressive Web App ("tela" means "web" in Latin).
+    Following the trends of "enhanced remakes" at the time, Pura Tela is the evolved version of [Pura](#article-pura) (a native Android app made with Flutter), reimagined as a Progressive Web App ("tela" means "web" in Latin).
 
     With the demand for a new platform, but clear existing specifications, the development was an opportunity to review and improve the user interface and experience. This was once again a collaboration with [Casey Kwokdinata](https://caseykwokdinata.webflow.io/), a professional UI/UX designer.
 
@@ -282,7 +282,7 @@
   content: |
     As one of my earliest dabbles into mobile app development, Pura was created with both technical curiosity and personal needs in mind (the existing apps with similar functions were riddled with ads). The development process provided insights into both the anatomy of an app, as well as the inner working of Google's [Flutter](https://flutter.dev/), a promising up-and-coming multi-platform framework.
 
-    The release was unfortunately delisted from Play Store and succeeded by an [alternative progressive web app](https://pura-tela.vercel.app/).
+    The release was unfortunately delisted from Play Store and succeeded by an [Pura Tela](#article-pura-tela).
   tags:
     - app development
     - flutter
