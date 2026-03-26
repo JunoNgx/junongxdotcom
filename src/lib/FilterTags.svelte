@@ -25,6 +25,8 @@
                 <button class="filter-tags__item
                         {isDisplayed && "filter-tags__item--is-selected"}
                     "
+                    role="switch"
+                    aria-checked={isDisplayed}
                     on:click={() => switchTagData(tag)}
                 >
                     <span class="filter-tags__item-label">
@@ -86,7 +88,7 @@
     @use "../styles/vars" as v
 
     .filter-tags
-        +m.control-wrapper 
+        +m.control-wrapper
 
         &__title
             +m.control-title
@@ -135,7 +137,7 @@
         &__item-icon
             margin-top: 1px
             display: block
-            
+
         &__buttons-container
             margin-top: 1rem
 
