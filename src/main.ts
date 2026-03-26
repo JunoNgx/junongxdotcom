@@ -1,4 +1,7 @@
 import { mount } from "svelte"
+
+import "./styles/globals.sass"
+
 import App from "./App.svelte"
 
 const app = mount(
