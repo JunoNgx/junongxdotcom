@@ -42,7 +42,7 @@
 
     The system had one fatal flaw: the smartphone was not the ideal form factor, and managing it from the Google Sheets mobile app with a touchscreen, was nothing but excruciating. It was something I did not want to do half the times, when I was not on my desktop.
 
-    Enter Pangolog, which was inevitable, after many conversations with [Casey](https://caseykwokdinata.webflow.io/) (our third collaboration). In all its essence, it is the smartphone-friendly evolution of my spreadsheet system: transactions are separated in the same way (now dubbed "small dimes" and "big bucks"); the same categories still exist; and my financial data continues to live on Google Drive.
+    Enter Pangolog, which was inevitable, after many conversations with [Casey](https://caseykwokdinata.webflow.io/) (our third collaboration). At its core, it is the smartphone-friendly evolution of my spreadsheet system: transactions are separated in the same way (now dubbed "small dimes" and "big bucks"); the same categories still exist; and my financial data continues to live on Google Drive.
 
     The decision to use Google Drive probably had the most impact. [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) became a necessity to persist a large volume of data; the app should naturally function without an internet connection; and interacting with Google API accounts for (pun not intended) the majority of the app's complexity.
 
