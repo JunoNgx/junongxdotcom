@@ -11,12 +11,12 @@
 
 @mixin transition($elements...)
     $transition: ()
-    @each $el in $elements 
+    @each $el in $elements
         $transition:list.append($transition, $el var(--transition-time-default) ease-out, $separator: comma)
     transition: $transition
 
 @mixin button
-    border: 1px solid var(--col-pri)
+    border: 2px solid var(--col-pri)
     border-radius: 0
     padding: 0.25rem 0.5rem
     cursor: pointer
@@ -33,7 +33,7 @@
     border: none
     font-family: var(--font-family)
     font-size: var(--font-size)
-    cursor: pointer 
+    cursor: pointer
     text-decoration: underline
     color: var(--col-pri)
     background-color: transparent
