@@ -1,5 +1,6 @@
 declare type Entry = {
     title: string,
+    id: string,
     imgSrc: string,
     imgAlt: string,
     summary: string,

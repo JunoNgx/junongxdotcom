@@ -1,4 +1,5 @@
 - title: JustJot
+  id: justjot
   imgSrc: /images/JustJotTrailer.apng
   imgAlt: Demonstration of the app JustJot
   summary: |
@@ -6,11 +7,11 @@
   content: |
     JustJot is the serendipitous outcome of many things: my desire to work on a side project; my needs to efficiently use time and handle my multitude of interests (spending over 300 hours on this project to perform 10-second tasks more efficiently; such a programmer's classic); my encounter with the brilliantly designed [bmrks](https://bmrks.com/) (unfortunately, not open-source); and [Casey](https://caseykwokdinata.webflow.io/), my collaborator for this project, showing up a lot in the office.
 
-    Aiming for an enterprise-like approach, I chose React and [TypeScript](https://www.typescriptlang.org/), the de facto template that would very likely be used, if a new project is created at the time of writing. Breaking away from my usual tradition to write everything myself, a UI library (cues in [Mantine](https://mantine.dev/)) was used for the first time, which provided me with a lot of valuable insights and experiences. I was alsso introduced to the world of Backend-as-a-Service, as [PocketBase](https://pocketbase.io/) helmed the backend implementation.
+    Aiming for an enterprise-like approach, I chose React and [TypeScript](https://www.typescriptlang.org/), the de facto template that would very likely be used, if a new project is created at the time of writing. Breaking away from my usual tradition to write everything myself, a UI library (cues in [Mantine](https://mantine.dev/)) was used for the first time, which provided me with a lot of valuable insights and experiences. I was also introduced to the world of Backend-as-a-Service, as [PocketBase](https://pocketbase.io/) helmed the backend implementation.
 
     Most noteworthy of all, in an era surrounded by touchscreens and trackpads, the keyboard-first approach raised numerous interesting challenges, in terms of both design and engineering. Casey and I found ourselves in uncharted territory most of the times. With development tools overwhelmingly catered to pointer-based input devices, it was difficult to find examples and documentations I needed. A keystroke does not simply have an effect on JustJot's main input (which already does much more than one thing); it also manages the app, and even the browser itself.
 
-    JustJot is aruguably my most impactful and valuable project yet: more than a project I worked on just for sheer fun, this is an application I use everyday.
+    JustJot is arguably my most impactful and valuable project yet: more than a project I worked on just for sheer fun, this is an application I use everyday.
   tags:
     - web development
     - progressive web app
@@ -28,6 +29,7 @@
       type: source
 
 - title: Pura Tela
+  id: pura-tela
   imgSrc: /images/Pura2Trailer.apng
   imgAlt: Demonstration of the app Pura Tela
   summary: |
@@ -60,6 +62,7 @@
 
 
 - title: Ebony Memo
+  id: ebony-memo
   imgSrc: /images/EbonyMemo.gif
   imgAlt: A gif trailer for Ebony Memo
   summary: |
@@ -86,6 +89,7 @@
       type: deployment
 
 - title: manafarm
+  id: manafarm
   imgSrc: /images/manafarm_withBg.jpg
   imgAlt: manafarm logo
   summary: |
@@ -93,8 +97,8 @@
   content: |
     I have been making videogames since 2013, under the moniker Aureoline Tetrahedron. The *manafarm* rebranding was made in 2019, after several years of hiatus. I have tried many languages, engines, tools, and everything in between, for all sort of devices and platforms, and still counting.
 
-    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone. 
-    
+    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone.
+
     It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
   tags:
     - game development
@@ -103,6 +107,7 @@
       url: https://junongx.itch.io/
 
 - title: Wonyun Trench Run
+  id: wonyun-trench-run
   imgSrc: /images/wonyun_5.gif
   imgAlt: animated screenshot of the game Wonyun Trench Run
   summary: |
@@ -124,6 +129,7 @@
 
 
 - title: CrispGameLib Collection
+  id: crisp-game-lib
   imgSrc: /images/CrispGameLib_Blitzed.gif
   imgAlt: animated screenshot of the game Blitzed in CripsGameLib Collection
   summary: A series of web minigames created with CrispGameLib.
@@ -145,6 +151,7 @@
 
 
 - title: Creative Coding
+  id: creative-coding
   summary: There is much more to programming than just cold hard logic, and programming for art is one of my favourite pastimes.
   content: |
     As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with [the web canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) as much as [p5js](https://p5js.org/). A handful of generative arts have also been incorporated into this website, randomising a small number of elements for each of your visit.
@@ -163,13 +170,14 @@
 
 
 - title: Chattie
+  id: chattie
   imgSrc: /images/Chattie.gif
   imgAlt: animated screenshot of the web application Chattie
-  summary: A progress web app that generates topics for social chatting.
+  summary: A progressive web app that generates topics for social chatting.
   content: |
     This was my preparation for my first full-time software engineer employment. Created in December 2021, this was not long after VueJS going 3 by default.
 
-    In order to have a good understanding of the ecosystem, I went in deep with **vue router** and **vueX**. As a side objective, it was also my first exposure with the indented SASS syntax (which I aboslutely loved) and dark mode/theming.
+    In order to have a good understanding of the ecosystem, I went in deep with **vue router** and **vueX**. As a side objective, it was also my first exposure with the indented SASS syntax (which I absolutely loved) and dark mode/theming.
 
     It's also a progressive web app, because why not.
   tags:
@@ -188,6 +196,7 @@
 
 
 - title: This Website
+  id: portfolio
   summary: |
     As a creative individual, I have worked on many projects over the years, and the idea of a portfolio has always been something endearing and important to me. This web page has been revamped, redesigned, and reworked many times over the years.
   content: |
@@ -209,11 +218,12 @@
 
 
 - title: Working Memory Test
+  id: working-memory-test
   imgSrc: /images/WorkingMemoryTestTrailer.gif
   imgAlt: A gif trailer for the Working Memory Test tool
   summary: A research tool I made for a university project.
   content: |
-    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
+    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software development experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
   tags:
     - web development
     - reactJS
@@ -227,6 +237,7 @@
 
 
 - title: Pura
+  id: pura
   imgSrc: /images/PuraTrailer.gif
   imgAlt: A gif trailer for the app Pura
   summary: A minimalist wallpaper generator made with Flutter for Android.
@@ -245,6 +256,7 @@
 
 
 - title: Lutro Mega Input Library
+  id: lutro-mega-input-library
   summary: An utility input library for the game engine Lutro.
   content: |
     Working with [Piepacker](https://piepacker.com/) on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used was [Lutro](https://github.com/piepacker/lutro), a port of [love2d](http://love2d.org/) API to [libretro](https://www.libretro.com/). The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was to be created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.
@@ -257,6 +269,7 @@
 
 
 - title: Moon2P8
+  id: moon2p8
   summary: An injection tool for Pico8 written in Python
   content: |
     After shipping Wonyun Trench Run, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was [moonscript](https://moonscript.org/), which compiled to lua. Moon2P8 was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.
@@ -271,6 +284,7 @@
 
 
 - title: Photography
+  id: photography
   imgSrc: /images/pavilion.jpg
   imgAlt: The pavillion at Gardens by the Bay, Singapore
   summary: I'm also a hobbyist photographer who immensely love the clicky movements of mechanical bodies in film and Fujifilm camera.
@@ -287,6 +301,7 @@
 
 
 - title: Lego StarCraft
+  id: lego-starcraft
   imgSrc: /images/siegetank_rev5.jpg
   imgAlt: Microscale StarCraft Siege Tank
   summary: Behind making videogames, Lego is probably the secondmost magical thing I have found in this lifetime.
@@ -303,6 +318,7 @@
 
 
 - title: Mechanical keyboards
+  id: mechkeebs
   imgSrc: /images/keebs_in_film.jpg
   imgAlt: Juno's collection of mechanical keyboards
   summary: Keyboard is a programmer's best friend.

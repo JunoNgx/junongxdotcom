@@ -11,9 +11,25 @@
 </script>
 
 <template>
-    <article class="article">
-        <h2 class="article__title">{entry.title}</h2>
-        <div class="article__tags-container">
+    <article class="article"
+        id="article-{entry.id}"
+        aria-labelledby="article-title-{entry.id}"
+        aria-describedby="
+            article-title-{entry.id}
+            article-tag-list-{entry.id}
+            article-summary-{entry.id}
+            article-content-{entry.id}
+        "
+    >
+        <h2 class="article__title"
+            id="article-title-{entry.id}"
+        >
+            {entry.title}
+        </h2>
+        <div class="article__tags-container"
+            id="article-tag-list-{entry.id}"
+        >
+            <span class="sr-only">Tag list</span>
             {#each entry.tags as tag}
                 <span class="article__tag-item">{tag}</span>
             {/each}
@@ -30,11 +46,14 @@
             <canvas id="scroll-canvas"></canvas>
         {/if}
 
-        <p class="article__summary">
+        <p class="article__summary"
+            id="article-summary-{entry.id}"
+        >
             {@html marked(entry.summary)}
         </p>
 
         <p class="article__content {isExpanded ? "article__content--is-expanded" : "article__content--is-collapsed"}"
+            id="article-content-{entry.id}"
             aria-hidden={!isExpanded}
         >
             {@html marked(entry.content)}
@@ -49,6 +68,8 @@
 
             <button class="article__expand-button"
                 onclick={handleExpandClick}
+                aria-expanded={isExpanded}
+                aria-controls="article-content-{entry.id}"
             >
                 <div class="article__expand-button-label-wrapper {isExpanded ? "article__expand-button-label-wrapper--is-expanded" : ""}">
                     <span class="article__expand-button-label article__expand-button-label--more"
@@ -62,6 +83,11 @@
                         Less
                     </span>
                 </div>
+
+                <i class="article__expand-icon
+                        {isExpanded ? "article__expand-icon--active" : ""}
+                    "
+                ></i>
             </button>
         </div>
     </article>
@@ -149,13 +175,33 @@
 
         &__expand-button
             +m.button
-            width: 60px
-            height: 33px
+            display: flex
+            flex-wrap: nowrap
+            justify-content: space-between
+            align-items: center
+            gap: 1rem
             overflow: hidden
+
+        &__expand-icon
+            width: 8px
+            height: 8px
+            border-right: 2px solid currentColor
+            border-bottom: 2px solid currentColor
+            transform: rotate(45deg)
+            transition-property: transform, margin
+            transition-duration: var(--transition-time-default)
+            transition-timing-function: ease-out
+            margin-bottom: 4px
+
+            &--active
+                transform: rotate(-135deg)
+                margin-bottom: 0
+                margin-top: 4px
 
         &__expand-button-label-wrapper
             display: flex
             flex-direction: column
+            height: 23px
 
             transition-property: transform, opacity
             transition-duration: var(--transition-time-default)
@@ -168,13 +214,13 @@
                 opacity: 0
 
             &--is-expanded
-                transform: translateY(-50%)
+                transform: translateY(-100%)
 
                 .article__expand-button-label--more
                     opacity: 0
                 .article__expand-button-label--less
                     opacity: 1
-        
+
         &__expand-button-label
             transition: transform var(--transition-time-default) ease-out
 
