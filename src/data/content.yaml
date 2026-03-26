@@ -6,11 +6,11 @@
   content: |
     JustJot is the serendipitous outcome of many things: my desire to work on a side project; my needs to efficiently use time and handle my multitude of interests (spending over 300 hours on this project to perform 10-second tasks more efficiently; such a programmer's classic); my encounter with the brilliantly designed [bmrks](https://bmrks.com/) (unfortunately, not open-source); and [Casey](https://caseykwokdinata.webflow.io/), my collaborator for this project, showing up a lot in the office.
 
-    Aiming for an enterprise-like approach, I chose React and [TypeScript](https://www.typescriptlang.org/), the de facto template that would very likely be used, if a new project is created at the time of writing. Breaking away from my usual tradition to write everything myself, a UI library (cues in [Mantine](https://mantine.dev/)) was used for the first time, which provided me with a lot of valuable insights and experiences. I was alsso introduced to the world of Backend-as-a-Service, as [PocketBase](https://pocketbase.io/) helmed the backend implementation.
+    Aiming for an enterprise-like approach, I chose React and [TypeScript](https://www.typescriptlang.org/), the de facto template that would very likely be used, if a new project is created at the time of writing. Breaking away from my usual tradition to write everything myself, a UI library (cues in [Mantine](https://mantine.dev/)) was used for the first time, which provided me with a lot of valuable insights and experiences. I was also introduced to the world of Backend-as-a-Service, as [PocketBase](https://pocketbase.io/) helmed the backend implementation.
 
     Most noteworthy of all, in an era surrounded by touchscreens and trackpads, the keyboard-first approach raised numerous interesting challenges, in terms of both design and engineering. Casey and I found ourselves in uncharted territory most of the times. With development tools overwhelmingly catered to pointer-based input devices, it was difficult to find examples and documentations I needed. A keystroke does not simply have an effect on JustJot's main input (which already does much more than one thing); it also manages the app, and even the browser itself.
 
-    JustJot is aruguably my most impactful and valuable project yet: more than a project I worked on just for sheer fun, this is an application I use everyday.
+    JustJot is arguably my most impactful and valuable project yet: more than a project I worked on just for sheer fun, this is an application I use everyday.
   tags:
     - web development
     - progressive web app
@@ -165,11 +165,11 @@
 - title: Chattie
   imgSrc: /images/Chattie.gif
   imgAlt: animated screenshot of the web application Chattie
-  summary: A progress web app that generates topics for social chatting.
+  summary: A progressive web app that generates topics for social chatting.
   content: |
     This was my preparation for my first full-time software engineer employment. Created in December 2021, this was not long after VueJS going 3 by default.
 
-    In order to have a good understanding of the ecosystem, I went in deep with **vue router** and **vueX**. As a side objective, it was also my first exposure with the indented SASS syntax (which I aboslutely loved) and dark mode/theming.
+    In order to have a good understanding of the ecosystem, I went in deep with **vue router** and **vueX**. As a side objective, it was also my first exposure with the indented SASS syntax (which I absolutely loved) and dark mode/theming.
 
     It's also a progressive web app, because why not.
   tags:
@@ -213,7 +213,7 @@
   imgAlt: A gif trailer for the Working Memory Test tool
   summary: A research tool I made for a university project.
   content: |
-    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software developement experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
+    During my study at Murdoch University, my team was tasked with a research project related to human working memory. At the height of the pandemic Covid-19, performing an in-person experiment was out of the question and the work was naturally brought to the web. As the only person with software development experience in the team, I created the bulk of the application with ReactJS and SASS over a weekend as the primary research instrument (minor refactors and bugfixes were done in the following week). The application was well-received by the project supervisor as well as the research participants.
   tags:
     - web development
     - reactJS
