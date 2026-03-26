@@ -1,4 +1,5 @@
 - title: JustJot
+  id: justjot
   imgSrc: /images/JustJotTrailer.apng
   imgAlt: Demonstration of the app JustJot
   summary: |
@@ -28,6 +29,7 @@
       type: source
 
 - title: Pura Tela
+  id: pura-tela
   imgSrc: /images/Pura2Trailer.apng
   imgAlt: Demonstration of the app Pura Tela
   summary: |
@@ -60,6 +62,7 @@
 
 
 - title: Ebony Memo
+  id: ebony-memo
   imgSrc: /images/EbonyMemo.gif
   imgAlt: A gif trailer for Ebony Memo
   summary: |
@@ -86,6 +89,7 @@
       type: deployment
 
 - title: manafarm
+  id: manafarm
   imgSrc: /images/manafarm_withBg.jpg
   imgAlt: manafarm logo
   summary: |
@@ -93,8 +97,8 @@
   content: |
     I have been making videogames since 2013, under the moniker Aureoline Tetrahedron. The *manafarm* rebranding was made in 2019, after several years of hiatus. I have tried many languages, engines, tools, and everything in between, for all sort of devices and platforms, and still counting.
 
-    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone. 
-    
+    Growing up with a Nintendo Famicom, I have always been a videogame enthusiast, and videogame is my medium of choice for creative expression. I have been led to many interesting ideas and knowledge introduced by games alone.
+
     It's fair to say that my career in software engineering was kickstarted by love and curiosity for videogames.
   tags:
     - game development
@@ -103,6 +107,7 @@
       url: https://junongx.itch.io/
 
 - title: Wonyun Trench Run
+  id: wonyun-trench-run
   imgSrc: /images/wonyun_5.gif
   imgAlt: animated screenshot of the game Wonyun Trench Run
   summary: |
@@ -124,6 +129,7 @@
 
 
 - title: CrispGameLib Collection
+  id: crisp-game-lib
   imgSrc: /images/CrispGameLib_Blitzed.gif
   imgAlt: animated screenshot of the game Blitzed in CripsGameLib Collection
   summary: A series of web minigames created with CrispGameLib.
@@ -145,6 +151,7 @@
 
 
 - title: Creative Coding
+  id: creative-coding
   summary: There is much more to programming than just cold hard logic, and programming for art is one of my favourite pastimes.
   content: |
     As an artistic person, I am in constant pursuit of creative ways to express myself, and creative coding is an inevitable stop. I am in love with [the web canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) as much as [p5js](https://p5js.org/). A handful of generative arts have also been incorporated into this website, randomising a small number of elements for each of your visit.
@@ -163,6 +170,7 @@
 
 
 - title: Chattie
+  id: chattie
   imgSrc: /images/Chattie.gif
   imgAlt: animated screenshot of the web application Chattie
   summary: A progressive web app that generates topics for social chatting.
@@ -188,6 +196,7 @@
 
 
 - title: This Website
+  id: portfolio
   summary: |
     As a creative individual, I have worked on many projects over the years, and the idea of a portfolio has always been something endearing and important to me. This web page has been revamped, redesigned, and reworked many times over the years.
   content: |
@@ -209,6 +218,7 @@
 
 
 - title: Working Memory Test
+  id: working-memory-test
   imgSrc: /images/WorkingMemoryTestTrailer.gif
   imgAlt: A gif trailer for the Working Memory Test tool
   summary: A research tool I made for a university project.
@@ -227,6 +237,7 @@
 
 
 - title: Pura
+  id: pura
   imgSrc: /images/PuraTrailer.gif
   imgAlt: A gif trailer for the app Pura
   summary: A minimalist wallpaper generator made with Flutter for Android.
@@ -245,6 +256,7 @@
 
 
 - title: Lutro Mega Input Library
+  id: lutro-mega-input-library
   summary: An utility input library for the game engine Lutro.
   content: |
     Working with [Piepacker](https://piepacker.com/) on game development provided me with an opportunity to dive deep into some interesting aspects of retro gaming. One of the tools we used was [Lutro](https://github.com/piepacker/lutro), a port of [love2d](http://love2d.org/) API to [libretro](https://www.libretro.com/). The input API proved unrobust and lacking in some scenario, and it was natural that a new input library was to be created to cover its shortcomings. The library was published, maintained, documented separately on my own account (published under MIT license), with generic usage and long-term high reusability for multiple games in mind.
@@ -257,6 +269,7 @@
 
 
 - title: Moon2P8
+  id: moon2p8
   summary: An injection tool for Pico8 written in Python
   content: |
     After shipping Wonyun Trench Run, I started experimenting with other possible development workflows for pico-8. One of the obvious choices was [moonscript](https://moonscript.org/), which compiled to lua. Moon2P8 was written in Python as a command-line tool to simplify and automate the compiling and injecting process, while retaining other pico-8 cartridge data, to improve the workflow of pico-8 developers who would like to use moonscript as the language of choice.
@@ -271,6 +284,7 @@
 
 
 - title: Photography
+  id: photography
   imgSrc: /images/pavilion.jpg
   imgAlt: The pavillion at Gardens by the Bay, Singapore
   summary: I'm also a hobbyist photographer who immensely love the clicky movements of mechanical bodies in film and Fujifilm camera.
@@ -287,6 +301,7 @@
 
 
 - title: Lego StarCraft
+  id: lego-starcraft
   imgSrc: /images/siegetank_rev5.jpg
   imgAlt: Microscale StarCraft Siege Tank
   summary: Behind making videogames, Lego is probably the secondmost magical thing I have found in this lifetime.
@@ -303,6 +318,7 @@
 
 
 - title: Mechanical keyboards
+  id: mechkeebs
   imgSrc: /images/keebs_in_film.jpg
   imgAlt: Juno's collection of mechanical keyboards
   summary: Keyboard is a programmer's best friend.
