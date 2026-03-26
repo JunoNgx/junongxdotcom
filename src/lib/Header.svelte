@@ -2,18 +2,24 @@
     <header class="header">
         <div class="header__name-container">
             <h1 class="header__name">
-                <span class="header__first-name-j">J</span><span class="header__first-name-u">u</span><span class="header__first-name-n">n</span><span class="header__first-name-o">o</span>
-                <span class="header__last-name">Nguyen</span>
+                <span class="header__first-name-j"
+                >J</span><span class="header__first-name-u"
+                >u</span><span class="header__first-name-n"
+                >n</span><span class="header__first-name-o"
+                >o</span>
+                <span class="header__last-name">
+                    Nguyen
+                </span>
             </h1>
             <div class="header__strip-container">
                 <div class="header__strip"></div>
             </div>
         </div>
-        <p class="header__desc header__desc--title">
-            Singapore-based frontend engineer at Pigeonhole Live by day
+        <p class="header__desc">
+            small web enthusiast, hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe
         </p>
-        <p class="header__desc header__desc--long-paragraph">
-            small web enthusiast, hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe by night
+        <p class="header__desc">
+            day job: frontend at Pigeonhole Live (Singapore)
         </p>
     </header>
 </template>
