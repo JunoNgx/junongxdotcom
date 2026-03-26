@@ -98,26 +98,6 @@
         +m.mobile
             font-size: var(--font-size-mobile)
 
-    :global(a)
-        color: var(--col-pri)
-        text-decoration: none
-        background-repeat: no-repeat
-        background-image: linear-gradient(to top, var(--col-acc) 0% 90%, transparent 10%)
-        background-position: 50% 80%
-        background-size: 100% 30%
-        transition: background-size var(--transition-time-anchor) ease-in, background-position var(--transition-time-anchor) ease-out
-
-        &:hover
-            // background-position: 50% 80%
-            background-size: 100% 100%
-
-    :global(code)
-        font-family: var(--font-family-code)
-        font-size: 0.9rem
-        background-color: var(--col-code-bg)
-        padding: 0.1rem 0.25rem
-        border-radius: 0.25rem
-
     main
         margin: 0 auto
         width: -moz-fit-content
