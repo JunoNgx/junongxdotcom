@@ -19,7 +19,7 @@
             small web enthusiast, hobbyist gamedev, creative coding artist, hardcore dabbler, know-it-all-wannabe
         </p>
         <p class="header__desc">
-            day job: frontend at Pigeonhole Live (Singapore)
+            current day job: frontend at Pigeonhole Live (Singapore)
         </p>
     </header>
 </template>
