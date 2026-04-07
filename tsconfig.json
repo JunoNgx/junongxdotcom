@@ -5,7 +5,9 @@
         "useDefineForClassFields": true,
         "module": "esnext",
         "resolveJsonModule": true,
-        "baseUrl": ".",
+        "paths": {
+            "src/*": ["./src/*"]
+        },
         "importsNotUsedAsValues": "remove",
         /**
         * Typecheck JS in `.svelte` and `.js` files by default.
