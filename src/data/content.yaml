@@ -1,6 +1,6 @@
 - title: JustJot
   id: justjot
-  imgSrc: /images/JustJotTrailer.apng
+  imgSrc: /images/JustJotTrailer.webp
   imgAlt: Demonstration of the app JustJot
   summary: |
     A full-featured note-taking system meticulously built around a keyboard-first approach (because I've always wanted one), made with [React](https://react.dev/) and [PocketBase](https://pocketbase.io/).
@@ -73,7 +73,7 @@
 
 - title: Pura Tela
   id: pura-tela
-  imgSrc: /images/Pura2Trailer.apng
+  imgSrc: /images/Pura2Trailer.webp
   imgAlt: Demonstration of the app Pura Tela
   summary: |
     A minimalist but highly customisable wallpaper generator and a colour palette toolkit. The app that has replaced every other wallpaper on my phone.
@@ -104,7 +104,7 @@
 
 - title: Ebony Memo
   id: ebony-memo
-  imgSrc: /images/EbonyMemo.gif
+  imgSrc: /images/EbonyMemo.webp
   imgAlt: A gif trailer for Ebony Memo
   summary: |
     As a videogame enthusiast, I seek out interesting titles across platforms, mobile nevertheless. [Ebony Memo](https://ebonymemo.vercel.app/) is an arthouse videogame curator website for mobile devices, and also a full custom content management system of MERN stack.
@@ -171,7 +171,7 @@
 
 - title: CrispGameLib Collection
   id: crisp-game-lib
-  imgSrc: /images/CrispGameLib_Blitzed.gif
+  imgSrc: /images/CrispGameLib_Blitzed.webp
   imgAlt: animated screenshot of the game Blitzed in CripsGameLib Collection
   summary: A series of web minigames created with CrispGameLib.
   content: |
