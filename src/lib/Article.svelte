@@ -111,11 +111,15 @@
         -webkit-hyphens: auto
         hyphens: auto
 
-        &__banner,
         canvas
             display: block
             margin: auto
             max-width: 100%
+
+        &__banner
+            display: block
+            margin: auto
+            max-width: 80%
 
         &__title
             margin: 0
