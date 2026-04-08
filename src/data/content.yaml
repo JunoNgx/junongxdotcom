@@ -12,6 +12,8 @@
     Most noteworthy of all, in an era surrounded by touchscreens and trackpads, the keyboard-first approach raised numerous interesting challenges, in terms of both design and engineering. Casey and I found ourselves in uncharted territory most of the times. With development tools overwhelmingly catered to pointer-based input devices, it was difficult to find examples and documentations I needed. A keystroke does not simply have an effect on JustJot's main input (which already does much more than one thing); it also manages the app, and even the browser or even the operating system itself.
 
     JustJot is arguably my most impactful and valuable project yet: this is an application I use everyday for many tasks, including the development of projects that came after it.
+
+    (If you have read this far, then something exciting is coming in 2026)
   tags:
     - web development
     - progressive web app
