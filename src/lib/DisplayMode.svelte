@@ -140,6 +140,9 @@
     .display-mode
         +m.control-wrapper
 
+        +m.mobile
+            order: -1
+
         // For pontential usage of __title
 
         // &__content-wrapper
