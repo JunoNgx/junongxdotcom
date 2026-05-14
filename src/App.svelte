@@ -114,7 +114,7 @@
     .leftside-wrapper
         position: sticky
         top: 40px
-        max-width: 320px
+        max-width: v.$left-side-width
         max-height: 90vh
         padding-right: 2rem
         border-right: 2px dashed var(--col-pri)

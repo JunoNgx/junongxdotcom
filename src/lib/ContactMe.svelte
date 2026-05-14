@@ -25,7 +25,7 @@
     @use "../styles/vars" as v
 
     .contact-me
-        max-width: 400px
+        max-width: v.$right-side-width
         border: 2px solid var(--col-pri)
         margin: 2rem
         padding: 1rem

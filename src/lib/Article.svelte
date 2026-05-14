@@ -105,7 +105,7 @@
     .article
         margin: 2rem
         padding: 1rem
-        max-width: 400px
+        max-width: v.$right-side-width
         border: 2px solid var(--col-pri)
         text-align: left
         -webkit-hyphens: auto
