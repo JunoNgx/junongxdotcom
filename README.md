@@ -26,20 +26,21 @@ git clone git@github.com:JunoNgx/junongxdotcom.git
 cd junongxdotcom
 ```
 
-Then install the packages (`yarn` is required):
+Then install the packages (`pnpm` is required):
+
 ```bash
-yarn
+pnpm install
 ```
 
 Then run the development server:
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Alternatively, run the network-exposed development server with the flag `--host`:
 
 ```bash
-yarn dev --host
+pnpm dev --host
 ```
 
 Open [http://localhost:3000](http://localhost:3000) (by default) with your browser to see the result.
