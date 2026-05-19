@@ -357,11 +357,14 @@
       type: generic
 
 
-- title: Mechanical keyboards
+- title: Mechkeebs
   id: mechkeebs
   imgSrc: /images/keebs_in_film.jpg
   imgAlt: Juno's collection of mechanical keyboards
-  summary: Keyboard is a programmer's best friend.
+  summary: |
+    Keyboard is a programmer's best friend.
+
+    (Mechanical keyboards are endearingly called "mechkeebs" by the enthusiast community)
   content: |
     Started off as a utilitarian need to improve my sitting posture, this hobby, turned out to me, was an art form of itself. Among keycaps profiles, strange layouts, switch lubrication, the dangerous rabbit hole of artisans, and how electric circuits work, mechanical keyboards offer a fascinating and endless world of self-expression.
 
