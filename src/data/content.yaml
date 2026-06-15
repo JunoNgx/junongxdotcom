@@ -31,7 +31,7 @@
 
 - title: Pangolog
   id: pangolog
-  imgSrc: /images/pangolog1.webp
+  imgSrc: /images/pangolog2.webp
   imgAlt: Demonstration of the app Pangolog
   summary: |
     A minimalist personal expense tracking app with focus on data ownership, local-first operations, and ease of use. Created to replace my highly formulated spreadsheets. Made with [Next.js](https://nextjs.org/) and Google Drive API.
